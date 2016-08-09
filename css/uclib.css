@@ -1,0 +1,2338 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+Content
+Text
+Images, Video, and other Media
+Right Sidebar
+Homepage Modules / Widgets  
+Workshops & Events Homepage Module
+News Homepage Module
+Ask A Librarian
+Forms
+Buttons
+Tables
+Mini Search (For Lists / Tables)
+Light Box Styling
+Index List Page
+Hours (Mods to LibCal Feed)
+Agenda (Conferences)
+Event Calendar List
+Spaces
+Collections & Exhibits
+Directory
+Staff Profile Page
+Page Specific Alterations
+-------------------------------------------------------------------*/
+/*
+ * Colors
+ * --------------------------------------------------
+ */
+/*
+ * Elements
+ * --------------------------------------------------
+ */
+/*
+ * Mixins
+ * --------------------------------------------------
+ */
+/*------------------------------------------------------------------
+[Table of contents]
+
+Accessibility
+Fonts and Headers
+Media Queries
+Global Elements
+Alerts
+
+-------------------------------------------------------------------*/
+/*
+ * Accessibility
+ * --------------------------------------------------
+ */
+/* line 17, _base.scss */
+#skip {
+  background-color: #47B5FF;
+  color: #fff;
+}
+/* line 20, _base.scss */
+#skip a {
+  position: absolute;
+  padding: 5px 0 5px 10px;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  color: #fff;
+}
+/* line 29, _base.scss */
+#skip a:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+/*
+ * Fonts and Headers
+ * --------------------------------------------------
+ */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url(/static/base/css/iconfont/MaterialIcons-Regular.ttf) format("truetype");
+}
+
+/* line 51, _base.scss */
+.material-icons {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
+/* line 69, _base.scss */
+h1 {
+  font-size: 1.4em;
+  color: #800000;
+  font-weight: 300;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #d6d6ce;
+  margin: 0 0 0.2em 0;
+}
+
+/* line 78, _base.scss */
+h2 {
+  font-size: 1.2em;
+  color: #9A5324;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+/* line 83, _base.scss */
+h2 .contentalert {
+  line-height: 1.3em;
+  color: #FF3399;
+}
+@media (min-width: 48em) {
+  /* line 87, _base.scss */
+  h2:first-child {
+    margin-top: 5px;
+  }
+}
+
+/* line 94, _base.scss */
+h3 {
+  font-size: 1.1em;
+  color: #616530;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.4em;
+}
+
+/* line 102, _base.scss */
+h4, .search-results h4 a {
+  font-weight: 400;
+  font-size: 1.1em;
+  color: #6d2f6a;
+  line-height: 1.4em;
+}
+/* line 107, _base.scss */
+.newsblock h4, .newsblock .search-results h4 a, .search-results h4 .newsblock a {
+  margin-bottom: 3px;
+}
+
+/* line 112, _base.scss */
+h5 {
+  font-size: 1em;
+  font-weight: 600;
+  color: #800000;
+  line-height: 1.4em;
+}
+
+/* line 119, _base.scss */
+h6 {
+  font-size: 1em;
+  font-weight: 600;
+  color: #767676;
+  margin: 15px 0 5px 0;
+}
+
+/* line 127, _base.scss */
+p {
+  margin-bottom: 1em;
+  line-height: 1.5em;
+}
+/* line 130, _base.scss */
+p small {
+  color: #767676;
+}
+
+/*
+ * Media Queries
+ * --------------------------------------------------
+ *
+ * Use as: @include respond-to(small) { ... }
+ *		@include respond-to(medium) { ... }
+ *		@include respond-to(large) { ... }
+ */
+/*
+ * Global Elements
+ * --------------------------------------------------
+ */
+/* line 193, _base.scss */
+body {
+  margin-bottom: 0;
+  font-family: 'ProximaNova-Regular', "Arial", sans-serif;
+}
+/* line 196, _base.scss */
+body .font-secondary {
+  font-family: Garamond, Baskerville, 'Baskerville Old Face', "Times New Roman", serif;
+}
+
+/* line 201, _base.scss */
+html, body {
+  overflow-x: hidden;
+  /* Off Canvas: Prevent scroll on narrow devices */
+}
+
+/* line 205, _base.scss */
+.valid {
+  color: #089e00;
+}
+
+/* line 208, _base.scss */
+.error {
+  color: red;
+}
+
+/* line 211, _base.scss */
+.warning {
+  color: #fff664;
+}
+
+/* line 214, _base.scss */
+.information {
+  color: #000db5;
+}
+
+/* Links */
+/* line 218, _base.scss */
+a {
+  text-decoration: none;
+  outline: 0;
+}
+/* line 221, _base.scss */
+a:hover, a:focus {
+  color: #5B8FA8;
+}
+/* line 224, _base.scss */
+a.social {
+  color: #767676;
+}
+
+/* Completely remove from the flow but leave available to screen readers. */
+/* line 230, _base.scss */
+.is-vishidden {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/*
+ * Alerts
+ * --------------------------------------------------
+ */
+/* line 244, _base.scss */
+.alert {
+  text-align: center;
+  padding: 1em;
+  margin-bottom: 0.5em;
+  border: 1px solid gray;
+  background: #f9f9f9;
+}
+/* line 250, _base.scss */
+.alert p {
+  margin-bottom: 0;
+  display: inline;
+}
+/* line 254, _base.scss */
+.alert.rich-text {
+  display: inline;
+}
+
+/* line 259, _base.scss */
+.alert-error {
+  color: red;
+  border-color: red;
+  background: #ffbebe;
+}
+
+/* line 265, _base.scss */
+.alert-high {
+  text-align: center;
+  font-size: 1em;
+  padding: 0.5em;
+  margin-bottom: 0em;
+  border-radius: 0;
+  color: #fff;
+  background-color: #642822;
+}
+/* line 273, _base.scss */
+.alert-high a {
+  color: #f9f9f9;
+  text-decoration: underline;
+}
+
+/* line 279, _base.scss */
+.alert-low, .alert-info {
+  text-align: center;
+  font-size: 1.1em;
+  padding: 1em;
+  margin-bottom: 0em;
+  border: 0;
+  color: #31708f;
+  background-color: #d9edf7;
+  border-bottom: 2px solid #31708f;
+}
+/* line 288, _base.scss */
+.alert-low a, .alert-info a {
+  color: #31708f;
+  text-decoration: underline;
+}
+
+/* line 294, _base.scss */
+.alert-info {
+  font-size: 0.9em;
+  padding: 0.5em;
+  border-bottom: none;
+  border-radius: 0;
+}
+/* line 300, _base.scss */
+.alert-info .close {
+  opacity: .4;
+}
+@media (min-width: 48em) {
+  /* line 294, _base.scss */
+  .alert-info {
+    padding: 0.5em 3em;
+  }
+}
+
+/*
+ * Content
+ * --------------------------------------------------
+ */
+/* line 37, uclib.scss */
+.breadcrumbs {
+  padding-top: 5px;
+  padding-left: 20px;
+  font-size: 85%;
+}
+
+/* line 43, uclib.scss */
+.body-container {
+  padding: 30px;
+  max-width: 2000px;
+}
+@media (min-width: 62em) {
+  /* line 46, uclib.scss */
+  .sidebar ~ .body-container {
+    padding-left: 45px;
+  }
+}
+
+/* line 54, uclib.scss */
+body.staffpublicpage h1 {
+  border-bottom: none;
+}
+/* line 56, uclib.scss */
+body.staffpublicpage h1 ~ h2 {
+  border-bottom: 1px solid #D6D6CE;
+  margin-top: 0px;
+  padding-bottom: 5px;
+  font-weight: 400;
+}
+
+/* line 65, uclib.scss */
+.nopadding {
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* line 72, uclib.scss */
+.centermain {
+  padding: 0;
+}
+@media (min-width: 48em) {
+  /* line 72, uclib.scss */
+  .centermain {
+    padding: 0 30px 0 15px;
+  }
+}
+@media (min-width: 75em) {
+  /* line 72, uclib.scss */
+  .centermain {
+    max-width: 1200px;
+  }
+}
+
+/* line 82, uclib.scss */
+.distinct-rightside, .ask-rightside, .rightside.coll-rightside, .coll-rightside.flex-sidebar {
+  background-color: #eeefe5;
+  margin: 10px 0;
+  padding: 15px 20px;
+}
+/* line 86, uclib.scss */
+.distinct-rightside ul, .ask-rightside ul, .rightside.coll-rightside ul, .coll-rightside.flex-sidebar ul {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+/* line 90, uclib.scss */
+.distinct-rightside li, .ask-rightside li, .rightside.coll-rightside li, .coll-rightside.flex-sidebar li {
+  color: #6d2f6a;
+}
+/* line 93, uclib.scss */
+.distinct-rightside a, .ask-rightside a, .rightside.coll-rightside a, .coll-rightside.flex-sidebar a {
+  color: #6d2f6a;
+}
+/* line 96, uclib.scss */
+.distinct-rightside h3, .ask-rightside h3, .rightside.coll-rightside h3, .coll-rightside.flex-sidebar h3 {
+  margin: 5px 0 10px 0;
+  font-size: 1.05em;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #a0a282;
+}
+@media (min-width: 62em) {
+  /* line 82, uclib.scss */
+  .distinct-rightside, .ask-rightside, .rightside.coll-rightside, .coll-rightside.flex-sidebar {
+    border-top: 0;
+    margin: 0;
+    max-width: 350px;
+  }
+}
+@media (min-width: 75em) {
+  /* line 82, uclib.scss */
+  .distinct-rightside, .ask-rightside, .rightside.coll-rightside, .coll-rightside.flex-sidebar {
+    max-width: 30em;
+  }
+}
+
+/* line 112, uclib.scss */
+.h1-banner, #p-3378 h1:not(.searchbox-header) {
+  position: absolute;
+  right: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* line 121, uclib.scss */
+.h1-banner .breadcrumbs, #p-3378 .breadcrumbs {
+  visibility: hidden;
+}
+
+/* line 126, uclib.scss */
+.search-results ul {
+  list-style: none;
+  padding-left: 0;
+}
+/* line 130, uclib.scss */
+.search-results h4, .search-results h4 a {
+  margin: 20px 0 0 0;
+}
+/* line 132, uclib.scss */
+.search-results h4 a {
+  text-decoration: underline;
+}
+/* line 137, uclib.scss */
+.search-results p {
+  color: #767676;
+  margin-bottom: 2px;
+  font-style: italic;
+}
+
+/*
+ * Text
+ * --------------------------------------------------
+ */
+/* line 149, uclib.scss */
+#footnotes {
+  font-family: 'ProximaNova-Light';
+  font-size: 0.8em;
+}
+
+/* line 154, uclib.scss */
+blockquote {
+  margin: 0 50px;
+  padding: 0;
+  text-indent: -2em;
+  quotes: "\201C""\201D""\2018""\2019";
+  line-height: 2.2em;
+  border-left: 0px;
+}
+/* line 161, uclib.scss */
+blockquote:before {
+  color: #767676;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.1em;
+  vertical-align: -0.4em;
+}
+/* line 169, uclib.scss */
+blockquote:after {
+  color: #767676;
+  content: close-quote;
+  font-size: 4em;
+  line-height: 0.5em;
+  margin-left: 0.1em;
+  vertical-align: -0.4em;
+}
+/* line 177, uclib.scss */
+blockquote p {
+  display: inline;
+}
+
+/* line 182, uclib.scss */
+.citation {
+  color: #767676;
+  font-size: .9em;
+  margin: 0 0 2em 4em;
+}
+
+/* line 188, uclib.scss */
+.intro {
+  font-size: 1.0625em;
+  font-family: 'ProximaNova-Light';
+}
+
+/* line 192, uclib.scss */
+.pullquote {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 1.4375em;
+}
+
+/* line 196, uclib.scss */
+p q {
+  quotes: "\201C""\201D""\2018""\2019";
+}
+/* line 198, uclib.scss */
+p q:before {
+  content: open-quote;
+  font-size: 1.2em;
+}
+/* line 202, uclib.scss */
+p q:after {
+  content: close-quote;
+  font-size: 1.2em;
+}
+
+/*
+ * Images, Video, and other Media
+ * --------------------------------------------------
+ */
+/* line 219, uclib.scss */
+.block-video > div {
+  padding-bottom: 20px!important;
+}
+
+/* line 224, uclib.scss */
+img.richtext-image.left {
+  float: left;
+  margin: 0 1.2em 0.7em 0;
+}
+@media (min-width: 48em) {
+  /* line 224, uclib.scss */
+  img.richtext-image.left {
+    margin: 0 1.5em 0.7em 0;
+  }
+}
+/* line 231, uclib.scss */
+img.richtext-image.right {
+  float: right;
+  margin: 0 0 0.7em 1.2em;
+}
+@media (min-width: 48em) {
+  /* line 231, uclib.scss */
+  img.richtext-image.right {
+    margin: 0 0 0.7em 1.5em;
+  }
+}
+/* line 238, uclib.scss */
+img.richtext-image.full-width {
+  width: 100%;
+  height: auto;
+  margin: 1em 0;
+}
+
+/* line 245, uclib.scss */
+figure.imgcaption {
+  max-width: 100%;
+  background: #d2cdcc;
+  padding: 0;
+}
+/* line 249, uclib.scss */
+figure.imgcaption.pull-left {
+  margin: 10px 20px 10px 0;
+}
+/* line 252, uclib.scss */
+figure.imgcaption.pull-right {
+  margin: 10px 0 10px 20px;
+}
+/* line 255, uclib.scss */
+figure.imgcaption figcaption {
+  padding: 0.7em 1em;
+  font-size: 0.8em;
+  color: #525252;
+}
+
+/* line 262, uclib.scss */
+span.img-title {
+  font-style: italic;
+  font-size: 1.1em;
+}
+
+/* line 267, uclib.scss */
+span.img-caption {
+  font-size: 1.1em;
+  padding-top: 10px;
+  display: block;
+}
+
+/* line 273, uclib.scss */
+a.img-src {
+  font-size: 0.8em;
+}
+
+/* line 277, uclib.scss */
+.imgcaption .fullwidth {
+  display: inline-block;
+  margin: 15px 0;
+}
+
+/*
+ * Right Sidebar
+ * --------------------------------------------------
+ */
+/* line 287, uclib.scss */
+.rightside, .flex-sidebar {
+  border-top: 1px dotted #767676;
+  border-left: 0;
+  margin: 10px 0;
+  padding: 20px 15px 0px 15px;
+}
+/* line 292, uclib.scss */
+.rightside li, .flex-sidebar li {
+  color: #767676;
+}
+/* line 295, uclib.scss */
+.rightside a, .flex-sidebar a {
+  color: #725663;
+}
+/* line 298, uclib.scss */
+.rightside h3, .flex-sidebar h3, .rightside h4, .flex-sidebar h4, .rightside .search-results h4 a, .search-results h4 .rightside a, .flex-sidebar .search-results h4 a, .search-results h4 .flex-sidebar a {
+  font-weight: 400;
+  margin: 5px 0 10px 0;
+  padding-bottom: 5px;
+  color: #6d2f6a;
+  font-style: normal;
+  border-bottom: 2px solid #6d2f6a;
+}
+/* line 305, uclib.scss */
+.rightside h3:first-child, .flex-sidebar h3:first-child, .rightside h4:first-child, .flex-sidebar h4:first-child, .rightside .search-results h4 a:first-child, .search-results h4 .rightside a:first-child, .flex-sidebar .search-results h4 a:first-child, .search-results h4 .flex-sidebar a:first-child {
+  margin-top: 5px;
+}
+@media (min-width: 48em) {
+  /* line 287, uclib.scss */
+  .rightside, .flex-sidebar {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 62em) {
+  /* line 287, uclib.scss */
+  .rightside, .flex-sidebar {
+    border-left: 1px dotted #767676;
+    border-top: 0;
+    margin: 0;
+    padding: 0 15px;
+  }
+}
+@media (min-width: 75em) {
+  /* line 287, uclib.scss */
+  .rightside, .flex-sidebar {
+    max-width: 30em;
+  }
+}
+/* line 322, uclib.scss */
+.rightside .btn-morelink, .flex-sidebar .btn-morelink, .rightside .btn-primary, .flex-sidebar .btn-primary, .rightside .btn-morecoll, .flex-sidebar .btn-morecoll {
+  margin-bottom: 10px;
+}
+
+/* line 327, uclib.scss */
+.call-out {
+  color: #fff;
+  padding: 15px!important;
+  margin-bottom: 15px;
+  background-color: maroon;
+}
+/* line 332, uclib.scss */
+.call-out h3, .call-out h4, .call-out .search-results h4 a, .search-results h4 .call-out a {
+  color: #fff;
+  border: none;
+}
+/* line 336, uclib.scss */
+.call-out a {
+  color: #fff;
+}
+
+/*
+ * Homepage Modules / Widgets
+ * --------------------------------------------------
+ */
+/* line 347, uclib.scss */
+.home-modwrapper {
+  padding-top: 20px;
+  margin: 10px 0;
+}
+/* line 350, uclib.scss */
+.home-modwrapper h2 {
+  display: inline;
+  font-size: 1.2em;
+  color: maroon;
+}
+/* line 355, uclib.scss */
+.home-modwrapper h3 {
+  font-size: 1em;
+  font-weight: 600;
+  color: #767676;
+  margin: 0 0 5px 0;
+}
+@media (min-width: 48em) {
+  /* line 347, uclib.scss */
+  .home-modwrapper {
+    padding-top: 0;
+  }
+}
+/* line 364, uclib.scss */
+.home-modwrapper ul:last-child {
+  margin-bottom: 0;
+}
+
+/* line 369, uclib.scss */
+.home-module {
+  border-bottom: 1px solid #767676;
+  padding: 0px 0px 10px 15px;
+  margin-bottom: 15px;
+}
+/* line 373, uclib.scss */
+.home-module a {
+  color: #767676;
+  display: inline;
+}
+/* line 376, uclib.scss */
+.home-module a.viewall:before {
+  content: "\0020|\0020";
+  margin: 0 0.5em;
+}
+/* line 380, uclib.scss */
+.home-module a:hover {
+  text-decoration: none;
+}
+
+/* line 386, uclib.scss */
+.rightside ul, .flex-sidebar ul, .home-modwrapper ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* line 392, uclib.scss */
+.rightside-mod {
+  padding: 0 0 2em 0;
+}
+@media (min-width: 48em) {
+  /* line 392, uclib.scss */
+  .rightside-mod {
+    padding: 0 1em 2em 1em;
+  }
+}
+@media (min-width: 62em) {
+  /* line 392, uclib.scss */
+  .rightside-mod {
+    padding: 0 0 2em 0;
+  }
+}
+
+/* line 403, uclib.scss */
+a.viewall:after {
+  content: "\0020\f101";
+  font-family: FontAwesome;
+}
+
+/* line 409, uclib.scss */
+.btn-morelink, .btn-primary, .btn-morecoll {
+  font-size: 0.9em;
+  color: #0f425c;
+  background: #f0eeef;
+  border: 1px solid #d6d6ce;
+  border-radius: 0;
+  padding: 6px 12px;
+  margin-bottom: 10px;
+}
+/* line 417, uclib.scss */
+.btn-morelink:after, .btn-primary:after, .btn-morecoll:after {
+  content: "\0020\f101";
+  font-family: FontAwesome;
+}
+/* line 421, uclib.scss */
+.btn-morelink:hover, .btn-primary:hover, .btn-morecoll:hover {
+  background: #d8b9b7;
+  color: maroon;
+}
+
+/* line 428, uclib.scss */
+.studymod p {
+  text-align: center;
+}
+/* line 431, uclib.scss */
+.studymod a {
+  color: #350e20;
+}
+/* line 434, uclib.scss */
+.studymod a:hover {
+  text-decoration: none;
+}
+/* line 437, uclib.scss */
+.studymod .material-icons, .studymod a.material-icons {
+  color: #350e20;
+  vertical-align: middle;
+  font-size: 2em;
+}
+/* line 442, uclib.scss */
+.studymod .fa, .studymod a.fa {
+  color: #350e20;
+  font-size: 1.5em;
+  padding-top: 10px;
+  padding-bottom: 7px;
+}
+
+/* line 450, uclib.scss */
+.home-profile {
+  padding: 0;
+  max-width: 110px;
+}
+
+/*
+ * Workshops & Events Homepage Module
+ * --------------------------------------------------
+ */
+/* line 461, uclib.scss */
+.dates-bar {
+  margin-bottom: 10px;
+}
+/* line 463, uclib.scss */
+.dates-bar a.active {
+  color: #fff;
+  background-color: #725663;
+}
+/* line 466, uclib.scss */
+.dates-bar a.active .date, .dates-bar a.active .month {
+  color: #fff;
+}
+
+/* line 472, uclib.scss */
+a#event-header {
+  color: #000;
+  font-weight: 100;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* line 480, uclib.scss */
+.event-date {
+  color: #616530;
+  font-weight: 600;
+}
+
+/* line 485, uclib.scss */
+.btn-register {
+  color: #8a9045;
+  background-color: transparent;
+  padding: 5px 0 0 0!important;
+  font-weight: 600;
+  margin: 0;
+}
+/* line 491, uclib.scss */
+.btn-register:after {
+  content: "\f274";
+  font-family: FontAwesome;
+  font-size: 1em;
+  line-height: 0.1em;
+  margin-left: 0.5em;
+}
+/* line 498, uclib.scss */
+.btn-register:hover {
+  color: #725663;
+}
+
+/*
+ * Carousel
+ * --------------------------------------------------
+ */
+/* line 508, uclib.scss */
+.carousel {
+  margin-bottom: 20px;
+}
+
+/* line 512, uclib.scss */
+.carousel-inner > .item > a > img, .carousel-inner > .item > img, .img-responsive, .thumbnail a > img, .thumbnail > img {
+  width: 100%;
+}
+
+/* line 516, uclib.scss */
+.carousel-caption {
+  padding-top: 0;
+  text-shadow: 1px 1px 30px black;
+  font-size: 0.7em;
+  z-index: 5;
+}
+@media (min-width: 48em) {
+  /* line 516, uclib.scss */
+  .carousel-caption {
+    font-size: 1em;
+  }
+}
+/* line 525, uclib.scss */
+.carousel-caption a {
+  color: #fff;
+  line-height: 2.3em;
+}
+/* line 528, uclib.scss */
+.carousel-caption a:hover {
+  color: #767676;
+  text-decoration: none;
+}
+
+/*
+ * News Homepage Module
+ * --------------------------------------------------
+ */
+/* line 540, uclib.scss */
+.news-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* line 545, uclib.scss */
+.newsblock {
+  padding: 0 5px;
+}
+/* line 547, uclib.scss */
+.newsblock h3 {
+  color: #7b4943;
+  font-style: normal;
+}
+/* line 551, uclib.scss */
+.newsblock p {
+  clear: both;
+  padding: 0 15px 0 0;
+}
+
+/* line 557, uclib.scss */
+figure.embed {
+  width: 98%;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  font-size: 0.9em;
+  background: transparent;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 568, uclib.scss */
+.newsblock figure.embed {
+  clear: both;
+}
+/* line 571, uclib.scss */
+figure.embed img {
+  object-fit: cover;
+  min-width: 100%;
+  min-height: auto;
+  height: 125px;
+  width: 200px;
+  display: block;
+  width: auto\9;
+  -ms-interpolation-mode: bicubic;
+}
+/* line 581, uclib.scss */
+figure.embed figcaption {
+  width: 100%;
+  padding: 0.5em;
+  background: rgba(50, 50, 50, 0.7);
+  color: #fff;
+  position: absolute;
+  bottom: 0px;
+}
+/* line 588, uclib.scss */
+figure.embed figcaption.exhibitdate {
+  position: absolute !important;
+  bottom: 30px;
+}
+/* line 592, uclib.scss */
+figure.embed figcaption.exhibits {
+  background: #25190f;
+}
+/* line 595, uclib.scss */
+figure.embed figcaption.spaces {
+  background: #656d33;
+}
+/* line 598, uclib.scss */
+figure.embed figcaption.people {
+  background: #995324;
+}
+/* line 601, uclib.scss */
+figure.embed figcaption.research {
+  background: #15435f;
+}
+/* line 604, uclib.scss */
+figure.embed figcaption.resources {
+  background: #464833;
+}
+/* line 607, uclib.scss */
+figure.embed figcaption.teaching {
+  background: #155f83;
+}
+/* line 610, uclib.scss */
+figure.embed figcaption.events {
+  background: #725663;
+}
+/* line 613, uclib.scss */
+figure.embed figcaption.hours-access {
+  background: maroon;
+}
+/* line 616, uclib.scss */
+figure.embed figcaption.spotlight {
+  background: #c68220;
+}
+/* line 619, uclib.scss */
+figure.embed figcaption.from-the-director {
+  background: #8f3931;
+}
+/* line 622, uclib.scss */
+.newsblock figure.embed figcaption {
+  position: inherit;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+/* line 630, uclib.scss */
+.figure-wrap {
+  height: 125px;
+  overflow: hidden;
+}
+
+/*
+ * Forms
+ * --------------------------------------------------
+ */
+/* line 640, uclib.scss */
+form ol, form ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+/* line 644, uclib.scss */
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 649, uclib.scss */
+label {
+  display: block;
+  padding-bottom: 0.5em;
+}
+
+/* line 653, uclib.scss */
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0 1px 0;
+}
+
+/* line 658, uclib.scss */
+input, textarea {
+  border: 1px solid gray;
+}
+
+/* line 661, uclib.scss */
+input[type=text], input[type=search], input[type=url], input[type=number], textarea {
+  -webkit-appearance: none;
+}
+
+/* line 664, uclib.scss */
+button, input[type="submit"] {
+  padding: 0.5em;
+  color: #fff;
+  background: #800000;
+  border: none;
+  cursor: pointer;
+}
+
+/* line 672, uclib.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: 0.3em;
+}
+
+/* line 676, uclib.scss */
+input[type="search"] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/* line 681, uclib.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 684, uclib.scss */
+.field-container {
+  margin-bottom: 1em;
+}
+
+/* line 687, uclib.scss */
+.inline-form fieldset, .inline-form .inline-container {
+  position: relative;
+}
+
+/* line 689, uclib.scss */
+.inline-form input[type=submit], .inline-form button, .inline-form .btn {
+  font-size: 0.875em;
+  padding: 0.65rem 1.3rem;
+  background: #767676;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: auto;
+}
+
+/* line 698, uclib.scss */
+.inline-form input[type=submit]:hover, .inline-form input[type=submit]:focus, .inline-form button:hover, .inline-form button:focus, .inline-form .btn:hover, .inline-form .btn:focus {
+  background: gray;
+  color: white;
+}
+
+/* Validation */
+/* line 703, uclib.scss */
+.has-error {
+  border-color: red;
+}
+
+/* line 706, uclib.scss */
+.is-valid {
+  border-color: #089e00;
+}
+
+/* line 710, uclib.scss */
+form#knowledgetracker input#submit {
+  padding: 0.5em 1.5em;
+}
+/* line 713, uclib.scss */
+form#knowledgetracker input[type="reset"] {
+  display: none;
+}
+
+/* line 718, uclib.scss */
+.extract {
+  background-color: #eeefe5;
+  margin: 20px 50px;
+  padding: 5px 30px;
+  border-left: 3px solid #ccc;
+  border-right: 3px solid #ccc;
+  box-shadow: 5px 5px 5px #888888;
+}
+
+/*
+ * Buttons
+ * --------------------------------------------------
+ */
+/* line 733, uclib.scss */
+.btn {
+  padding: 10px 14px;
+}
+
+/* line 737, uclib.scss */
+.btn-default {
+  color: #fff;
+  background-color: #767676;
+  padding: 6px 12px;
+  margin-bottom: 10px;
+}
+/* line 742, uclib.scss */
+.btn-default:hover {
+  background: #d6d6ce;
+  color: maroon;
+}
+
+/* line 752, uclib.scss */
+.btn-list-toggle {
+  color: #767676;
+  background-color: #fff;
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  padding: 5px 15px;
+  border-radius: 0;
+}
+/* line 759, uclib.scss */
+.btn-list-toggle.active {
+  border-top: 2px solid maroon;
+  border-bottom: 2px solid maroon;
+  color: maroon;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 766, uclib.scss */
+.btn-list-toggle:hover {
+  border-top: 2px solid #d8b9b7;
+  border-bottom: 2px solid #d8b9b7;
+  color: maroon;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 775, uclib.scss */
+.btn-textonly {
+  color: #767676;
+  background-color: transparent;
+  border: 0;
+  padding: 5px 10px 5px 5px;
+  border-radius: 0;
+  margin-bottom: 0px;
+}
+@media (min-width: 48em) {
+  /* line 775, uclib.scss */
+  .btn-textonly {
+    padding: 5px 10px 5px 10px;
+  }
+}
+
+/* line 787, uclib.scss */
+.open > .dropdown-toggle.btn-textonly:focus, .open > .dropdown-toggle.btn-textonly:hover {
+  background-color: #eeefe5;
+}
+
+/* line 791, uclib.scss */
+.btn-alpha {
+  padding: 20px 0 0 0;
+  text-align: center;
+}
+@media (max-width: 34em) {
+  /* line 791, uclib.scss */
+  .btn-alpha {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+/* line 799, uclib.scss */
+.btn-alpha a {
+  color: #333;
+  font-size: 0.8em;
+  padding: 0.5em 1em;
+  line-height: 3em;
+  border-right: 1px solid #800000;
+}
+/* line 805, uclib.scss */
+.btn-alpha a:last-child {
+  border-right: none;
+}
+@media (max-width: 34em) {
+  /* line 799, uclib.scss */
+  .btn-alpha a {
+    flex: 1;
+    width: 10%;
+  }
+}
+@media (min-width: 62em) {
+  /* line 799, uclib.scss */
+  .btn-alpha a {
+    padding: 0.5em 0.75em;
+  }
+}
+
+/*
+ * Tables 
+ * --------------------------------------------------
+ */
+@media (max-width: 34em) {
+  /* line 824, uclib.scss */
+  table {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 34em) {
+  /* line 830, uclib.scss */
+  table.table-striped, .table-striped > tbody {
+    display: block;
+    width: 100%;
+  }
+  /* line 834, uclib.scss */
+  table.table-striped thead, table.table-striped tr, table.table-striped th, table.table-striped td, .table-striped > tbody thead, .table-striped > tbody tr, .table-striped > tbody th, .table-striped > tbody td {
+    display: block;
+    padding: 0;
+    text-align: left;
+    white-space: normal;
+  }
+  /* line 840, uclib.scss */
+  table.table-striped tr, .table-striped > tbody tr {
+    border-bottom: 1px solid #eee;
+  }
+  /* line 843, uclib.scss */
+  table.table-striped td, .table-striped > tbody td {
+    border: none;
+    margin-bottom: 6px;
+    color: #444;
+  }
+}
+
+/* line 852, uclib.scss */
+.distinct-list a, .scrc-list a, table.ask a, .spacelist a, .coll-list a, .directory-list a {
+  color: #8a4a20;
+}
+/* line 855, uclib.scss */
+.distinct-list .material-icons, .scrc-list .material-icons, table.ask .material-icons, .spacelist .material-icons, .coll-list .material-icons, .directory-list .material-icons, .distinct-list .fa, .scrc-list .fa, table.ask .fa, .spacelist .fa, .coll-list .fa, .directory-list .fa {
+  padding-right: 10px;
+}
+/* line 857, uclib.scss */
+.distinct-list .material-icons.floorplan, .scrc-list .material-icons.floorplan, table.ask .material-icons.floorplan, .spacelist .material-icons.floorplan, .coll-list .material-icons.floorplan, .directory-list .material-icons.floorplan, .distinct-list .fa.floorplan, .scrc-list .fa.floorplan, table.ask .fa.floorplan, .spacelist .fa.floorplan, .coll-list .fa.floorplan, .directory-list .fa.floorplan {
+  font-size: 1.1em;
+  padding-right: 5px;
+}
+/* line 863, uclib.scss */
+.distinct-list > tbody > tr:last-child, .scrc-list > tbody > tr:last-child, table.ask > tbody > tr:last-child, .spacelist > tbody > tr:last-child, .coll-list > tbody > tr:last-child, .directory-list > tbody > tr:last-child {
+  border-bottom: 2px solid #ADB17D;
+}
+@media (min-width: 62em) {
+  /* line 851, uclib.scss */
+  .distinct-list, .scrc-list, table.ask, .spacelist, .coll-list, .directory-list {
+    margin-top: 0;
+  }
+}
+
+/* line 872, uclib.scss */
+tr.etable-header {
+  border-bottom: 2px solid #ADB17D;
+  background-color: #c5c8a4 !important;
+}
+@media (max-width: 34em) {
+  /* line 872, uclib.scss */
+  tr.etable-header {
+    display: inline-block;
+    width: inherit;
+  }
+}
+
+/* line 881, uclib.scss */
+table.etable > thead > tr > th {
+  border-bottom: 0;
+}
+
+/* line 885, uclib.scss */
+table.etable thead {
+  text-indent: -999em;
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+/* line 898, uclib.scss */
+table.etable > tbody > tr:last-child {
+  border-bottom: 2px solid #ADB17D;
+}
+/* line 901, uclib.scss */
+table.etable > tbody > tr > td:last-child {
+  vertical-align: middle;
+  white-space: nowrap;
+}
+@media (min-width: 62em) {
+  /* line 901, uclib.scss */
+  table.etable > tbody > tr > td:last-child {
+    padding-right: 10px;
+  }
+}
+@media (min-width: 75em) {
+  /* line 901, uclib.scss */
+  table.etable > tbody > tr > td:last-child {
+    padding-right: 10px;
+  }
+}
+
+/* line 913, uclib.scss */
+.quicktable {
+  margin: 10px 0 0;
+}
+/* line 917, uclib.scss */
+.quicktable > tbody > tr > td:first-child {
+  color: maroon;
+  font-weight: 600;
+}
+
+/* line 924, uclib.scss */
+.headline {
+  color: maroon;
+  font-weight: 600;
+}
+
+/* line 929, uclib.scss */
+.scrc-list {
+  margin-top: 1em;
+}
+@media (min-width: 48em) {
+  /* line 933, uclib.scss */
+  .scrc-list > tbody > tr > td:first-child {
+    width: 30%;
+    padding: 15px 30px;
+  }
+  /* line 937, uclib.scss */
+  .scrc-list > tbody > tr > td:nth-child(2) {
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 48em) {
+  /* line 945, uclib.scss */
+  #p-3765 .table {
+    width: 25em;
+  }
+}
+@media (min-width: 48em) {
+  /* line 949, uclib.scss */
+  #p-3765 .table > tbody > tr > td {
+    width: 50%;
+  }
+}
+
+@media (min-width: 48em) {
+  /* line 956, uclib.scss */
+  #p-3765 .table > tbody > tr > td:first-child, #p-3765 .table > thead > tr > th:first-child {
+    padding-right: 3em;
+    text-align: right;
+  }
+}
+
+/*
+ * Mini Search (For Browse / Lists / Tables)
+ * --------------------------------------------------
+ */
+/* line 968, uclib.scss */
+.searchbox {
+  position: relative;
+  min-width: 30px;
+  margin: 5px 0 10px 0;
+  width: 100%;
+  height: 30px;
+  float: right;
+}
+@media (min-width: 48em) {
+  /* line 968, uclib.scss */
+  .searchbox {
+    margin: 15px 0 10px 0;
+  }
+}
+
+/* line 980, uclib.scss */
+.searchbox-input {
+  top: 0;
+  right: 0;
+  border: 0;
+  outline: 0;
+  background: #dcddd8;
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  padding: 0px 55px 0px 20px;
+  font-size: 1em;
+  color: maroon;
+}
+
+/* line 996, uclib.scss */
+.searchbox-icon,
+.searchbox-submit,
+.searchbox > input[type="submit"] {
+  content: "\f002";
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  top: 0;
+  font-family: verdana;
+  font-size: 1em;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  color: #ddd;
+  background: maroon;
+}
+
+/* line 1017, uclib.scss */
+.byline {
+  position: absolute;
+  top: 150px;
+  left: 30%;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* line 1024, uclib.scss */
+.byline a {
+  text-decoration: none;
+  color: maroon;
+}
+
+/* line 1029, uclib.scss */
+.distinct-search {
+  padding: 15px 30px;
+  background-color: rgba(210, 205, 204, 0.5);
+  border-top: 3px solid #D6D6CE;
+}
+/* line 1033, uclib.scss */
+.distinct-search input.searchbox-input {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+@media (max-width: 34em) {
+  /* line 1029, uclib.scss */
+  .distinct-search {
+    max-width: 90%;
+    margin: 0 15px;
+  }
+}
+
+/*
+ * Lightbox Styling
+ * --------------------------------------------------
+ */
+/* line 1049, uclib.scss */
+.modal-content {
+  -webkit-box-shadow: 0 5px 35px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.8);
+}
+
+/* line 1054, uclib.scss */
+.modal-header {
+  padding: 15px 20px 0px 15px;
+  border-bottom: none;
+}
+/* line 1057, uclib.scss */
+.modal-header > .close {
+  font-size: 2em;
+  opacity: .6;
+}
+/* line 1060, uclib.scss */
+.modal-header > .close:hover {
+  opacity: .5;
+}
+
+/*
+ *  Index List Page
+ * --------------------------------------------------
+ */
+/* line 1071, uclib.scss */
+ul.index-list {
+  list-style: none;
+}
+/* line 1073, uclib.scss */
+ul.index-list > li {
+  margin: 1em 0;
+  padding-left: 0;
+}
+/* line 1076, uclib.scss */
+ul.index-list > li a {
+  font-weight: 600;
+  color: #9a5324;
+}
+/* line 1080, uclib.scss */
+ul.index-list > li > ul.index-list > li {
+  margin: 5px 0;
+  padding-left: 0;
+}
+/* line 1083, uclib.scss */
+ul.index-list > li > ul.index-list > li a {
+  font-weight: 400;
+  color: #767676;
+}
+/* line 1088, uclib.scss */
+ul.index-list > li > ul.index-list > li > ul.index-list > li a {
+  font-weight: 300;
+  color: #616530;
+}
+/* line 1093, uclib.scss */
+ul.index-list > li > ul.index-list > li > ul.index-list > li > ul.index-list > li a {
+  font-weight: 300;
+  color: #767676;
+  font-style: italic;
+}
+
+/*
+ * Ask A Librarian Pages
+ * --------------------------------------------------
+ */
+/* line 1111, uclib.scss */
+.libraryh3lp iframe {
+  width: 100%;
+  height: 400px;
+  border: 0px;
+}
+@media (min-width: 48em) {
+  /* line 1111, uclib.scss */
+  .libraryh3lp iframe {
+    width: 80%;
+  }
+}
+
+/* line 1121, uclib.scss */
+.ask-rightside {
+  background-color: #fff;
+}
+@media (min-width: 62em) {
+  /* line 1121, uclib.scss */
+  .ask-rightside {
+    background-color: #e7eef2;
+    border: none;
+    margin-top: 10px;
+  }
+}
+/* line 1129, uclib.scss */
+.ask-rightside ul {
+  text-indent: 0;
+  margin-left: 0;
+  padding-left: 5px;
+}
+/* line 1134, uclib.scss */
+.ask-rightside i {
+  font-size: 1.5em;
+  margin: 0.3em 0;
+}
+/* line 1138, uclib.scss */
+.ask-rightside hr {
+  border-top: 1px solid #6d2f6a;
+}
+
+/* line 1145, uclib.scss */
+table.ask a {
+  color: #6d2f6a;
+}
+/* line 1148, uclib.scss */
+table.ask > tbody > tr > td {
+  line-height: 1.8em;
+}
+/* line 1150, uclib.scss */
+table.ask > tbody > tr > td:last-child {
+  text-align: center;
+}
+
+/* line 1156, uclib.scss */
+a.btn-ask {
+  color: #fff!important;
+  background-color: #767676;
+  border-right: 0px;
+  padding: 10px 20px;
+  margin: 10px 0;
+}
+/* line 1162, uclib.scss */
+a.btn-ask:before {
+  content: "\f0e5";
+  font-family: FontAwesome;
+  font-size: 1.2em;
+  margin-right: 0.5em;
+}
+/* line 1168, uclib.scss */
+a.btn-ask:after {
+  content: "Chat Offline";
+}
+/* line 1171, uclib.scss */
+a.btn-ask.active {
+  background-color: #8a9045;
+}
+/* line 1173, uclib.scss */
+a.btn-ask.active:hover {
+  background-color: #616530;
+}
+/* line 1176, uclib.scss */
+a.btn-ask.active:before {
+  content: "\f075";
+}
+/* line 1179, uclib.scss */
+a.btn-ask.active:after {
+  content: "Chat Now";
+}
+/* line 1183, uclib.scss */
+a.btn-ask:hover {
+  background-color: #7b4943;
+}
+
+/*
+ * Hours (Mods to LibCal Feed)
+ * --------------------------------------------------
+ */
+/* line 1193, uclib.scss */
+.s-lc-whw {
+  width: 100%;
+  margin-bottom: 20px;
+  max-width: 100%;
+  background-color: transparent;
+  border-bottom: none;
+  border-left: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* line 1202, uclib.scss */
+.s-lc-whw thead {
+  background-color: #c5c8a4;
+  color: #000;
+}
+/* line 1205, uclib.scss */
+.s-lc-whw thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #ADB17D;
+  padding: 5px;
+}
+/* line 1211, uclib.scss */
+.s-lc-whw th {
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+}
+/* line 1222, uclib.scss */
+.s-lc-whw > tbody > tr > td {
+  padding: 5px;
+}
+@media (min-width: 48em) {
+  /* line 1224, uclib.scss */
+  .s-lc-whw > tbody > tr > td:first-child {
+    border-right: 1px solid #c5c8a4;
+  }
+}
+@media (min-width: 62em) {
+  /* line 1224, uclib.scss */
+  .s-lc-whw > tbody > tr > td:first-child {
+    min-width: 150px;
+  }
+}
+/* line 1233, uclib.scss */
+.s-lc-whw > tbody > tr:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+/* line 1236, uclib.scss */
+.s-lc-whw > tbody > tr:last-child {
+  border-bottom: 2px solid #ADB17D;
+}
+
+/* line 1242, uclib.scss */
+.s-lc-whw-head-date {
+  color: #767676;
+  font-style: italic;
+}
+
+/* line 1247, uclib.scss */
+.s-lc-whw-today-h {
+  background-color: #ADB17D;
+}
+
+/* line 1251, uclib.scss */
+.s-lc-whw-today {
+  background-color: #edeee3;
+}
+
+/* line 1255, uclib.scss */
+.s-lc-whw-locname {
+  font-weight: bold;
+}
+
+/* line 1259, uclib.scss */
+.s-lc-whw-sublocname {
+  padding-left: 10px!important;
+}
+
+/* line 1263, uclib.scss */
+.s-lc-whw-footnote {
+  color: #555;
+  font-size: 80%;
+}
+/* line 1266, uclib.scss */
+.s-lc-whw-footnote td:hover {
+  background-color: #fff!important;
+}
+
+/* line 1271, uclib.scss */
+.s-lc-whw-pr, .s-lc-whw-ne {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+/* line 1290, uclib.scss */
+.s-lc-whw-pr:disabled, .s-lc-whw-ne:disabled {
+  background-color: #efefef;
+}
+
+/* line 1295, uclib.scss */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* line 1306, uclib.scss */
+.hours-today tr {
+  border-bottom: 1px solid #b8aab1;
+}
+/* line 1308, uclib.scss */
+.hours-today tr td {
+  width: 100%;
+  display: list-item;
+  list-style: none;
+}
+/* line 1312, uclib.scss */
+.hours-today tr td:first-child {
+  color: #725663;
+  padding: 5px 0 3px 0;
+}
+/* line 1316, uclib.scss */
+.hours-today tr td:last-child {
+  padding: 0 0 5px 0;
+}
+
+/* line 1323, uclib.scss */
+.s-lc-whw-cont > .table-responsive > table > tbody > tr > td {
+  white-space: normal;
+}
+@media (max-width: 34em) {
+  /* line 1323, uclib.scss */
+  .s-lc-whw-cont > .table-responsive > table > tbody > tr > td {
+    white-space: normal;
+    width: 10%;
+    max-width: 100px;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #ddd;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+@media (min-width: 62em) {
+  /* line 1322, uclib.scss */
+  .s-lc-whw-cont > .table-responsive {
+    border: 0;
+  }
+}
+
+/* line 1350, uclib.scss */
+.s-lc-whw > thead > tr > th, .s-lc-whw > tbody > tr > th {
+  display: table-cell;
+}
+
+/* line 1354, uclib.scss */
+th.s-lc-whw-bh {
+  text-align: left;
+  white-space: nowrap;
+}
+@media (max-width: 34em) {
+  /* line 1354, uclib.scss */
+  th.s-lc-whw-bh {
+    background-color: #ADB17D;
+  }
+}
+
+/*
+ * Agenda (Conferences)
+ * --------------------------------------------------
+ */
+/* line 1372, uclib.scss */
+.agenda {
+  padding: 0;
+}
+
+/* line 1376, uclib.scss */
+.agenda-header {
+  color: #000;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+/* line 1382, uclib.scss */
+.end-time {
+  padding-right: 10px;
+}
+/* line 1384, uclib.scss */
+.end-time:before {
+  content: "\2013\0020";
+}
+
+/* line 1389, uclib.scss */
+.agenda-body {
+  padding: 0;
+}
+/* line 1391, uclib.scss */
+.agenda-body > .row {
+  padding-top: 10px;
+}
+
+/* line 1396, uclib.scss */
+.location {
+  padding: 0;
+  color: #767676;
+  font-size: 1.1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* line 1404, uclib.scss */
+.session-title {
+  padding-left: 15px;
+}
+@media (min-width: 48em) {
+  /* line 1404, uclib.scss */
+  .session-title {
+    padding-left: 0;
+    margin-left: -10px;
+  }
+}
+
+/* line 1413, uclib.scss */
+.session-subtitle {
+  color: #767676;
+  font-size: 1.1em;
+  font-weight: 600;
+  padding-right: 20px;
+}
+
+/* line 1420, uclib.scss */
+.agenda-body {
+  padding-left: 2.2em;
+}
+@media (min-width: 48em) {
+  /* line 1420, uclib.scss */
+  .agenda-body {
+    padding-left: 0;
+  }
+}
+
+/* line 1427, uclib.scss */
+.agenda-presenters {
+  color: #635D5A;
+  font-size: 1em;
+  font-weight: 600;
+  padding-right: 20px;
+}
+
+/*
+ * Event Calendar List
+ * --------------------------------------------------
+ */
+/* line 1440, uclib.scss */
+td.time, td.event-nav {
+  white-space: nowrap;
+}
+
+/* line 1444, uclib.scss */
+.event-nav {
+  padding-bottom: 15px;
+}
+@media (min-width: 48em) {
+  /* line 1444, uclib.scss */
+  .event-nav {
+    text-align: right;
+  }
+}
+/* line 1449, uclib.scss */
+.event-nav a {
+  color: #767676;
+}
+
+/*
+ * Spaces
+ * --------------------------------------------------
+ */
+/* line 1460, uclib.scss */
+.featured {
+  color: #3e3e23;
+  font-size: 1.1em;
+}
+/* line 1463, uclib.scss */
+.featured a {
+  color: #616530;
+}
+/* line 1466, uclib.scss */
+.featured .material-icons, .featured .fa {
+  padding: 0 3px 0 15px;
+  font-size: 1.2em;
+  color: #8a9045;
+}
+/* line 1470, uclib.scss */
+.featured .material-icons a, .featured .fa a {
+  color: #8a9045;
+}
+
+/* line 1476, uclib.scss */
+.spaces-dropdown {
+  padding-top: 15px;
+}
+
+/* line 1480, uclib.scss */
+.spaces-toggle {
+  padding: 15px 0;
+}
+
+/* line 1484, uclib.scss */
+.img-spaces {
+  padding: 0 10px 0 0;
+}
+/* line 1486, uclib.scss */
+.img-spaces img {
+  margin-bottom: 15px;
+}
+
+@media (min-width: 48em) {
+  /* line 1495, uclib.scss */
+  .spacelist > tbody > tr > td:nth-child(2), .spacelist > tbody > tr > td:nth-child(3) {
+    width: 25%;
+  }
+  /* line 1498, uclib.scss */
+  .spacelist > tbody > tr > td:last-child {
+    padding-right: 15px;
+  }
+}
+/* line 1503, uclib.scss */
+.spacelist img {
+  max-width: 150px;
+}
+@media (min-width: 48em) {
+  /* line 1503, uclib.scss */
+  .spacelist img {
+    max-width: 100px;
+  }
+}
+@media (min-width: 62em) {
+  /* line 1503, uclib.scss */
+  .spacelist img {
+    max-width: 200px;
+  }
+}
+
+/* line 1514, uclib.scss */
+.space-computers {
+  font-weight: 600;
+  color: #616530;
+  line-height: 3em;
+}
+
+/* line 1520, uclib.scss */
+.features-list {
+  line-height: 2em;
+  list-style: none;
+}
+
+/* line 1525, uclib.scss */
+.locations-list {
+  border-bottom: 1px solid #b8aab1;
+}
+/* line 1527, uclib.scss */
+.locations-list > div {
+  padding: 0 1em 0 0;
+}
+/* line 1530, uclib.scss */
+.locations-list img {
+  margin-bottom: 1em;
+}
+
+/* line 1535, uclib.scss */
+.btn-reserve {
+  color: #fff;
+  letter-spacing: 0.1em;
+  background-color: #58593F;
+  border-right: 0px;
+  margin: 5px 0 15px;
+  padding: 5px 20px;
+}
+/* line 1542, uclib.scss */
+.btn-reserve:before {
+  color: #fff;
+  content: "\f271";
+  font-family: FontAwesome;
+  font-size: 1.2em;
+  line-height: 0.1em;
+  margin-right: 0.5em;
+}
+/* line 1550, uclib.scss */
+.btn-reserve:hover {
+  color: #fff;
+  background-color: #725663;
+}
+
+/*
+ * Collections & Exhibits
+ * --------------------------------------------------
+ */
+/* line 1561, uclib.scss */
+.rightside.coll-rightside, .coll-rightside.flex-sidebar {
+  border: none;
+}
+/* line 1564, uclib.scss */
+.rightside.coll-rightside h3, .coll-rightside.flex-sidebar h3 {
+  color: #616530;
+  font-weight: 600;
+}
+/* line 1568, uclib.scss */
+.rightside.coll-rightside ul, .coll-rightside.flex-sidebar ul {
+  padding-left: 2em;
+  text-indent: -2em;
+  margin-bottom: 10px;
+}
+
+/* line 1575, uclib.scss */
+.listings-dropdown {
+  margin-top: 0;
+  background-color: #eeefe5;
+  min-width: 200px;
+  color: #000;
+  border-radius: 0;
+}
+/* line 1581, uclib.scss */
+.listings-dropdown > ul > li > a {
+  color: #262626;
+  font-size: 1em;
+}
+/* line 1584, uclib.scss */
+.listings-dropdown > ul > li > a:hover {
+  color: #767676;
+  text-decoration: none;
+  background-color: #f6f7f2;
+}
+
+/* line 1592, uclib.scss */
+.coll-dropdown {
+  margin-bottom: 15px;
+}
+@media (min-width: 62em) {
+  /* line 1592, uclib.scss */
+  .coll-dropdown {
+    padding: 0px 14px 10px 14px;
+  }
+}
+
+/* line 1599, uclib.scss */
+.coll-checkbox {
+  padding: 10px 0px 0px 15px;
+}
+@media (min-width: 48em) {
+  /* line 1599, uclib.scss */
+  .coll-checkbox {
+    padding: 5px 10px 5px 10px;
+  }
+}
+
+/* line 1606, uclib.scss */
+.btn-morecoll {
+  background: #eeefe5;
+  border-color: #a0a282;
+}
+
+/* line 1612, uclib.scss */
+.btn-coll-link {
+  font-size: 0.9em;
+  background: transparent;
+  border: 1px solid #a0a282;
+  border-radius: 0;
+  padding: 6px 12px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 48em) {
+  /* line 1624, uclib.scss */
+  .coll-list img {
+    max-width: 100px;
+  }
+  /* line 1627, uclib.scss */
+  .coll-list > tbody > tr > td:nth-child(2) {
+    padding-left: 15px;
+  }
+  /* line 1630, uclib.scss */
+  .coll-list > tbody > tr > td:nth-child(3), .coll-list > tbody > tr > td:nth-child(4) {
+    width: 25%;
+  }
+}
+
+/* line 1636, uclib.scss */
+.currentlist, .quicktable > tbody > tr {
+  background-color: #eeefe5;
+}
+/* line 1638, uclib.scss */
+.currentlist:nth-of-type(odd), .quicktable > tbody > tr:nth-of-type(odd) {
+  background-color: #f6f7f2 !important;
+}
+
+/* line 1643, uclib.scss */
+tr.seealso {
+  background-color: #eeeeeb;
+}
+/* line 1645, uclib.scss */
+tr.seealso td {
+  font-style: italic;
+}
+
+/* line 1650, uclib.scss */
+p.acknowledgments {
+  font-style: italic;
+  color: #6d2f6a;
+  font-size: 1.2em;
+}
+
+/*
+ * Directory
+ * --------------------------------------------------
+ */
+/* line 1663, uclib.scss */
+.directory-list img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  max-width: 7em;
+}
+/* line 1668, uclib.scss */
+.directory-list > tbody > tr > td:nth-child(2) {
+  padding-left: 15px;
+}
+@media (min-width: 48em) {
+  /* line 1672, uclib.scss */
+  .directory-list > tbody > tr > td:nth-child(3), .directory-list > tbody > tr > td:nth-child(4) {
+    width: 25%;
+  }
+}
+@media (max-width: 34em) {
+  /* line 1667, uclib.scss */
+  .directory-list > tbody > tr > td {
+    padding-left: 15px;
+  }
+}
+
+/* line 1682, uclib.scss */
+.guide-link {
+  line-height: 2.2em;
+}
+/* line 1684, uclib.scss */
+.guide-link:before {
+  content: "\f0f6";
+  font-family: FontAwesome;
+  font-size: 1em;
+  margin-right: 0.5em;
+}
+
+/* line 1692, uclib.scss */
+.list-view, .coll-limit {
+  padding: 5px 15px;
+}
+@media (min-width: 48em) {
+  /* line 1692, uclib.scss */
+  .list-view, .coll-limit {
+    text-align: right;
+    padding: 5px 15px 10px 0;
+  }
+}
+/* line 1698, uclib.scss */
+.list-view a, .coll-limit a {
+  color: #767676;
+}
+
+/*
+ * Staff Profile Page
+ * --------------------------------------------------
+ */
+/* line 1708, uclib.scss */
+.flex-sidebar {
+  border-top: none;
+  margin-top: 0;
+  padding-top: 0;
+}
+@media (min-width: 48em) {
+  /* line 1708, uclib.scss */
+  .flex-sidebar {
+    display: block;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 34em) {
+  /* line 1719, uclib.scss */
+  .staff-profile {
+    padding: 0 3em 1.2em 3em;
+  }
+}
+
+/*
+ * Page Specific Alterations
+ * --------------------------------------------------
+ */
+@media (min-width: 48em) {
+  /* line 1732, uclib.scss */
+  #p-3413 .block-paragraph > .rich-text, #p-3415 .block-paragraph > .rich-text, #p-3417 .block-paragraph > .rich-text, #p-3418 .block-paragraph > .rich-text, #p-3419 .block-paragraph > .rich-text {
+    overflow: hidden;
+  }
+}

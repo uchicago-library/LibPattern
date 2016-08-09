@@ -1,0 +1,309 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+Accessibility
+Fonts and Headers
+Media Queries
+Global Elements
+Alerts
+
+-------------------------------------------------------------------*/
+
+/*
+ * Accessibility
+ * --------------------------------------------------
+ */
+
+#skip  {
+  background-color: #47B5FF;
+  color: #fff;
+  a { 
+    position:absolute;
+    padding: 5px 0 5px 10px;
+    left:-10000px; 
+    top:auto; 
+    width:1px; 
+    height:1px; 
+    overflow:hidden;
+  color: #fff;
+    &:focus { 
+      position:static; 
+      width:auto; 
+      height:auto; 
+    } 
+  }
+}
+
+/*
+ * Fonts and Headers
+ * --------------------------------------------------
+ */
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(/static/base/css/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased; // Support for all WebKit browsers.
+  text-rendering: optimizeLegibility; // Support for Safari and Chrome.
+  -moz-osx-font-smoothing: grayscale; // Support for Firefox.
+  font-feature-settings: 'liga'; // Support for IE.
+}
+
+h1 {
+  font-size: 1.4em;
+  color: #800000;
+  font-weight: 300;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $lightgray;
+  margin: 0 0 0.2em 0;
+}
+
+h2{
+  font-size: 1.2em;
+  color: #9A5324; //#C16622;
+  font-weight: 600;
+  line-height: 1.4em;
+  .contentalert {
+    line-height: 1.3em;
+    color: #FF3399;
+  }
+  &:first-child {
+     @media (min-width: 48em) {
+      margin-top: 5px;
+    }
+  }
+}
+
+h3 {
+  font-size: 1.1em;
+  color: #616530;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.4em;
+}
+
+h4 {
+  font-weight: 400;
+  font-size:1.1em;
+  color: #6d2f6a;
+  line-height: 1.4em;
+  .newsblock & {
+    margin-bottom: 3px;
+  }
+}
+
+h5 {
+  font-size: 1em;
+  font-weight: 600;
+  color: #800000;
+  line-height: 1.4em;
+}
+
+h6 {
+  font-size: 1em;
+  font-weight: 600;
+  color: #767676;
+  margin: 15px 0 5px 0;
+}
+
+
+p {
+  margin-bottom: 1em;
+  line-height: 1.5em;
+    small {
+      color: #767676;
+  }
+}
+
+
+/*
+ * Media Queries
+ * --------------------------------------------------
+ *
+ * Use as: @include respond-to(small) { ... }
+ *		@include respond-to(medium) { ... }
+ *		@include respond-to(large) { ... }
+ */
+
+@mixin respond-to($breakpoint) {
+  // Extra small devices (phones, 544px and up)
+  @if $breakpoint == "xsmall" {
+    @media (min-width: 34em) {
+      @content;
+    }
+  }
+
+  // Small devices (landscape phones, 768px and up)
+  @else if $breakpoint == "small" {
+    @media (min-width: 48em) {
+      @content;
+    }
+  }
+  // Medium devices (crappy laptops, tablets, 992px and up)
+  @else if $breakpoint == "medium" {
+    @media (min-width: 62em) {
+      @content;
+    }
+  }
+  // Large devices (desktops, 1200px and up)
+  @else if $breakpoint == "large" {
+    @media (min-width: 75em) {
+      @content;
+    }
+  }
+
+  //Extra large devices (large desktops, 1900px and up)
+  @else if $breakpoint == "xlarge" {
+    @media (min-width: 118em) {
+      @content;
+    }
+  }
+  
+  // Short-cut to target extra small devices *only* (phones, 544px and up)
+  @else if $breakpoint == "smallonly" {
+    @media (max-width: 34em) {
+      @content;
+    }
+  }
+}
+
+
+/*
+ * Global Elements
+ * --------------------------------------------------
+ */
+
+body {
+  margin-bottom: 0;
+  font-family: 'ProximaNova-Regular', "Arial", sans-serif;
+    .font-secondary {
+      font-family: Garamond, Baskerville, 'Baskerville Old Face', "Times New Roman", serif;
+  }
+}
+
+html, body {
+  overflow-x: hidden; /* Off Canvas: Prevent scroll on narrow devices */
+}
+
+.valid {
+  color: #089e00; }
+
+.error {
+  color: red; }
+
+.warning {
+  color: #fff664; }
+
+.information {
+  color: #000db5; }
+
+/* Links */
+a {
+  text-decoration: none;
+  outline: 0;
+    &:hover, &:focus {
+      color: #5B8FA8;
+    }
+  &.social {
+    color: #767676;
+  }
+}
+
+/* Completely remove from the flow but leave available to screen readers. */
+.is-vishidden {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px); }
+
+/*
+ * Alerts
+ * --------------------------------------------------
+ */
+
+.alert {
+  text-align: center;
+  padding: 1em;
+  margin-bottom: 0.5em;
+  border: 1px solid gray;
+  background: #f9f9f9;
+  & p {
+    margin-bottom: 0;
+    display: inline;
+  }
+  &.rich-text {
+    display: inline;
+  }
+}
+
+.alert-error {
+  color: red;
+  border-color: red;
+  background: #ffbebe;
+}
+
+.alert-high {
+    text-align: center;
+    font-size: 1em;
+    padding: 0.5em;
+    margin-bottom: 0em;
+    border-radius: 0;
+    color: #fff;
+    background-color: #642822;
+    a {
+      color: #f9f9f9;
+      text-decoration: underline;
+    }
+}
+
+.alert-low {
+    text-align: center;
+    font-size: 1.1em;
+    padding: 1em;
+    margin-bottom: 0em;
+    border: 0;
+    color: #31708f;
+    background-color: #d9edf7;
+    border-bottom: 2px solid #31708f;
+    a {
+      color: #31708f;
+      text-decoration: underline;
+    }
+}
+
+.alert-info {
+  @extend .alert-low;
+  font-size: 0.9em;
+  padding: 0.5em;
+  border-bottom: none;
+  border-radius: 0;
+  & .close {
+    opacity: .4;
+  }
+  @include respond-to(small) {
+    padding: 0.5em 3em;
+  }
+}
+
+
+
