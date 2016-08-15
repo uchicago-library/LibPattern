@@ -436,7 +436,7 @@ body.staffpublicpage h1 ~ h2 {
 }
 
 /* line 112, uclib.scss */
-.h1-banner, #p-3378 h1:not(.searchbox-header) {
+.h1-banner, #p-4898 h1, #p-3378 h1:not(.searchbox-header) {
   position: absolute;
   right: -10000px;
   top: auto;
