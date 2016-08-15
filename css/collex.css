@@ -440,235 +440,261 @@ h4 {
 }
 
 /* line 120, collex.scss */
-.sidebar.collex, .sidebar.collex-solo, .sidebar.collex-verso, .sidebar.collex-duo {
+.btn.webex-next {
+  margin-top: 2em;
+  background: transparent;
+  border-color: #271847;
+  float: right;
+}
+/* line 125, collex.scss */
+a .btn.webex-next {
+  color: #271847;
+}
+
+/* line 130, collex.scss */
+.sidebar.collex, .sidebar.collex-solo, .sidebar.collex-verso {
   background-color: #eee;
   padding: 1em 0 0 0;
 }
 @media (min-width: 48em) {
-  /* line 120, collex.scss */
-  .sidebar.collex, .sidebar.collex-solo, .sidebar.collex-verso, .sidebar.collex-duo {
+  /* line 130, collex.scss */
+  .sidebar.collex, .sidebar.collex-solo, .sidebar.collex-verso {
     background-color: #fff;
     border-right: 1px dotted #767676;
   }
 }
-/* line 127, collex.scss */
-.sidebar.collex h3, .sidebar.collex-solo h3, .sidebar.collex-verso h3, .sidebar.collex-duo h3 {
+/* line 137, collex.scss */
+.sidebar.collex h3, .sidebar.collex-solo h3, .sidebar.collex-verso h3 {
   padding-left: 2em;
   font-weight: 600;
 }
 @media (min-width: 48em) {
-  /* line 127, collex.scss */
-  .sidebar.collex h3, .sidebar.collex-solo h3, .sidebar.collex-verso h3, .sidebar.collex-duo h3 {
+  /* line 137, collex.scss */
+  .sidebar.collex h3, .sidebar.collex-solo h3, .sidebar.collex-verso h3 {
     padding-left: 1em;
   }
 }
-/* line 133, collex.scss */
-.sidebar.collex h3 a, .sidebar.collex-solo h3 a, .sidebar.collex-verso h3 a, .sidebar.collex-duo h3 a {
+/* line 143, collex.scss */
+.sidebar.collex h3 a, .sidebar.collex-solo h3 a, .sidebar.collex-verso h3 a {
   color: #513293;
 }
-/* line 137, collex.scss */
-.sidebar.collex a, .sidebar.collex-solo a, .sidebar.collex-verso a, .sidebar.collex-duo a {
+/* line 147, collex.scss */
+.sidebar.collex a, .sidebar.collex-solo a, .sidebar.collex-verso a {
   color: #271847;
 }
-/* line 139, collex.scss */
-.sidebar.collex a:hover, .sidebar.collex-solo a:hover, .sidebar.collex-verso a:hover, .sidebar.collex-duo a:hover {
+/* line 149, collex.scss */
+.sidebar.collex a:hover, .sidebar.collex-solo a:hover, .sidebar.collex-verso a:hover {
   color: #bfaee3;
   text-decoration: none;
 }
-/* line 144, collex.scss */
-.sidebar.collex ul, .sidebar.collex-solo ul, .sidebar.collex-verso ul, .sidebar.collex-duo ul {
+/* line 154, collex.scss */
+.sidebar.collex ul, .sidebar.collex-solo ul, .sidebar.collex-verso ul {
   padding-left: 0;
   text-indent: 0;
 }
-/* line 148, collex.scss */
-.sidebar.collex li, .sidebar.collex-solo li, .sidebar.collex-verso li, .sidebar.collex-duo li {
+/* line 158, collex.scss */
+.sidebar.collex li, .sidebar.collex-solo li, .sidebar.collex-verso li {
   padding: 0.6em 1em 0.6em 2em;
 }
-/* line 151, collex.scss */
-.sidebar.collex li.active, .sidebar.collex-solo li.active, .sidebar.collex-verso li.active, .sidebar.collex-duo li.active {
+/* line 161, collex.scss */
+.sidebar.collex li.active, .sidebar.collex-solo li.active, .sidebar.collex-verso li.active {
   background-color: #ece7f7;
   font-weight: 600;
 }
 
-/* line 158, collex.scss */
+/* line 168, collex.scss */
+.coll-rightside.webex {
+  background-color: #ece7f7;
+}
+/* line 170, collex.scss */
+.coll-rightside.webex h3, .coll-rightside.webex h3 a {
+  color: #3c256d;
+  border-bottom-color: #3c256d;
+}
+
+/* line 176, collex.scss */
 .collex-loc {
   background-color: #eee;
   padding: 1.5em;
   display: flex;
   flex-wrap: wrap;
 }
-/* line 163, collex.scss */
+/* line 181, collex.scss */
 .collex-loc ~ #push {
   background-color: #eee;
 }
-/* line 174, collex.scss */
+/* line 192, collex.scss */
 .collex-loc .loc-title {
   margin-bottom: 0.5em;
   color: #271847;
   font-weight: 600;
   font-size: 1em;
 }
-/* line 179, collex.scss */
+/* line 197, collex.scss */
 .collex-loc .loc-title a {
   font-weight: 400;
   color: #462b80;
 }
-/* line 184, collex.scss */
+/* line 202, collex.scss */
 .collex-loc p, .collex-loc ul {
   font-size: 0.95em;
 }
-/* line 187, collex.scss */
+/* line 205, collex.scss */
 .collex-loc ul {
   list-style: none;
   padding-left: 0;
 }
-/* line 190, collex.scss */
+/* line 208, collex.scss */
 .collex-loc ul li {
   margin-bottom: 10px;
 }
-/* line 192, collex.scss */
+/* line 210, collex.scss */
 .collex-loc ul li .viewall {
   margin-top: 15px;
 }
 
-/* line 200, collex.scss */
+/* line 218, collex.scss */
 .loc-child + .loc-child {
   padding-top: 10px;
   border-top: 1px dotted #767676;
 }
 @media (min-width: 62em) {
-  /* line 200, collex.scss */
+  /* line 218, collex.scss */
   .loc-child + .loc-child {
     padding-top: initial;
     border-top: none;
   }
 }
-/* line 208, collex.scss */
+/* line 226, collex.scss */
 .loc-child .loc-title ~ .loc-title {
   margin-top: 1.2em;
 }
 
-/* line 213, collex.scss */
+/* line 231, collex.scss */
 .collex-gallery {
   border-top: 1px dotted #767676;
 }
 
-/* line 217, collex.scss */
-.collex, .collex-solo, .collex-verso, .collex-duo {
+/* line 235, collex.scss */
+.collex, .collex-solo, .collex-verso {
   padding: 2em 1em;
 }
 @media (min-width: 62em) {
-  /* line 219, collex.scss */
-  .collex figure, .collex-solo figure, .collex-verso figure, .collex-duo figure {
+  /* line 237, collex.scss */
+  .collex figure, .collex-solo figure, .collex-verso figure {
     display: flex;
   }
 }
 
-/* line 226, collex.scss */
+/* line 244, collex.scss */
 .collex-solo, .collex-verso {
   border-bottom: 1px dotted #767676;
 }
-/* line 229, collex.scss */
+/* line 247, collex.scss */
 .collex-solo img, .collex-verso img {
   padding-bottom: 1em;
-  max-height: 50em;
+  max-height: 40em;
   width: auto;
 }
 @media (min-width: 62em) {
-  /* line 229, collex.scss */
+  /* line 247, collex.scss */
   .collex-solo img, .collex-verso img {
     float: right;
     padding-bottom: 0;
   }
 }
 
-/* line 242, collex.scss */
+/* line 260, collex.scss */
 .collex-solo .img-title, .collex-verso .img-title, .collex-duo .img-title, .collex-trio .img-title, .collex-verso .img-title {
   color: #271847;
   font-size: 1.1em;
   font-weight: 600;
 }
-/* line 247, collex.scss */
+/* line 265, collex.scss */
 .collex-solo .img-citation, .collex-verso .img-citation, .collex-duo .img-citation, .collex-trio .img-citation, .collex-verso .img-citation {
   color: #5b38a6;
   font-size: 0.95em;
 }
-/* line 251, collex.scss */
+/* line 269, collex.scss */
 .collex-solo .img-caption, .collex-verso .img-caption, .collex-duo .img-caption, .collex-trio .img-caption, .collex-verso .img-caption {
   color: #000;
   font-size: 1em;
 }
 
-/* line 259, collex.scss */
+/* line 277, collex.scss */
 .collex-verso .modal.and.carousel {
   position: absolute;
 }
 
-/* line 264, collex.scss */
+/* line 282, collex.scss */
 .duo-wrapper {
-  display: flex;
-  flex-wrap: wrap;
   padding: 2em 1em;
 }
 @media (min-width: 48em) {
-  /* line 264, collex.scss */
+  /* line 282, collex.scss */
   .duo-wrapper {
     border-bottom: 1px dotted #767676;
   }
 }
 
-/* line 273, collex.scss */
+/* line 291, collex.scss */
 .collex-duo {
   padding: 0;
 }
 @media (min-width: 62em) {
-  /* line 277, collex.scss */
+  /* line 295, collex.scss */
   .collex-duo:not(.collex-solo):nth-of-type(odd) {
     border-right: 1px dotted #767676;
   }
 }
-/* line 281, collex.scss */
+/* line 299, collex.scss */
 .collex-duo + .collex-duo img {
   padding-left: 1em;
 }
-/* line 284, collex.scss */
+/* line 302, collex.scss */
 .collex-duo img {
   padding: 0 1em 1em 0;
 }
 @media (min-width: 62em) {
-  /* line 284, collex.scss */
+  /* line 302, collex.scss */
   .collex-duo img {
-    max-height: 20em;
+    max-height: 30em;
     width: auto;
-    padding-bottom: 0;
-    padding-right: 0.75em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
   }
 }
+/* line 312, collex.scss */
+.collex-duo figcaption {
+  text-align: center;
+}
 @media (min-width: 62em) {
-  /* line 295, collex.scss */
+  /* line 315, collex.scss */
   .collex-duo figcaption:nth-of-type(odd) {
     padding-right: 0.5em;
   }
 }
 
-/* line 302, collex.scss */
+/* line 322, collex.scss */
 .collex-trio {
   padding: 1em 0 2em 0;
   border-bottom: 1px dotted #767676;
 }
-/* line 305, collex.scss */
+/* line 325, collex.scss */
 .collex-trio img {
   float: left;
   max-width: 33%;
+  height: auto;
   padding: 1em;
 }
-/* line 310, collex.scss */
+/* line 331, collex.scss */
 .collex-trio figcaption {
   clear: both;
   text-align: center;
 }
 
-/* line 316, collex.scss */
+/* line 337, collex.scss */
 #page-turn {
   position: absolute;
   width: 0;

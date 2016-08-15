@@ -117,6 +117,16 @@ h4 {
 	}
 }
 
+.btn.webex-next {
+	margin-top: 2em;
+	background: transparent;
+	border-color: $base-color;
+	float: right;
+	a & {
+	  	color: $base-color;
+	}
+}
+
 .sidebar.collex {
 	background-color: #eee;
 	padding: 1em 0 0 0;
@@ -152,6 +162,14 @@ h4 {
 		    background-color: lighten($base-color, 75%);
 		    font-weight: 600;
 		}
+	}
+}
+
+.coll-rightside.webex {
+	background-color: lighten($base-color, 75%);
+	h3, h3 a {
+		color: lighten($base-color, 10%);
+		border-bottom-color: lighten($base-color, 10%);
 	}
 }
 
@@ -228,7 +246,7 @@ h4 {
 	@include borders;
 	img {
 		padding-bottom: 1em	;
-		max-height: 50em;
+		max-height: 40em;
 		width: auto;
 		@include respond-to(medium) {
 		float: right;
@@ -262,8 +280,8 @@ h4 {
 }
 
 .duo-wrapper {
-	display:flex;
-	flex-wrap: wrap;
+	//display:flex;
+	//flex-wrap: wrap;
 	padding: 2em 1em;
 	@include respond-to(small) {
 		@include borders;
@@ -272,7 +290,7 @@ h4 {
 
 .collex-duo {
 	padding: 0;
-	@extend .collex;
+	//@extend .collex;
 	@include respond-to(medium) {
 		&:not(.collex-solo):nth-of-type(odd) {
 			border-right: 1px dotted $darkgray;
@@ -284,13 +302,15 @@ h4 {
 	img {
 		padding: 0 1em 1em 0;
 		@include respond-to(medium) {
-		    max-height: 20em;
+		    max-height: 30em;
 		    width: auto;
-			padding-bottom: 0;
-			padding-right: 0.75em;
+		    margin-left: auto;
+		    margin-right: auto;
+			padding: 1em;
 		}
 	}
 	figcaption {
+		text-align: center;
 		@include respond-to(medium) {
 			&:nth-of-type(odd) {
 				padding-right: 0.5em;
@@ -305,6 +325,7 @@ h4 {
 	img {
 		float: left;
 		max-width: 33%;
+		height: auto;
 		padding: 1em;
 	}
 	figcaption {
