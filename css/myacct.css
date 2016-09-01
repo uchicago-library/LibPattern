@@ -1,0 +1,24 @@
+/* line 1, myacct.scss */
+.alert-danger {
+  padding: 5px;
+  margin: 10px 0;
+}
+
+/* line 6, myacct.scss */
+[id^="record"] {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+/* line 9, myacct.scss */
+[id^="record"]:nth-of-type(odd) {
+  background-color: #f2efef;
+}
+
+/* line 14, myacct.scss */
+.btn-export {
+  display: inline;
+}
+/* line 16, myacct.scss */
+.btn-export + h2 {
+  display: inline;
+}

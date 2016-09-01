@@ -1,0 +1,10 @@
+/* line 1, css/myacct.scss */
+.alert-danger {
+  padding: 5px;
+  margin: 10px 0;
+}
+
+/* line 6, css/myacct.scss */
+[id^="record"]:nth-of-type(even) {
+  background-color: #f8f8f8;
+}

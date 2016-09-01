@@ -1,0 +1,19 @@
+.alert-danger {
+    padding: 5px;
+    margin: 10px 0;
+}
+
+[id^="record"] {
+	padding-top: 7px;
+	padding-bottom: 7px;
+	&:nth-of-type(odd) {
+		background-color: #f2efef;
+	}
+}
+
+.btn-export {
+	display: inline;
+	&+h2 {
+		display: inline;
+	}
+}
