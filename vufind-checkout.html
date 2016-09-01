@@ -119,39 +119,7 @@
                   </li>
       
       
-              <!--<li class="dropdown">
-          <form method="post" name="langForm" action="" id="langForm">
-            <input type="hidden" name="mylang"/>
-          </form>
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Language <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-                      <li class="active"><a href="#" onClick="document.langForm.mylang.value='en';document.langForm.submit()">English</a></li>
-                      <li><a href="#" onClick="document.langForm.mylang.value='de';document.langForm.submit()">Deutsch</a></li>
-                      <li><a href="#" onClick="document.langForm.mylang.value='es';document.langForm.submit()">Español</a></li>
-                      <li><a href="#" onClick="document.langForm.mylang.value='fr';document.langForm.submit()">Français</a></li>
-                      <li><a href="#" onClick="document.langForm.mylang.value='it';document.langForm.submit()">Italiano</a></li>
-                      <li><a href="#" onClick="document.langForm.mylang.value='ja';document.langForm.submit()">日本語</a></li>
-                      <li><a href="#" onClick="document.langForm.mylang.value='nl';document.langForm.submit()">Nederlands</a></li>
-                      <li><a href="#" onClick="document.langForm.mylang.value='pt';document.langForm.submit()">Português</a></li>
-                      <li><a href="#" onClick="document.langForm.mylang.value='pt-br';document.langForm.submit()">Português (Brasil)</a></li>
-                      <li><a href="#" onClick="document.langForm.mylang.value='zh-cn';document.langForm.submit()">中文(简体)</a></li>
-                      <li><a href="#" onClick="document.langForm.mylang.value='zh';document.langForm.submit()">中文（繁體）</a></li>
-                      <li><a href="#" onClick="document.langForm.mylang.value='tr';document.langForm.submit()">Türkçe</a></li>
-                      <li><a href="#" onClick="document.langForm.mylang.value='he';document.langForm.submit()">עברית</a></li>
-                      <li><a href="#" onClick="document.langForm.mylang.value='ga';document.langForm.submit()">Gaeilge</a></li>
-                      <li><a href="#" onClick="document.langForm.mylang.value='cy';document.langForm.submit()">Cymraeg</a></li>
-                      <li><a href="#" onClick="document.langForm.mylang.value='el';document.langForm.submit()">Ελληνικά</a></li>
-                      <li><a href="#" onClick="document.langForm.mylang.value='ca';document.langForm.submit()">Català</a></li>
-                      <li><a href="#" onClick="document.langForm.mylang.value='eu';document.langForm.submit()">Euskara</a></li>
-                      <li><a href="#" onClick="document.langForm.mylang.value='ru';document.langForm.submit()">Русский</a></li>
-                      <li><a href="#" onClick="document.langForm.mylang.value='cs';document.langForm.submit()">čeština</a></li>
-                      <li><a href="#" onClick="document.langForm.mylang.value='fi';document.langForm.submit()">Suomi</a></li>
-                      <li><a href="#" onClick="document.langForm.mylang.value='sv';document.langForm.submit()">Svenska</a></li>
-                      <li><a href="#" onClick="document.langForm.mylang.value='pl';document.langForm.submit()">polski</a></li>
-                      <li><a href="#" onClick="document.langForm.mylang.value='da';document.langForm.submit()">Dansk</a></li>
-                      <li><a href="#" onClick="document.langForm.mylang.value='sl';document.langForm.submit()">slovenščina</a></li>
-                    </ul>
-        </li>-->
+             
             <li><a href="https://www.lib.uchicago.edu/research/help/catalog-help/" title="Help">Help</a></li>
     </ul>
   </div>
@@ -203,14 +171,23 @@
 <div class="row">
   <div class="col-sm-9">
     <h2>Checked Out Items <small>(2)</small></h2>
-    <input type="submit" class="btn btn-export" name="" value="Export List" />
-    
+    <div class="alert alert-danger" role="alert" style="padding: 7px 15px;">You have item(s) due soon.</div>
                   <div class="alert alert-warning" role="alert" style="">Please do not click renew twice—renewals can take up to a minute.<br/>For help, <a href="https://www.lib.uchicago.edu/about/directory/?view=department&query=circulation">Call us</a> or use our <a href="https://www.lib.uchicago.edu/borrow/borrowing/contact-circulation/">online form</a> and Library staff will help you.</div>
       <form name="renewals" action="/vufind/MyResearch/Home" method="post" id="renewals">
         <div class="toolbar">
-          <input type="submit" class="btn btn-default" name="renewSelected" value="Renew Selected Items" />
-          <input type="submit" class="btn btn-default" name="renewAll" value="Renew All Items" />
-          <span class="dropdown pull-right">
+          <input type="submit" class="btn btn-default" name="renewSelected" value="Renew Selected" />
+          <input type="submit" class="btn btn-default" name="renewAll" value="Renew All" />
+
+        <span class="dropdown pull-right">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Export   <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">CSV</a></li>
+            <li><a href="#">Citations</a></li>
+          </ul>
+        </span>
+
+          <span class="dropdown pull-right" style="padding-right: 5px;">
           <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Reorder List   <span class="caret"></span>
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -224,25 +201,25 @@
             <li><a href="#">Fee</a></li>
           </ul>
         </span>
+
         </div>
 
         <div id="recordill_request_0" class="row">
                                   <input type="hidden" name="cancelAllIDS[]" value="0">
-            <div class="col-xs-1">
-              <input type="checkbox" name="cancelSelectedIDS[]" value="0" id="checkbox_illrequest0">
-            </div>
-            <div class="col-sm-2 hidden-xs text-center">
+
+
+            <div class="col-sm-offset-1 col-sm-2 hidden-xs text-center">
             <img alt="Cover Image" class="recordcover" src="https://catalog.lib.uchicago.edu/vufind/Cover/Show?author=Wharton%2C+William&callnumber=DC801.L586W48+1996&size=medium&title=Houseboat+on+the+Seine+%2F&isbn=1557042721&oclc=33665147">
             </div>
 
-            <div class="col-sm-5 col-xs-11">
+            <div class="col-sm-5 col-xs-12">
               <a href="/vufind/Record/4130680" class="title">Houseboat on the Seine /</a> c.1<br>
               by: Wharton, William<br/>
             DC801.L586W48 1996<br>
             Regenstein Library<br/>
             <strong>Barcode:</strong> 55446983<br/>
           </div>
-          <div class="col-sm-4 col-xs-11">
+          <div class="col-sm-4 col-xs-12">
             <span class="iconlabel print">Print</span>  <span class="iconlabel book">Book</span><br/>
             <strong>Checked Out:</strong> 07-06-2016<br/>
             <strong>Due Date:</strong> 09-30-2016 <br>
@@ -250,41 +227,36 @@
             <div class="alert alert-danger">Recalled</div>
                         
           </div>
+  
         </div>
 
-        <div id="recordill_request_2" class="row">
-                                  <input type="hidden" name="cancelAllIDS[]" value="0">
-            <div class="col-xs-1">
-              <input type="checkbox" name="cancelSelectedIDS[]" value="0" id="checkbox_illrequest0">
-            </div>
-            <div class="col-sm-2 hidden-xs text-center">
+        <div id="recordill_request_2 checkboxes" class="row">
+            <input type="hidden" name="cancelAllIDS[]" value="0">
+
+              <input id="lists[Two]" type="checkbox" name="lists[Two]" />
+              <label for="lists[Two]">
+            <div class="col-sm-offset-1 col-sm-2 hidden-xs text-center">
             <img alt="Cover Image" class="recordcover" src="https://catalog.lib.uchicago.edu/vufind/Cover/Show?author=Solnit%2C+Rebecca&callnumber=HQ1155.S665+2014&size=large&title=Men+explain+things+to+me+%2F&isbn=1608463869&oclc=859046490">
             </div>
 
-            <div class="col-sm-5 col-xs-11">
+            <div class="col-sm-5 col-xs-12">
               <a href="/vufind/Record/4130680" class="title">Men explain things to me /</a> 2<br>
               by: Solnit, Rebecca<br/>
             HQ1155.S665 2014<br>
             Borrow Direct<br/>
             <strong>Barcode:</strong> 112716692<br/>
           </div>
-          <div class="col-sm-4 col-xs-11">
+          <div class="col-sm-4 col-xs-12">
             <span class="iconlabel print">Print</span>  <span class="iconlabel book">Book</span><br/>
             <strong>Checked Out:</strong> 07-23-2016<br/>
             <strong>Due Date:</strong> 09-30-2016 <br>
             <strong>Renewal Count:</strong> 1
                         
           </div>
-        </div>Title
-Call Number
-(Date) Checked Out
-Due Date
-Renewal count?
-Barcode?
-Bill date
-Fee/Balance
 
-      
+          </label>  
+        </div>  
+
       </form>
     </div>
 

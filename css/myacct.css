@@ -1,24 +1,84 @@
-/* line 1, myacct.scss */
+/*
+ * Media Queries
+ * --------------------------------------------------
+ *
+ * Use as: @include respond-to(small) { ... }
+ *		@include respond-to(medium) { ... }
+ *		@include respond-to(large) { ... }
+ */
+/* line 53, myacct.scss */
 .alert-danger {
   padding: 5px;
   margin: 10px 0;
 }
 
-/* line 6, myacct.scss */
+/* line 58, myacct.scss */
 [id^="record"] {
   padding-top: 7px;
   padding-bottom: 7px;
 }
-/* line 9, myacct.scss */
+/* line 61, myacct.scss */
 [id^="record"]:nth-of-type(odd) {
-  background-color: #f2efef;
+  background-color: #fff;
+}
+@media (min-width: 48em) {
+  /* line 61, myacct.scss */
+  [id^="record"]:nth-of-type(odd) {
+    background-color: #f2efef;
+  }
 }
 
-/* line 14, myacct.scss */
-.btn-export {
-  display: inline;
+/* line 69, myacct.scss */
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+  background-color: #806362;
 }
-/* line 16, myacct.scss */
-.btn-export + h2 {
-  display: inline;
+
+/* line 74, myacct.scss */
+input[type=checkbox] {
+  display: none;
+}
+/* line 76, myacct.scss */
+input[type=checkbox] + label {
+  font-weight: normal;
+}
+
+/* line 81, myacct.scss */
+input:checked + label {
+  background-color: #dfe0d5;
+  color: #616530;
+  padding: 10px 0;
+  margin: 0;
+}
+
+/* line 88, myacct.scss */
+input:checked + label:before {
+  content: "✓ ";
+  font-size: 5em;
+  position: absolute;
+  right: 50px;
+  z-index: 10;
+}
+@media (min-width: 48em) {
+  /* line 88, myacct.scss */
+  input:checked + label:before {
+    font-size: 2em;
+    position: absolute;
+    left: 10px;
+  }
+}
+
+/* new stuff */
+/* line 103, myacct.scss */
+.check {
+  visibility: hidden;
+}
+
+/* line 107, myacct.scss */
+input:checked + label .check {
+  visibility: visible;
+}
+
+/* line 111, myacct.scss */
+input.checkbox:checked + label:before {
+  content: "";
 }
