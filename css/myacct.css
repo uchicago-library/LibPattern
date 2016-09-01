@@ -40,9 +40,10 @@ input[type=checkbox] {
 /* line 76, myacct.scss */
 input[type=checkbox] + label {
   font-weight: normal;
+  width: 100%;
 }
 
-/* line 81, myacct.scss */
+/* line 82, myacct.scss */
 input:checked + label {
   background-color: #dfe0d5;
   color: #616530;
@@ -50,7 +51,7 @@ input:checked + label {
   margin: 0;
 }
 
-/* line 88, myacct.scss */
+/* line 89, myacct.scss */
 input:checked + label:before {
   content: "✓ ";
   font-size: 5em;
@@ -59,7 +60,7 @@ input:checked + label:before {
   z-index: 10;
 }
 @media (min-width: 48em) {
-  /* line 88, myacct.scss */
+  /* line 89, myacct.scss */
   input:checked + label:before {
     font-size: 2em;
     position: absolute;
@@ -68,17 +69,17 @@ input:checked + label:before {
 }
 
 /* new stuff */
-/* line 103, myacct.scss */
+/* line 104, myacct.scss */
 .check {
   visibility: hidden;
 }
 
-/* line 107, myacct.scss */
+/* line 108, myacct.scss */
 input:checked + label .check {
   visibility: visible;
 }
 
-/* line 111, myacct.scss */
+/* line 112, myacct.scss */
 input.checkbox:checked + label:before {
   content: "";
 }
