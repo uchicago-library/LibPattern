@@ -75,6 +75,7 @@ input[type=checkbox] {
   display: none; 
   &+label {
   	font-weight: normal;
+    width: 100%;
   }
 }
 
