@@ -7,43 +7,55 @@
  *		@include respond-to(large) { ... }
  */
 /* line 53, myacct.scss */
-.alert-danger {
+.alert-list {
   padding: 5px;
   margin: 10px 0;
+  border: 1px solid;
 }
 
-/* line 58, myacct.scss */
+/* line 59, myacct.scss */
+.ill-item {
+  color: #9A5324;
+  font-weight: 600;
+}
+
+/* line 64, myacct.scss */
+a.title {
+  font-weight: 600;
+}
+
+/* line 68, myacct.scss */
 [id^="record"] {
   padding-top: 7px;
   padding-bottom: 7px;
 }
-/* line 61, myacct.scss */
+/* line 71, myacct.scss */
 [id^="record"]:nth-of-type(odd) {
   background-color: #fff;
 }
 @media (min-width: 48em) {
-  /* line 61, myacct.scss */
+  /* line 71, myacct.scss */
   [id^="record"]:nth-of-type(odd) {
     background-color: #f2efef;
   }
 }
 
-/* line 69, myacct.scss */
+/* line 79, myacct.scss */
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
   background-color: #806362;
 }
 
-/* line 74, myacct.scss */
+/* line 84, myacct.scss */
 input[type=checkbox] {
   display: none;
 }
-/* line 76, myacct.scss */
+/* line 86, myacct.scss */
 input[type=checkbox] + label {
   font-weight: normal;
   width: 100%;
 }
 
-/* line 82, myacct.scss */
+/* line 92, myacct.scss */
 input:checked + label {
   background-color: #dfe0d5;
   color: #616530;
@@ -51,7 +63,7 @@ input:checked + label {
   margin: 0;
 }
 
-/* line 89, myacct.scss */
+/* line 99, myacct.scss */
 input:checked + label:before {
   content: "✓ ";
   font-size: 5em;
@@ -60,7 +72,7 @@ input:checked + label:before {
   z-index: 10;
 }
 @media (min-width: 48em) {
-  /* line 89, myacct.scss */
+  /* line 99, myacct.scss */
   input:checked + label:before {
     font-size: 2em;
     position: absolute;
@@ -69,17 +81,17 @@ input:checked + label:before {
 }
 
 /* new stuff */
-/* line 104, myacct.scss */
+/* line 125, myacct.scss */
 .check {
   visibility: hidden;
 }
 
-/* line 108, myacct.scss */
+/* line 129, myacct.scss */
 input:checked + label .check {
   visibility: visible;
 }
 
-/* line 112, myacct.scss */
+/* line 133, myacct.scss */
 input.checkbox:checked + label:before {
   content: "";
 }

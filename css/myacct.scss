@@ -50,9 +50,19 @@
 }
 
 
-.alert-danger {
+.alert-list {
     padding: 5px;
     margin: 10px 0;
+    border: 1px solid;
+}
+
+.ill-item {
+  color: #9A5324;
+  font-weight: 600;
+}
+
+a.title {
+  font-weight: 600;
 }
 
 [id^="record"] {
@@ -99,6 +109,17 @@ input:checked + label:before {
     }
 }
 
+// input:not( :checked) + label:before {
+//   @include respond-to(small) {
+//     content: "\039f";
+//     color: #767676;
+//     font-size: 1em;
+//     position: absolute;
+//     left: 20px;
+//     padding-top: 20px;
+//     z-index: 10;
+//   }
+// }
 
 /* new stuff */
 .check {
@@ -112,3 +133,4 @@ input:checked + label .check {
 input.checkbox:checked + label:before {
 content: "";
 }
+
