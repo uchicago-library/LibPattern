@@ -1,0 +1,22 @@
+{
+  "name": "libpattern",
+  "version": "0.0.1",
+  "description": "Public website for UChicago Libraries",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kzadrozny/LibPattern.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kzadrozny/LibPattern/issues"
+  },
+  "homepage": "https://github.com/kzadrozny/LibPattern#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
