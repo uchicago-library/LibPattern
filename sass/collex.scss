@@ -1,6 +1,6 @@
 @import "variables.scss";
 @import "base.scss";
-@import "compass/utilities/color/contrast";
+//@import "compass/utilities/color/contrast";
 
 $base-color: #271847;
 $base-font: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -53,7 +53,7 @@ h4 {
 	}
 }
 
-.jumbotron.collex-banner {
+.exhibitpage .jumbotron {
   min-height: 250px;
   overflow: hidden;
   padding-top: 0px;
@@ -97,7 +97,7 @@ h4 {
   }
 }
 
-.collex-banner .overlaywrap {
+.exhibitpage .jumbotron .overlaywrap {
 	background-color: rgba( $base-color, .9 );
 	left: 0;
 	top: 0;
@@ -113,7 +113,7 @@ h4 {
 			padding-bottom: 15px;
 		}
 	}
-	h2.banner-title {
+	h2 {
 		font-weight: 100;
 		font-size: $font-large*0.7;
 		margin: 0;
@@ -149,7 +149,7 @@ h4 {
 	}
 }
 
-.sidebar.collex {
+.exhibitpage .sidebar {
 	background-color: #eee;
 	padding: 1em 0 0 0;
 	@include respond-to(small) {
@@ -187,7 +187,7 @@ h4 {
 	}
 }
 
-.coll-rightside.webex {
+.exhibitpage .coll-rightside {
 	background-color: lighten($base-color, 75%);
 	h3, h3 a {
 		color: lighten($base-color, 10%);
