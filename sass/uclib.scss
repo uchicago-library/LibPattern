@@ -540,6 +540,8 @@ a#event-header {
  .news-wrap {
   display: flex;
   flex-wrap: wrap;
+  display: -webkit-flex;  // Safari fix
+  -webkit-flex-wrap: wrap;  // Safari fix
 }
 
 .newsblock {
