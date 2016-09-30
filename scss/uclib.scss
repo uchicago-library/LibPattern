@@ -54,7 +54,7 @@ body.staffpublicpage {
   h1 {
     border-bottom: none;
     &~h2 {
-      border-bottom: 1px solid #D6D6CE;
+      border-bottom: 1px solid green;
       margin-top: 0px;
       padding-bottom: 5px;
       font-weight: 400;
@@ -244,8 +244,8 @@ img.richtext-image {  //images placed in richtext streamfield
 
 figure.imgcaption { //image in streamfield
   max-width: 100%;
-  background: $midneutral;
   padding: 0;
+  display:table; // keeps caption withing img width 1/3
   &.pull-left {
     margin: 10px 20px 10px 0;
   }
@@ -256,6 +256,9 @@ figure.imgcaption { //image in streamfield
     padding: 0.7em 1em;
     font-size: 0.8em;
     color: $mid-dark;
+    display:table-caption; // keeps caption withing img width 2/3
+    caption-side:bottom; // keeps caption withing img width 3/3
+    background: $midneutral;
   }
 }
 
