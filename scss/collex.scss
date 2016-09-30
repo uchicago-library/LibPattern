@@ -12,7 +12,7 @@ $font-small: 1.1em;
 	border-bottom: 1px dotted $darkgray;
 }
 
-body.exhibitpage {
+.exhibitpage, .exhibitchildpage {
 	h1, h2 {
 		color: $base-color;
 		font-family: $display-font;

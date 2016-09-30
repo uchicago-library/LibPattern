@@ -2979,26 +2979,26 @@ a {
     .alert-info {
       padding: 0.5em 3em; } }
 
-body.exhibitpage h1, body.exhibitpage h2 {
+.exhibitpage h1, .exhibitpage h2, .exhibitchildpage h1, .exhibitchildpage h2 {
   color: #271847;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-size: 1.5em;
   font-weight: 400; }
 
-body.exhibitpage h3 {
+.exhibitpage h3, .exhibitchildpage h3 {
   color: #3c256d;
   font-style: normal;
   font-size: 1.1em;
   font-weight: 600; }
 
-body.exhibitpage h4, body.exhibitpage .search-results h4 a, .search-results h4 body.exhibitpage a {
+.exhibitpage h4, .exhibitpage .search-results h4 a, .search-results h4 .exhibitpage a, .exhibitchildpage h4, .exhibitchildpage .search-results h4 a, .search-results h4 .exhibitchildpage a {
   color: #271847;
   font-style: italic;
   font-size: 1.1em;
   font-weight: 600; }
 
-body.exhibitpage .jumbotron {
+.exhibitpage .jumbotron, .exhibitchildpage .jumbotron {
   min-height: 250px;
   overflow: hidden;
   padding-top: 0px;
@@ -3006,50 +3006,50 @@ body.exhibitpage .jumbotron {
   background-color: #642822;
   background-image: url("../images/banner.gif");
   background-size: cover; }
-  body.exhibitpage .jumbotron h2 {
+  .exhibitpage .jumbotron h2, .exhibitchildpage .jumbotron h2 {
     color: #fff; }
-  body.exhibitpage .jumbotron .container {
+  .exhibitpage .jumbotron .container, .exhibitchildpage .jumbotron .container {
     padding: 0px;
     margin: 0px;
     position: relative;
     width: 100%; }
-  body.exhibitpage .jumbotron .img-wrapper {
+  .exhibitpage .jumbotron .img-wrapper, .exhibitchildpage .jumbotron .img-wrapper {
     width: 200px;
     overflow: hidden; }
     @media (min-width: 62em) {
-      body.exhibitpage .jumbotron .img-wrapper {
+      .exhibitpage .jumbotron .img-wrapper, .exhibitchildpage .jumbotron .img-wrapper {
         width: 250px; } }
     @media (max-width: 34em) {
-      body.exhibitpage .jumbotron .img-wrapper {
+      .exhibitpage .jumbotron .img-wrapper, .exhibitchildpage .jumbotron .img-wrapper {
         display: none; } }
-    body.exhibitpage .jumbotron .img-wrapper img {
+    .exhibitpage .jumbotron .img-wrapper img, .exhibitchildpage .jumbotron .img-wrapper img {
       width: 200px;
       height: auto; }
       @media (min-width: 62em) {
-        body.exhibitpage .jumbotron .img-wrapper img {
+        .exhibitpage .jumbotron .img-wrapper img, .exhibitchildpage .jumbotron .img-wrapper img {
           width: 250px; } }
     @media (min-width: 48em) {
-      body.exhibitpage .jumbotron .img-wrapper + .overlaywrap {
+      .exhibitpage .jumbotron .img-wrapper + .overlaywrap, .exhibitchildpage .jumbotron .img-wrapper + .overlaywrap {
         left: 200px; } }
     @media (min-width: 62em) {
-      body.exhibitpage .jumbotron .img-wrapper + .overlaywrap {
+      .exhibitpage .jumbotron .img-wrapper + .overlaywrap, .exhibitchildpage .jumbotron .img-wrapper + .overlaywrap {
         left: 250px; } }
 
-body.exhibitpage .jumbotron .overlaywrap {
+.exhibitpage .jumbotron .overlaywrap, .exhibitchildpage .jumbotron .overlaywrap {
   background-color: rgba(39, 24, 71, 0.9);
   left: 0;
   top: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 0.5em 2em; }
   @media (min-width: 48em) {
-    body.exhibitpage .jumbotron .overlaywrap {
+    .exhibitpage .jumbotron .overlaywrap, .exhibitchildpage .jumbotron .overlaywrap {
       padding-right: 6em; } }
-  body.exhibitpage .jumbotron .overlaywrap p {
+  .exhibitpage .jumbotron .overlaywrap p, .exhibitchildpage .jumbotron .overlaywrap p {
     padding: 0;
     margin: 0; }
-    body.exhibitpage .jumbotron .overlaywrap p:last-child {
+    .exhibitpage .jumbotron .overlaywrap p:last-child, .exhibitchildpage .jumbotron .overlaywrap p:last-child {
       padding-bottom: 15px; }
-  body.exhibitpage .jumbotron .overlaywrap h2 {
+  .exhibitpage .jumbotron .overlaywrap h2, .exhibitchildpage .jumbotron .overlaywrap h2 {
     font-weight: 100;
     font-size: 1.75em;
     margin: 0;
@@ -3057,62 +3057,62 @@ body.exhibitpage .jumbotron .overlaywrap {
     letter-spacing: 0.03em;
     color: contrast-color(#271847, shade(#271847, 5%), tint(#271847, 90%), 80%); }
     @media (min-width: 48em) {
-      body.exhibitpage .jumbotron .overlaywrap h2 {
+      .exhibitpage .jumbotron .overlaywrap h2, .exhibitchildpage .jumbotron .overlaywrap h2 {
         font-size: 2.5em; } }
-  body.exhibitpage .jumbotron .overlaywrap .banner-subtitle {
+  .exhibitpage .jumbotron .overlaywrap .banner-subtitle, .exhibitchildpage .jumbotron .overlaywrap .banner-subtitle {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #bfaee3;
     font-size: 1.2em;
     padding-bottom: 5px; }
     @media (min-width: 48em) {
-      body.exhibitpage .jumbotron .overlaywrap .banner-subtitle {
+      .exhibitpage .jumbotron .overlaywrap .banner-subtitle, .exhibitchildpage .jumbotron .overlaywrap .banner-subtitle {
         font-size: 1.5em; } }
-  body.exhibitpage .jumbotron .overlaywrap .banner-loc, body.exhibitpage .jumbotron .overlaywrap .banner-date {
+  .exhibitpage .jumbotron .overlaywrap .banner-loc, .exhibitpage .jumbotron .overlaywrap .banner-date, .exhibitchildpage .jumbotron .overlaywrap .banner-loc, .exhibitchildpage .jumbotron .overlaywrap .banner-date {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #e0dddb;
     font-style: italic;
     font-size: 0.88em; }
 
-body.exhibitpage .btn.webex-next {
+.exhibitpage .btn.webex-next, .exhibitchildpage .btn.webex-next {
   margin-top: 2em;
   background: transparent;
   border-color: #271847;
   float: right; }
-  a body.exhibitpage .btn.webex-next {
+  a .exhibitpage .btn.webex-next, a .exhibitchildpage .btn.webex-next {
     color: #271847; }
 
-body.exhibitpage .sidebar {
+.exhibitpage .sidebar, .exhibitchildpage .sidebar {
   background-color: #eee;
   padding: 1em 0 0 0; }
   @media (min-width: 48em) {
-    body.exhibitpage .sidebar {
+    .exhibitpage .sidebar, .exhibitchildpage .sidebar {
       background-color: #fff;
       border-right: 1px dotted #767676; } }
-  body.exhibitpage .sidebar h3 {
+  .exhibitpage .sidebar h3, .exhibitchildpage .sidebar h3 {
     padding-left: 2em;
     font-weight: 600; }
     @media (min-width: 48em) {
-      body.exhibitpage .sidebar h3 {
+      .exhibitpage .sidebar h3, .exhibitchildpage .sidebar h3 {
         padding-left: 1em; } }
-    body.exhibitpage .sidebar h3 a {
+    .exhibitpage .sidebar h3 a, .exhibitchildpage .sidebar h3 a {
       color: #513293; }
-  body.exhibitpage .sidebar a {
+  .exhibitpage .sidebar a, .exhibitchildpage .sidebar a {
     color: #271847; }
-    body.exhibitpage .sidebar a:hover {
+    .exhibitpage .sidebar a:hover, .exhibitchildpage .sidebar a:hover {
       color: #bfaee3;
       text-decoration: none; }
-  body.exhibitpage .sidebar ul {
+  .exhibitpage .sidebar ul, .exhibitchildpage .sidebar ul {
     padding-left: 0;
     text-indent: 0; }
-  body.exhibitpage .sidebar li {
+  .exhibitpage .sidebar li, .exhibitchildpage .sidebar li {
     padding: 0.6em 1em 0.6em 2em; }
-    body.exhibitpage .sidebar li.active {
+    .exhibitpage .sidebar li.active, .exhibitchildpage .sidebar li.active {
       background-color: #ece7f7;
       font-weight: 600; }
 
-body.exhibitpage .coll-rightside {
+.exhibitpage .coll-rightside, .exhibitchildpage .coll-rightside {
   background-color: #ece7f7; }
-  body.exhibitpage .coll-rightside h3, body.exhibitpage .coll-rightside h3 a {
+  .exhibitpage .coll-rightside h3, .exhibitpage .coll-rightside h3 a, .exhibitchildpage .coll-rightside h3, .exhibitchildpage .coll-rightside h3 a {
     color: #3c256d;
     border-bottom-color: #3c256d; }
 
