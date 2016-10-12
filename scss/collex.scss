@@ -59,10 +59,6 @@ $font-large: 2.5em;
 $font-medium: 1.5em;
 $font-small: 1.1em;
 
-@mixin borders {
-	border-bottom: 1px dotted $darkgray;
-}
-
 .exhibitpage, .exhibitchildpage {
 	h1, h2 {
 		color: $base-color;
@@ -185,39 +181,40 @@ $font-small: 1.1em;
 	}
 
 	.sidebar {
-		background-color: #eee;
-		padding: 1em 0 0 0;
-		@include respond-to(small) {
+	    background-color: #fff;
+	    border-right: 1px solid #ddd;
+		@include respond-to(small) {	
 			background-color: #fff;
 			border-right: 1px dotted #767676;
 		}
-		h3 {
-		    padding-left: 2em;
-		    font-weight: 600;
-		    @include respond-to(small) {
-		    	padding-left: 1em;
-		    }
-		    a {
-		    	color: lighten($base-color, 20%);
-		    }
+		h3 a {
+	    	color: lighten($base-color, 20%);
 		}
-		a {
-			color: $base-color;
-			&:hover {
-				color: lighten($base-color, 60%);
-				text-decoration: none;
-			}
-		}
-		& ul {	
-			padding-left: 0;
-			text-indent: 0;
-		}
-		& li {
-			padding: 0.6em 1em 0.6em 2em;
-			//margin: 2em 0;
-			&.active {
-			    background-color: lighten($base-color, 75%);
-			    font-weight: 600;
+		> ul {
+			> li { // Direct child page
+				a {
+					font-weight: 200;
+					color: $base-color;
+					&:hover {
+						color: lighten($base-color, 60%);
+						text-decoration: none;
+					}
+				}
+				&.active { // Active direct child page
+					background-color: lighten($base-color, 75%);
+				    margin-left: -2em; // Bleed background color past div
+				    margin-right: -1em; // Bleed background color past div
+				    padding: 0.5em 0.5em 0.5em 2em; // Fix text padding from bleeding background color past div
+				    >a {
+						font-weight: 600;
+					}
+				}
+				> ul { // Grandchild page
+					li a {
+				    	font-style: italic;
+				    	color: lighten($base-color, 10%);
+				    }
+				}
 			}
 		}
 	}
@@ -282,7 +279,7 @@ $font-small: 1.1em;
 	border-top: 1px dotted #767676;
 }
 
-.collex {
+.collexbase {
 	padding: 2em 1em;
 	& figure {
 	   @include respond-to(medium) {
@@ -292,8 +289,8 @@ $font-small: 1.1em;
 }
 
 .collex-solo {
-	@extend .collex;
-	@include borders;
+	@extend .collexbase;
+	border-bottom: 1px dotted $darkgray;
 	img {
 		padding-bottom: 1em	;
 		max-height: 40em;
@@ -330,48 +327,39 @@ $font-small: 1.1em;
 }
 
 .duo-wrapper {
-	//display:flex;
-	//flex-wrap: wrap;
-	padding: 2em 1em;
-	@include respond-to(small) {
-		@include borders;
-	}
+	display:flex;
+	flex-wrap: wrap;
+	padding: 1em;
+	border-bottom: 1px dotted $darkgray;
 }
 
 .collex-duo {
 	padding: 0;
-	//@extend .collex;
-	@include respond-to(medium) {
-		&:not(.collex-solo):nth-of-type(odd) {
-			border-right: 1px dotted $darkgray;
+	text-align: center;
+	& + & {
+		border-top: 1px dotted $darkgray;
+		@include respond-to(small) {
+			border-top: none;
+			border-left: 1px dotted $darkgray;
+			padding-left: 1em;
 		}
-   }
-   &+& img {
-   	padding-left: 1em;
-   }
+	}
+	figure {
+	    display: inline-block;
+	    text-align: left;
+	}
 	img {
-		padding: 0 1em 1em 0;
+		padding: 1.5em 1em 1em 0;
 		@include respond-to(medium) {
 		    max-height: 30em;
 		    width: auto;
-		    margin-left: auto;
-		    margin-right: auto;
-			padding: 1em;
-		}
-	}
-	figcaption {
-		text-align: center;
-		@include respond-to(medium) {
-			&:nth-of-type(odd) {
-				padding-right: 0.5em;
-			}
 		}
 	}
 }
 
 .collex-trio {
 	padding: 1em 0 2em 0;
-	@include borders;
+	border-bottom: 1px dotted $darkgray;
 	img {
 		float: left;
 		max-width: 33%;
@@ -380,7 +368,6 @@ $font-small: 1.1em;
 	}
 	figcaption {
 		clear: both;
-		text-align: center;
 	}
 }
 

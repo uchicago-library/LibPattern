@@ -15,17 +15,18 @@ Alerts
  */
 
 #skip  {
-  background-color: #47B5FF;
-  color: #fff;
+  background: #f5f5f5;
+  color: #222;
   a { 
     position:absolute;
-    padding: 5px 0 5px 10px;
+    padding: 1em 0 1em 3em;
+    line-height: 2em;
     left:-10000px; 
     top:auto; 
     width:1px; 
     height:1px; 
     overflow:hidden;
-  color: #fff;
+    color: #222;
     &:focus { 
       position:static; 
       width:auto; 

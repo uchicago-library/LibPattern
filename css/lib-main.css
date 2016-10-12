@@ -37,17 +37,18 @@ Alerts
  * --------------------------------------------------
  */
 #skip {
-  background-color: #47B5FF;
-  color: #fff; }
+  background: #f5f5f5;
+  color: #222; }
   #skip a {
     position: absolute;
-    padding: 5px 0 5px 10px;
+    padding: 1em 0 1em 3em;
+    line-height: 2em;
     left: -10000px;
     top: auto;
     width: 1px;
     height: 1px;
     overflow: hidden;
-    color: #fff; }
+    color: #222; }
     #skip a:focus {
       position: static;
       width: auto;
@@ -542,40 +543,45 @@ i.ask-icon {
  */
 .sidebar {
   background-color: rgba(210, 205, 204, 0.6);
-  padding: 5px 15px 40px 40px; }
+  padding: 1em 1em 1em 2em; }
   @media (min-width: 62em) {
     .sidebar {
-      padding-left: 2em;
+      padding-left: 1em;
       padding-top: 35px; } }
-  .sidebar ul {
+  .sidebar.crerar > ul > li > a {
+    color: #0F425C; }
+  .sidebar.eckhart > ul > li > a {
+    color: #350E20; }
+  .sidebar.mansueto > ul > li > a {
+    color: #3E3E23; }
+  .sidebar.reg > ul > li > a {
+    color: #616530; }
+  .sidebar.ssa > ul > li > a {
+    color: #9A5324; }
+  .sidebar > ul {
     list-style-type: none;
     padding-left: 1em;
     text-indent: -1em; }
-    .sidebar ul li {
-      margin-bottom: 5px; }
+    .sidebar > ul > li {
+      margin: 1em 0;
+      font-weight: 600; }
+      .sidebar > ul > li a {
+        color: #800000; }
+      .sidebar > ul > li ul {
+        list-style-type: none;
+        padding-left: 1em;
+        text-indent: -1em; }
+        .sidebar > ul > li ul li {
+          font-weight: 200;
+          margin-top: 0.5em; }
+          .sidebar > ul > li ul li:first-child {
+            margin-top: 0.2em; }
+          .sidebar > ul > li ul li a {
+            color: #525252; }
   .sidebar h3, .sidebar h3 a {
     margin-bottom: 3px;
     font-size: 1em;
     color: #642822; }
-  .sidebar h4, .sidebar .search-results h4 a, .search-results h4 .sidebar a, .sidebar h4 a, .search-results h4 .sidebar a a {
-    font-size: 1em;
-    font-weight: 600;
-    color: #800000;
-    line-height: 1.4em;
-    margin: 18px 0 5px; }
-  .sidebar a {
-    font-size: 1em;
-    color: #525252; }
-  .sidebar.crerar h4, .sidebar.crerar .search-results h4 a, .search-results h4 .sidebar.crerar a, .sidebar.crerar h4 a, .search-results h4 .sidebar.crerar a a {
-    color: #0F425C; }
-  .sidebar.eckhart h4, .sidebar.eckhart .search-results h4 a, .search-results h4 .sidebar.eckhart a, .sidebar.eckhart h4 a, .search-results h4 .sidebar.eckhart a a {
-    color: #350E20; }
-  .sidebar.mansueto h4, .sidebar.mansueto .search-results h4 a, .search-results h4 .sidebar.mansueto a, .sidebar.mansueto h4 a, .search-results h4 .sidebar.mansueto a a {
-    color: #3E3E23; }
-  .sidebar.reg h4, .sidebar.reg .search-results h4 a, .search-results h4 .sidebar.reg a, .sidebar.reg h4 a, .search-results h4 .sidebar.reg a a {
-    color: #616530; }
-  .sidebar.ssa h4, .sidebar.ssa .search-results h4 a, .search-results h4 .sidebar.ssa a, .sidebar.ssa h4 a, .search-results h4 .sidebar.ssa a a {
-    color: #9A5324; }
 
 .btn-sidebar {
   background: #ddd;
@@ -684,17 +690,18 @@ Alerts
  * --------------------------------------------------
  */
 #skip {
-  background-color: #47B5FF;
-  color: #fff; }
+  background: #f5f5f5;
+  color: #222; }
   #skip a {
     position: absolute;
-    padding: 5px 0 5px 10px;
+    padding: 1em 0 1em 3em;
+    line-height: 2em;
     left: -10000px;
     top: auto;
     width: 1px;
     height: 1px;
     overflow: hidden;
-    color: #fff; }
+    color: #222; }
     #skip a:focus {
       position: static;
       width: auto;
@@ -1129,17 +1136,18 @@ Alerts
  * --------------------------------------------------
  */
 #skip {
-  background-color: #47B5FF;
-  color: #fff; }
+  background: #f5f5f5;
+  color: #222; }
   #skip a {
     position: absolute;
-    padding: 5px 0 5px 10px;
+    padding: 1em 0 1em 3em;
+    line-height: 2em;
     left: -10000px;
     top: auto;
     width: 1px;
     height: 1px;
     overflow: hidden;
-    color: #fff; }
+    color: #222; }
     #skip a:focus {
       position: static;
       width: auto;
@@ -2829,33 +2837,30 @@ p.acknowledgments {
     color: #271847; }
 
 .exhibitpage .sidebar, .exhibitchildpage .sidebar {
-  background-color: #eee;
-  padding: 1em 0 0 0; }
+  background-color: #fff;
+  border-right: 1px solid #ddd; }
   @media (min-width: 48em) {
     .exhibitpage .sidebar, .exhibitchildpage .sidebar {
       background-color: #fff;
       border-right: 1px dotted #767676; } }
-  .exhibitpage .sidebar h3, .exhibitchildpage .sidebar h3 {
-    padding-left: 2em;
-    font-weight: 600; }
-    @media (min-width: 48em) {
-      .exhibitpage .sidebar h3, .exhibitchildpage .sidebar h3 {
-        padding-left: 1em; } }
-    .exhibitpage .sidebar h3 a, .exhibitchildpage .sidebar h3 a {
-      color: #513293; }
-  .exhibitpage .sidebar a, .exhibitchildpage .sidebar a {
+  .exhibitpage .sidebar h3 a, .exhibitchildpage .sidebar h3 a {
+    color: #513293; }
+  .exhibitpage .sidebar > ul > li a, .exhibitchildpage .sidebar > ul > li a {
+    font-weight: 200;
     color: #271847; }
-    .exhibitpage .sidebar a:hover, .exhibitchildpage .sidebar a:hover {
+    .exhibitpage .sidebar > ul > li a:hover, .exhibitchildpage .sidebar > ul > li a:hover {
       color: #bfaee3;
       text-decoration: none; }
-  .exhibitpage .sidebar ul, .exhibitchildpage .sidebar ul {
-    padding-left: 0;
-    text-indent: 0; }
-  .exhibitpage .sidebar li, .exhibitchildpage .sidebar li {
-    padding: 0.6em 1em 0.6em 2em; }
-    .exhibitpage .sidebar li.active, .exhibitchildpage .sidebar li.active {
-      background-color: #ece7f7;
+  .exhibitpage .sidebar > ul > li.active, .exhibitchildpage .sidebar > ul > li.active {
+    background-color: #ece7f7;
+    margin-left: -2em;
+    margin-right: -1em;
+    padding: 0.5em 0.5em 0.5em 2em; }
+    .exhibitpage .sidebar > ul > li.active > a, .exhibitchildpage .sidebar > ul > li.active > a {
       font-weight: 600; }
+  .exhibitpage .sidebar > ul > li > ul li a, .exhibitchildpage .sidebar > ul > li > ul li a {
+    font-style: italic;
+    color: #3c256d; }
 
 .exhibitpage .coll-rightside, .exhibitchildpage .coll-rightside {
   background-color: #ece7f7; }
@@ -2902,10 +2907,10 @@ p.acknowledgments {
 .collex-gallery {
   border-top: 1px dotted #767676; }
 
-.collex, .collex-solo, .collex-verso {
+.collexbase, .collex-solo, .collex-verso {
   padding: 2em 1em; }
   @media (min-width: 62em) {
-    .collex figure, .collex-solo figure, .collex-verso figure {
+    .collexbase figure, .collex-solo figure, .collex-verso figure {
       display: flex; } }
 
 .collex-solo, .collex-verso {
@@ -2936,32 +2941,30 @@ p.acknowledgments {
   position: absolute; }
 
 .duo-wrapper {
-  padding: 2em 1em; }
-  @media (min-width: 48em) {
-    .duo-wrapper {
-      border-bottom: 1px dotted #767676; } }
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em;
+  border-bottom: 1px dotted #767676; }
 
 .collex-duo {
-  padding: 0; }
-  @media (min-width: 62em) {
-    .collex-duo:not(.collex-solo):not(.collex-verso):nth-of-type(odd) {
-      border-right: 1px dotted #767676; } }
-  .collex-duo + .collex-duo img {
-    padding-left: 1em; }
+  padding: 0;
+  text-align: center; }
+  .collex-duo + .collex-duo {
+    border-top: 1px dotted #767676; }
+    @media (min-width: 48em) {
+      .collex-duo + .collex-duo {
+        border-top: none;
+        border-left: 1px dotted #767676;
+        padding-left: 1em; } }
+  .collex-duo figure {
+    display: inline-block;
+    text-align: left; }
   .collex-duo img {
-    padding: 0 1em 1em 0; }
+    padding: 1.5em 1em 1em 0; }
     @media (min-width: 62em) {
       .collex-duo img {
         max-height: 30em;
-        width: auto;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 1em; } }
-  .collex-duo figcaption {
-    text-align: center; }
-    @media (min-width: 62em) {
-      .collex-duo figcaption:nth-of-type(odd) {
-        padding-right: 0.5em; } }
+        width: auto; } }
 
 .collex-trio {
   padding: 1em 0 2em 0;
@@ -2972,8 +2975,7 @@ p.acknowledgments {
     height: auto;
     padding: 1em; }
   .collex-trio figcaption {
-    clear: both;
-    text-align: center; }
+    clear: both; }
 
 #page-turn {
   position: absolute;

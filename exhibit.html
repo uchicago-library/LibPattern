@@ -19,11 +19,15 @@
 <body class="exhibitchildpage">
 <div id="skip">
 		<a href="#content">Skip to Main Content</a>
+		<a href="#global-navbar">Skip to Main Navigation</a>
+		<a href="#sidebar">Skip to Side Bar</a>
+		<a href="#footer">Skip to Footer</a>
+	</ul>
 	</div>
 		<div id="body-wrap">
 
 	<!-- Top Navigation -->
-	<nav class="navbar navbar-default"> <!-- Navwrapper -->
+	<nav class="navbar navbar-default" role="navigation" > <!-- Navwrapper -->
 			<!-- Mobile top right nav -->
 			<div class="mobile-topnav visible-xs visible-sm">
 			    <a href="#"><i class="fa fa-clock-o fa-lg"></i></a> | <a href="#"><i class="fa fa-comment fa-lg"></i></a> | <a href="#"><i class="fa fa-gift fa-lg"></i></a> | <a href="#"><i class="fa fa-user fa-lg"></i></a>
@@ -279,19 +283,31 @@
 	<div class="row row-offcanvas row-offcanvas-left"> <!-- Off Canvas Wrapper Row -->
 
 <!-- Sidebar -->
-	<div class="col-xs-6 col-md-2 sidebar-offcanvas sidebar collex" id="sidebar">
+<nav role="navigation">
+	<div class="col-xs-6 col-md-2 sidebar-offcanvas navbar sidebar collex" id="sidebar">
 		<h3><a href="#">Special Collections Exibits</a></h3>
 		<ul>
 			<li><a href="exhibit-home.html">Introduction</a></li>
 			<li><a href="/e/webexhibits/outinthequads/closeted.html">Closeted/Out in the Quadrangles</a></li>
 			<li><a href="/e/webexhibits/outinthequads/women.html">Women's Relationships at the early University</a></li>
 			<li><a href="/e/webexhibits/outinthequads/smith.html">Cecil Smith and Paul Goodman</a></li>
-			<li class="active"><a href="exhibit.html">Gay Liberation</a></li>
+			<li class="active" aria-label="You are here:"><a href="exhibit.html">Gay Liberation</a>
+				<ul>
+					<li><a href="#">Grandchild page</a></li>
+					<li><a href="#">Second grandchild from this child page</a></li>
+					<li><a href="#">Third grandchild page</a></li>
+				</ul>
+			</li>
 			<li><a href="/e/webexhibits/outinthequads/cruising.html">Cruising the University</a></li>
 			<li><a href="/e/webexhibits/outinthequads/organizations.html">From GLF to Q&amp;A: Gender and Student Organizing from the 1970s to the 1990s</a></li>
 			<li><a href="/e/webexhibits/outinthequads/aids.html">AIDS at the University</a></li>
 			<li><a href="/e/webexhibits/outinthequads/brotherhood.html">Harassment and Response on Campus, 1984-1991</a></li>
-			<li><a href="/e/webexhibits/outinthequads/gllsa.html">Gay and Lesbian Law Students</a></li>
+			<li><a href="/e/webexhibits/outinthequads/gllsa.html">Gay and Lesbian Law Students</a>
+				<ul>
+					<li><a href="#">Another Grandchild page</a></li>
+					<li><a href="#">Second grandchild </a></li>
+				</ul>
+			</li>
 			<li><a href="/e/webexhibits/outinthequads/weddstock.html">Weddstock and Domestic Partnership Rights</a></li>
 			<li><a href="/e/webexhibits/outinthequads/natives.html">"The Natives are Studying Themselves": Studying Queers/Queer Studies at the University</a></li>
 			<li><a href="/e/webexhibits/outinthequads/5710.html">5710 and 21st Century Activism</a></li>
@@ -299,6 +315,7 @@
 			<li><a href="/e/webexhibits/outinthequads/rights.html">Rights and Reproductions</a></li>
 		</ul>
     </div>
+</nav>
 	<!-- // Sidebar -->
 <div class="col-md-10 breadcrumbs hidden-xs hidden-sm">
 	<a hreaf="#">Collections & Exhibits</a> > <a href="#">Exhibits</a> > Closeted/Out in the Quadrangles: A History of LGBTQ Life at the University of Chicago
