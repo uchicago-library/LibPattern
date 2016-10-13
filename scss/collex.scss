@@ -304,6 +304,9 @@ $font-small: 1.1em;
 }
 
 .collex-solo, .collex-duo, .collex-trio, .collex-verso {
+	img {
+	    border: 3px solid #c8c8c8;
+	}
 	.img-title {
 		color: $base-color;
 		font-size: $font-small;
@@ -355,7 +358,7 @@ $font-small: 1.1em;
 	    }
 	}
 	img {
-		padding: 1.5em 1em 1em 0;
+	    margin: 1.5em 1em 1.5em 0;
 		@include respond-to(medium) {
 		    max-height: 30em;
 		    width: auto;
@@ -368,9 +371,12 @@ $font-small: 1.1em;
 	border-bottom: 1px dotted $darkgray;
 	img {
 		float: left;
-		max-width: 33%;
+		max-width: 28%;
 		height: auto;
-		padding: 1em;
+		margin: 1em;
+		@include respond-to(large) {
+			max-width: 25%;
+		}
 	}
 	figcaption {
 		clear: both;
