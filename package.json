@@ -17,6 +17,13 @@
   },
   "homepage": "https://github.com/kzadrozny/LibPattern#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "browser-sync": "^2.16.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0"
   }
 }
