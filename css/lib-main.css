@@ -2959,6 +2959,12 @@ p.acknowledgments {
   .collex-duo figure {
     display: inline-block;
     text-align: left; }
+    @media (min-width: 48em) {
+      .collex-duo figure {
+        max-width: 90%; } }
+    @media (min-width: 62em) {
+      .collex-duo figure {
+        max-width: 80%; } }
   .collex-duo img {
     padding: 1.5em 1em 1em 0; }
     @media (min-width: 62em) {

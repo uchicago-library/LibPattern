@@ -196,7 +196,7 @@ $font-small: 1.1em;
 					font-weight: 200;
 					color: $base-color;
 					&:hover {
-						color: lighten($base-color, 60%);
+						color: lighten($base-color, 25%);
 						text-decoration: none;
 					}
 				}
@@ -310,7 +310,7 @@ $font-small: 1.1em;
 		font-weight: 600;
 	}
 	.img-citation {
-		color: lighten($base-color, 25%);
+		color: lighten($base-color, 10%);
 		font-size: 0.95em;
 	}
 	.img-caption {
@@ -347,6 +347,12 @@ $font-small: 1.1em;
 	figure {
 	    display: inline-block;
 	    text-align: left;
+	    @include respond-to(small) {
+	    	max-width: 90%;
+	    }
+	    @include respond-to(medium) {
+	    	max-width: 80%;
+	    }
 	}
 	img {
 		padding: 1.5em 1em 1em 0;
