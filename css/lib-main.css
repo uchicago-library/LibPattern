@@ -2863,9 +2863,12 @@ p.acknowledgments {
     padding: 0.5em 0.5em 0.5em 2em; }
     .exhibitpage .sidebar > ul > li.active > a, .exhibitchildpage .sidebar > ul > li.active > a {
       font-weight: 600; }
-  .exhibitpage .sidebar > ul > li > ul li a, .exhibitchildpage .sidebar > ul > li > ul li a {
-    font-style: italic;
-    color: #3c256d; }
+  .exhibitpage .sidebar > ul > li > ul, .exhibitchildpage .sidebar > ul > li > ul {
+    padding-left: 1.5em;
+    border-left: 3px solid #ece7f7; }
+    .exhibitpage .sidebar > ul > li > ul li a, .exhibitchildpage .sidebar > ul > li > ul li a {
+      font-style: italic;
+      color: #3c256d; }
 
 .exhibitpage .coll-rightside, .exhibitchildpage .coll-rightside {
   background-color: #ece7f7; }
