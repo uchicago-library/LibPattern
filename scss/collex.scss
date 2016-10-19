@@ -100,14 +100,16 @@ $font-small: 1.1em;
 	    width: 100%;
 	  }
 	  .img-wrapper {
-	  	width: 200px;
-	  	overflow: hidden;
+	  	display: none;
+	  	@include respond-to(small) {
+	  		display: block;
+	  		width: 250px;
+		  	overflow: hidden;
+	  	}
 	  	@include respond-to(medium) {
 	  		width: 250px;
+		  	overflow: hidden;
 	  	}
-		@include respond-to(smallonly) {
-			display: none;
-		}
 	  	img {
 	  		width: 200px;
 	  		height: auto;

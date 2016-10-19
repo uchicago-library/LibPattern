@@ -2774,14 +2774,16 @@ p.acknowledgments {
     position: relative;
     width: 100%; }
   .exhibitpage .jumbotron .img-wrapper, .exhibitchildpage .jumbotron .img-wrapper {
-    width: 200px;
-    overflow: hidden; }
+    display: none; }
+    @media (min-width: 48em) {
+      .exhibitpage .jumbotron .img-wrapper, .exhibitchildpage .jumbotron .img-wrapper {
+        display: block;
+        width: 250px;
+        overflow: hidden; } }
     @media (min-width: 62em) {
       .exhibitpage .jumbotron .img-wrapper, .exhibitchildpage .jumbotron .img-wrapper {
-        width: 250px; } }
-    @media (max-width: 34em) {
-      .exhibitpage .jumbotron .img-wrapper, .exhibitchildpage .jumbotron .img-wrapper {
-        display: none; } }
+        width: 250px;
+        overflow: hidden; } }
     .exhibitpage .jumbotron .img-wrapper img, .exhibitchildpage .jumbotron .img-wrapper img {
       width: 200px;
       height: auto; }
