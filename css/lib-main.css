@@ -2829,7 +2829,7 @@ p.acknowledgments {
     @media (min-width: 48em) {
       .exhibitpage .jumbotron .overlaywrap .banner-subtitle, .exhibitchildpage .jumbotron .overlaywrap .banner-subtitle {
         font-size: 1.5em; } }
-  .exhibitpage .jumbotron .overlaywrap .banner-loc, .exhibitpage .jumbotron .overlaywrap .banner-date, .exhibitchildpage .jumbotron .overlaywrap .banner-loc, .exhibitchildpage .jumbotron .overlaywrap .banner-date {
+  .exhibitpage .jumbotron .overlaywrap .banner-loc, .exhibitpage .jumbotron .overlaywrap .banner-loc a, .exhibitpage .jumbotron .overlaywrap .banner-date, .exhibitchildpage .jumbotron .overlaywrap .banner-loc, .exhibitchildpage .jumbotron .overlaywrap .banner-loc a, .exhibitchildpage .jumbotron .overlaywrap .banner-date {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #e0dddb;
     font-style: italic;

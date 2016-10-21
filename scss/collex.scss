@@ -164,7 +164,7 @@ $font-small: 1.1em;
 				font-size: $font-medium;
 			}
 		}
-		.banner-loc, .banner-date {
+		.banner-loc, .banner-loc a, .banner-date {
 			font-family: $display-font;
 			color: #e0dddb;
 			font-style: italic;
