@@ -1,15 +1,4 @@
 /*
- * Style Notes
- * --------------------------------------------------
- *
- * Styles split into two files: collex.sccs and collex-base.scss
- * This file contains user-based variables that are placed in the head of individual web exhibits
- *
- */
-
-
-
-/*
  * Media Queries
  * --------------------------------------------------
  *
@@ -72,18 +61,19 @@ $font-small: 1.1em;
  * --------------------------------------------------
  *
  */
-
+ 
 $base-color: #271847;
+$accent-color: #271847;
 $display-font: "Helvetica Neue",Helvetica,Arial,sans-serif;
 
 
 /*
- * Exhibit Customizations
+ * Conference Customizations
  * --------------------------------------------------
  *
  */
 
-.exhibitpage, .exhibitchildpage {
+.conferencepage, .conferencesubpage {
 	h1, h2 {
 		color: $base-color;
 		font-family: $display-font;
@@ -93,7 +83,7 @@ $display-font: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	}
 
 	h3 {
-		color: lighten($base-color, 10%);
+		color: $accent-color;
 		font-style: normal;
 		font-size: $font-small;
 		font-weight: 600;
@@ -111,7 +101,7 @@ $display-font: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	  overflow: hidden;
 	  padding-top: 0px;
 	  margin-bottom: 0;
-	  background-color: lighten($base-color, 30%);
+	  background-color: $base-color;
 	  background-image: url("../images/banner.gif"); //fallback if no image uploaded
 	  background-size: cover;
 	  h2 {
@@ -153,7 +143,7 @@ $display-font: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	}
 
 	.jumbotron .overlaywrap {
-		background-color: rgba( $base-color, .9 );
+		background-color: rgba( $accent-color, .9 );
 		left: 0;
 		top: 0;
 		font-family: $display-font;
@@ -174,14 +164,14 @@ $display-font: "Helvetica Neue",Helvetica,Arial,sans-serif;
 			margin: 0;
 			padding: 0px;
 			letter-spacing: 0.03em;
-			color: contrast-color($base-color, shade($base-color, 5%), tint($base-color, 90%), 80%);
+			color: #fff;
 			@include respond-to(small) {
 				font-size: $font-large;
 			}
 		}
 		.banner-subtitle {
 			font-family: $display-font;
-			color: lighten($base-color, 60%);
+			color: #eee;
 			font-size: $font-medium*0.8;
 			padding-bottom:5px;
 			@include respond-to(small) {
@@ -195,118 +185,10 @@ $display-font: "Helvetica Neue",Helvetica,Arial,sans-serif;
 			font-size: $font-small*0.8;
 		}
 	}
+} // End body conf. customizations
 
-	.btn.webex-next {
-		margin-top: 2em;
-		background: transparent;
-		border-color: $base-color;
-		float: right;
-		a & {
-		  	color: $base-color;
-		}
-	}
 
-	.sidebar {
-	    background-color: #fff;
-	    border-right: 1px solid #ddd;
-		@include respond-to(small) {	
-			background-color: #fff;
-			border-right: 1px dotted #767676;
-		}
-		h3 a {
-	    	color: lighten($base-color, 20%);
-		}
-		> ul {
-			> li { // Direct child page
-				a {
-					font-weight: 200;
-					color: $base-color;
-					&:hover {
-						color: lighten($base-color, 25%);
-						text-decoration: none;
-					}
-				}
-				&.active { // Active direct child page
-					background-color: lighten($base-color, 75%);
-				    margin-left: -2em; // Bleed background color past div
-				    margin-right: -1em; // Bleed background color past div
-				    padding: 0.5em 0.5em 0.5em 2em; // Fix text padding from bleeding background color past div
-				    >a {
-						font-weight: 600;
-					}
-				}
-				> ul { // Grandchild page
-				    padding-left: 1.5em;
-					border-left: 3px solid lighten($base-color, 75%);
-					li a {
-				    	font-style: italic;
-				    	color: lighten($base-color, 10%);
-				    }
-				}
-			}
-		}
-	}
 
-	.coll-rightside {
-		background-color: lighten($base-color, 75%);
-		h3, h3 a {
-			color: lighten($base-color, 10%);
-			border-bottom-color: lighten($base-color, 10%);
-		}
-	}
-} // End body.exhibitpage customizations
-
-.collex-loc {
-	background-color: #eee;
-	padding: 1.5em;
-	display: flex;
-	flex-wrap: wrap;
-	& ~ #push {
-		background-color: #eee;
-	}
-	.loc-title {
-		margin-bottom: 0.5em;
-		color: $base-color;
-		font-weight: 600;
-		font-size: 1em;
-		a {
-			font-weight: 400;	
-			color: lighten($base-color, 15%);
-		}
-	}
-	p, ul {
-		font-size: 0.95em;
-	}
-	ul {
-		list-style: none;
-		padding-left: 0;
-		& li {
-			margin-bottom: 10px;
-			.viewall {
-				margin-top: 15px;
-			}
-		}
-	}
-}
-
-.collex-solo, .collex-duo, .collex-trio, .collex-verso {
-	img {
-	    border: 3px solid #c8c8c8;
-	}
-	.img-title {
-		color: $base-color;
-		font-size: $font-small;
-		font-weight: 600;
-	}
-	.img-citation {
-		color: lighten($base-color, 10%);
-		font-size: 0.95em;
-	}
-	.img-caption {
-		color: #000;
-		font-size: 1em;
-	}
-}
 
 
 

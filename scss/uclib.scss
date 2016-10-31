@@ -118,7 +118,7 @@ body.staffpublicpage {
   overflow:hidden;
 }
 
-.h1-banner .breadcrumbs, #p-3378 .breadcrumbs { // Hide breadcrumbs on homepages with banners
+.h1-banner .breadcrumbs, #p-3378 .breadcrumbs, #p-1752 .breadcrumbs, #p-1754 .breadcrumbs, #p-1755 .breadcrumbs, #p-1753 .breadcrumbs, #p-1756 .breadcrumbs, #p-1758 .breadcrumbs { // Hide breadcrumbs on homepages with banners
    visibility: hidden;
 }
 
@@ -216,11 +216,6 @@ p q { //Inline Quote
  * Images, Video, and other Media
  * --------------------------------------------------
  */
-
-// img, video, object {
-//   max-width: 100%;
-//   height: auto;
-// }
 
 .block-video > div { //override Wagtail's weird padding
     padding-bottom: 20px!important;
@@ -746,7 +741,7 @@ form#knowledgetracker { // Desk Tracker
 }
 
 .btn-default {
-  color: #fff;
+  color: #fff!important;
   background-color: $darkgray;
   padding: 6px 12px;
   margin-bottom: 10px;

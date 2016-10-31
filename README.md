@@ -17,3 +17,7 @@ The production files are:
 * js/bootstrap.min.js
 * js/lib-main.min.js
 * images/*
+
+## User Defined Styles
+* scss/collex.scss - Intended to be placed in the head of .exhibitpage, .exhibitchildpage
+* scss/conf.scss - Intended to be placed in the head of .conferencepage, .conferencesubpage
