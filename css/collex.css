@@ -1,0 +1,209 @@
+/*
+ * Style Notes
+ * --------------------------------------------------
+ *
+ * Styles split into two files: collex.sccs and collex-base.scss
+ * This file contains user-based variables that are placed in the head of individual web exhibits
+ *
+ */
+/*
+ * Media Queries
+ * --------------------------------------------------
+ *
+ */
+/*
+ * Stable Variables
+ * --------------------------------------------------
+ *
+ */
+/*
+ * User Defined Variables
+ * --------------------------------------------------
+ *
+ */
+/*
+ * Exhibit Customizations
+ * --------------------------------------------------
+ *
+ */
+.exhibitpage h1, .exhibitpage h2, .exhibitchildpage h1, .exhibitchildpage h2 {
+  color: #271847;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-size: 1.5em;
+  font-weight: 400; }
+
+.exhibitpage h3, .exhibitchildpage h3 {
+  color: #3c256d;
+  font-style: normal;
+  font-size: 1.1em;
+  font-weight: 600; }
+
+.exhibitpage h4, .exhibitchildpage h4 {
+  color: #271847;
+  font-style: italic;
+  font-size: 1.1em;
+  font-weight: 600; }
+
+.exhibitpage .jumbotron, .exhibitchildpage .jumbotron {
+  min-height: 250px;
+  overflow: hidden;
+  padding-top: 0px;
+  margin-bottom: 0;
+  background-color: #663fb9;
+  background-image: url("../images/banner.gif");
+  background-size: cover; }
+  .exhibitpage .jumbotron h2, .exhibitchildpage .jumbotron h2 {
+    color: #fff; }
+  .exhibitpage .jumbotron .container, .exhibitchildpage .jumbotron .container {
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    width: 100%; }
+  .exhibitpage .jumbotron .img-wrapper, .exhibitchildpage .jumbotron .img-wrapper {
+    display: none; }
+    @media (min-width: 48em) {
+      .exhibitpage .jumbotron .img-wrapper, .exhibitchildpage .jumbotron .img-wrapper {
+        display: block;
+        width: 250px;
+        overflow: hidden; } }
+    @media (min-width: 62em) {
+      .exhibitpage .jumbotron .img-wrapper, .exhibitchildpage .jumbotron .img-wrapper {
+        width: 250px;
+        overflow: hidden; } }
+    .exhibitpage .jumbotron .img-wrapper img, .exhibitchildpage .jumbotron .img-wrapper img {
+      width: 200px;
+      height: auto; }
+      @media (min-width: 62em) {
+        .exhibitpage .jumbotron .img-wrapper img, .exhibitchildpage .jumbotron .img-wrapper img {
+          width: 250px; } }
+    @media (min-width: 48em) {
+      .exhibitpage .jumbotron .img-wrapper + .overlaywrap, .exhibitchildpage .jumbotron .img-wrapper + .overlaywrap {
+        left: 200px; } }
+    @media (min-width: 62em) {
+      .exhibitpage .jumbotron .img-wrapper + .overlaywrap, .exhibitchildpage .jumbotron .img-wrapper + .overlaywrap {
+        left: 250px; } }
+
+.exhibitpage .jumbotron .overlaywrap, .exhibitchildpage .jumbotron .overlaywrap {
+  background-color: rgba(39, 24, 71, 0.9);
+  left: 0;
+  top: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 0.5em 2em; }
+  @media (min-width: 48em) {
+    .exhibitpage .jumbotron .overlaywrap, .exhibitchildpage .jumbotron .overlaywrap {
+      padding-right: 6em; } }
+  .exhibitpage .jumbotron .overlaywrap p, .exhibitchildpage .jumbotron .overlaywrap p {
+    padding: 0;
+    margin: 0; }
+    .exhibitpage .jumbotron .overlaywrap p:last-child, .exhibitchildpage .jumbotron .overlaywrap p:last-child {
+      padding-bottom: 15px; }
+  .exhibitpage .jumbotron .overlaywrap h2, .exhibitchildpage .jumbotron .overlaywrap h2 {
+    font-weight: 100;
+    font-size: 1.75em;
+    margin: 0;
+    padding: 0px;
+    letter-spacing: 0.03em;
+    color: contrast-color(#271847, shade(#271847, 5%), tint(#271847, 90%), 80%); }
+    @media (min-width: 48em) {
+      .exhibitpage .jumbotron .overlaywrap h2, .exhibitchildpage .jumbotron .overlaywrap h2 {
+        font-size: 2.5em; } }
+  .exhibitpage .jumbotron .overlaywrap .banner-subtitle, .exhibitchildpage .jumbotron .overlaywrap .banner-subtitle {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #bfaee3;
+    font-size: 1.2em;
+    padding-bottom: 5px; }
+    @media (min-width: 48em) {
+      .exhibitpage .jumbotron .overlaywrap .banner-subtitle, .exhibitchildpage .jumbotron .overlaywrap .banner-subtitle {
+        font-size: 1.5em; } }
+  .exhibitpage .jumbotron .overlaywrap .banner-loc, .exhibitpage .jumbotron .overlaywrap .banner-loc a, .exhibitpage .jumbotron .overlaywrap .banner-date, .exhibitchildpage .jumbotron .overlaywrap .banner-loc, .exhibitchildpage .jumbotron .overlaywrap .banner-loc a, .exhibitchildpage .jumbotron .overlaywrap .banner-date {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #e0dddb;
+    font-style: italic;
+    font-size: 0.88em; }
+
+.exhibitpage .btn.webex-next, .exhibitchildpage .btn.webex-next {
+  margin-top: 2em;
+  background: transparent;
+  border-color: #271847;
+  float: right; }
+  a .exhibitpage .btn.webex-next, a .exhibitchildpage .btn.webex-next {
+    color: #271847; }
+
+.exhibitpage .sidebar, .exhibitchildpage .sidebar {
+  background-color: #fff;
+  border-right: 1px solid #ddd; }
+  @media (min-width: 48em) {
+    .exhibitpage .sidebar, .exhibitchildpage .sidebar {
+      background-color: #fff;
+      border-right: 1px dotted #767676; } }
+  .exhibitpage .sidebar h3 a, .exhibitchildpage .sidebar h3 a {
+    color: #513293; }
+  .exhibitpage .sidebar > ul > li a, .exhibitchildpage .sidebar > ul > li a {
+    font-weight: 200;
+    color: #271847; }
+    .exhibitpage .sidebar > ul > li a:hover, .exhibitchildpage .sidebar > ul > li a:hover {
+      color: #5b38a6;
+      text-decoration: none; }
+  .exhibitpage .sidebar > ul > li.active, .exhibitchildpage .sidebar > ul > li.active {
+    background-color: #ece7f7;
+    margin-left: -2em;
+    margin-right: -1em;
+    padding: 0.5em 0.5em 0.5em 2em; }
+    .exhibitpage .sidebar > ul > li.active > a, .exhibitchildpage .sidebar > ul > li.active > a {
+      font-weight: 600; }
+  .exhibitpage .sidebar > ul > li > ul, .exhibitchildpage .sidebar > ul > li > ul {
+    padding-left: 1.5em;
+    border-left: 3px solid #ece7f7; }
+    .exhibitpage .sidebar > ul > li > ul li a, .exhibitchildpage .sidebar > ul > li > ul li a {
+      font-style: italic;
+      color: #3c256d; }
+
+.exhibitpage .coll-rightside, .exhibitchildpage .coll-rightside {
+  background-color: #ece7f7; }
+  .exhibitpage .coll-rightside h3, .exhibitpage .coll-rightside h3 a, .exhibitchildpage .coll-rightside h3, .exhibitchildpage .coll-rightside h3 a {
+    color: #3c256d;
+    border-bottom-color: #3c256d; }
+
+.collex-loc {
+  background-color: #eee;
+  padding: 1.5em;
+  display: flex;
+  flex-wrap: wrap; }
+  .collex-loc ~ #push {
+    background-color: #eee; }
+  .collex-loc .loc-title {
+    margin-bottom: 0.5em;
+    color: #271847;
+    font-weight: 600;
+    font-size: 1em; }
+    .collex-loc .loc-title a {
+      font-weight: 400;
+      color: #462b80; }
+  .collex-loc p, .collex-loc ul {
+    font-size: 0.95em; }
+  .collex-loc ul {
+    list-style: none;
+    padding-left: 0; }
+    .collex-loc ul li {
+      margin-bottom: 10px; }
+      .collex-loc ul li .viewall {
+        margin-top: 15px; }
+
+.collex-solo img, .collex-duo img, .collex-trio img, .collex-verso img {
+  border: 3px solid #c8c8c8; }
+
+.collex-solo .img-title, .collex-duo .img-title, .collex-trio .img-title, .collex-verso .img-title {
+  color: #271847;
+  font-size: 1.1em;
+  font-weight: 600; }
+
+.collex-solo .img-citation, .collex-duo .img-citation, .collex-trio .img-citation, .collex-verso .img-citation {
+  color: #3c256d;
+  font-size: 0.95em; }
+
+.collex-solo .img-caption, .collex-duo .img-caption, .collex-trio .img-caption, .collex-verso .img-caption {
+  color: #000;
+  font-size: 1em; }
+
+/*# sourceMappingURL=collex.css.map */

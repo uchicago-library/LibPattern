@@ -24,7 +24,7 @@ gulp.task("concatScripts", function() {
 
 // Minify js
 gulp.task("minifyScripts", ["concatScripts"], function() {
-	return gulp.src("js/lib-main.js")
+	return gulp.src('js/lib-main.js')
 		.pipe(uglify())
 		.pipe(rename('lib-main.min.js'))
 		.pipe(gulp.dest('js'));
@@ -32,7 +32,7 @@ gulp.task("minifyScripts", ["concatScripts"], function() {
 
 //Compile Sass to css
 gulp.task('compileSass', function() {
-	return gulp.src('scss/lib-main.scss')
+	return gulp.src(['scss/lib-main.scss', 'scss/collex.scss', 'scss/conf.scss'])
 		.pipe(maps.init()) // Sass source map 1/2
 		.pipe(sass())
 		.pipe(maps.write('./')) // Sass source map 2/2

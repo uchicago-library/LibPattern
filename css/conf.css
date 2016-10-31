@@ -1,0 +1,117 @@
+/*
+ * Media Queries
+ * --------------------------------------------------
+ *
+ */
+/*
+ * Stable Variables
+ * --------------------------------------------------
+ *
+ */
+/*
+ * User Defined Variables
+ * --------------------------------------------------
+ *
+ */
+/*
+ * Conference Customizations
+ * --------------------------------------------------
+ *
+ */
+.conferencepage h1, .conferencepage h2, .conferencesubpage h1, .conferencesubpage h2 {
+  color: #271847;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-size: 1.5em;
+  font-weight: 400; }
+
+.conferencepage h3, .conferencesubpage h3 {
+  color: #271847;
+  font-style: normal;
+  font-size: 1.1em;
+  font-weight: 600; }
+
+.conferencepage h4, .conferencesubpage h4 {
+  color: #271847;
+  font-style: italic;
+  font-size: 1.1em;
+  font-weight: 600; }
+
+.conferencepage .jumbotron, .conferencesubpage .jumbotron {
+  min-height: 250px;
+  overflow: hidden;
+  padding-top: 0px;
+  margin-bottom: 0;
+  background-color: #271847;
+  background-image: url("../images/banner.gif");
+  background-size: cover; }
+  .conferencepage .jumbotron h2, .conferencesubpage .jumbotron h2 {
+    color: #fff; }
+  .conferencepage .jumbotron .container, .conferencesubpage .jumbotron .container {
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    width: 100%; }
+  .conferencepage .jumbotron .img-wrapper, .conferencesubpage .jumbotron .img-wrapper {
+    display: none; }
+    @media (min-width: 48em) {
+      .conferencepage .jumbotron .img-wrapper, .conferencesubpage .jumbotron .img-wrapper {
+        display: block;
+        width: 250px;
+        overflow: hidden; } }
+    @media (min-width: 62em) {
+      .conferencepage .jumbotron .img-wrapper, .conferencesubpage .jumbotron .img-wrapper {
+        width: 250px;
+        overflow: hidden; } }
+    .conferencepage .jumbotron .img-wrapper img, .conferencesubpage .jumbotron .img-wrapper img {
+      width: 200px;
+      height: auto; }
+      @media (min-width: 62em) {
+        .conferencepage .jumbotron .img-wrapper img, .conferencesubpage .jumbotron .img-wrapper img {
+          width: 250px; } }
+    @media (min-width: 48em) {
+      .conferencepage .jumbotron .img-wrapper + .overlaywrap, .conferencesubpage .jumbotron .img-wrapper + .overlaywrap {
+        left: 200px; } }
+    @media (min-width: 62em) {
+      .conferencepage .jumbotron .img-wrapper + .overlaywrap, .conferencesubpage .jumbotron .img-wrapper + .overlaywrap {
+        left: 250px; } }
+
+.conferencepage .jumbotron .overlaywrap, .conferencesubpage .jumbotron .overlaywrap {
+  background-color: rgba(39, 24, 71, 0.9);
+  left: 0;
+  top: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 0.5em 2em; }
+  @media (min-width: 48em) {
+    .conferencepage .jumbotron .overlaywrap, .conferencesubpage .jumbotron .overlaywrap {
+      padding-right: 6em; } }
+  .conferencepage .jumbotron .overlaywrap p, .conferencesubpage .jumbotron .overlaywrap p {
+    padding: 0;
+    margin: 0; }
+    .conferencepage .jumbotron .overlaywrap p:last-child, .conferencesubpage .jumbotron .overlaywrap p:last-child {
+      padding-bottom: 15px; }
+  .conferencepage .jumbotron .overlaywrap h2, .conferencesubpage .jumbotron .overlaywrap h2 {
+    font-weight: 100;
+    font-size: 1.75em;
+    margin: 0;
+    padding: 0px;
+    letter-spacing: 0.03em;
+    color: #fff; }
+    @media (min-width: 48em) {
+      .conferencepage .jumbotron .overlaywrap h2, .conferencesubpage .jumbotron .overlaywrap h2 {
+        font-size: 2.5em; } }
+  .conferencepage .jumbotron .overlaywrap .banner-subtitle, .conferencesubpage .jumbotron .overlaywrap .banner-subtitle {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #eee;
+    font-size: 1.2em;
+    padding-bottom: 5px; }
+    @media (min-width: 48em) {
+      .conferencepage .jumbotron .overlaywrap .banner-subtitle, .conferencesubpage .jumbotron .overlaywrap .banner-subtitle {
+        font-size: 1.5em; } }
+  .conferencepage .jumbotron .overlaywrap .banner-loc, .conferencepage .jumbotron .overlaywrap .banner-loc a, .conferencepage .jumbotron .overlaywrap .banner-date, .conferencesubpage .jumbotron .overlaywrap .banner-loc, .conferencesubpage .jumbotron .overlaywrap .banner-loc a, .conferencesubpage .jumbotron .overlaywrap .banner-date {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #e0dddb;
+    font-style: italic;
+    font-size: 0.88em; }
+
+/*# sourceMappingURL=conf.css.map */
