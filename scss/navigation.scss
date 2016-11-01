@@ -235,6 +235,31 @@ i.ask-icon {
   }
 }
 
+.onecol-drop {
+  background-color: $transparent;
+  @include respond-to(small) {
+      min-width: 15em;
+      padding: 10px 0 10px 0;
+  }
+  >li {
+    margin-bottom: 5px;
+    a {
+      color: #fff;
+      font-size: 1.1em;
+      text-decoration: none;
+      &:hover {
+        color: $hoveraccent;
+        background-color: $transparent;
+      }
+    }
+  }
+  .twocol-head {
+    @include respond-to(small) {
+      padding-left: 20px;
+    }
+  }
+}
+
 .ul-left {
   padding-bottom: 1.5em;
   @include respond-to(medium) {
