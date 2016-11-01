@@ -2316,7 +2316,7 @@ form#knowledgetracker input[type="reset"] {
   padding: 10px 14px; }
 
 .btn-default {
-  color: #fff !important;
+  color: #fff;
   background-color: #767676;
   padding: 6px 12px;
   margin-bottom: 10px; }
