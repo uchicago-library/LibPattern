@@ -443,23 +443,25 @@ i.ask-icon {
         color: #D49464; }
 
 .onecol-drop {
-  background-color: rgba(67, 67, 67, 0.95); }
+  background-color: rgba(67, 67, 67, 0.95);
+  padding: 0 15px 10px 15px; }
   @media (min-width: 48em) {
     .onecol-drop {
       min-width: 15em;
-      padding: 10px 0 10px 0; } }
+      padding: 10px 15px 10px 15px; } }
   .onecol-drop > li {
     margin-bottom: 5px; }
     .onecol-drop > li a {
-      color: #fff;
+      color: #fff !important;
+      padding: 0 !important;
+      text-decoration: none;
       font-size: 1.1em;
-      text-decoration: none; }
+      margin-bottom: 12px; }
       .onecol-drop > li a:hover {
         color: #D49464;
         background-color: rgba(67, 67, 67, 0.95); }
-  @media (min-width: 48em) {
-    .onecol-drop .twocol-head {
-      padding-left: 20px; } }
+  .onecol-drop .twocol-head {
+    padding-left: 0px; }
 
 .ul-left {
   padding-bottom: 1.5em; }
