@@ -301,7 +301,13 @@ h1.searchbox-header {
   margin: 0px 0 10px 5px; }
 
 .btn-search {
-  padding: 13px; }
+  padding: 8px; }
+  @media (min-width: 48em) {
+    .btn-search {
+      padding: 13px; } }
+
+.search-btn-wrapper {
+  padding-right: 0; }
 
 .btn-toolbar {
   margin-left: 0;
