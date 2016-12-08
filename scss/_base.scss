@@ -267,6 +267,17 @@ a {
   }
 }
 
+//External Link Styling
+// a[href*="events.uchicago"], a[href*="guides.lib.uchicago"], a:not([href*='lib.uchicago']) {
+//   &:after {
+//     content: "\0020\F08E";
+//     font-family: FontAwesome;
+//     font-size: 0.9em;
+//     padding-left: 0.5em;
+//     display: inline-block;
+//   }
+// }
+
 /* Completely remove from the flow but leave available to screen readers. */
 .is-vishidden {
   position: absolute !important;

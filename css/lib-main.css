@@ -968,6 +968,13 @@ a {
  * Content
  * --------------------------------------------------
  */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); }
+
 .breadcrumbs {
   padding-top: 5px;
   padding-left: 20px;
@@ -1641,6 +1648,9 @@ form#knowledgetracker input[type="reset"] {
       margin-bottom: 6px;
       color: #444; } }
 
+thead th {
+  white-space: nowrap; }
+
 .distinct-list a, .scrc-list a, table.ask a, .spacelist a, .coll-list a, .directory-list a {
   color: #8a4a20; }
 
@@ -1657,31 +1667,39 @@ form#knowledgetracker input[type="reset"] {
   .distinct-list, .scrc-list, table.ask, .spacelist, .coll-list, .directory-list {
     margin-top: 0; } }
 
+thead a {
+  color: #000036;
+  font-weight: 400;
+  text-decoration: underline; }
+  thead a:after {
+    content: "\0020\f101";
+    font-family: FontAwesome; }
+
+tbody a {
+  color: #32327f; }
+
 .etable a[href*="events.uchicago"] {
   font-size: 1.05em;
   font-weight: 600; }
+  .etable a[href*="events.uchicago"] a[href*=register] {
+    color: red; }
+  .etable a[href*="events.uchicago"]:after {
+    content: "\0020\F08E";
+    font-family: FontAwesome;
+    font-size: 0.8em;
+    padding-left: 0.5em;
+    display: inline-block; }
 
-tr.etable-header {
+tr.etable-header, th.etable-header, table.etable thead {
   border-bottom: 2px solid #ADB17D;
   background-color: #c5c8a4 !important; }
   @media (max-width: 34em) {
-    tr.etable-header {
+    tr.etable-header, th.etable-header, table.etable thead {
       display: inline-block;
       width: inherit; } }
 
 table.etable > thead > tr > th {
   border-bottom: 0; }
-
-table.etable thead {
-  text-indent: -999em;
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0; }
 
 table.etable > tbody > tr:last-child {
   border-bottom: 2px solid #ADB17D; }
@@ -2110,6 +2128,11 @@ td.time, td.event-nav {
       text-align: right; } }
   .event-nav a {
     color: #767676; }
+
+.event-time {
+  font-weight: 400;
+  display: block;
+  font-style: italic; }
 
 /*
  * Spaces
