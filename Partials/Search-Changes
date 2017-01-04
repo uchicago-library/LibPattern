@@ -1,0 +1,24 @@
+.transformer-tabs li a.active {
+    color: #642822;
+    border-bottom: 3px solid #642822;
+    bottom: -3px;
+}
+
+a.active:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-top: 10px solid #642822;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    margin-left: -10px;
+}
+
+.transformer-tabs a {
+    display: inline-block;
+    color: #525252;
+    text-decoration: none;
+    padding: 0.5em 1.5em;
+    font-weight: 600;
+}
