@@ -1177,6 +1177,22 @@ a.img-src {
   display: inline-block;
   margin: 15px 0; }
 
+.standardpage .collex-solo img, .standardpage .collex-verso img, .standardpage .collex-duo img, .standardpage .collex-trio img, .standardpage .collex-verso img {
+  border: 3px solid #c8c8c8; }
+
+.standardpage .collex-solo .img-title, .standardpage .collex-verso .img-title, .standardpage .collex-duo .img-title, .standardpage .collex-trio .img-title, .standardpage .collex-verso .img-title {
+  color: #525252;
+  font-size: 1.1em;
+  font-weight: 600; }
+
+.standardpage .collex-solo .img-citation, .standardpage .collex-verso .img-citation, .standardpage .collex-duo .img-citation, .standardpage .collex-trio .img-citation, .standardpage .collex-verso .img-citation {
+  color: #7B4943;
+  font-size: 0.95em; }
+
+.standardpage .collex-solo .img-caption, .standardpage .collex-verso .img-caption, .standardpage .collex-duo .img-caption, .standardpage .collex-trio .img-caption, .standardpage .collex-verso .img-caption {
+  color: #000;
+  font-size: 1em; }
+
 /*
  * Right Sidebar
  * --------------------------------------------------
@@ -1671,9 +1687,6 @@ thead a {
   color: #000036;
   font-weight: 400;
   text-decoration: underline; }
-  thead a:after {
-    content: "\0020\f101";
-    font-family: FontAwesome; }
 
 tbody a {
   color: #32327f; }
