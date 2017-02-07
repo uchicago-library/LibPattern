@@ -465,7 +465,7 @@ i.ask-icon {
 
 .ul-left {
   padding-bottom: 1.5em; }
-  @media (min-width: 62em) {
+  @media (min-width: 48em) {
     .ul-left {
       padding-bottom: 0px;
       border-right: 1px solid #767676; } }
