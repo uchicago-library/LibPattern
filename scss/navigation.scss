@@ -202,12 +202,12 @@ i.ask-icon {
   }
 }
 
-.dropdown-menu-right {
-  @include respond-to(large) {
-    right: auto;
-    left: 0;
-  }
-}
+// .dropdown-menu-right {
+//   @include respond-to(large) {
+//     right: auto;
+//     left: 0;
+//   }
+// }
 
 .twocol-head { // Headers for mega drop downs
   color: #e7d5d3;
@@ -251,8 +251,8 @@ i.ask-icon {
       font-size: 1.1em;
       margin-bottom: 12px;
       &:hover {
-        color: $hoveraccent;
-        background-color: $transparent;
+        color: $hoveraccent!important;
+        background-color: transparent!important;
       }
     }
   }
