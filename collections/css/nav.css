@@ -1,0 +1,233 @@
+/* line 1, nav.scss */
+body {
+  font-family: 'ProximaNova-Regular', "Arial", sans-serif;
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  /* line 8, nav.scss */
+  .navbar-right {
+    padding-right: 1.5em;
+  }
+}
+
+/* line 14, nav.scss */
+.mob-fa {
+  text-align: center;
+  background-color: #eeeeee;
+  padding: 5px 0 5px 0;
+}
+/* line 18, nav.scss */
+.mob-fa a {
+  color: #767676;
+}
+
+@media (min-width: 768px) {
+  /* line 25, nav.scss */
+  .fluid-top {
+    padding: 0px;
+  }
+}
+
+/* line 31, nav.scss */
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border: 0px;
+}
+
+/* line 36, nav.scss */
+#bs-example-navbar-collapse-1 {
+  background-color: #eeeeee;
+  font-size: 1.1em;
+}
+@media (min-width: 768px) {
+  /* line 36, nav.scss */
+  #bs-example-navbar-collapse-1 {
+    margin-top: 75px;
+  }
+}
+
+/* line 44, nav.scss */
+.navbar-brand {
+  max-width: 175px;
+  padding: 5px 15px 15px 15px;
+}
+@media (min-width: 768px) {
+  /* line 44, nav.scss */
+  .navbar-brand {
+    padding-left: 2.5em;
+    max-width: 250px;
+    padding-top: 15px;
+  }
+}
+
+/* line 54, nav.scss */
+.navbar-default {
+  border: 0px;
+}
+/* line 58, nav.scss */
+.navbar-default .navbar-nav > li > a {
+  color: #000;
+}
+/* line 60, nav.scss */
+.navbar-default .navbar-nav > li > a:hover {
+  color: #555;
+}
+/* line 64, nav.scss */
+.navbar-default .navbar-nav .active > a, .navbar-default .navbar-nav .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav .navbar-default .navbar-nav > .active > a:hover {
+  color: #555;
+  background-color: #e7e7e7;
+}
+/* line 68, nav.scss */
+.navbar-default .navbar-nav .open .dropdown-menu {
+  background-color: #e7e7e7;
+}
+
+/* line 77, nav.scss */
+.dropdown-menu .divider {
+  background-color: #767676;
+}
+
+/* line 81, nav.scss */
+.twocol-drop {
+  background-color: #767676;
+}
+@media (min-width: 768px) {
+  /* line 81, nav.scss */
+  .twocol-drop {
+    min-width: 500px;
+    background-color: #e7e7e7;
+    padding: 10px 0 10px 0;
+  }
+}
+/* line 89, nav.scss */
+.twocol-drop > li > ul > li > a, .twocol-drop > ul > li > a {
+  color: #767676;
+  line-height: 2.2em;
+  text-decoration: none;
+}
+
+/* line 96, nav.scss */
+.twocol-head {
+  font-size: .8em;
+  line-height: 2.4em;
+  color: #000;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  /* line 103, nav.scss */
+  .tworow .navbar-collapse {
+    clear: left;
+  }
+}
+
+/* line 109, nav.scss */
+.ul-left {
+  padding-bottom: 1.5em;
+}
+@media (min-width: 768px) {
+  /* line 109, nav.scss */
+  .ul-left {
+    padding-bottom: 0px;
+    border-right: 1px solid black;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 117, nav.scss */
+  .open > .dropdown-menu {
+    background-color: #e7e7e7;
+  }
+}
+
+/* line 127, nav.scss */
+.body-container {
+  padding-top: 15px;
+}
+/* line 130, nav.scss */
+.body-container h1 {
+  color: #434343;
+}
+@media (min-width: 768px) {
+  /* line 127, nav.scss */
+  .body-container {
+    padding: 40px 0 20px 60px;
+  }
+}
+
+/* line 140, nav.scss */
+.sidebar {
+  background: #ddd;
+  padding-bottom: 40px;
+}
+/* line 145, nav.scss */
+.sidebar a {
+  color: #767676;
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+/* line 150, nav.scss */
+.sidebar h2 {
+  color: #5D5D5D;
+}
+
+/* line 155, nav.scss */
+.crerar-sidebar {
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+/* Fancy Page Alts */
+/* line 166, nav.scss */
+.navbar {
+  margin-bottom: 0px;
+}
+
+@media (min-width: 768px) {
+  /* line 170, nav.scss */
+  .jumbotron {
+    min-height: 200px;
+    background-image: url("../images/crerar-header.jpg");
+    background-size: cover;
+    padding-top: 0px;
+    margin-bottom: 0;
+  }
+  /* line 177, nav.scss */
+  .jumbotron .container {
+    position: relative;
+    margin: 0px;
+  }
+}
+
+/* line 184, nav.scss */
+.fancyheader {
+  background-color: #767676;
+  padding: .5em 0 .3em 4em;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+/* line 189, nav.scss */
+.fancyheader h2 {
+  color: #fff;
+  margin: 0px;
+}
+
+@media (min-width: 768px) {
+  /* line 195, nav.scss */
+  .overlaywrap {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 150%;
+    padding-right: 3em;
+    padding-left: 2em;
+  }
+  /* line 204, nav.scss */
+  .overlaywrap h2 {
+    color: #fff;
+    font-size: 1.7em;
+    margin-top: 10px;
+  }
+}

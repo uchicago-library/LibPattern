@@ -1,0 +1,1707 @@
+@import url(http://www.netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css);
+/* line 22, _variables.scss */
+img.desaturate {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+/*
+ * Accessibility
+ * --------------------------------------------------
+ */
+/* line 6, _base.scss */
+#skip {
+  background-color: #47B5FF;
+  color: #fff;
+}
+/* line 9, _base.scss */
+#skip a {
+  position: absolute;
+  padding: 5px 0 5px 10px;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  color: #fff;
+}
+/* line 18, _base.scss */
+#skip a:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+/*
+ * Fonts and Headers
+ * --------------------------------------------------
+ */
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url("fonts/glyphicons-halflings-regular.eot");
+  src: url("fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded- opentype"), url("Content/fonts/glyphicons-halflings-regular.woff") format("woff"), url("Content/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("Content/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular") format("svg");
+}
+
+/* line 40, _base.scss */
+h1 {
+  font-size: 1.4em;
+  color: #800000;
+  font-weight: 300;
+}
+
+/* line 46, _base.scss */
+h2 {
+  font-size: 1.2em;
+  color: #C16622;
+  font-weight: 600;
+}
+/* line 50, _base.scss */
+h2 .contentalert {
+  line-height: 1.3em;
+  color: #FF3399;
+}
+
+/* line 56, _base.scss */
+h3 {
+  font-size: 1.1em;
+  color: #616530;
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* line 63, _base.scss */
+h4 {
+  font-weight: 400;
+  font-size: 1.1em;
+  color: #6d2f6a;
+}
+/* line 68, _base.scss */
+.newsblock h4 {
+  margin-bottom: 3px;
+  line-height: 1.4em;
+}
+
+/* line 74, _base.scss */
+h5 {
+  font-size: 1em;
+  font-weight: 600;
+  color: #800000;
+}
+
+/* line 80, _base.scss */
+h6 {
+  font-size: 1em;
+  font-weight: 600;
+  color: #767676;
+  margin: 15px 0 5px 0;
+}
+
+/* line 88, _base.scss */
+p {
+  margin-bottom: 1em;
+  line-height: 1.5em;
+}
+/* line 91, _base.scss */
+p small {
+  color: #767676;
+}
+
+/*
+ * Media Queries
+ * --------------------------------------------------
+ *
+ * Use as: @include respond-to(small) { ... }
+ *		@include respond-to(medium) { ... }
+ *		@include respond-to(large) { ... }
+ */
+/*
+ * Global Elements
+ * --------------------------------------------------
+ */
+/* line 154, _base.scss */
+body {
+  margin-bottom: 0;
+  font-family: 'ProximaNova-Regular', "Arial", sans-serif;
+}
+/* line 157, _base.scss */
+body .font-secondary {
+  font-family: Garamond, Baskerville, 'Baskerville Old Face', "Times New Roman", serif;
+}
+
+/* line 162, _base.scss */
+html, body {
+  overflow-x: hidden;
+  /* Off Canvas: Prevent scroll on narrow devices */
+}
+
+/* line 166, _base.scss */
+.alert-high {
+  text-align: center;
+  font-size: 1.1em;
+  padding: 1em;
+  margin-bottom: 0em;
+  border: 0;
+  color: #a94442;
+  background-color: #f2dede;
+  border-bottom: 2px solid #a94442;
+}
+/* line 175, _base.scss */
+.alert-high a {
+  color: #a94442;
+  text-decoration: underline;
+}
+
+/* line 181, _base.scss */
+.alert-low {
+  text-align: center;
+  font-size: 1.1em;
+  padding: 1em;
+  margin-bottom: 0em;
+  border: 0;
+  color: #31708f;
+  background-color: #d9edf7;
+  border-bottom: 2px solid #31708f;
+}
+/* line 190, _base.scss */
+.alert-low a {
+  color: #31708f;
+  text-decoration: underline;
+}
+
+/* line 196, _base.scss */
+.valid {
+  color: #089e00;
+}
+
+/* line 199, _base.scss */
+.error {
+  color: red;
+}
+
+/* line 202, _base.scss */
+.warning {
+  color: #fff664;
+}
+
+/* line 205, _base.scss */
+.information {
+  color: #000db5;
+}
+
+/* Links */
+/* line 209, _base.scss */
+a {
+  text-decoration: none;
+  outline: 0;
+}
+/* line 212, _base.scss */
+a:hover, a:focus {
+  color: #5B8FA8;
+}
+/* line 215, _base.scss */
+a.social {
+  color: #767676;
+}
+
+/* Completely remove from the flow but leave available to screen readers. */
+/* line 221, _base.scss */
+.is-vishidden {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/*
+ * Alerts
+ * --------------------------------------------------
+ */
+/* line 235, _base.scss */
+.alert {
+  text-align: center;
+  padding: 1em;
+  margin-bottom: 0.5em;
+  border: 1px solid gray;
+  background: #f9f9f9;
+}
+
+/* line 243, _base.scss */
+.alert-error {
+  color: red;
+  border-color: red;
+  background: #ffbebe;
+}
+
+/*
+ * Headeer
+ * --------------------------------------------------
+ */
+/*
+ * Content
+ * --------------------------------------------------
+ */
+/* line 14, uclib.scss */
+.breadcrumbs {
+  padding-top: 5px;
+  padding-left: 20px;
+  font-size: 85%;
+}
+
+/* line 26, uclib.scss */
+.body-container {
+  padding: 30px 0;
+}
+
+/* line 32, uclib.scss */
+.nopadding {
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+@media (min-width: 48em) {
+  /* line 39, uclib.scss */
+  .centermain {
+    padding: 0 30px;
+  }
+}
+@media (min-width: 75em) {
+  /* line 39, uclib.scss */
+  .centermain {
+    padding: 0 45px;
+    max-width: 1400px;
+  }
+}
+
+@media (min-width: 75em) {
+  /* line 49, uclib.scss */
+  .profile-bio {
+    padding: 0 35px 0 25px;
+  }
+}
+
+/* line 55, uclib.scss */
+.home-modwrapper {
+  padding-top: 20px;
+}
+@media (min-width: 48em) {
+  /* line 55, uclib.scss */
+  .home-modwrapper {
+    padding-top: 0;
+  }
+}
+/* line 60, uclib.scss */
+.home-modwrapper ul:last-child {
+  margin-bottom: 0;
+}
+
+/*
+ * Text
+ * --------------------------------------------------
+ */
+/* line 71, uclib.scss */
+#footnotes {
+  font-family: 'ProximaNova-Light';
+  font-size: 0.8em;
+}
+
+/* Blockquote */
+/* line 78, uclib.scss */
+blockquote {
+  margin: 0 50px;
+  padding: 0.5em 5px;
+  quotes: "\201C""\201D""\2018""\2019";
+  line-height: 1.7em;
+  padding-right: 4em;
+  border-left: 0px;
+}
+/* line 85, uclib.scss */
+blockquote:before {
+  color: #767676;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.1em;
+  vertical-align: -0.4em;
+}
+/* line 93, uclib.scss */
+blockquote:after {
+  color: #767676;
+  content: close-quote;
+  font-size: 4em;
+  line-height: 0.5em;
+  margin-left: 0.1em;
+  vertical-align: -0.4em;
+}
+/* line 101, uclib.scss */
+blockquote p {
+  display: inline;
+}
+
+/* line 107, uclib.scss */
+.citation {
+  text-align: center;
+  color: #767676;
+  font-size: .9em;
+}
+
+/* line 113, uclib.scss */
+.intro {
+  font-size: 1.0625em;
+  font-family: 'ProximaNova-Light';
+}
+
+/* line 117, uclib.scss */
+.pullquote {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 1.4375em;
+}
+
+/* Inline Quote */
+/* line 122, uclib.scss */
+p q {
+  quotes: "\201C""\201D""\2018""\2019";
+}
+/* line 124, uclib.scss */
+p q:before {
+  content: open-quote;
+  font-size: 1.2em;
+}
+/* line 128, uclib.scss */
+p q:after {
+  content: close-quote;
+  font-size: 1.2em;
+}
+
+/*
+ * Homepage Mods
+ * --------------------------------------------------
+ */
+/* line 141, uclib.scss */
+.home-modwrapper h6 {
+  margin: 0 0 5px 0;
+}
+/* line 147, uclib.scss */
+.home-modwrapper img {
+  margin-top: -15px;
+}
+
+/* line 152, uclib.scss */
+.home-module {
+  border-bottom: 1px solid #767676;
+  padding: 0px 0px 10px 15px;
+  margin-bottom: 15px;
+}
+
+/* line 158, uclib.scss */
+.home-rightside ul, .quicklink-rightside ul, .home-modwrapper ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* line 164, uclib.scss */
+.h-inline {
+  display: inline;
+}
+
+/*
+ * Feature Image & News
+ * --------------------------------------------------
+ */
+/* line 173, uclib.scss */
+.newsblock {
+  padding: 0 0 0 5px;
+}
+/* line 175, uclib.scss */
+.newsblock p {
+  clear: both;
+  padding: 0 15px 0 0;
+}
+
+/* line 181, uclib.scss */
+figure.embed {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+  background: white;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 192, uclib.scss */
+.newsblock figure.embed {
+  clear: both;
+}
+/* line 196, uclib.scss */
+figure.embed img {
+  width: 100%;
+  display: block;
+}
+@media (min-width: 48em) {
+  /* line 196, uclib.scss */
+  figure.embed img {
+    max-width: 250px;
+  }
+  /* line 201, uclib.scss */
+  .newsblock figure.embed img {
+    max-width: 300px;
+  }
+}
+/* line 206, uclib.scss */
+figure.embed figcaption {
+  width: 100%;
+  padding: 0.5em;
+  background: rgba(50, 50, 50, 0.7);
+  color: #fff;
+  position: absolute;
+  bottom: 0px;
+}
+/* line 213, uclib.scss */
+figure.embed figcaption.exhibitdate {
+  position: absolute !important;
+  bottom: 30px;
+}
+/* line 217, uclib.scss */
+figure.embed figcaption.exhibit {
+  background: #25190f;
+}
+/* line 220, uclib.scss */
+figure.embed figcaption.spaces {
+  background: #656d33;
+}
+/* line 223, uclib.scss */
+figure.embed figcaption.people {
+  background: #995324;
+}
+/* line 226, uclib.scss */
+figure.embed figcaption.research {
+  background: #15435f;
+}
+/* line 229, uclib.scss */
+figure.embed figcaption.resources {
+  background: #464833;
+}
+/* line 232, uclib.scss */
+figure.embed figcaption.teaching {
+  background: #155f83;
+}
+/* line 235, uclib.scss */
+figure.embed figcaption.events {
+  background: #725663;
+}
+/* line 238, uclib.scss */
+figure.embed figcaption.hours {
+  background: maroon;
+}
+/* line 241, uclib.scss */
+figure.embed figcaption.spotlight {
+  background: #c68220;
+}
+/* line 244, uclib.scss */
+figure.embed figcaption.director {
+  background: #8f3931;
+}
+/* line 247, uclib.scss */
+.newsblock figure.embed figcaption {
+  position: inherit;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+@media (min-width: 48em) {
+  /* line 181, uclib.scss */
+  figure.embed {
+    margin-right: 15px;
+    margin-left: 0px;
+  }
+}
+
+/* Blocks */
+/* line 261, uclib.scss */
+.news-tagbox {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(21, 67, 95, 0.8);
+  padding: 0.25em;
+}
+
+/* line 268, uclib.scss */
+.news-thumb img {
+  display: block;
+}
+
+/* Hero Block ----- PRE-LOADED // Possible Change */
+/* line 273, uclib.scss */
+.block-hero {
+  margin-bottom: 0.5em;
+}
+
+/* line 275, uclib.scss */
+.block-hero .b-thumb img {
+  display: block;
+}
+
+@media all and (min-width: 50em) {
+  /* line 278, uclib.scss */
+  .block-hero {
+    position: relative;
+  }
+
+  /* line 280, uclib.scss */
+  .block-hero .b-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1.5em;
+  }
+}
+/*
+ * Right Sidebar
+ * --------------------------------------------------
+ */
+/* line 296, uclib.scss */
+.home-rightside, .quicklink-rightside {
+  border-top: 1px dotted #767676;
+  border-left: 0;
+  margin: 10px 0;
+  padding-bottom: 40px;
+}
+/* line 301, uclib.scss */
+.home-rightside li, .quicklink-rightside li {
+  color: #767676;
+}
+/* line 304, uclib.scss */
+.home-rightside a, .quicklink-rightside a {
+  color: #725663;
+}
+/* line 307, uclib.scss */
+.home-rightside h4, .quicklink-rightside h4 {
+  margin: 30px 0 10px 0;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #6d2f6a;
+}
+/* line 312, uclib.scss */
+.home-rightside h4.topmodule, .quicklink-rightside h4.topmodule {
+  margin-top: 5px;
+}
+@media (min-width: 48em) {
+  /* line 296, uclib.scss */
+  .home-rightside, .quicklink-rightside {
+    border-left: 1px dotted #767676;
+    border-top: 0;
+    margin: 0;
+    max-width: 350px;
+  }
+}
+@media (min-width: 75em) {
+  /* line 296, uclib.scss */
+  .home-rightside, .quicklink-rightside {
+    max-width: 30em;
+  }
+}
+
+/* line 327, uclib.scss */
+.quicklink-rightside {
+  border-top: 0;
+  padding-bottom: 5px;
+  margin: 0;
+}
+/* line 332, uclib.scss */
+.quicklink-rightside h4:first-child {
+  margin-top: 5px;
+}
+/* line 335, uclib.scss */
+.quicklink-rightside .btn-morelink, .quicklink-rightside .btn-morecoll {
+  margin-bottom: 10px;
+}
+@media (min-width: 62em) {
+  /* line 339, uclib.scss */
+  .quicklink-rightside h4:first-child {
+    margin-top: 15px;
+  }
+}
+
+/* line 345, uclib.scss */
+.coll-rightside, .ask-rightside {
+  background-color: #e0e5e2;
+  margin: 10px 0;
+  padding: 15px 20px;
+}
+/* line 349, uclib.scss */
+.coll-rightside ul, .ask-rightside ul {
+  list-style-type: none;
+  padding-left: 2em;
+  text-indent: -2em;
+  margin-bottom: 10px;
+}
+/* line 355, uclib.scss */
+.coll-rightside li, .ask-rightside li {
+  color: #6d2f6a;
+}
+/* line 358, uclib.scss */
+.coll-rightside a, .ask-rightside a {
+  color: #6d2f6a;
+}
+/* line 361, uclib.scss */
+.coll-rightside h3, .ask-rightside h3 {
+  margin: 5px 0 10px 0;
+  font-size: 1.05em;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #a0a282;
+}
+@media (min-width: 62em) {
+  /* line 345, uclib.scss */
+  .coll-rightside, .ask-rightside {
+    border-top: 0;
+    margin: 0;
+    max-width: 350px;
+  }
+}
+@media (min-width: 75em) {
+  /* line 345, uclib.scss */
+  .coll-rightside, .ask-rightside {
+    max-width: 30em;
+  }
+}
+
+/* line 377, uclib.scss */
+.ask-rightside {
+  background-color: #e7eef2;
+}
+/* line 380, uclib.scss */
+.ask-rightside ul {
+  list-style: none;
+  text-indent: 0;
+  margin-left: 0;
+  padding-left: 5px;
+}
+
+/* line 390, uclib.scss */
+.studymod a {
+  color: #350E20;
+}
+/* line 393, uclib.scss */
+.studymod a:hover {
+  text-decoration: none;
+}
+/* line 396, uclib.scss */
+.studymod .material-icons {
+  vertical-align: middle;
+  font-size: 2em;
+}
+
+/* line 402, uclib.scss */
+.btn-morelink, .btn-morecoll {
+  font-size: 0.9em;
+  background: #f0eeef;
+  border: 1px solid #d6d6ce;
+  border-radius: 0;
+  padding: 6px 12px;
+  margin-bottom: 10px;
+}
+
+/* line 411, uclib.scss */
+.btn-morecoll {
+  background: #e0e5e2;
+  border-color: #a0a282;
+}
+
+/* Calendar */
+/* line 418, uclib.scss */
+.cal-date {
+  border: 2px solid #725663;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  float: left;
+  padding: 0 10px;
+  margin-right: 10px;
+}
+/* line 426, uclib.scss */
+.cal-date p {
+  font-family: Helvetica, sans-serif;
+  font-size: 1.7em;
+  text-align: center;
+  color: #725663;
+  margin-bottom: 0;
+}
+/* line 432, uclib.scss */
+.cal-date p span {
+  font-size: 0.5em;
+  font-weight: bold;
+  color: #767676;
+  text-transform: uppercase;
+  display: block;
+  border-top: 3px solid #725663;
+}
+
+/* line 443, uclib.scss */
+.cal-event {
+  clear: both;
+}
+
+/* Event List */
+/* line 448, uclib.scss */
+a#event-header {
+  color: #000;
+  font-weight: 100;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* line 456, uclib.scss */
+.event-date {
+  color: #616530;
+  font-weight: 600;
+}
+
+/*
+ * Agenda
+ * --------------------------------------------------
+ */
+/* line 467, uclib.scss */
+.agenda {
+  padding: 0;
+}
+
+/* line 471, uclib.scss */
+.agenda-header {
+  color: #000;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+/* line 477, uclib.scss */
+.end-time {
+  padding-right: 10px;
+}
+/* line 479, uclib.scss */
+.end-time:before {
+  content: "\2013\0020";
+}
+
+/* line 484, uclib.scss */
+.agenda-body {
+  padding: 0;
+}
+/* line 486, uclib.scss */
+.agenda-body > .row {
+  padding-top: 10px;
+}
+
+/* line 491, uclib.scss */
+.location {
+  padding: 0;
+  color: #767676;
+  font-size: 1.1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* line 499, uclib.scss */
+.session-title {
+  padding-left: 15px;
+}
+@media (min-width: 48em) {
+  /* line 499, uclib.scss */
+  .session-title {
+    padding-left: 0;
+    margin-left: -10px;
+  }
+}
+
+/* line 508, uclib.scss */
+.session-subtitle {
+  color: #767676;
+  font-size: 1.1em;
+  font-weight: 600;
+  padding-right: 20px;
+}
+
+/* line 515, uclib.scss */
+.agenda-body {
+  padding-left: 2.2em;
+}
+@media (min-width: 48em) {
+  /* line 515, uclib.scss */
+  .agenda-body {
+    padding-left: 0;
+  }
+}
+
+/* line 522, uclib.scss */
+.agenda-presenters {
+  color: #635D5A;
+  font-size: 1em;
+  font-weight: 600;
+  padding-right: 20px;
+}
+
+/*
+ * Hours
+ * --------------------------------------------------
+ */
+/*
+ * Forms
+ * --------------------------------------------------
+ */
+/* line 563, uclib.scss */
+form ol, form ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+/* line 567, uclib.scss */
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 572, uclib.scss */
+label {
+  display: block;
+  padding-bottom: 0.5em;
+}
+
+/* line 576, uclib.scss */
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0 1px 0;
+}
+
+/* line 581, uclib.scss */
+input, textarea {
+  border: 1px solid gray;
+}
+
+/* line 584, uclib.scss */
+input[type=text], input[type=search], input[type=url], input[type=number], textarea {
+  -webkit-appearance: none;
+}
+
+/* line 587, uclib.scss */
+button, input[type="submit"] {
+  padding: 0.5em;
+  background: #333333;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+/* line 594, uclib.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: 0.3em;
+}
+
+/* line 598, uclib.scss */
+input[type="search"] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/* line 603, uclib.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 606, uclib.scss */
+.field-container {
+  margin-bottom: 1em;
+}
+
+/* line 609, uclib.scss */
+.inline-form fieldset, .inline-form .inline-container {
+  position: relative;
+}
+
+/* line 611, uclib.scss */
+.inline-form input[type=submit], .inline-form button, .inline-form .btn {
+  font-size: 0.875em;
+  padding: 0.65rem 1.3rem;
+  background: #333333;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: auto;
+}
+
+/* line 620, uclib.scss */
+.inline-form input[type=submit]:hover, .inline-form input[type=submit]:focus, .inline-form button:hover, .inline-form button:focus, .inline-form .btn:hover, .inline-form .btn:focus {
+  background: gray;
+  color: white;
+}
+
+/* Validation */
+/* line 625, uclib.scss */
+.has-error {
+  border-color: red;
+}
+
+/* line 628, uclib.scss */
+.is-valid {
+  border-color: #089e00;
+}
+
+/*
+ * Buttons
+ * --------------------------------------------------
+ */
+/* line 637, uclib.scss */
+.btn {
+  padding: 10px 14px 10px 14px;
+}
+
+/* line 641, uclib.scss */
+.btn-search {
+  margin-top: 0px;
+}
+
+/* line 645, uclib.scss */
+.btn-toggle .btn {
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+/* line 650, uclib.scss */
+.btn-toggle .btn:hover {
+  background-color: #eee;
+}
+
+/* line 655, uclib.scss */
+.btn-default {
+  background-color: #767676;
+}
+
+/* line 659, uclib.scss */
+.btn-alpha > .btn {
+  color: #333;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+}
+
+/* line 665, uclib.scss */
+.btn-ask {
+  color: #fff;
+  background-color: #8A9045;
+  border-right: 0px;
+  padding: 10px 20px;
+  margin: 10px 0;
+}
+/* line 671, uclib.scss */
+.btn-ask.off {
+  background-color: #767676;
+}
+/* line 674, uclib.scss */
+.btn-ask:hover {
+  color: #e7e7e7;
+  background-color: #616530;
+}
+
+/* line 681, uclib.scss */
+.btn-directory {
+  color: #767676;
+  background-color: #fff;
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  padding: 5px 15px;
+  border-radius: 0;
+}
+/* line 688, uclib.scss */
+.btn-directory.active {
+  border-top: 2px solid #800000;
+  border-bottom: 2px solid #800000;
+  color: #800000;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 695, uclib.scss */
+.btn-directory:hover {
+  border-top: 2px solid #d8b9b7;
+  border-bottom: 2px solid #d8b9b7;
+  color: #800000;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 704, uclib.scss */
+.btn-textonly {
+  color: #767676;
+  background-color: #fff;
+  border: 0;
+  padding: 5px 10px 5px 5px;
+}
+@media (min-width: 48em) {
+  /* line 704, uclib.scss */
+  .btn-textonly {
+    padding: 5px 10px 5px 10px;
+  }
+}
+
+/* line 714, uclib.scss */
+.coll-checkbox {
+  padding: 10px 0px 0px 5px;
+}
+@media (min-width: 48em) {
+  /* line 714, uclib.scss */
+  .coll-checkbox {
+    padding: 5px 10px 5px 10px;
+  }
+}
+
+/* line 731, uclib.scss */
+.btn-reserve {
+  color: #fff;
+  letter-spacing: 0.1em;
+  background-color: #58593F;
+  border-right: 0px;
+  margin-top: 15px;
+  padding: 5px 20px;
+}
+/* line 738, uclib.scss */
+.btn-reserve:before {
+  color: #fff;
+  content: "\f271";
+  font-family: FontAwesome;
+  font-size: 1.2em;
+  line-height: 0.1em;
+  margin-right: 0.5em;
+}
+/* line 746, uclib.scss */
+.btn-reserve:hover {
+  color: #fff;
+  background-color: #725663;
+}
+
+/* line 752, uclib.scss */
+.btn-subreserve {
+  color: #8A9045;
+  letter-spacing: 0.1em;
+  background-color: transparent;
+  padding: 5px 0;
+  font-weight: 600;
+}
+/* line 758, uclib.scss */
+.btn-subreserve:before {
+  color: #8A9045;
+  content: "\f274";
+  font-family: FontAwesome;
+  font-size: 1em;
+  line-height: 0.1em;
+  margin-right: 0.5em;
+}
+/* line 766, uclib.scss */
+.btn-subreserve:hover {
+  color: #725663;
+}
+
+/*
+ * Lists
+ * --------------------------------------------------
+ */
+/* line 776, uclib.scss */
+ul {
+  margin-bottom: 20px;
+}
+/* line 778, uclib.scss */
+ul.twocol {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+/* line 785, uclib.scss */
+.clear-search {
+  background-color: #D6D6CE !important;
+  padding: 2px 5px;
+  margin: 0 5px;
+}
+@media (min-width: 48em) {
+  /* line 785, uclib.scss */
+  .clear-search {
+    margin: 0 5px 0 10px;
+  }
+}
+/* line 792, uclib.scss */
+.searchbox .clear-search {
+  background-color: #fff;
+  color: #D6D6CE;
+}
+
+/* line 798, uclib.scss */
+.list-group {
+  margin-right: 30px;
+}
+/* line 800, uclib.scss */
+.list-group .badge {
+  background-color: #D6D6CE;
+}
+
+/* line 805, uclib.scss */
+.list-group-item {
+  border: 0;
+  padding: 5px 0;
+}
+
+/* line 810, uclib.scss */
+.quicklinkfloat {
+  border-left: 1px dotted #767676;
+  padding: 15px 0 30px 35px;
+  margin-left: 20px;
+  float: right;
+  min-width: 250px;
+}
+/* line 816, uclib.scss */
+.quicklinkfloat.ask {
+  padding: 0 0 30px 35px;
+  min-width: 30%;
+  margin-left: 0px;
+}
+/* line 820, uclib.scss */
+.quicklinkfloat.ask li {
+  color: #767676;
+  font-size: 1.1em;
+}
+/* line 824, uclib.scss */
+.quicklinkfloat.ask .fa {
+  vertical-align: middle;
+  line-height: 1.5em;
+  color: #8A9045;
+}
+/* line 830, uclib.scss */
+.quicklinkfloat a {
+  color: #767676;
+}
+/* line 833, uclib.scss */
+.quicklinkfloat p {
+  color: #616530;
+}
+/* line 836, uclib.scss */
+.quicklinkfloat li {
+  margin-bottom: 5px;
+}
+
+/*
+ * Ask A Librarian
+ * --------------------------------------------------
+ */
+/* line 848, uclib.scss */
+.libraryh3lp iframe {
+  width: 100%;
+  height: 400px;
+  border: 0px;
+}
+@media (min-width: 48em) {
+  /* line 848, uclib.scss */
+  .libraryh3lp iframe {
+    width: 80%;
+  }
+}
+
+/* line 858, uclib.scss */
+table.ask > tbody > tr > td {
+  line-height: 1.8em;
+}
+
+@media (min-width: 34em) {
+  /* line 862, uclib.scss */
+  .askoptions {
+    padding-right: 60px;
+  }
+}
+
+/* uofc-ask@chat style sheet override */
+/* line 869, uclib.scss */
+textarea #send * {
+  width: 99%;
+}
+
+/* line 873, uclib.scss */
+i.ask-online {
+  color: #eee;
+}
+
+/* line 878, uclib.scss */
+i.ask-offline {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+}
+
+/*
+ * Tables 
+ * --------------------------------------------------
+ */
+@media (max-width: 34em) {
+  /* line 894, uclib.scss */
+  table, tbody {
+    display: block;
+    width: 100%;
+  }
+  /* line 898, uclib.scss */
+  table tr, table th, table td, tbody tr, tbody th, tbody td {
+    display: block;
+    padding: 0;
+    text-align: left;
+    white-space: normal;
+  }
+  /* line 904, uclib.scss */
+  table tr, tbody tr {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 11px;
+  }
+  /* line 909, uclib.scss */
+  table td, tbody td {
+    border: none;
+    margin-bottom: 6px;
+    color: #444;
+  }
+}
+
+/* line 917, uclib.scss */
+.hours-today tr {
+  border-bottom: 1px solid #b8aab1;
+}
+/* line 919, uclib.scss */
+.hours-today tr td {
+  width: 100%;
+  display: list-item;
+  list-style: none;
+}
+/* line 923, uclib.scss */
+.hours-today tr td:first-child {
+  color: #725663;
+  padding: 5px 0 3px 0;
+}
+/* line 928, uclib.scss */
+.hours-today tr td:last-child {
+  padding: 0 0 5px 0;
+}
+
+/* line 934, uclib.scss */
+.quicktable {
+  margin: 0px;
+}
+
+/* line 940, uclib.scss */
+.maincontent .nav {
+  margin-left: 0;
+  margin-bottom: 18px;
+  list-style: none;
+}
+
+/* line 946, uclib.scss */
+table.etable > thead > tr > th {
+  border-bottom: 0;
+}
+
+/* line 950, uclib.scss */
+table.etable thead {
+  text-indent: -999em;
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+/* line 963, uclib.scss */
+table.etable > tbody > tr:last-child {
+  border-bottom: 2px solid #ADB17D;
+}
+/* line 966, uclib.scss */
+table.etable > tbody > tr > td:last-child {
+  vertical-align: middle;
+  white-space: nowrap;
+}
+@media (min-width: 62em) {
+  /* line 966, uclib.scss */
+  table.etable > tbody > tr > td:last-child {
+    padding-right: 10px;
+  }
+}
+@media (min-width: 75em) {
+  /* line 966, uclib.scss */
+  table.etable > tbody > tr > td:last-child {
+    padding-right: 10px;
+  }
+}
+
+/* line 979, uclib.scss */
+table.spacelist > tbody > tr:last-child {
+  border-bottom: 2px solid #ADB17D;
+}
+
+/* line 984, uclib.scss */
+td.time, td.event-nav {
+  white-space: nowrap;
+}
+
+/* line 988, uclib.scss */
+.event-nav {
+  padding-bottom: 15px;
+}
+@media (min-width: 62em) {
+  /* line 988, uclib.scss */
+  .event-nav {
+    text-align: right;
+  }
+}
+@media (min-width: 75em) {
+  /* line 988, uclib.scss */
+  .event-nav {
+    text-align: right;
+  }
+}
+/* line 996, uclib.scss */
+.event-nav a {
+  color: #767676;
+}
+
+/* line 1001, uclib.scss */
+tr.etable-header {
+  border-bottom: 2px solid #ADB17D;
+  background-color: #c5c8a4 !important;
+}
+@media (max-width: 34em) {
+  /* line 1001, uclib.scss */
+  tr.etable-header {
+    display: inline-block;
+    width: inherit;
+  }
+}
+
+/*
+ * Images, Video, and other Media
+ * --------------------------------------------------
+ */
+/* line 1016, uclib.scss */
+img, video, object {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 1021, uclib.scss */
+figure.imgcaption {
+  max-width: 100%;
+  background: #fff;
+  padding: 0;
+  margin: 10px 20px 10px 0;
+  float: left;
+}
+/* line 1027, uclib.scss */
+figure.imgcaption figcaption {
+  font-size: 0.8em;
+  color: #767676;
+  padding-top: 5px;
+}
+
+/*
+ * Directory / Staff Profile
+ * --------------------------------------------------
+ */
+/* line 1041, uclib.scss */
+.directory ul {
+  padding-left: 0;
+}
+/* line 1044, uclib.scss */
+.directory > li:first-child {
+  list-style: none;
+}
+/* line 1047, uclib.scss */
+.directory > li > ul {
+  list-style-type: disc;
+  margin-left: 30px;
+}
+/* line 1050, uclib.scss */
+.directory > li > ul > li > ul {
+  list-style-type: circle;
+  margin-left: 40px;
+}
+
+/* line 1057, uclib.scss */
+.bg-directory {
+  padding: 15px 10px 0 0;
+}
+
+/* line 1061, uclib.scss */
+.dir-header {
+  display: none;
+}
+@media (min-width: 48em) {
+  /* line 1061, uclib.scss */
+  .dir-header {
+    text-align: right;
+    display: inline;
+  }
+}
+
+/* line 1069, uclib.scss */
+.bg-filter {
+  display: flex;
+}
+@media (min-width: 48em) {
+  /* line 1069, uclib.scss */
+  .bg-filter {
+    padding-right: 15px;
+    display: inline-flex;
+  }
+}
+
+/* line 1077, uclib.scss */
+.guide-link {
+  line-height: 2.2em;
+}
+
+@media (max-width: 34em) {
+  /* line 1081, uclib.scss */
+  .staff-profile {
+    padding: 0 3em 1.2em 3em;
+  }
+}
+@media (min-width: 48em) {
+  /* line 1081, uclib.scss */
+  .staff-profile {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 62em) {
+  /* line 1081, uclib.scss */
+  .staff-profile {
+    padding-right: 0;
+  }
+}
+
+/* line 1094, uclib.scss */
+.home-profile {
+  padding: 0;
+  max-width: 150px;
+}
+
+/* line 1099, uclib.scss */
+.list-supp {
+  padding-bottom: 10px;
+}
+/* line 1101, uclib.scss */
+.list-supp a {
+  color: #767676;
+}
+
+/*
+ * Collections
+ * --------------------------------------------------
+ */
+/* line 1117, uclib.scss */
+#listings-dropdown {
+  margin-top: 0;
+  padding: 5px 10px;
+  background-color: #fff;
+  min-width: 200px;
+  color: #000;
+}
+/* line 1123, uclib.scss */
+#listings-dropdown > li > a {
+  color: #262626;
+  font-size: 1em;
+}
+/* line 1126, uclib.scss */
+#listings-dropdown > li > a:hover {
+  text-decoration: none;
+  background-color: #e0e5e2;
+}
+
+/* line 1133, uclib.scss */
+.coll-dropdown {
+  padding: 0;
+  margin-bottom: 15px;
+}
+@media (min-width: 62em) {
+  /* line 1133, uclib.scss */
+  .coll-dropdown {
+    padding: 0px 14px 10px 14px;
+  }
+}
+
+/* line 1141, uclib.scss */
+.btn-coll-link {
+  font-size: 0.9em;
+  background: transparent;
+  border: 1px solid #a0a282;
+  border-radius: 0;
+  padding: 6px 12px;
+  margin-bottom: 20px;
+}
+
+/* line 1151, uclib.scss */
+.coll-list a#parentlink {
+  color: #6a6a6a;
+  font-style: italic;
+}
+@media (min-width: 48em) {
+  /* line 1156, uclib.scss */
+  .coll-list img {
+    max-width: 100px;
+  }
+  /* line 1159, uclib.scss */
+  .coll-list > tbody > tr > td:nth-child(2) {
+    padding-left: 15px;
+  }
+  /* line 1162, uclib.scss */
+  .coll-list > tbody > tr > td:nth-child(3), .coll-list > tbody > tr > td:nth-child(4) {
+    width: 20%;
+  }
+}
+
+/* line 1168, uclib.scss */
+.currentlist {
+  background-color: #eeefe5;
+}
+/* line 1170, uclib.scss */
+.currentlist:nth-of-type(odd) {
+  background-color: #f6f7f2!important;
+}
+
+/* line 1175, uclib.scss */
+tr.seealso {
+  background-color: #eeeeeb;
+}
+/* line 1177, uclib.scss */
+tr.seealso td {
+  font-style: italic;
+}
+
+/*
+ * Spaces
+ * --------------------------------------------------
+ */
+/* line 1188, uclib.scss */
+.featured {
+  color: #3E3E23;
+  font-size: 1.1em;
+}
+/* line 1191, uclib.scss */
+.featured a {
+  color: #616530;
+}
+/* line 1194, uclib.scss */
+.featured .material-icons, .featured .fa {
+  padding: 0 3px 0 15px;
+  font-size: 1.2em;
+  color: #8A9045;
+}
+/* line 1198, uclib.scss */
+.featured .material-icons a, .featured .fa a {
+  color: #8A9045;
+}
+
+/* line 1204, uclib.scss */
+.spaces-toggle {
+  padding: 0 0 15px 0;
+}
+
+/* line 1208, uclib.scss */
+.img-space {
+  max-width: 150px;
+}
+@media (min-width: 48em) {
+  /* line 1208, uclib.scss */
+  .img-space {
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 62em) {
+  /* line 1215, uclib.scss */
+  .spacelist, .coll-list {
+    margin-top: 0;
+  }
+}
+/* line 1219, uclib.scss */
+.spacelist a, .coll-list a {
+  color: #8a4a20;
+}
+/* line 1222, uclib.scss */
+.spacelist .material-icons, .spacelist .fa, .coll-list .material-icons, .coll-list .fa {
+  padding-right: 10px;
+}
+/* line 1224, uclib.scss */
+.spacelist .material-icons.floorplan, .spacelist .fa.floorplan, .coll-list .material-icons.floorplan, .coll-list .fa.floorplan {
+  font-size: 1.1em;
+  padding-right: 5px;
+}
+
+/* line 1231, uclib.scss */
+.spacelist > tbody > tr > td {
+  width: 25%;
+}
+
+/* line 1235, uclib.scss */
+.space-computers {
+  font-weight: 600;
+  color: #616530;
+  line-height: 3em;
+}
+
+/* line 1241, uclib.scss */
+.features-list {
+  line-height: 2em;
+}
+
+/* line 1245, uclib.scss */
+.material-icons {
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+
+/* line 1250, uclib.scss */
+.locations-list {
+  margin: 020px;
+  border-bottom: 1px solid #b8aab1;
+}
+
+/*
+ * Pagination - NEEDS TO BE FIXED
+ * --------------------------------------------------
+ */
+/* line 1259, uclib.scss */
+.pagination {
+  overflow: hidden;
+}
+
+/* line 1263, uclib.scss */
+.pagination li {
+  float: left;
+  border-right: 1px solid #eeeeee;
+}
+
+/* line 1268, uclib.scss */
+.pagination li:last-child {
+  border: 0;
+}
+
+/* line 1272, uclib.scss */
+.pagination li > a {
+  padding: 1em;
+  border: 0px;
+}

@@ -1,0 +1,504 @@
+@import url(http://www.netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css);
+/* line 22, _variables.scss */
+img.desaturate {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+/*
+ * Accessibility
+ * --------------------------------------------------
+ */
+/* line 6, _base.scss */
+#skip {
+  background-color: #47B5FF;
+  color: #fff;
+}
+/* line 9, _base.scss */
+#skip a {
+  position: absolute;
+  padding: 5px 0 5px 10px;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  color: #fff;
+}
+/* line 18, _base.scss */
+#skip a:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+/*
+ * Fonts and Headers
+ * --------------------------------------------------
+ */
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url("fonts/glyphicons-halflings-regular.eot");
+  src: url("fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded- opentype"), url("Content/fonts/glyphicons-halflings-regular.woff") format("woff"), url("Content/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("Content/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular") format("svg");
+}
+
+/* line 40, _base.scss */
+h1 {
+  font-size: 1.4em;
+  color: #800000;
+  font-weight: 300;
+}
+
+/* line 46, _base.scss */
+h2 {
+  font-size: 1.2em;
+  color: #C16622;
+  font-weight: 600;
+}
+/* line 50, _base.scss */
+h2 .contentalert {
+  line-height: 1.3em;
+  color: #FF3399;
+}
+
+/* line 56, _base.scss */
+h3 {
+  font-size: 1.1em;
+  color: #616530;
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* line 63, _base.scss */
+h4 {
+  font-weight: 400;
+  font-size: 1.1em;
+  color: #6d2f6a;
+}
+/* line 68, _base.scss */
+.newsblock h4 {
+  margin-bottom: 3px;
+  line-height: 1.4em;
+}
+
+/* line 74, _base.scss */
+h5 {
+  font-size: 1em;
+  font-weight: 600;
+  color: #800000;
+}
+
+/* line 80, _base.scss */
+h6 {
+  font-size: 1em;
+  font-weight: 600;
+  color: #767676;
+  margin: 15px 0 5px 0;
+}
+
+/* line 88, _base.scss */
+p {
+  margin-bottom: 1em;
+  line-height: 1.5em;
+}
+/* line 91, _base.scss */
+p small {
+  color: #767676;
+}
+
+/*
+ * Media Queries
+ * --------------------------------------------------
+ *
+ * Use as: @include respond-to(small) { ... }
+ *		@include respond-to(medium) { ... }
+ *		@include respond-to(large) { ... }
+ */
+/*
+ * Global Elements
+ * --------------------------------------------------
+ */
+/* line 154, _base.scss */
+body {
+  margin-bottom: 0;
+  font-family: 'ProximaNova-Regular', "Arial", sans-serif;
+}
+/* line 157, _base.scss */
+body .font-secondary {
+  font-family: Garamond, Baskerville, 'Baskerville Old Face', "Times New Roman", serif;
+}
+
+/* line 162, _base.scss */
+html, body {
+  overflow-x: hidden;
+  /* Off Canvas: Prevent scroll on narrow devices */
+}
+
+/* line 166, _base.scss */
+.alert-high {
+  text-align: center;
+  font-size: 1.1em;
+  padding: 1em;
+  margin-bottom: 0em;
+  border: 0;
+  color: #a94442;
+  background-color: #f2dede;
+  border-bottom: 2px solid #a94442;
+}
+/* line 175, _base.scss */
+.alert-high a {
+  color: #a94442;
+  text-decoration: underline;
+}
+
+/* line 181, _base.scss */
+.alert-low {
+  text-align: center;
+  font-size: 1.1em;
+  padding: 1em;
+  margin-bottom: 0em;
+  border: 0;
+  color: #31708f;
+  background-color: #d9edf7;
+  border-bottom: 2px solid #31708f;
+}
+/* line 190, _base.scss */
+.alert-low a {
+  color: #31708f;
+  text-decoration: underline;
+}
+
+/* line 196, _base.scss */
+.valid {
+  color: #089e00;
+}
+
+/* line 199, _base.scss */
+.error {
+  color: red;
+}
+
+/* line 202, _base.scss */
+.warning {
+  color: #fff664;
+}
+
+/* line 205, _base.scss */
+.information {
+  color: #000db5;
+}
+
+/* Links */
+/* line 209, _base.scss */
+a {
+  text-decoration: none;
+  outline: 0;
+}
+/* line 212, _base.scss */
+a:hover, a:focus {
+  color: #5B8FA8;
+}
+/* line 215, _base.scss */
+a.social {
+  color: #767676;
+}
+
+/* Completely remove from the flow but leave available to screen readers. */
+/* line 221, _base.scss */
+.is-vishidden {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/*
+ * Alerts
+ * --------------------------------------------------
+ */
+/* line 235, _base.scss */
+.alert {
+  text-align: center;
+  padding: 1em;
+  margin-bottom: 0.5em;
+  border: 1px solid gray;
+  background: #f9f9f9;
+}
+
+/* line 243, _base.scss */
+.alert-error {
+  color: red;
+  border-color: red;
+  background: #ffbebe;
+}
+
+/*
+ * Content
+ * --------------------------------------------------
+ */
+@media (min-width: 62em) {
+  /* line 9, ucsearch.scss */
+  .centermain {
+    padding: 0 20px;
+    max-width: 1000px;
+  }
+}
+
+/* line 17, ucsearch.scss */
+.h-inline {
+  display: inline;
+}
+
+/*
+ * Search Mode Dropdown
+ * --------------------------------------------------
+ */
+/* line 26, ucsearch.scss */
+.btn-boxmode {
+  width: 100%;
+  background-color: transparent;
+  color: #000;
+  text-align: left;
+  border-bottom: 1px solid #767676;
+  border-radius: 0px;
+  padding-right: 0px;
+}
+/* line 34, ucsearch.scss */
+.btn-boxmode:hover, .btn-boxmode:focus {
+  background: #d6d6ce;
+  color: white;
+}
+
+/* line 40, ucsearch.scss */
+.boxmode-desc {
+  font-style: italic;
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-bottom: 0px;
+  vertical-align: text-bottom;
+}
+
+/* line 48, ucsearch.scss */
+.boxmode-desc-wrapper {
+  padding-top: 10px;
+}
+
+/* line 52, ucsearch.scss */
+.caret {
+  border-top: 6px dashed;
+  border-top: 6px solid\9;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+}
+
+/* line 59, ucsearch.scss */
+.dropdown-searchtop {
+  width: 100%;
+  margin: 0px;
+  background-color: #F2F2F2;
+  border: 0px;
+  border-radius: 0px;
+}
+
+/* line 67, ucsearch.scss */
+#searchtop {
+  color: #767676;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 5px;
+}
+/* line 72, ucsearch.scss */
+#searchtop a {
+  color: #800000;
+  font-size: 1.2em;
+  font-weight: 700;
+  padding-left: 30px;
+}
+
+/* line 80, ucsearch.scss */
+.searchtop-sub {
+  padding-left: 30px;
+}
+
+/* line 84, ucsearch.scss */
+.searchtitle {
+  margin-top: 7px;
+  margin-bottom: 20px;
+  font-size: 1.4em;
+}
+
+/* line 90, ucsearch.scss */
+.eoptions {
+  padding-top: 20px;
+}
+@media (min-width: 768px) {
+  /* line 90, ucsearch.scss */
+  .eoptions {
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 97, ucsearch.scss */
+  .searchmodule {
+    padding: 30px 20px 0px 20px;
+  }
+}
+
+/* line 103, ucsearch.scss */
+.artmodule {
+  border-right: 3px solid #767676;
+  border-left: 3px solid #767676;
+  padding: 0 20px 50px 20px;
+}
+@media (min-width: 768px) {
+  /* line 103, ucsearch.scss */
+  .artmodule {
+    padding: 0px 20px 15px 20px;
+  }
+}
+
+/*
+ * Search Field Row
+ * --------------------------------------------------
+ */
+/* line 117, ucsearch.scss */
+.form-control {
+  padding: 18px 12px;
+}
+
+/* line 121, ucsearch.scss */
+.btn-searchtype {
+  background-color: #767676;
+  color: #fff;
+  padding: 15px;
+  line-height: 0.45em;
+}
+
+/* line 128, ucsearch.scss */
+.btn-search {
+  background-color: #642822;
+  color: #fff;
+  width: 100%;
+  font-size: 1.1em;
+  padding: 15px;
+  line-height: 0.45em;
+  margin-top: 15px;
+}
+@media (min-width: 768px) {
+  /* line 128, ucsearch.scss */
+  .btn-search {
+    margin-top: 0px;
+  }
+}
+
+/* line 141, ucsearch.scss */
+.btn-search:hover, .btn-search:focus, .btn-search:active, .btn-searchtype:hover, .btn-searchtype:focus, .btn-searchtype:active {
+  color: #000;
+  background-color: #B1746F;
+}
+
+/* line 146, ucsearch.scss */
+.dropdown-menu-right {
+  margin: 0px;
+  border: 0px;
+  background-color: #F2F2F2;
+}
+
+/* line 151, ucsearch.scss */
+.s-hr {
+  color: #767676;
+  background-color: #767676;
+  height: 1px;
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+
+/* line 159, ucsearch.scss */
+.artoptions {
+  border-right: 1px dotted #767676;
+  padding-right: 0px;
+}
+
+/*
+ * Other Search Row
+ * --------------------------------------------------
+ */
+/* line 169, ucsearch.scss */
+.searchother {
+  width: 100%;
+  background-color: #eee;
+  margin-bottom: 30px;
+  padding: 5px 20px 10px 20px;
+}
+@media (min-width: 768px) {
+  /* line 169, ucsearch.scss */
+  .searchother {
+    padding: 0px 20px 10px 20px;
+  }
+}
+/* line 177, ucsearch.scss */
+.searchother h3 {
+  margin-bottom: 5px;
+}
+
+/* line 182, ucsearch.scss */
+.othercats {
+  font-weight: 400;
+  padding-bottom: 15px;
+}
+/* line 185, ucsearch.scss */
+.othercats a {
+  font-size: 1.1em;
+  font-weight: 700;
+  text-decoration: none;
+  color: #725663;
+}
+/* line 190, ucsearch.scss */
+.othercats a:hover {
+  color: #5B8FA8;
+  text-decoration: underline;
+}
+
+/*
+ * Explore Module
+ * --------------------------------------------------
+ */
+/* line 206, ucsearch.scss */
+.exploreheader {
+  color: #fff;
+  margin-bottom: 2px;
+  margin-top: 5px;
+}
+
+/* line 212, ucsearch.scss */
+.exploresubhead {
+  color: #767676;
+  margin-bottom: 7px;
+  padding-top: 15px;
+}
+
+/* line 218, ucsearch.scss */
+label.artmod {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+/* line 223, ucsearch.scss */
+.featured-tagbox {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0.25em;
+}
+
+@media (min-width: 768px) {
+  /* line 229, ucsearch.scss */
+  .midal {
+    display: flex;
+    align-items: center;
+  }
+}
