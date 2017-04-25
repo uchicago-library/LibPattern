@@ -40,6 +40,10 @@ Alerts
  * --------------------------------------------------
  */
 
+$font-large: 2.5em;
+$font-medium: 1.5em;
+$font-small: 1.1em;
+
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -78,35 +82,39 @@ h1 {
 
 h2{
   font-size: 1.2em;
-  color: #9A5324; //#C16622;
+  color: #800000;
   font-weight: 600;
   line-height: 1.4em;
   .contentalert {
     line-height: 1.3em;
     color: #FF3399;
   }
-  &:first-child {
-     @media (min-width: 48em) {
-      margin-top: 5px;
-    }
+  &+h3 {
+    margin-top: 0;
   }
 }
 
 h3 {
   font-size: 1.1em;
-  color: #616530;
+  color: #9A5324;
   font-weight: 600;
-  font-style: italic;
   line-height: 1.4em;
+  &+h4 {
+    margin-top: 0;
+  }
 }
 
 h4 {
-  font-weight: 400;
+  font-weight: 600;
   font-size:1.1em;
   color: #6d2f6a;
+  font-style: italic;
   line-height: 1.4em;
   .newsblock & {
     margin-bottom: 3px;
+  }
+  &+h5 {
+    margin-top: 0;
   }
 }
 
@@ -114,13 +122,17 @@ h5 {
   font-size: 1em;
   font-weight: 600;
   color: #800000;
+  font-style: italic;
   line-height: 1.4em;
+  &+h6 {
+    margin-top: 0;
+  }
 }
 
 h6 {
   font-size: 1em;
   font-weight: 600;
-  color: #767676;
+  color: #525252;
   margin: 15px 0 5px 0;
 }
 
@@ -132,10 +144,6 @@ p {
       color: #767676;
   }
 }
-
-$font-large: 2.5em;
-$font-medium: 1.5em;
-$font-small: 1.1em;
 
 
 /*
@@ -271,26 +279,13 @@ a {
   }
 }
 
-//External Link Styling
-// a[href*="events.uchicago"], a[href*="guides.lib.uchicago"], a:not([href*='lib.uchicago']) {
-//   &:after {
-//     content: "\0020\F08E";
-//     font-family: FontAwesome;
-//     font-size: 0.9em;
-//     padding-left: 0.5em;
-//     display: inline-block;
-//   }
-// }
-
-/* Completely remove from the flow but leave available to screen readers. */
-.is-vishidden {
-  position: absolute !important;
-  overflow: hidden;
+.is-vishidden, .visually-hidden { // For ADA helper text
+  position: absolute;
   width: 1px;
   height: 1px;
-  padding: 0;
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px); }
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
 
 /*
  * Alerts
@@ -307,7 +302,7 @@ a {
     margin-bottom: 0;
     display: inline;
   }
-  &.rich-text {
+  .rich-text {
     display: inline;
   }
 }

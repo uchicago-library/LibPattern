@@ -34,14 +34,6 @@ Page Specific Alterations
  * --------------------------------------------------
  */
 
-.visually-hidden { // For ADA helper text
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
 .breadcrumbs {
   padding-top: 5px;
   padding-left: 20px;
@@ -50,7 +42,10 @@ Page Specific Alterations
 
 .body-container {
   padding: 30px;
-  max-width: 2000px;
+  max-width: 1200px;
+  #p-3378 &, #p-1752 &, #p-1754 &, #p-1755 &, #p-1753 &, #p-1756 &, #p-1758 & {  // Exception for Homepages
+    max-width: 2000px;
+  }
   .sidebar ~ & {
     @include respond-to(medium) {
       padding-left: 45px;
@@ -62,7 +57,7 @@ body.staffpublicpage {
   h1 {
     border-bottom: none;
     &~h2 {
-      border-bottom: 1px solid green;
+      border-bottom: 1px solid #D6D6CE;
       margin-top: 0px;
       padding-bottom: 5px;
       font-weight: 400;
@@ -79,16 +74,23 @@ body.staffpublicpage {
 
 .centermain {
   padding: 0;
+  max-width: 900px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  #p-3378 &, #p-1752 &, #p-1754 &, #p-1755 &, #p-1753 &, #p-1756 &, #p-1758 &, .floorplanpage & {  // Exception for Homepages
+    max-width: 1200px;
+  }
+  .collectionpage & {
+    padding-top: 1.75em;
+  }
   @include respond-to(small) {
     padding: 0 30px 0 15px;
-  }
-  @include respond-to(large) {
-    max-width: 1200px;
   }
 }
 
 .distinct-rightside {
-  background-color: $hovercalm;
+  background-color: $hovercalmlight;
   margin: 10px 0;
   padding: 15px 20px;
   ul {
@@ -101,7 +103,8 @@ body.staffpublicpage {
   a {
     color: $brightpurple;
   }
-  & h3 {
+  & h2 {
+    color: $reggreen;
     margin: 5px 0 10px 0;
     font-size: 1.05em;
     padding-bottom: 5px;
@@ -127,7 +130,7 @@ body.staffpublicpage {
 }
 
 .h1-banner .breadcrumbs, #p-3378 .breadcrumbs, #p-1752 .breadcrumbs, #p-1754 .breadcrumbs, #p-1755 .breadcrumbs, #p-1753 .breadcrumbs, #p-1756 .breadcrumbs, #p-1758 .breadcrumbs { // Hide breadcrumbs on homepages with banners
-   visibility: hidden;
+   @include visually-hidden;
 }
 
 .search-results {
@@ -229,6 +232,10 @@ p q { //Inline Quote
     padding-bottom: 20px!important;
 }
 
+.block-image + div {
+  margin-top: 1em;
+}
+
 img.richtext-image {  //images placed in richtext streamfield
   &.left {
     float: left;
@@ -291,6 +298,23 @@ a.img-src {
   margin: 15px 0;
 }
 
+figure.coll-thumb {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1.5em;
+    img {
+      max-height: 25em;
+    }
+    @include respond-to(small) {
+        float: left!important;
+        margin-right: 2em;
+        img {
+          max-width: 25em;
+        }
+    }
+}
+
+// Solo, Duo, and Trio Image Stylings
 .standardpage .collex-solo, .standardpage .collex-duo, .standardpage .collex-trio, .standardpage .collex-verso {
   img {
       border: 3px solid #c8c8c8;
@@ -310,6 +334,22 @@ a.img-src {
   }
 }
 
+// Image Link Streamfield
+
+.thumbnail-mod {
+  text-align: center;
+  img {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  p {
+    margin-top: 0.75em;
+    font-size: 1.1em;
+  }
+}
+
+
 /*
  * Right Sidebar
  * --------------------------------------------------
@@ -322,12 +362,14 @@ a.img-src {
   padding: 20px 15px 0px 15px;
   li {
   color: $darkgray;
+  margin-bottom: 0.25em; //add to production
   }
   a {
     color:  $active-hover;
   }
-  h3, h4 {
+  h2, h3 {
     font-weight: 400;
+    font-size:1.1em;
     margin: 5px 0 10px 0;
     padding-bottom: 5px;
     color: $brightpurple;
@@ -360,7 +402,7 @@ a.img-src {
   padding: 15px!important;
   margin-bottom: 15px;
   background-color: $maroon;
-  & h3, & h4 {
+  & h2, & h3 {
     color: #fff;
     border: none;
   }
@@ -422,6 +464,9 @@ a.img-src {
 
 .rightside-mod { //Wrapper for individual modules
   padding: 0 0 2em 0;
+  .collectionpage & {
+    padding-bottom: 1em;
+  }
   @include respond-to(small) {
     padding: 0 1em 2em 1em;
   }
@@ -481,6 +526,10 @@ a.viewall {
 .home-profile { // featured profile on specialist module
   padding: 0;
   max-width: 110px;
+}
+
+#widget-explore-research-guides {
+  padding-left: 0;
 }
 
 
@@ -580,6 +629,7 @@ a#event-header {
   h3 {
     color: $darkneutral;
     font-style: normal;
+    margin-top: 0.5em;
   }
   p {
     clear:both;
@@ -749,7 +799,7 @@ form#knowledgetracker { // Desk Tracker
 }
 
 .extract { // copyright info box
-  background-color: #eeefe5;
+  background-color: $hovercalm;
   margin: 20px 50px;
   padding: 5px 30px;
   border-left: 3px solid #ccc;
@@ -914,6 +964,7 @@ thead a {
 
 tbody a {
   color: #32327f;
+  text-decoration: underline;
 }
 
 .etable {
@@ -945,18 +996,6 @@ tr.etable-header, th.etable-header, table.etable thead {
 table.etable>thead>tr>th {
   border-bottom: 0;
 }
-
-// table.etable thead {
-//   text-indent: -999em;
-//   position: absolute;
-//   overflow: hidden;
-//   clip: rect(0 0 0 0);
-//   height: 1px;
-//   width: 1px;
-//   margin: -1px;
-//   padding: 0;
-//   border: 0;
-// }
 
 table.etable>tbody>tr {
   &:last-child {
@@ -1161,7 +1200,7 @@ ul.index-list {
       &>ul.index-list>li { // 3rd Level
         a {
           font-weight: 300;
-          color: #616530;
+          color: $reggreen;
         }
         &>ul.index-list>li { // 4th Level
           a {
@@ -1196,7 +1235,7 @@ ul.index-list {
   @extend .distinct-rightside;
   background-color: #fff;
   @include respond-to(medium) {
-    background-color: #e7eef2;
+    background-color: $hovercalmlight;
     border: none;
     margin-top: 10px;
   }
@@ -1210,7 +1249,7 @@ ul.index-list {
     margin: 0.3em 0;
   }
   hr {
-    border-top: 1px solid $brightpurple;
+    border-top: 1px dotted $brightpurple;
   }
 }
 
@@ -1233,6 +1272,7 @@ a.btn-ask {
   border-right: 0px;
   padding: 10px 20px;
   margin: 10px 0;
+  text-decoration: none;
   &:before {
     content: "\f0e5";
     font-family: FontAwesome;
@@ -1613,7 +1653,7 @@ td.time, td.event-nav {
 }
 
 .btn-reserve {  //Reserve a room link
-  color: #fff;
+  color: #fff!important;
   letter-spacing: 0.1em;
   background-color: #58593F;
   border-right: 0px;
@@ -1641,9 +1681,15 @@ td.time, td.event-nav {
 .rightside.coll-rightside {
   @extend .distinct-rightside;
   border: none;
-  h3 {
-    color: #616530;
+  h2 {
+    color: $reggreen;
     font-weight: 600;
+  }
+  h3 {
+    color: $mid-dark;
+    border-bottom: none;
+    margin: 1.5em 0 0;
+    font-style: italic;
   }
   ul {
     padding-left: 2em;
@@ -1721,7 +1767,7 @@ padding: 10px 0px 0px 15px;
 }
 
 tr.seealso {
-  background-color: #eeeeeb;
+  background-color: #eeeeeb!important;
   td {
     font-style: italic;
   }
@@ -1729,8 +1775,15 @@ tr.seealso {
 
 p.acknowledgments {
   font-style: italic;
-  color: #6d2f6a;
-  font-size: 1.2em;
+  color: $mansuetogreen;
+  font-size: 1.1em;
+}
+
+a.coll-access {
+  &:after {
+    content: "\0020\f101";
+    font-family: FontAwesome;
+  }
 }
 
 /*
@@ -1815,5 +1868,19 @@ p.acknowledgments {
     }
   }
 }
+
+
+/*
+ * Temporary until all web exhibits are migrated over
+ * --------------------------------------------------
+ */
+
+.collex-loc {
+  background-color: #eee;
+  padding: 1.5em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 
 

@@ -79,41 +79,47 @@ h1 {
 
 h2 {
   font-size: 1.2em;
-  color: #9A5324;
+  color: #800000;
   font-weight: 600;
   line-height: 1.4em; }
   h2 .contentalert {
     line-height: 1.3em;
     color: #FF3399; }
-  @media (min-width: 48em) {
-    h2:first-child {
-      margin-top: 5px; } }
+  h2 + h3 {
+    margin-top: 0; }
 
 h3 {
   font-size: 1.1em;
-  color: #616530;
+  color: #9A5324;
   font-weight: 600;
-  font-style: italic;
   line-height: 1.4em; }
+  h3 + h4 {
+    margin-top: 0; }
 
 h4 {
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.1em;
   color: #6d2f6a;
+  font-style: italic;
   line-height: 1.4em; }
   .newsblock h4 {
     margin-bottom: 3px; }
+  h4 + h5 {
+    margin-top: 0; }
 
 h5 {
   font-size: 1em;
   font-weight: 600;
   color: #800000;
+  font-style: italic;
   line-height: 1.4em; }
+  h5 + h6 {
+    margin-top: 0; }
 
 h6 {
   font-size: 1em;
   font-weight: 600;
-  color: #767676;
+  color: #525252;
   margin: 15px 0 5px 0; }
 
 p {
@@ -193,14 +199,11 @@ a {
   a.social {
     color: #767676; }
 
-/* Completely remove from the flow but leave available to screen readers. */
-.is-vishidden {
-  position: absolute !important;
-  overflow: hidden;
+.is-vishidden, .visually-hidden {
+  position: absolute;
   width: 1px;
   height: 1px;
-  padding: 0;
-  border: 0;
+  overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px); }
 
 /*
@@ -216,7 +219,7 @@ a {
   .alert p {
     margin-bottom: 0;
     display: inline; }
-  .alert.rich-text {
+  .alert .rich-text {
     display: inline; }
 
 .alert-error {
