@@ -514,12 +514,19 @@ a.viewall {
     color: $eckhartpurple;
     vertical-align: middle;
     font-size: 2em;
+    .centermain & {
+      font-size: 4em;
+    }
   }
   .fa, a.fa {  // to make-up for the size difference between the two icon families
     color: $eckhartpurple;
     font-size:1.5em;
     padding-top: 10px;
     padding-bottom:7px;
+    .centermain & {
+      font-size: 3em;
+      padding-bottom: 0.35em;
+    }
   }
 }
 
@@ -531,6 +538,53 @@ a.viewall {
 #widget-explore-research-guides {
   padding-left: 0;
 }
+
+
+// Reg Kiosk
+.techbar-mod {
+  display: flex;
+  justify-content: center;
+  &>div {
+    flex-grow: 1;
+    text-align: center;
+    a {
+      color: $eckhartpurple;
+    }
+  }
+}
+
+// .techbar-count {
+//   display: block;
+//   font-size: 3em;
+//   color: $darkgray;
+// }
+
+.fa-stack {
+  fa-circle {
+    font-size: 2.5em!important;
+  }
+  &[data-count]:after{
+    position:absolute;
+    left: -20%;
+    bottom: -20%;
+    content: attr(data-count);
+    font-size:55%;
+    padding:.6em;
+    border-radius:999px;
+    line-height:.75em;
+    color: white;
+    background:$ssaorange;
+    text-align:center;
+    min-width:2em;
+    font-weight:bold;
+  }
+}
+
+.techbar-desc {
+  display: block;
+  padding-top: 0.75em;
+}
+
 
 
 /*

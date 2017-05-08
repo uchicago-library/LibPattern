@@ -1359,12 +1359,17 @@ a.viewall:after {
   color: #350E20;
   vertical-align: middle;
   font-size: 2em; }
+  .centermain .studymod .material-icons, .centermain .studymod a.material-icons {
+    font-size: 4em; }
 
 .studymod .fa, .studymod a.fa {
   color: #350E20;
   font-size: 1.5em;
   padding-top: 10px;
   padding-bottom: 7px; }
+  .centermain .studymod .fa, .centermain .studymod a.fa {
+    font-size: 3em;
+    padding-bottom: 0.35em; }
 
 .home-profile {
   padding: 0;
@@ -1372,6 +1377,37 @@ a.viewall:after {
 
 #widget-explore-research-guides {
   padding-left: 0; }
+
+.techbar-mod {
+  display: flex;
+  justify-content: center; }
+  .techbar-mod > div {
+    flex-grow: 1;
+    text-align: center; }
+    .techbar-mod > div a {
+      color: #350E20; }
+
+.fa-stack fa-circle {
+  font-size: 2.5em !important; }
+
+.fa-stack[data-count]:after {
+  position: absolute;
+  left: -20%;
+  bottom: -20%;
+  content: attr(data-count);
+  font-size: 55%;
+  padding: .6em;
+  border-radius: 999px;
+  line-height: .75em;
+  color: white;
+  background: #9A5324;
+  text-align: center;
+  min-width: 2em;
+  font-weight: bold; }
+
+.techbar-desc {
+  display: block;
+  padding-top: 0.75em; }
 
 /*
  * Workshops & Events Homepage Module
