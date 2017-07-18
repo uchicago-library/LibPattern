@@ -1192,6 +1192,8 @@ figure.coll-thumb {
   margin-bottom: 1.5em; }
   figure.coll-thumb img {
     max-height: 25em; }
+  figure.coll-thumb.hub img {
+    max-height: 15em; }
   @media (min-width: 48em) {
     figure.coll-thumb {
       float: left !important;
@@ -2314,7 +2316,8 @@ td.time, td.event-nav {
     color: #525252;
     border-bottom: none;
     margin: 1.5em 0 0;
-    font-style: italic; }
+    font-weight: 600;
+    font-size: 1em; }
   .rightside.coll-rightside ul, .coll-rightside.flex-sidebar ul {
     padding-left: 2em;
     text-indent: -2em;

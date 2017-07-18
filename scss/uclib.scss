@@ -305,6 +305,9 @@ figure.coll-thumb {
     img {
       max-height: 25em;
     }
+    &.hub img {
+      max-height: 15em;
+    }
     @include respond-to(small) {
         float: left!important;
         margin-right: 2em;
@@ -1743,7 +1746,9 @@ td.time, td.event-nav {
     color: $mid-dark;
     border-bottom: none;
     margin: 1.5em 0 0;
-    font-style: italic;
+    //font-style: italic;
+    font-weight: 600;
+    font-size: 1em;
   }
   ul {
     padding-left: 2em;
