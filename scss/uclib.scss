@@ -1850,6 +1850,65 @@ a.coll-access {
  * --------------------------------------------------
  */
 
+ .label {
+  font-size: 100%!important;
+  font-weight: 400;
+  &.label-library {
+    background: $crerarblue;
+  }
+  &.label-subject {
+    background: $reggreen;
+  }
+ }
+
+.card {
+  margin: 1em;
+  position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.card-header {
+  padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #f7f7f9;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+  h2 {
+    display: inline;
+    font-style: normal;
+    margin-top: 0;
+    margin-right: 1em;
+  }
+  a {
+    color: $crerarblue;
+  }
+}
+
+.card-block {
+  -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    //padding: 1.25rem;
+    h3 {
+      margin-top: 0;
+      margin-right: 1em;
+      display: inline;
+    }
+}
+
+ ////
+
  .directory-list {
   @extend .distinct-list;
   & img {

@@ -101,8 +101,9 @@ h2 {
     margin-top: 0; }
 
 h3 {
-  font-size: 1.1em;
-  color: #9A5324;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.25em;
+  color: #525252;
   font-weight: 600;
   line-height: 1.4em; }
   h3 + h4, .search-results h4 h3 + a {
@@ -791,8 +792,9 @@ h2 {
     margin-top: 0; }
 
 h3 {
-  font-size: 1.1em;
-  color: #9A5324;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.25em;
+  color: #525252;
   font-weight: 600;
   line-height: 1.4em; }
   h3 + h4, .search-results h4 h3 + a {
@@ -2392,6 +2394,53 @@ a.coll-access:after {
  * Directory
  * --------------------------------------------------
  */
+.label {
+  font-size: 100% !important;
+  font-weight: 400; }
+  .label.label-library {
+    background: #0F425C; }
+  .label.label-subject {
+    background: #616530; }
+
+.card {
+  margin: 1em;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: .25rem; }
+
+.card-header {
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: #f7f7f9;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+  .card-header h2 {
+    display: inline;
+    font-style: normal;
+    margin-top: 0;
+    margin-right: 1em; }
+  .card-header a {
+    color: #0F425C; }
+
+.card-block {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto; }
+  .card-block h3 {
+    margin-top: 0;
+    margin-right: 1em;
+    display: inline; }
+
 .directory-list img {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
@@ -2559,8 +2608,9 @@ h2 {
     margin-top: 0; }
 
 h3 {
-  font-size: 1.1em;
-  color: #9A5324;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.25em;
+  color: #525252;
   font-weight: 600;
   line-height: 1.4em; }
   h3 + h4, .search-results h4 h3 + a {
@@ -2993,8 +3043,9 @@ h2 {
     margin-top: 0; }
 
 h3 {
-  font-size: 1.1em;
-  color: #9A5324;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.25em;
+  color: #525252;
   font-weight: 600;
   line-height: 1.4em; }
   h3 + h4, .search-results h4 h3 + a {
