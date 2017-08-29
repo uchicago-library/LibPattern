@@ -1850,6 +1850,25 @@ a.coll-access {
  * --------------------------------------------------
  */
 
+ .side-test {
+  h2 a {
+    margin-bottom: 3px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #642822;
+    font-style: italic;
+  }
+  h3 a {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.25em;
+    color: $eckhartpurple;
+    font-weight: 600;
+    //line-height: 1.4em;
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+  }
+ }
+
  .label {
   font-size: 100%!important;
   font-weight: 400;
@@ -1888,6 +1907,71 @@ a.coll-access {
     background-color: #fff;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
+}
+
+.sdir {
+  margin: 2em 0 0.25em 0;
+  padding-left: 0;
+  h2 {
+    font-family: "Cormorant Garamond", serif;
+    color: $reggreen;
+    font-size: 1.3em;
+    padding-left: 15px;
+    margin-right: 2em;
+    margin-bottom: 0.25em;
+    border-bottom: 2px solid #ADB17D;
+      a, a:active, a:focus, a:hover {
+      color: $mid-dark;
+      text-decoration: none;
+    }
+  }
+  span {
+    padding-left: 15px;
+  }
+}
+
+.sdir-wrap {
+  @extend .news-wrap;
+  padding: 0;
+  h3 {
+    font-size: 1.1em;
+    margin-bottom: 0;
+  }
+  a, a:active, a:focus, a:hover {
+    color: $crerarblue;
+    text-decoration: underline;
+  }
+}
+
+a.toggle-link {
+    color: #337ab7;
+    text-decoration: none;
+    font-size: 0.9em;
+    &:active, &:focus, &:hover {
+      color: #337ab7;
+      text-decoration: none;
+    }
+    &:before {
+    font-family: 'Material Icons';
+    font-size: 1.2em;
+    margin-right: 0.25em;
+    content: "indeterminate_check_box";
+  }
+}
+
+.card.card-two {
+  background-color: #eee;
+  border: none;
+  padding: 1em 2em;
+  font-size: 0.9em;
+  h3 {
+    font-size: 1em;
+    margin-bottom: 0;
+  }
+  a, a:active, a:focus, a:hover {
+    color: $crerarblue;
+    text-decoration: underline;
+  }
 }
 
 .card-header {
