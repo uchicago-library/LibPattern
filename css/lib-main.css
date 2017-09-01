@@ -1693,7 +1693,16 @@ form#knowledgetracker input[type="reset"] {
     .btn-textonly {
       padding: 5px 10px 5px 10px; } }
 
+.btn-obvious {
+  color: #525252;
+  background-color: #fff;
+  border-color: #ccc;
+  padding: 0.5em 1em; }
+
 .open > .dropdown-toggle.btn-textonly:focus, .open > .dropdown-toggle.btn-textonly:hover {
+  background-color: #eeefe5; }
+
+.open > .dropdown-toggle.btn-obvious:focus, .open > .dropdown-toggle.btn-obvious:hover {
   background-color: #eeefe5; }
 
 .btn-alpha {
@@ -2467,6 +2476,8 @@ tr td.div-head {
   .sdir-wrap a, .sdir-wrap a:active, .sdir-wrap a:focus, .sdir-wrap a:hover {
     color: #0F425C;
     text-decoration: underline; }
+  .sdir-wrap .col-xs-12 {
+    padding-bottom: 1em; }
 
 a.toggle-link {
   color: #337ab7;

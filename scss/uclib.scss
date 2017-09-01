@@ -924,7 +924,18 @@ form#knowledgetracker { // Desk Tracker
   }
 }
 
+.btn-obvious { // testing for directory
+  color: $mid-dark;
+  background-color: #fff;
+  border-color: #ccc;
+  padding: 0.5em 1em; 
+}
+
 .open>.dropdown-toggle.btn-textonly:focus, .open>.dropdown-toggle.btn-textonly:hover {
+  background-color: $hovercalm;
+}
+
+.open>.dropdown-toggle.btn-obvious:focus, .open>.dropdown-toggle.btn-obvious:hover {
   background-color: $hovercalm;
 }
 
@@ -1940,6 +1951,9 @@ a.coll-access {
   a, a:active, a:focus, a:hover {
     color: $crerarblue;
     text-decoration: underline;
+  }
+  .col-xs-12 {
+    padding-bottom: 1em;
   }
 }
 
