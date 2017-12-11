@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>University of Chicago Libraries</title>
+	<meta name="generator" content="Bootply" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/lib-main.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/calendar/res-timeline.css">
+	<link rel="stylesheet" type="text/css" href="css/calendar/font-awesome.min.css">
+	<script type="text/javascript" src="css/calendar/jquery.min.js"></script>	
+	<script type="text/javascript" src="css/calendar/res-timeline.js"></script>
+</head>
+
+<body>
+		<div id="skip">
+		<a href="#content">Skip to Main Content</a>
+	</div>
+	<div id="body-wrap">
+<!-- <div class="alert alert-info" role="alert">
+	<strong>Welcome to the new Library website!</strong> Leave <a href="//lib.uchicago.edu/about/feedback/">feedback or report a problem</a>.
+</div> -->
+
+	<!-- Top Navigation -->
+	<nav class="navbar navbar-default"> <!-- Navwrapper -->
+			<!-- Mobile top right nav -->
+			<div class="mobile-topnav visible-xs visible-sm">
+			    <a href="#"><i class="fa fa-clock-o fa-lg"></i></a> | <a href="#"><i class="fa fa-comment fa-lg"></i></a> | <a href="#"><i class="fa fa-gift fa-lg"></i></a> | <a href="#"><i class="fa fa-user fa-lg"></i></a>
+			</div>
+			<!-- // Mobile top right nav -->
+
+			<div class="container-fluid fluid-top"> <!-- Nav Wrapper / Fluid Top -->
+
+			    <!-- Mobile + Menu Toggle  -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#global-navbar" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="home-updated.html"><img src="images/color-logo.png" class="img-responsive" alt="library logo"></a>
+			    </div> <!-- // end navbar-header -->
+				<!-- // Mobile + Menu Toggle  -->
+
+				<!-- Top right nav --> <!-- Hidden XS + SM -->
+			    <ul class="nav navbar-nav hidden-xs hidden-sm navbar-right" id="navbar-right">
+			      <li><a href="asklib-updated.html"><i class="fa fa-comment fa-lg ask-icon"></i> Ask a Librarian</a></li>
+			      <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-clock-o"></i> Hours: Regenstein 8:00am-10:30pm <span class="caret"></span></a>
+				    <ul class="dropdown-menu">
+			            <li><a href="home-crerar-updated.html">Crerar: 8:00am-10:30pm</a></li>
+			            <li><a href="a3-search-law.html">D'Angelo Law: 8:00am-9:00pm</a></li>
+			            <li><a href="#">Eckhart: 9:00am-5:30pm</a></li>
+			            <li><a href="#">Mansueto: 9:00am-6:00pm</a></li>
+			            <li><a href="#">Special Collections: 8:30am-4:30pm</a></li>
+			            <li><a href="#">SSA: 9:00am-5:00pm</a></li>
+			            <li><a href="spaces-fullhours.html">View all Locations <span class="glyphicon glyphicon-chevron-right" style="font-size:0.8em;"></span></a></li>
+			        </ul>
+			      </li>
+			      <li><a href="#"><i class="fa fa-gift"></i> Support the Library</a></li>
+			      <li><a href="#"><i class="fa fa-user"></i> My Accounts</a></li>
+			    </ul> 
+			    <!-- // Top right nav -->
+
+ <!-- Main Navigation (In Toggle) -->
+        <div class="collapse navbar-collapse" id="global-navbar"> <!-- Global Navbar -->
+            <ul class="nav navbar-nav"> <!-- Dropdown Nav -->
+
+                <!-- Search Dropdown -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Search<span class="caret"></span></a>
+                    <ul class="dropdown-menu twocol-drop">
+                        <li>
+                            <ul class="list-unstyled col-sm-6 ul-left">
+                                <li class="twocol-head">Catalogs</li>
+                                <li role="separator" class="divider visible-xs"></li>
+                                <li><a href="http://lib.uchicago.edu/h/3" data-ga-tracked="on">Library Catalog</a></li>
+                                <li><a href="http://lib.uchicago.edu/h/ub" data-ga-tracked="on">UBorrow</a></li>
+                                <li><a href="http://lib.uchicago.edu/h/borrowdirect" data-ga-tracked="on">BorrowDirect</a></li>
+                                <li><a href="http://lib.uchicago.edu/h/worldcat" data-ga-tracked="on">WorldCat</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/search/catalogs/other">Other Catalogs</a></li>
+                            </ul>
+
+                            <ul class="list-unstyled col-sm-6">
+                                <li class="twocol-head">Other Search Tools</li>
+                                <li role="separator" class="divider visible-xs"></li>
+                                <li><a href="http://lib.uchicago.edu/h/articlesplus" data-ga-tracked="on">Articles Plus</a></li>
+                                <li><a href="http://lib.uchicago.edu/h/atoz" data-ga-tracked="on">Database Finder</a></li>
+                                <li><a href="http://lib.uchicago.edu/ejournals" data-ga-tracked="on">EJournals</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/#websitesearch">Website Search</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!-- // Search Dropdown -->
+
+                <!-- Borrow/Request Dropdown -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Borrow <span class="hidden-sm hidden-md">&amp; Request</span> <span class="caret"></span></a>
+                    <ul class="dropdown-menu twocol-drop">
+                        <li>
+                            <ul class="list-unstyled col-sm-6 ul-left">
+                                <li class="twocol-head">Borrowing</li>
+                                <li role="separator" class="divider visible-xs"></li>
+                                <li><a href="https://www.lib.uchicago.edu/borrow/borrowing/">Borrowing &amp; Renewing</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/borrow/borrowing/due-dates-and-loan-periods/">Due Dates &amp; Loan Periods</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/borrow/borrowing/fines-and-lost-items/">Fines &amp; Lost Items</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/borrow/borrowing/course-reserves">Course Reserves</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/borrow/borrowing/my-accounts/">My Accounts</a></li>
+                            </ul>
+
+                            <ul class="list-unstyled col-sm-6">
+                                <li class="twocol-head">Requesting</li>
+                                <li role="separator" class="divider visible-xs"></li>
+                                <li><a href="https://www.lib.uchicago.edu/borrow/requesting/request-articles-chapters/">Request Articles &amp; Chapters</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/borrow/requesting/request-books-other-media/">Request Books &amp; Other Media</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/borrow/requesting/suggest-purchase/">Suggest a Purchase</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!-- // Borrow/Request Dropdown -->
+
+                <!-- Research Dropdown -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Research <span class="hidden-sm">&amp; Teaching </span><span class="caret"></span></a>
+                    <ul class="dropdown-menu twocol-drop">
+                        <li>
+                            <ul class="list-unstyled col-sm-5 ul-left">
+                                <li class="twocol-head">Research Help &amp; Tools</li>
+                                <li role="separator" class="divider visible-xs"></li>
+                                <li><a href="https://www.lib.uchicago.edu/research/help/ask-librarian/">Ask a Librarian</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/about/directory/?view=staff&amp;subject=All+Subject+Specialists">Subject Specialists</a></li>
+                                <li><a href="http://guides.lib.uchicago.edu/citation_management" data-ga-tracked="on">Citation Management</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/research/help/offcampus">Off-Campus Access</a></li>
+                                <li><a href="http://guides.lib.uchicago.edu/subjectguides/helpguides" data-ga-tracked="on">Help Guides</a></li>
+                                <li><a href="http://guides.lib.uchicago.edu/subjectguides" data-ga-tracked="on">Subject Guides</a></li>
+                            </ul>
+
+                            <ul class="list-unstyled col-sm-7">
+                                <li class="twocol-head">Teaching Support</li>
+                                <li role="separator" class="divider visible-xs"></li>
+                                <li><a href="http://guides.lib.uchicago.edu/coursereserves" data-ga-tracked="on">Course Reserves</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/research/teaching/research-instruction-courses/">Research Instruction for Courses</a></li>
+                                <li class="hidden-xs"><hr style="border:0; border-top: 1px solid #767676;"></li>
+                                <li class="twocol-head">Scholarly Communication &amp; Publishing</li>
+                                <li role="separator" class="divider visible-xs"></li>
+                                <li><a href="https://www.lib.uchicago.edu/research/scholar/phd">Dissertation Office</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/research/scholar/digitalscholarship">Digital Scholarship</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/copyrightinfo/" data-ga-tracked="on">Copyright Info</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!-- // Research Dropdown -->
+
+                <!-- Collection/Exhibits Dropdown -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Collections <span class="hidden-sm">&amp; Exhibits</span> <span class="caret"></span></a>
+                    <ul class="dropdown-menu twocol-drop">
+                        <li>
+                            <ul class="list-unstyled col-sm-6 ul-left">
+                                <li class="twocol-head">Collections</li>
+                                <li role="separator" class="divider visible-xs"></li>
+                                <li><a href="https://www.lib.uchicago.edu/collections/">Notable Collections</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/collections/?digital=on&amp;view=collections">Digital Collections</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/collections/?view=subjects">Collecting Areas by Subject</a></li>
+                                <li><a href="#">Other Local Collections</a></li>
+                                <li class="hidden-xs"><hr style="border:0; border-top: 1px solid #767676;"></li>
+                                <li class="twocol-head">Exhibits</li>
+                                <li role="separator" class="divider visible-xs"></li>
+                                <li><a href="https://www.lib.uchicago.edu/collections/?view=exhibits">All Exhibits</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/collections/?digital=on&amp;view=exhibits">Web Exhibits</a></li>
+                            </ul>
+
+                            <ul class="list-unstyled col-sm-6">
+                                <li class="twocol-head">Research Centers</li>
+                                <li role="separator" class="divider visible-xs"></li>
+                                <li><a href="https://www.lib.uchicago.edu/about/directory/departments/eastasia/">East Asian Collection</a></li>
+                                <li><a href="#">Maps Collection</a></li>
+                               <li><a href="https://www.lib.uchicago.edu/about/directory/departments/southasia/">Southern Asia Collection</a></li>
+                               <li><a href="https://www.lib.uchicago.edu/collections/?digital=on&amp;view=exhibits">Special Collections</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!-- // Collection/Exhibits Dropdown -->
+
+                <!-- Spaces  Dropdown  -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Spaces <span class="hidden-sm hidden-md">&amp; Services</span><span class="caret"></span></a>
+                    <ul class="dropdown-menu dropdown-menu-right onecol-drop">
+                        <li class="twocol-head">Using Our Spaces</li>
+                        <li role="separator" class="divider visible-xs"></li>
+                        <li><a href="https://www.lib.uchicago.edu/research/help/infofor/information-visitors/">Visiting the Library</a></li>
+                        <li><a href="https://www.lib.uchicago.edu/using/libraries-hours/">Library Hours</a></li>
+                        <li><a href="http://rooms.lib.uchicago.edu/" data-ga-tracked="on">Book a Room</a></li>
+                        <li><a href="https://www.lib.uchicago.edu/spaces/">Places to Study</a></li>
+                        <li><a href="https://www.lib.uchicago.edu/using/access-privileges/">Access &amp; Privileges</a></li>
+                        <li><a href="https://www.lib.uchicago.edu/research/help/offcampus">Off-Campus Access</a></li>
+                        <li><a href="https://printing.uchicago.edu/" data-ga-tracked="on">Copy, Print, Scan</a></li>
+                        <li><a href="https://itservices.uchicago.edu/page/techbr" data-ga-tracked="on">TECHB@R</a></li>
+                    </ul>
+                </li>
+                <!-- // Spaces Dropdown -->
+
+                <!-- Locations  Dropdown  -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Libraries <span class="caret"></span></a>
+                    <ul class="dropdown-menu dropdown-menu-right onecol-drop">
+                        <li class="twocol-head">Our Locations</li>
+                        <li role="separator" class="divider visible-xs"></li>
+                        <li><a href="https://www.lib.uchicago.edu/crerar/">Crerar</a></li>
+                        <li><a href="https://www.lib.uchicago.edu/law/">D'Angelo Law</a></li>
+                        <li><a href="https://www.lib.uchicago.edu/eck/">Eckhart</a></li>
+                        <li><a href="https://www.lib.uchicago.edu/mansueto/">Mansueto</a></li>
+                        <li><a href="https://www.lib.uchicago.edu/reg/">Regenstein</a></li>
+                        <li><a href="https://www.lib.uchicago.edu/scrc/">Special Collections</a></li>
+                        <li><a href="https://www.lib.uchicago.edu/ssa/">SSA</a></li>
+                    </ul>
+                </li>
+                <!-- // Locations Dropdown -->
+
+                <!-- About Mega Dropdown -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+                    <ul class="dropdown-menu dropdown-menu-right twocol-drop">
+                        <li>
+                            <ul class="list-unstyled col-sm-6 ul-left">
+                                <li class="twocol-head">About the Library</li>
+                                <li role="separator" class="divider visible-xs"></li>
+                                <li><a href="https://www.lib.uchicago.edu/about/thelibrary/mission/">Mission &amp; Strategic Plan</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/about/thelibrary/">Facts</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/about/directory/">Departments &amp; Staff</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/about/thelibrary/employment/">Employment</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/research/help/infofor/information-visitors/">Visiting the Library</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/about/thelibrary/supportus/">Support the Library</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/about/thelibrary/surveys/">Library Surveys &amp; Reports</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/about/thelibrary/policies/">Library Policies</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/conferences">Conferences</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/about/thelibrary/committees/">Library Boards &amp; Committees</a></li>
+                            </ul>
+
+                            <ul class="list-unstyled col-sm-6">
+                                <li class="twocol-head">News &amp; Events</li>
+                                <li role="separator" class="divider visible-xs"></li>
+                                <li><a href="http://news.lib.uchicago.edu/" data-ga-tracked="on">News</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/about/news-events/workshops">Workshops &amp; Events</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/about/news-events/libra">Libra (newsletter)</a></li>
+                                <li><a href="https://www.lib.uchicago.edu/about/news-events/social-media/">Social Media Directory</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!-- // About Dropdown -->
+
+			    	</ul> <!-- // Dropdown Nav -->
+			    </div> <!-- // Global Navbar -->
+			</div> <!-- // Nav Wrapper / Fluid Top  -->
+	</nav><!-- // Top Navigation -->
+
+
+<!-- Awesome Page Content -->
+	<div class="container-fluid main-container"> <!-- Main Container Wrapper -->
+		<div class="row row-offcanvas row-offcanvas-left"> <!-- Off Canvas Wrapper Row -->
+		<div  class="col-md-12 breadcrumbs hidden-xs hidden-sm"><a href="#">About</a> > <a href="#">The Library </a> > Library Directory</div>
+
+    <div class="container body-container col-xs-12 col-lg-11 col-lg-offset-1" id="content"> <!-- Content Container -->
+
+<div class="col-xs-12 page-head">
+            <h1>Library Directory</h1>
+        </div>
+			
+<!-- *********** START VARIABLE CONTENT *********** -->
+		<div class="col-xs-12 col-md-9 centermain"> <!-- START Main -->
+
+			<div class="col-sm-3"> <!-- START Left sidebar -->
+				<div class="filter-box"><!-- filter-box START -->
+	<div class="dark-solid-divider">&nbsp;</div>
+	<h2>SEARCH &amp; FILTER</h2>
+	<div class="grey-dotted-divider">&nbsp;</div>
+	<div class="finder-box fndboxspc">
+		<div class="finder-option-box">
+			<div id="serach-box">
+				<div class="serach-textbox-box"><label for="fnalibgobtn" title="Enter your keywords ">Enter your keywords </label> <input class="form-text" id="fnalibgotf" maxlength="255" name="keys" size="40" title="Search by name or keyword" type="text" value="Search by name or keyword"></div>
+				<br>
+				<input class="form-submit" id="fnalibgobtn" name="op" title="Search" type="button" value="Search"></div>
+		</div>
+	</div>
+	<div class="filter-option-box staff">
+		<ul>
+			<li id="librFilter"><a class="expanded collapse1" href="#" id="librLink">Libraries</a>
+				<ul id="librul" style="display: none;"><li class="leaf"><input aria-label="Arnold Arboretum" alt="" type="checkbox" value="Arnold Arboretum" title="Arnold Arboretum"><a href="javascript:void(0);" id="Arnold Arboretum">Arnold Arboretum</a></li><li class="leaf"><input aria-label="Artemas Ward House" alt="" type="checkbox" value="Artemas Ward House" title="Artemas Ward House"><a href="javascript:void(0);" id="Artemas Ward House">Artemas Ward House</a></li><li class="leaf"><input aria-label="Baker Library" alt="" type="checkbox" value="Baker Library" title="Baker Library"><a href="javascript:void(0);" id="Baker Library">Baker Library</a></li><li class="leaf"><input aria-label="Biblioteca Berenson" alt="" type="checkbox" value="Biblioteca Berenson" title="Biblioteca Berenson"><a href="javascript:void(0);" id="Biblioteca Berenson">Biblioteca Berenson</a></li><li class="leaf"><input aria-label="Birkhoff Math" alt="" type="checkbox" value="Birkhoff Math" title="Birkhoff Math"><a href="javascript:void(0);" id="Birkhoff Math">Birkhoff Math</a></li><li class="leaf"><input aria-label="Botany Libraries" alt="" type="checkbox" value="Botany Libraries" title="Botany Libraries"><a href="javascript:void(0);" id="Botany Libraries">Botany Libraries</a></li><li class="leaf"><input aria-label="Cabot Science Library" alt="" type="checkbox" value="Cabot Science Library" title="Cabot Science Library"><a href="javascript:void(0);" id="Cabot Science Library">Cabot Science Library</a></li><li class="leaf"><input aria-label="Center for Hellenic Studies" alt="" type="checkbox" value="Center for Hellenic Studies" title="Center for Hellenic Studies"><a href="javascript:void(0);" id="Center for Hellenic Studies">Center for Hellenic Studies</a></li><li class="leaf"><input aria-label="Chemistry Library" alt="" type="checkbox" value="Chemistry Library" title="Chemistry Library"><a href="javascript:void(0);" id="Chemistry Library">Chemistry Library</a></li><li class="leaf"><input aria-label="Countway Medical Library" alt="" type="checkbox" value="Countway Medical Library" title="Countway Medical Library"><a href="javascript:void(0);" id="Countway Medical Library">Countway Medical Library</a></li><li class="leaf"><input aria-label="Design Library" alt="" type="checkbox" value="Design Library" title="Design Library"><a href="javascript:void(0);" id="Design Library">Design Library</a></li><li class="leaf"><input aria-label="Divinity Library" alt="" type="checkbox" value="Divinity Library" title="Divinity Library"><a href="javascript:void(0);" id="Divinity Library">Divinity Library</a></li><li class="leaf"><input aria-label="Dumbarton Oaks" alt="" type="checkbox" value="Dumbarton Oaks" title="Dumbarton Oaks"><a href="javascript:void(0);" id="Dumbarton Oaks">Dumbarton Oaks</a></li><li class="leaf"><input aria-label="Ernst Mayr Library" alt="" type="checkbox" value="Ernst Mayr Library" title="Ernst Mayr Library"><a href="javascript:void(0);" id="Ernst Mayr Library">Ernst Mayr Library</a></li><li class="leaf"><input aria-label="Fine Arts Library" alt="" type="checkbox" value="Fine Arts Library" title="Fine Arts Library"><a href="javascript:void(0);" id="Fine Arts Library">Fine Arts Library</a></li><li class="leaf"><input aria-label="Fung Library" alt="" type="checkbox" value="Fung Library" title="Fung Library"><a href="javascript:void(0);" id="Fung Library">Fung Library</a></li><li class="leaf"><input aria-label="Grossman Library" alt="" type="checkbox" value="Grossman Library" title="Grossman Library"><a href="javascript:void(0);" id="Grossman Library">Grossman Library</a></li><li class="leaf"><input aria-label="Gutman Library" alt="" type="checkbox" value="Gutman Library" title="Gutman Library"><a href="javascript:void(0);" id="Gutman Library">Gutman Library</a></li><li class="leaf"><input aria-label="Harvard Art Museums" alt="" type="checkbox" value="Harvard Art Museums" title="Harvard Art Museums"><a href="javascript:void(0);" id="Harvard Art Museums">Harvard Art Museums</a></li><li class="leaf"><input aria-label="Harvard Library" alt="" type="checkbox" value="Harvard Library" title="Harvard Library"><a href="javascript:void(0);" id="Harvard Library">Harvard Library</a></li><li class="leaf"><input aria-label="Harvard-Yenching Library" alt="" type="checkbox" value="Harvard-Yenching Library" title="Harvard-Yenching Library"><a href="javascript:void(0);" id="Harvard-Yenching Library">Harvard-Yenching Library</a></li><li class="leaf"><input aria-label="History Library" alt="" type="checkbox" value="History Library" title="History Library"><a href="javascript:void(0);" id="History Library">History Library</a></li><li class="leaf"><input aria-label="HKS Library" alt="" type="checkbox" value="HKS Library" title="HKS Library"><a href="javascript:void(0);" id="HKS Library">HKS Library</a></li><li class="leaf"><input aria-label="Houghton Library" alt="" type="checkbox" value="Houghton Library" title="Houghton Library"><a href="javascript:void(0);" id="Houghton Library">Houghton Library</a></li><li class="leaf"><input aria-label="IQSS Dataverse" alt="" type="checkbox" value="IQSS Dataverse" title="IQSS Dataverse"><a href="javascript:void(0);" id="IQSS Dataverse">IQSS Dataverse</a></li><li class="leaf"><input aria-label="Lamont Library" alt="" type="checkbox" value="Lamont Library" title="Lamont Library"><a href="javascript:void(0);" id="Lamont Library">Lamont Library</a></li><li class="leaf"><input aria-label="Law Library" alt="" type="checkbox" value="Law Library" title="Law Library"><a href="javascript:void(0);" id="Law Library">Law Library</a></li><li class="leaf"><input aria-label="Music Library" alt="" type="checkbox" value="Music Library" title="Music Library"><a href="javascript:void(0);" id="Music Library">Music Library</a></li><li class="leaf"><input aria-label="Peabody Museum" alt="" type="checkbox" value="Peabody Museum" title="Peabody Museum"><a href="javascript:void(0);" id="Peabody Museum">Peabody Museum</a></li><li class="leaf"><input aria-label="Physics Research Library" alt="" type="checkbox" value="Physics Research Library" title="Physics Research Library"><a href="javascript:void(0);" id="Physics Research Library">Physics Research Library</a></li><li class="leaf"><input aria-label="Robbins Library" alt="" type="checkbox" value="Robbins Library" title="Robbins Library"><a href="javascript:void(0);" id="Robbins Library">Robbins Library</a></li><li class="leaf"><input aria-label="Schlesinger Library" alt="" type="checkbox" value="Schlesinger Library" title="Schlesinger Library"><a href="javascript:void(0);" id="Schlesinger Library">Schlesinger Library</a></li><li class="leaf"><input aria-label="Ukrainian Research" alt="" type="checkbox" value="Ukrainian Research" title="Ukrainian Research"><a href="javascript:void(0);" id="Ukrainian Research">Ukrainian Research</a></li><li class="leaf"><input aria-label="University Archives" alt="" type="checkbox" value="University Archives" title="University Archives"><a href="javascript:void(0);" id="University Archives">University Archives</a></li><li class="leaf"><input aria-label="Widener Library" alt="" type="checkbox" value="Widener Library" title="Widener Library"><a href="javascript:void(0);" id="Widener Library">Widener Library</a></li><li class="leaf"><input aria-label="Wolbach Library" alt="" type="checkbox" value="Wolbach Library" title="Wolbach Library"><a href="javascript:void(0);" id="Wolbach Library">Wolbach Library</a></li></ul>
+			</li>
+			<li id="schoolFilter"><a class="expanded collapse1" href="#" id="schoolsLink">Schools</a>
+				<ul id="schoolsul" style="display: none;"><li class="leaf"><input aria-label="Arts &amp; Sciences" alt="" type="checkbox" value="Arts &amp; Sciences" title="Arts &amp; Sciences"><a href="javascript:void(0);" id="Arts &amp; Sciences">Arts &amp; Sciences</a></li><li class="leaf"><input aria-label="Business School" alt="" type="checkbox" value="Business School" title="Business School"><a href="javascript:void(0);" id="Business School">Business School</a></li><li class="leaf"><input aria-label="Central Administration" alt="" type="checkbox" value="Central Administration" title="Central Administration"><a href="javascript:void(0);" id="Central Administration">Central Administration</a></li><li class="leaf"><input aria-label="Continuing Education" alt="" type="checkbox" value="Continuing Education" title="Continuing Education"><a href="javascript:void(0);" id="Continuing Education">Continuing Education</a></li><li class="leaf"><input aria-label="Design School" alt="" type="checkbox" value="Design School" title="Design School"><a href="javascript:void(0);" id="Design School">Design School</a></li><li class="leaf"><input aria-label="Divinity School" alt="" type="checkbox" value="Divinity School" title="Divinity School"><a href="javascript:void(0);" id="Divinity School">Divinity School</a></li><li class="leaf"><input aria-label="Education School" alt="" type="checkbox" value="Education School" title="Education School"><a href="javascript:void(0);" id="Education School">Education School</a></li><li class="leaf"><input aria-label="Harvard College" alt="" type="checkbox" value="Harvard College" title="Harvard College"><a href="javascript:void(0);" id="Harvard College">Harvard College</a></li><li class="leaf"><input aria-label="Harvard Library" alt="" type="checkbox" value="Harvard Library" title="Harvard Library"><a href="javascript:void(0);" id="Harvard Library">Harvard Library</a></li><li class="leaf"><input aria-label="Kennedy School" alt="" type="checkbox" value="Kennedy School" title="Kennedy School"><a href="javascript:void(0);" id="Kennedy School">Kennedy School</a></li><li class="leaf"><input aria-label="Law School" alt="" type="checkbox" value="Law School" title="Law School"><a href="javascript:void(0);" id="Law School">Law School</a></li><li class="leaf"><input aria-label="Medical / Public Health" alt="" type="checkbox" value="Medical / Public Health" title="Medical / Public Health"><a href="javascript:void(0);" id="Medical / Public Health">Medical / Public Health</a></li><li class="leaf"><input aria-label="Other Harvard" alt="" type="checkbox" value="Other Harvard" title="Other Harvard"><a href="javascript:void(0);" id="Other Harvard">Other Harvard</a></li><li class="leaf"><input aria-label="Radcliffe Institute" alt="" type="checkbox" value="Radcliffe Institute" title="Radcliffe Institute"><a href="javascript:void(0);" id="Radcliffe Institute">Radcliffe Institute</a></li><li class="leaf"><input aria-label="Villa I Tatti" alt="" type="checkbox" value="Villa I Tatti" title="Villa I Tatti"><a href="javascript:void(0);" id="Villa I Tatti">Villa I Tatti</a></li></ul>
+			</li>
+			<li id="subjectareasFilter"><a class="collapse1 expanded" href="#" id="subjectareasLink">Subject Areas</a>
+				<ul id="subjectareasul" style="display: none;"><li class="leaf"><input aria-label="American Literature and Language" alt="" type="checkbox" value="American Literature and Language" title="American Literature and Language"><a href="javascript:void(0);" id="American Literature and Language">American Literature and Language</a></li><li class="leaf"><input aria-label="Anthropology/Archaeology" alt="" type="checkbox" value="Anthropology/Archaeology" title="Anthropology/Archaeology"><a href="javascript:void(0);" id="Anthropology/Archaeology">Anthropology/Archaeology</a></li><li class="leaf"><input aria-label="Architecture" alt="" type="checkbox" value="Architecture" title="Architecture"><a href="javascript:void(0);" id="Architecture">Architecture</a></li><li class="leaf"><input aria-label="Archives" alt="" type="checkbox" value="Archives" title="Archives"><a href="javascript:void(0);" id="Archives">Archives</a></li><li class="leaf"><input aria-label="Art" alt="" type="checkbox" value="Art" title="Art"><a href="javascript:void(0);" id="Art">Art</a></li><li class="leaf"><input aria-label="Astronomy/Astrophysics" alt="" type="checkbox" value="Astronomy/Astrophysics" title="Astronomy/Astrophysics"><a href="javascript:void(0);" id="Astronomy/Astrophysics">Astronomy/Astrophysics</a></li><li class="leaf"><input aria-label="Biology" alt="" type="checkbox" value="Biology" title="Biology"><a href="javascript:void(0);" id="Biology">Biology</a></li><li class="leaf"><input aria-label="Botany" alt="" type="checkbox" value="Botany" title="Botany"><a href="javascript:void(0);" id="Botany">Botany</a></li><li class="leaf"><input aria-label="Business" alt="" type="checkbox" value="Business" title="Business"><a href="javascript:void(0);" id="Business">Business</a></li><li class="leaf"><input aria-label="Chemistry" alt="" type="checkbox" value="Chemistry" title="Chemistry"><a href="javascript:void(0);" id="Chemistry">Chemistry</a></li><li class="leaf"><input aria-label="Chinese Studies" alt="" type="checkbox" value="Chinese Studies" title="Chinese Studies"><a href="javascript:void(0);" id="Chinese Studies">Chinese Studies</a></li><li class="leaf"><input aria-label="Classical Studies" alt="" type="checkbox" value="Classical Studies" title="Classical Studies"><a href="javascript:void(0);" id="Classical Studies">Classical Studies</a></li><li class="leaf"><input aria-label="Design" alt="" type="checkbox" value="Design" title="Design"><a href="javascript:void(0);" id="Design">Design</a></li><li class="leaf"><input aria-label="Economics" alt="" type="checkbox" value="Economics" title="Economics"><a href="javascript:void(0);" id="Economics">Economics</a></li><li class="leaf"><input aria-label="Education" alt="" type="checkbox" value="Education" title="Education"><a href="javascript:void(0);" id="Education">Education</a></li><li class="leaf"><input aria-label="Engineering/Applied Sciences" alt="" type="checkbox" value="Engineering/Applied Sciences" title="Engineering/Applied Sciences"><a href="javascript:void(0);" id="Engineering/Applied Sciences">Engineering/Applied Sciences</a></li><li class="leaf"><input aria-label="English Literature and Language" alt="" type="checkbox" value="English Literature and Language" title="English Literature and Language"><a href="javascript:void(0);" id="English Literature and Language">English Literature and Language</a></li><li class="leaf"><input aria-label="Environmental Studies" alt="" type="checkbox" value="Environmental Studies" title="Environmental Studies"><a href="javascript:void(0);" id="Environmental Studies">Environmental Studies</a></li><li class="leaf"><input aria-label="Geological Sciences" alt="" type="checkbox" value="Geological Sciences" title="Geological Sciences"><a href="javascript:void(0);" id="Geological Sciences">Geological Sciences</a></li><li class="leaf"><input aria-label="Government" alt="" type="checkbox" value="Government" title="Government"><a href="javascript:void(0);" id="Government">Government</a></li><li class="leaf"><input aria-label="Harvard History" alt="" type="checkbox" value="Harvard History" title="Harvard History"><a href="javascript:void(0);" id="Harvard History">Harvard History</a></li><li class="leaf"><input aria-label="Humanities, General" alt="" type="checkbox" value="Humanities, General" title="Humanities, General"><a href="javascript:void(0);" id="Humanities, General">Humanities, General</a></li><li class="leaf"><input aria-label="Japanese Studies" alt="" type="checkbox" value="Japanese Studies" title="Japanese Studies"><a href="javascript:void(0);" id="Japanese Studies">Japanese Studies</a></li><li class="leaf"><input aria-label="Judaica" alt="" type="checkbox" value="Judaica" title="Judaica"><a href="javascript:void(0);" id="Judaica">Judaica</a></li><li class="leaf"><input aria-label="Korean Studies" alt="" type="checkbox" value="Korean Studies" title="Korean Studies"><a href="javascript:void(0);" id="Korean Studies">Korean Studies</a></li><li class="leaf"><input aria-label="Landscape Architecture" alt="" type="checkbox" value="Landscape Architecture" title="Landscape Architecture"><a href="javascript:void(0);" id="Landscape Architecture">Landscape Architecture</a></li><li class="leaf"><input aria-label="Language and Literature" alt="" type="checkbox" value="Language and Literature" title="Language and Literature"><a href="javascript:void(0);" id="Language and Literature">Language and Literature</a></li><li class="leaf"><input aria-label="Law" alt="" type="checkbox" value="Law" title="Law"><a href="javascript:void(0);" id="Law">Law</a></li><li class="leaf"><input aria-label="Maps" alt="" type="checkbox" value="Maps" title="Maps"><a href="javascript:void(0);" id="Maps">Maps</a></li><li class="leaf"><input aria-label="Medicine" alt="" type="checkbox" value="Medicine" title="Medicine"><a href="javascript:void(0);" id="Medicine">Medicine</a></li><li class="leaf"><input aria-label="Middle Eastern Studies" alt="" type="checkbox" value="Middle Eastern Studies" title="Middle Eastern Studies"><a href="javascript:void(0);" id="Middle Eastern Studies">Middle Eastern Studies</a></li><li class="leaf"><input aria-label="Music" alt="" type="checkbox" value="Music" title="Music"><a href="javascript:void(0);" id="Music">Music</a></li><li class="leaf"><input aria-label="Physics" alt="" type="checkbox" value="Physics" title="Physics"><a href="javascript:void(0);" id="Physics">Physics</a></li><li class="leaf"><input aria-label="Poetry" alt="" type="checkbox" value="Poetry" title="Poetry"><a href="javascript:void(0);" id="Poetry">Poetry</a></li><li class="leaf"><input aria-label="Religion/Theology" alt="" type="checkbox" value="Religion/Theology" title="Religion/Theology"><a href="javascript:void(0);" id="Religion/Theology">Religion/Theology</a></li><li class="leaf"><input aria-label="Slavic Studies" alt="" type="checkbox" value="Slavic Studies" title="Slavic Studies"><a href="javascript:void(0);" id="Slavic Studies">Slavic Studies</a></li><li class="leaf"><input aria-label="Social Sciences" alt="" type="checkbox" value="Social Sciences" title="Social Sciences"><a href="javascript:void(0);" id="Social Sciences">Social Sciences</a></li><li class="leaf"><input aria-label="Women" s="" studies'="" alt="" type="checkbox" value="Women" title="Women"><a href="javascript:void(0);" id="Women" s="" studies'="">Women's Studies</a></li><li class="leaf"><input aria-label="Zoology" alt="" type="checkbox" value="Zoology" title="Zoology"><a href="javascript:void(0);" id="Zoology">Zoology</a></li></ul>
+			</li>
+			<li id="langFilter"><a class="collapse1 expanded" href="#" id="langLink">Languages</a>
+				<ul id="languageul" style="display: none;"><li class="leaf"><input aria-label="Arabic" alt="" type="checkbox" value="Arabic" title="Arabic"><a href="javascript:void(0);" id="Arabic">Arabic</a></li><li class="leaf"><input aria-label="Armenian" alt="" type="checkbox" value="Armenian" title="Armenian"><a href="javascript:void(0);" id="Armenian">Armenian</a></li><li class="leaf"><input aria-label="Attic Greek" alt="" type="checkbox" value="Attic Greek" title="Attic Greek"><a href="javascript:void(0);" id="Attic Greek">Attic Greek</a></li><li class="leaf"><input aria-label="Baluchi" alt="" type="checkbox" value="Baluchi" title="Baluchi"><a href="javascript:void(0);" id="Baluchi">Baluchi</a></li><li class="leaf"><input aria-label="Belarusian" alt="" type="checkbox" value="Belarusian" title="Belarusian"><a href="javascript:void(0);" id="Belarusian">Belarusian</a></li><li class="leaf"><input aria-label="Bosnian" alt="" type="checkbox" value="Bosnian" title="Bosnian"><a href="javascript:void(0);" id="Bosnian">Bosnian</a></li><li class="leaf"><input aria-label="Brahui" alt="" type="checkbox" value="Brahui" title="Brahui"><a href="javascript:void(0);" id="Brahui">Brahui</a></li><li class="leaf"><input aria-label="Bulgarian" alt="" type="checkbox" value="Bulgarian" title="Bulgarian"><a href="javascript:void(0);" id="Bulgarian">Bulgarian</a></li><li class="leaf"><input aria-label="Chinese" alt="" type="checkbox" value="Chinese" title="Chinese"><a href="javascript:void(0);" id="Chinese">Chinese</a></li><li class="leaf"><input aria-label="Czech" alt="" type="checkbox" value="Czech" title="Czech"><a href="javascript:void(0);" id="Czech">Czech</a></li><li class="leaf"><input aria-label="Dutch" alt="" type="checkbox" value="Dutch" title="Dutch"><a href="javascript:void(0);" id="Dutch">Dutch</a></li><li class="leaf"><input aria-label="English" alt="" type="checkbox" value="English" title="English"><a href="javascript:void(0);" id="English">English</a></li><li class="leaf"><input aria-label="French" alt="" type="checkbox" value="French" title="French"><a href="javascript:void(0);" id="French">French</a></li><li class="leaf"><input aria-label="Georgian" alt="" type="checkbox" value="Georgian" title="Georgian"><a href="javascript:void(0);" id="Georgian">Georgian</a></li><li class="leaf"><input aria-label="German" alt="" type="checkbox" value="German" title="German"><a href="javascript:void(0);" id="German">German</a></li><li class="leaf"><input aria-label="German, French" alt="" type="checkbox" value="German, French" title="German, French"><a href="javascript:void(0);" id="German, French">German, French</a></li><li class="leaf"><input aria-label="Greek, Ancient" alt="" type="checkbox" value="Greek, Ancient" title="Greek, Ancient"><a href="javascript:void(0);" id="Greek, Ancient">Greek, Ancient</a></li><li class="leaf"><input aria-label="Greek, Modern" alt="" type="checkbox" value="Greek, Modern" title="Greek, Modern"><a href="javascript:void(0);" id="Greek, Modern">Greek, Modern</a></li><li class="leaf"><input aria-label="Hebrew" alt="" type="checkbox" value="Hebrew" title="Hebrew"><a href="javascript:void(0);" id="Hebrew">Hebrew</a></li><li class="leaf"><input aria-label="Hungarian" alt="" type="checkbox" value="Hungarian" title="Hungarian"><a href="javascript:void(0);" id="Hungarian">Hungarian</a></li><li class="leaf"><input aria-label="Irish" alt="" type="checkbox" value="Irish" title="Irish"><a href="javascript:void(0);" id="Irish">Irish</a></li><li class="leaf"><input aria-label="Italian" alt="" type="checkbox" value="Italian" title="Italian"><a href="javascript:void(0);" id="Italian">Italian</a></li><li class="leaf"><input aria-label="Japanese" alt="" type="checkbox" value="Japanese" title="Japanese"><a href="javascript:void(0);" id="Japanese">Japanese</a></li><li class="leaf"><input aria-label="Kashmiri" alt="" type="checkbox" value="Kashmiri" title="Kashmiri"><a href="javascript:void(0);" id="Kashmiri">Kashmiri</a></li><li class="leaf"><input aria-label="Korean" alt="" type="checkbox" value="Korean" title="Korean"><a href="javascript:void(0);" id="Korean">Korean</a></li><li class="leaf"><input aria-label="Latin" alt="" type="checkbox" value="Latin" title="Latin"><a href="javascript:void(0);" id="Latin">Latin</a></li><li class="leaf"><input aria-label="Latvian" alt="" type="checkbox" value="Latvian" title="Latvian"><a href="javascript:void(0);" id="Latvian">Latvian</a></li><li class="leaf"><input aria-label="Ottoman" alt="" type="checkbox" value="Ottoman" title="Ottoman"><a href="javascript:void(0);" id="Ottoman">Ottoman</a></li><li class="leaf"><input aria-label="Panjabi (shahmukhi)" alt="" type="checkbox" value="Panjabi (shahmukhi)" title="Panjabi (shahmukhi)"><a href="javascript:void(0);" id="Panjabi (shahmukhi)">Panjabi (shahmukhi)</a></li><li class="leaf"><input aria-label="Persian" alt="" type="checkbox" value="Persian" title="Persian"><a href="javascript:void(0);" id="Persian">Persian</a></li><li class="leaf"><input aria-label="Polish" alt="" type="checkbox" value="Polish" title="Polish"><a href="javascript:void(0);" id="Polish">Polish</a></li><li class="leaf"><input aria-label="Portuguese" alt="" type="checkbox" value="Portuguese" title="Portuguese"><a href="javascript:void(0);" id="Portuguese">Portuguese</a></li><li class="leaf"><input aria-label="Pushto" alt="" type="checkbox" value="Pushto" title="Pushto"><a href="javascript:void(0);" id="Pushto">Pushto</a></li><li class="leaf"><input aria-label="Romanian" alt="" type="checkbox" value="Romanian" title="Romanian"><a href="javascript:void(0);" id="Romanian">Romanian</a></li><li class="leaf"><input aria-label="Russian" alt="" type="checkbox" value="Russian" title="Russian"><a href="javascript:void(0);" id="Russian">Russian</a></li><li class="leaf"><input aria-label="Serbian" alt="" type="checkbox" value="Serbian" title="Serbian"><a href="javascript:void(0);" id="Serbian">Serbian</a></li><li class="leaf"><input aria-label="Sindhi" alt="" type="checkbox" value="Sindhi" title="Sindhi"><a href="javascript:void(0);" id="Sindhi">Sindhi</a></li><li class="leaf"><input aria-label="Siraiki" alt="" type="checkbox" value="Siraiki" title="Siraiki"><a href="javascript:void(0);" id="Siraiki">Siraiki</a></li><li class="leaf"><input aria-label="Slovak" alt="" type="checkbox" value="Slovak" title="Slovak"><a href="javascript:void(0);" id="Slovak">Slovak</a></li><li class="leaf"><input aria-label="Spanish" alt="" type="checkbox" value="Spanish" title="Spanish"><a href="javascript:void(0);" id="Spanish">Spanish</a></li><li class="leaf"><input aria-label="Turkish" alt="" type="checkbox" value="Turkish" title="Turkish"><a href="javascript:void(0);" id="Turkish">Turkish</a></li><li class="leaf"><input aria-label="Ukrainian" alt="" type="checkbox" value="Ukrainian" title="Ukrainian"><a href="javascript:void(0);" id="Ukrainian">Ukrainian</a></li><li class="leaf"><input aria-label="Urdu" alt="" type="checkbox" value="Urdu" title="Urdu"><a href="javascript:void(0);" id="Urdu">Urdu</a></li><li class="leaf"><input aria-label="Yiddish" alt="" type="checkbox" value="Yiddish" title="Yiddish"><a href="javascript:void(0);" id="Yiddish">Yiddish</a></li></ul>
+			</li>
+			<li id="roleFilter"><a class="collapse1 expanded" href="#" id="roleLink">Roles</a>
+				<ul id="roleul" style="display: none;"><li class="leaf"><input aria-label="Access Services" alt="" type="checkbox" value="Access Services" title="Access Services"><a href="javascript:void(0);" id="Access Services">Access Services</a></li><li class="leaf"><input aria-label="Acquisitions" alt="" type="checkbox" value="Acquisitions" title="Acquisitions"><a href="javascript:void(0);" id="Acquisitions">Acquisitions</a></li><li class="leaf"><input aria-label="Administration" alt="" type="checkbox" value="Administration" title="Administration"><a href="javascript:void(0);" id="Administration">Administration</a></li><li class="leaf"><input aria-label="Archives" alt="" type="checkbox" value="Archives" title="Archives"><a href="javascript:void(0);" id="Archives">Archives</a></li><li class="leaf"><input aria-label="Cataloging" alt="" type="checkbox" value="Cataloging" title="Cataloging"><a href="javascript:void(0);" id="Cataloging">Cataloging</a></li><li class="leaf"><input aria-label="Collection Development" alt="" type="checkbox" value="Collection Development" title="Collection Development"><a href="javascript:void(0);" id="Collection Development">Collection Development</a></li><li class="leaf"><input aria-label="Collection Management" alt="" type="checkbox" value="Collection Management" title="Collection Management"><a href="javascript:void(0);" id="Collection Management">Collection Management</a></li><li class="leaf"><input aria-label="Continuing Resources" alt="" type="checkbox" value="Continuing Resources" title="Continuing Resources"><a href="javascript:void(0);" id="Continuing Resources">Continuing Resources</a></li><li class="leaf"><input aria-label="Curation" alt="" type="checkbox" value="Curation" title="Curation"><a href="javascript:void(0);" id="Curation">Curation</a></li><li class="leaf"><input aria-label="Digital Imaging" alt="" type="checkbox" value="Digital Imaging" title="Digital Imaging"><a href="javascript:void(0);" id="Digital Imaging">Digital Imaging</a></li><li class="leaf"><input aria-label="Electronic Resource Management" alt="" type="checkbox" value="Electronic Resource Management" title="Electronic Resource Management"><a href="javascript:void(0);" id="Electronic Resource Management">Electronic Resource Management</a></li><li class="leaf"><input aria-label="Finance" alt="" type="checkbox" value="Finance" title="Finance"><a href="javascript:void(0);" id="Finance">Finance</a></li><li class="leaf"><input aria-label="Human Resources" alt="" type="checkbox" value="Human Resources" title="Human Resources"><a href="javascript:void(0);" id="Human Resources">Human Resources</a></li><li class="leaf"><input aria-label="Information Technology" alt="" type="checkbox" value="Information Technology" title="Information Technology"><a href="javascript:void(0);" id="Information Technology">Information Technology</a></li><li class="leaf"><input aria-label="Operations" alt="" type="checkbox" value="Operations" title="Operations"><a href="javascript:void(0);" id="Operations">Operations</a></li><li class="leaf"><input aria-label="Payments" alt="" type="checkbox" value="Payments" title="Payments"><a href="javascript:void(0);" id="Payments">Payments</a></li><li class="leaf"><input aria-label="Preservation/Conservation" alt="" type="checkbox" value="Preservation/Conservation" title="Preservation/Conservation"><a href="javascript:void(0);" id="Preservation/Conservation">Preservation/Conservation</a></li><li class="leaf"><input aria-label="Privileges" alt="" type="checkbox" value="Privileges" title="Privileges"><a href="javascript:void(0);" id="Privileges">Privileges</a></li><li class="leaf"><input aria-label="Records Management" alt="" type="checkbox" value="Records Management" title="Records Management"><a href="javascript:void(0);" id="Records Management">Records Management</a></li><li class="leaf"><input aria-label="Reference" alt="" type="checkbox" value="Reference" title="Reference"><a href="javascript:void(0);" id="Reference">Reference</a></li><li class="leaf"><input aria-label="Research, Teaching, and Learning" alt="" type="checkbox" value="Research, Teaching, and Learning" title="Research, Teaching, and Learning"><a href="javascript:void(0);" id="Research, Teaching, and Learning">Research, Teaching, and Learning</a></li><li class="leaf"><input aria-label="Reserves" alt="" type="checkbox" value="Reserves" title="Reserves"><a href="javascript:void(0);" id="Reserves">Reserves</a></li><li class="leaf"><input aria-label="Resource Sharing" alt="" type="checkbox" value="Resource Sharing" title="Resource Sharing"><a href="javascript:void(0);" id="Resource Sharing">Resource Sharing</a></li><li class="leaf"><input aria-label="Student Coordination" alt="" type="checkbox" value="Student Coordination" title="Student Coordination"><a href="javascript:void(0);" id="Student Coordination">Student Coordination</a></li><li class="leaf"><input aria-label="User experience" alt="" type="checkbox" value="User experience" title="User experience"><a href="javascript:void(0);" id="User experience">User experience</a></li></ul>
+			</li>
+			<li id="deptFilter"><a class="collapse1 expanded" href="#" id="deptLink">Central Services</a>
+				<ul id="deptul" style="display: none;"><li class="leaf"><input aria-label="Access Services" alt="" type="checkbox" value="Access Services" title="Access Services"><a href="javascript:void(0);" id="Access Services">Access Services</a></li><li class="leaf"><input aria-label="Administration" alt="" type="checkbox" value="Administration" title="Administration"><a href="javascript:void(0);" id="Administration">Administration</a></li><li class="leaf"><input aria-label="Information &amp; Technical Services" alt="" type="checkbox" value="Information &amp; Technical Services" title="Information &amp; Technical Services"><a href="javascript:void(0);" id="Information &amp; Technical Services">Information &amp; Technical Services</a></li><li class="leaf"><input aria-label="Library Technology Services" alt="" type="checkbox" value="Library Technology Services" title="Library Technology Services"><a href="javascript:void(0);" id="Library Technology Services">Library Technology Services</a></li><li class="leaf"><input aria-label="Office for Scholarly Communication" alt="" type="checkbox" value="Office for Scholarly Communication" title="Office for Scholarly Communication"><a href="javascript:void(0);" id="Office for Scholarly Communication">Office for Scholarly Communication</a></li><li class="leaf"><input aria-label="Preservation, Conservation &amp; Digital Imaging" alt="" type="checkbox" value="Preservation, Conservation &amp; Digital Imaging" title="Preservation, Conservation &amp; Digital Imaging"><a href="javascript:void(0);" id="Preservation, Conservation &amp; Digital Imaging">Preservation, Conservation &amp; Digital Imaging</a></li><li class="leaf"><input aria-label="University Archives" alt="" type="checkbox" value="University Archives" title="University Archives"><a href="javascript:void(0);" id="University Archives">University Archives</a></li></ul>
+			</li>					
+			<li>
+				<div class="resetapply">
+					<div class="resetlft"><input class="rstlft" id="resStaffDirFilterReset" title="Reset" type="reset" value="Reset"></div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+			</div> <!-- END Left sidebar -->
+
+			<div class="col-sm-9"> <!-- START Inner Main -->
+			<h4>Departments &amp; Divisions</h4>
+			<h3><a href="#">Administration, Regenstein Library</a></h3>
+				<table class="table table-striped coll-list">
+		            <tbody>
+						<tr>
+							<td><a href="#">Communications</a><br>Regenstein Library, Rm. 180</td>
+							<td>773-834-1519</td>
+						</tr>
+
+						<tr>
+							<td><a href="#">Development</a><br>Regenstein Library, Rm. 180</td>
+							<td>773-702-6623<br><a href="mailto:libdev@lib.uchicago.edu">libdev@lib.uchicago.edu</a></td>
+						</tr>
+
+						<tr>
+							<td><a href="#">Director's Office</a><br>Regenstein Library, Rm. 180</td>
+							<td>773-702-8740</td>
+						</tr>
+						</tbody></table>
+						<table>
+							<td colspan="2">
+								<ul class="directory">
+									<li><strong><a href="#">Adminstrative Services</a></strong><br>Regenstein Library<br>
+										<ul>
+											<li><strong><a href="#">Budget</a></strong><br>
+												Fax: 773-702-7730<br><a href="mailto:lib-budget@uchicago.edu">lib-budget@uchicago.edu</a><br>Regenstein Library<br>Rm. 210</li>
+											<li><strong><a href="#">Building Services</a></strong><br>
+												<a href="mailto:bldg-svcs@lib.uchicago.edu">bldg-svcs@lib.uchicago.edu</a><br>Regenstein Library<br>Rm. A90</li>
+											<li><strong><a href="#">Human Resources</a></strong><br>
+												Fax: 773-702-7730<br><a href="mailto:hr@lib.uchicago.edu">hr@lib.uchicago.edu</a><br>Regenstein Library<br>Rm. 210</li>
+											<li><strong><a href="#">Shipping and Receiving</a></strong><br>
+												<a href="tel:" 773-702-8719="">773-702-8719</a><br>Regenstein Library<br>Rm. A-80</li>
+										</ul>
+									</li>
+								</ul>
+							</td>
+						</tr>
+
+						<tr>
+							<td colspan="2">
+								<ul class="directory">
+									<li>
+										<strong><a href="#">Collection Services</a></strong><br>Regenstein Library<br>
+										<ul>
+											<li><strong><a href="#">Administration</a></strong><br>Regenstein Library<br></li>
+											<li><strong><a href="#">Administrative and Desktop Systems (ADS)</a></strong><br>Regenstein Library<br>Rm.A-70</li>
+											<li><strong><a href="#">Collections Support</a></strong><br>
+												<a href="tel:" 773-702-8734="">773-702-8734</a><br>Regenstein Library<br>Rm. 170
+													<ul>
+														<li><strong><a href="#">Gifts</a></strong><br>
+															<a href="tel:" 773-702-8734="">773-702-8734</a><br>Regenstein Library<br>Rm. 180</li>
+														<li><strong><a href="#">Payments</a></strong><br>
+															<a href="tel:" 773-702-8736="">773-702-8736</a><br></li>
+														<li><p><strong><a href="#">Vendor Relations</a></strong><br>
+															<a href="tel:" 773-702-8734="">773-702-8734</a><br>Fax: 773-702-3016<br></li>
+														</ul>
+											</li>
+											<li><strong><a href="#">Electronic Resources Management (ERM)</a></strong><br>
+												<a href="tel:" 773-702-0228="">773-702-0228</a><br>Fax: 773-702-3016<br>Regenstein Library<br>Rm. 170</li>
+										</ul>
+									</li>
+								</ul>
+							</td>
+						</tr>
+
+						<tr>
+							<td colspan="2">
+								<ul class="directory">
+									<li><strong><a href="#">Digital Services</a></strong><br>
+										<a href="tel:" 773-702-3732="">773-702-3732</a><br>Regenstein Library<br>Rm. 220
+										<ul>
+											<li><strong><a href="#">Administration</a></strong><br>Regenstein Library<br></li>
+											<li><strong><a href="#">Digital Library Development Center (DLDC)</a></strong><br>Regenstein Library<br></li>
+											<li><strong><a href="#">eCUIP</a></strong><br>Regenstein Library<br></li>
+										</ul>
+									</li>
+								</ul>
+							</td>
+						</tr>
+
+					</tbody>
+				</table>
+			</div> <!-- END Inner Main -->
+			
+		</div> <!-- END Main -->
+
+		<div class="col-xs-12 col-md-3 rightside"> <!-- START Right sidebar -->
+            <div class="rightside-mod col-xs-12 col-sm-6 col-md-12">
+                <h3>Quick Numbers</h3>
+                <ul>
+                	<li><strong>Main Telephone</strong> 773-702-8740</li>
+                	<li><strong>Privileges</strong> 773-702-8782</li>
+                	<li><strong>General Reference</strong> 773-702-4685</li>
+                </ul>   
+            </div>
+		</div> <!-- END Right sidebar -->
+
+
+		</div> <!-- End Main Row -->
+
+	</div> <!-- // Off Canvas Wrapper Row -->
+</div> <!-- // Main Container Wrapper -->
+<!-- // Awesome Page Content -->
+
+
+<!-- Footer -->
+<footer class="container-fluid footer">
+
+	<!-- Contact -->
+	<div class="col-sm-2 col-md-2">
+	    <p>Contact<br/>
+	    <a href="#">Contact Form</a><br/>
+	    <a href="#">Library Departments</a><br/>
+	    <a href="#"><a href="#">Staff Directory</a><br/></p>
+    </div>
+    <!-- // Contact -->
+
+    <hr class="visible-xs"> <!-- Mobile Divider -->
+
+	<!-- Information -->
+    <div class="col-sm-2 col-md-2 divider-vertical">
+	    <p>Information for<br/>
+	    <a href="#">Faculty</a><br/>
+	    <a href="#">Students</a><br/>
+	    <a href="#">University Staff</a><br/>
+	    <a href="#"><a href="#">Visitors</a><br/>
+	    <a href="#"><a href="#">Alumni &amp; Library Friends</a><br/>
+	    <a href="#">Patrons with Disabilities</a></p>
+    </div>
+    <!-- // Information -->
+
+    <hr class="visible-xs"> <!-- Mobile Divider -->
+
+
+
+	<!-- Libraries -->
+    <div class="col-sm-2 col-md-2 col-sm-push-4 col-md-push-4 divider-vertical">
+	    <p>Libraries<br/>
+	    <a href="#">Crerar</a><br/>
+	    <a href="#">D’Angelo Law</a><br/>
+	    <a href="#">Eckhart</a><br/>
+	    <a href="#">Mansueto</a><br/>
+	    <a href="#">Regenstein</a><br/>
+	    <a href="#">SSA</a></p>
+    </div>
+    <!-- // Libraries -->
+
+    <hr class="visible-xs"> <!-- Mobile Divider -->
+
+	<!-- Social -->
+    <div class="col-sm-2 col-md-2 col-sm-push-4 col-md-push-4">
+	    <p>Library Social Media<br/>
+	    <a href="#"><i class="fa fa-facebook-official"></i> &nbsp; Facebook</a><br/>
+	    <a href="#"><i class="fa fa-rss-square"></i> &nbsp; Library News</a><br/>
+	    <a href="#"><i class="fa fa-clone"></i> &nbsp; More Library Accounts...</a></p>
+    </div>
+    <!-- // Social -->
+
+    <hr class="visible-xs"> <!-- Mobile Divider -->
+	<!-- Address / Logo Text for Desktop-->
+    <div class="col-md-4  col-sm-pull-4 col-md-pull-4">
+	    <div class="centerdiv">
+		    <img src="images/unvlogo-white.png" width="150px" height="auto">
+		    <!-- Library Location: Address -->
+	        <p>University of Chicago Library<br/>
+             1100 East 57th Street, Chicago, IL 60637</p>
+
+	        <small><a href="#">Privacy Policy</a><br/>
+	        © University of Chicago</small>
+	    </div>
+    </div>
+    <!-- // Address / Logo Text -->
+</footer>
+<!-- // Footer -->
+
+
+<!-- Scripts -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+     <script src="js/lib-main.min.js"></script>
+<!-- // Scripts -->
+
+</body>
+</html>

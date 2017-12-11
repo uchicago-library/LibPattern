@@ -270,251 +270,381 @@
 	<div class="container body-container col-xs-12 col-lg-11 col-lg-offset-1" id="content" role="main"> <!-- Content  -->
 
 <div class="col-xs-12 page-head">
-            <h1>Library Directory: Departments</h1>
+            <h1>Library Directory: Search Results</h1>
         </div>
+
+        <div class="row visible-xs visible-sm toggle-side">
+                    <p><button type="button" class="btn btn-sidebar law btn-xs" data-toggle="offcanvas"><i class="fa fa-caret-square-o-right fa-lg" aria-hidden="true"></i></button></p>
+                </div>
 
 <div class="col-xs-12 col-md-9 centermain"> <!-- Center Content -->
 
-    <div class="row">
+<div class="row">
 
-        <div class="col-xs-12">
-            <form action="." class="searchbox" method="GET">
-                <input name="view" type="hidden" value="department">
-                <input name="query" placeholder="Search by name or department" required="required" type="search" aria-label="..." class="searchbox-input" value="">
-                <span class="searchbox-icon"><i title="search" class="fa fa-search"></i>
-                    <input type="submit" class="searchbox-submit" style="background-color: transparent; color: transparent;">
-                </span>
-           </form>
-        </div>
+<div class="col-xs-12">
+    <form action="." class="searchbox" method="GET">
+        <input name="view" type="hidden" value="department">
+        <input name="query" placeholder="David" required="required" type="search" aria-label="..." class="searchbox-input" value="">
+        <span class="searchbox-icon"><i title="search" class="fa fa-search"></i>
+            <input type="submit" class="searchbox-submit" style="background-color: transparent; color: transparent;">
+        </span>
+   </form>
+</div>
 
-        <div class="col-xs-12 col-sm-6">
-            <div class="btn-group spaces-toggle">
-                <a class="btn btn-list-toggle" style="padding: 5px 15px;" href="directory-redux-main.html">Staff</a>
-                <a class="btn btn-list-toggle active" style="padding: 5px 15px;" href="directory-redux-org.html">Departments</a>
+            <div class="col-xs-12 col-sm-6">
+                <div class="btn-group spaces-toggle">
+                    <a class="btn btn-list-toggle" style="padding: 5px 15px;" href="directory-redux-main.html">Staff</a>
+                    <a class="btn btn-list-toggle" style="padding: 5px 15px;" href="directory-redux-org.html">Departments</a>
                 <a class="btn btn-list-toggle" style="padding: 5px 15px;" href="directory-redux-chart.html">Org Chart</a>
-            </div><!-- /btn-group-->
-        </div><!-- / col-xs-12 col-sm-6 -->
+                </div><!-- /btn-group-->
+            </div><!-- / col-xs-12 col-sm-6 -->
             
 
-        </div>
 
-    
+</div>
 <div class="col-xs-12 sdir" style="padding-top: 0; margin-top: 0">
-      <h2><a href="#">Administration</a></h2>
-        <span>The Joseph Regenstein Library, Room 180 &nbsp; | &nbsp; 773-702-8740 &nbsp; | &nbsp; <a href="#" class="viewall">View all Administration staff</a></span>
-
-
+      <h2><a href="#">Matching Departments</a></h2>
     <div class="col-xs-12 sdir-wrap">
 
         <div class="col-xs-12 col-sm-4">
-            <h3><a href="#">Budget & Facilities</a></h3>
+            <h3><a href="#">Budget &amp; Facilities</a></h3>
+            <em>Part of: <a href="#" class="viewall">Administration</a></em><br>
             The Joseph Regenstein Library, Room 210<br>
             <a href="#">lib-budget@uchicago.edu</a>
         </div>
 
         <div class="col-xs-12 col-sm-4">
-            <h3><a href="#">Building Services</a></h3>
-            The Joseph Regenstein Library, Room A90<br>
-            <a href="#">bldg-svcs@lib.uchicago.edu</a>
+            <h3><a href="#">Digital Library Development Center</a></h3>
+            <em>Part of: <a href="#" class="viewall">Information Technology &amp; Digital Scholarship</a></em><br>
+            The Joseph Regenstein Library, Room 220
         </div>
 
         <div class="col-xs-12 col-sm-4">
             <h3><a href="#">Assessment</a></h3>
+            <em>Part of: <a href="#" class="viewall">Administration</a></em><br>
             The Joseph Regenstein Library, Room 220M<br>
             <a href="#">eee@uchicago.edu</a>
         </div>
+    </div>
+</div>
+
+<table class="table table-striped directory-list">
+<thead><tr class="sdir">
+                            <td colspan="4"><h2>Matching Staff</h2></td></tr></thead>
+                        </tr>
+                    <tbody>
+                        
+                            <tr>
+                                <td>
+                                    
+                                        <img alt="Default Placeholder Photo" height="100" src="https://www.lib.uchicago.edu/media/images/default-photo.2e16d0ba.fill-100x100.jpg" width="100">
+                                    
+                                </td>
+                                <td>
+                                    <strong>
+    <a href="https://www.lib.uchicago.edu/about/directory/staff/david-farley/">David Farley</a>
+
+</strong>
+                                    <br>
+                                    <p>
+                                      Manager, Administrative &amp; Desktop Systems<br>
+                                      
+    <a href="/about/directory/?view=staff&amp;department=Information%20Technology%20%26%20Digital%20Scholarship">Information Technology &amp; Digital Scholarship</a>
+     - 
+
+    <a href="/about/directory/?view=staff&amp;department=Information%20Technology%20%26%20Digital%20Scholarship%20-%20Administrative%20and%20Desktop%20Systems%20%28ADS%29">Administrative and Desktop Systems (ADS)</a>
+    
 
 
-        <div class="col-xs-12 col-sm-4">
-            <h3><a href="#">Communications</a></h3>
-            The Joseph Regenstein Library, Room 180<br>
-            <a href="#">libdev@lib.uchicago.edu</a>
-        </div>
-
-        <div class="col-xs-12 col-sm-4">
-            <h3><a href="#">Development</a></h3>
-            The Joseph Regenstein Library, Room 180<br>
-            773-834-1519<br/>
-            <a href="#">rrosenbe@uchicago.edu</a>
-         </div>
-
-         <div class="col-xs-12 col-sm-4">
-             <h3><a href="#">Human Resources</a></h3>
-            The Joseph Regenstein Library, Room 210<br>
-            <a href="#">hr@lib.uchicago.edu</a>
-        </div>
-    </div><!-- END sdir-wrap -->
-</div><!-- END sdir -->
+                                    </p>
+                                </td>
+                                <td>
+                                    <strong>Contact</strong>
+                                    <br>
+                                    
+  <a href="mailto:dfarley@uchicago.edu">dfarley@uchicago.edu</a><br>
 
 
-
-    <div class="col-xs-12 sdir">
-        <h2><a href="#">Collections &amp; Access</a></h2>
-        <span>The Joseph Regenstein Library, Room 189 &nbsp; | &nbsp; 773-702-8732 &nbsp; | &nbsp; <a href="#" class="viewall">View all Collections &amp; Access staff</a></span>
-
-    <div class="col-xs-12 sdir-wrap">
-        <div class="col-xs-12 col-sm-4">
-            <h3><a href="#">Access Services</a></h3>
-            The Joseph Regenstein Library, Room 115<br>
-            <a href="#">lar1@uchicago.edu</a>
-        </div>
-
-         <div class="col-xs-12 col-sm-4">
-            <h3><a href="#">Assessment</a></h3>
-            The Joseph Regenstein Library, Room 220M<br>
-            <a href="#">eee@uchicago.edu</a>
-        </div>
-
-         <div class="col-xs-12 col-sm-4">
-            <h3><a href="#">Collection Management and Circulation</a></h3>
-            The Joseph Regenstein Library, Room A02B<br>
-            <a href="#">dbottorff@uchicago.edu</a>
-        </div>
+                                    
+  
+    <a href="https://www.lib.uchicago.edu/spaces/joseph-regenstein-library/">The Joseph Regenstein Library</a><br>
+  
+  
+    Room A70<br>
+  
+  
+    773-702-3426<br>
+  
 
 
-        <div class="col-xs-12 col-sm-4">
-            <h3><a href="#">Collections Support</a></h3>
-            The Joseph Regenstein Library, Room 170
-        </div>
+                                </td>
+                                <td>
+                                    
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    
+                                        <img alt="David Borycz" height="100" src="https://www.lib.uchicago.edu/media/images/David_Borycz_02.5c55358d.fill-100x100.jpg" width="100">
+                                    
+                                </td>
+                                <td>
+                                    <strong>
+    <a href="https://www.lib.uchicago.edu/about/directory/staff/david-borycz/">David Borycz</a>
 
-        <div class="col-xs-12 col-sm-4">
-            <h3><a href="#">Collections Support, Gifts</a></h3>
-            The Joseph Regenstein Library, Room 170<br>
-            773-702-8781
-        </div>
+</strong>
+                                    <br>
+                                    <p>
+                                      Director of Budget &amp; Facilities<br>
+                                      
+    <a href="/about/directory/?view=staff&amp;department=Administration">Administration</a>
+     - 
 
-        <div class="col-xs-12 col-sm-4">
-             <h3><a href="#">Collections Support, Payments</a></h3>
-            The Joseph Regenstein Library, Room 170<br>
-            773-702-8781
-        </div>
-
-        <div class="col-xs-12 col-sm-4">
-            <h3><a href="#">Collections Support, Vendor Relations</a></h3>
-            The Joseph Regenstein Library, Room 170<br>
-            773-702-0228
-        </div>
-
-        <div class="col-xs-12 col-sm-4">
-           <h3><a href="#">Collection Management and Special Projects</a></h3>
-            <strong>Includes:</strong><br/>
-            <ul>
-            <li><a href="">Regenstein Bookstacks</a></li>
-            <li><a href="">Regenstein Reading Rooms</a></li>
-            <li><a href="">Regenstein Search Services</a></li></ul>
-        </div>
-
-        <div class="col-xs-12 col-sm-4">
-            <h3><a href="#">Document Delivery</a></h3>
-            The Joseph Regenstein Library, Room 121<br>
-            <a href="#">interlibrary-loan@lib.uchicago.edu</a>
-        </div>
-
-        <div class="col-xs-12 col-sm-4">
-            <h3><a href="#">Electronic Resources Management</a></h3>
-            The Joseph Regenstein Library, Room 170<br>
-            <a href="#">libdev@lib.uchicago.edu</a>
-        </div>
-
-        <div class="col-xs-12 col-sm-4">
-            <h3><a href="#">ID & Privileges Office & Entry Control</a></h3>
-            The Joe and Rika Mansueto Library, Room 106<br>
-            773-702-8781
-        </div>
-
-        <div class="col-xs-12 col-sm-4">
-            <h3><a href="#">Interlibrary Loan, Borrowing</a></h3>
-            The Joe and Rika Mansueto Library, Room 106<br>
-            773-702-8781
-        </div>
-
-        <div class="col-xs-12 col-sm-4">
-            <h3><a href="#">Interlibrary Loan, Lending</a></h3>
-            The Joe and Rika Mansueto Library, Room 106<br>
-            773-702-8781
-        </div>
-
-        <div class="col-xs-12 col-sm-4">
-            <h3><a href="#">Mansueto Library</a></h3>
-            The Joe and Rika Mansueto Library<br>
-            773-834-1519
-        </div>
-
-        <div class="col-xs-12 col-sm-4">
-            <h3><a href="#">Preservation</a></h3>
-            The Joseph Regenstein Library, Room 170<br>
-            <a href="#">libdev@lib.uchicago.edu</a>
-        </div>
-
-        <div class="col-xs-12 col-sm-4">
-            <h3><a href="#">Technical Services</a></h3>
-            The Joseph Regenstein Library, Room 170<br>
-            <a href="#">libdev@lib.uchicago.edu</a>
-        </div>
-
-    </div><!-- END sdir-wrap -->
-</div><!-- END sdir -->
-
-    <div class="col-xs-12 sdir">
-        <h2><a href="#">D'Angelo Law Library</a></h2>
-        <span>D'Angelo Law Library &nbsp; | &nbsp; 773-702-9615 &nbsp; | &nbsp; <a href="#">law-library@lib.uchicago.edu</a> &nbsp; | &nbsp; <a href="#" class="viewall">View all Law Library staff</a></span>
-            
-        <div class="col-xs-12 sdir-wrap">
-            <div class="col-xs-12 col-sm-4">
-                <h3><a href="#">Administration</a></h3>
-                D'Angelo Law Library, Room A-70<br/>
-                773-702-9615
-            </div>
-            <div class="col-xs-12 col-sm-4">
-                <h3><a href="#">Foreign and International Law</a></h3>
-                D'Angelo Law Library, Room A-70<br/>773-702-9615
-            </div>
-            <div class="col-xs-12 col-sm-4">
-                <h3><a href="#">Law Collection Services</a></h3>
-                D'Angelo Law Library, Room 220
-            </div>
-            <div class="col-xs-12 col-sm-4">
-                <h3><a href="#">Dissertation Office</a></h3>
-                D'Angelo Law Library, Room 100B<br/>
-                773-702-7404<br/><a href="#">phd@lib.uchicago.edu</a>
-            </div>
-            <div class="col-xs-12 col-sm-4">
-                <h3><a href="#">Integrated Library Systems</a></h3>
-                D'Angelo Law Library, Room 220<br/><a href="#">ils@lib.uchicago.edu</a>
-            </div>
-    </div><!-- END sdir-wrap -->
-</div><!-- END sdir -->
+    <a href="/about/directory/?view=staff&amp;department=Administration%20-%20Budget%20%26%20Facilities">Budget &amp; Facilities</a>
+    
 
 
-    <div class="col-xs-12 sdir">
-        <h2><a href="#">Information Technology &amp; Digital Scholarship</a></h2>
-        <span>The Joseph Regenstein Library, Room 220 &nbsp; | &nbsp; 773-702-8732 &nbsp; | &nbsp; <a href="#" class="viewall">View all Information Technology &amp; Digital Scholarship staff</a></span>
+                                    </p>
+                                </td>
+                                <td>
+                                    <strong>Contact</strong>
+                                    <br>
+                                    
+  <a href="mailto:dnborycz@uchicago.edu">dnborycz@uchicago.edu</a><br>
 
-        <div class="col-xs-12 sdir-wrap">
-            <div class="col-xs-12 col-sm-4">
-                <h3><a href="#">Administrative and Desktop Systems</a></h3>
-                The Joseph Regenstein Library, Room A-70
-            </div>
-            <div class="col-xs-12 col-sm-4">
-                <h3><a href="#">Black Metropolis Research Consortium</a></h3>
-                The Joseph Regenstein Library, Room A-70
-            </div>
-            <div class="col-xs-12 col-sm-4">
-                <h3><a href="#">Digital Library Development Center</a></h3>
-                The Joseph Regenstein Library, Room 220
-            </div>
-            <div class="col-xs-12 col-sm-4">
-                <h3><a href="#">Dissertation Office</a></h3>
-                The Joseph Regenstein Library, Room 100B<br/>
-                773-702-7404<br/><a href="#">phd@lib.uchicago.edu</a>
-            </div>
-            <div class="col-xs-12 col-sm-4">
-                <h3><a href="#">Integrated Library Systems</a></h3>
-                The Joseph Regenstein Library, Room 220<br/><a href="#">ils@lib.uchicago.edu</a>
-            </div>
-    </div><!-- END sdir-wrap -->
-</div><!-- END sdir -->
 
+                                    
+  
+    <a href="https://www.lib.uchicago.edu/spaces/joseph-regenstein-library/">The Joseph Regenstein Library</a><br>
+  
+  
+    Room 210<br>
+  
+  
+    773-702-2494<br>
+  
+
+
+                                </td>
+                                <td>
+                                    
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    
+                                        <img alt="David Bietila" height="100" src="https://www.lib.uchicago.edu/media/images/DBPortrait1.2e16d0ba.fill-100x100.jpg" width="100">
+                                    
+                                </td>
+                                <td>
+                                    <strong>
+    <a href="https://www.lib.uchicago.edu/about/directory/staff/david-bietila/">David Bietila</a>
+
+</strong>
+                                    <br>
+                                    <p>
+                                      Web Program Director<br>
+                                      
+    <a href="/about/directory/?view=staff&amp;department=Information%20Technology%20%26%20Digital%20Scholarship">Information Technology &amp; Digital Scholarship</a>
+     - 
+
+    <a href="/about/directory/?view=staff&amp;department=Information%20Technology%20%26%20Digital%20Scholarship%20-%20Digital%20Library%20Development%20Center%20%28DLDC%29">Digital Library Development Center (DLDC)</a>
+    
+
+
+                                    </p>
+                                </td>
+                                <td>
+                                    <strong>Contact</strong>
+                                    <br>
+                                    
+  <a href="mailto:dbietila@uchicago.edu">dbietila@uchicago.edu</a><br>
+
+
+                                    
+  
+    <a href="https://www.lib.uchicago.edu/spaces/joseph-regenstein-library/">The Joseph Regenstein Library</a><br>
+  
+  
+    Room 220J<br>
+  
+  
+    773-834-5761<br>
+  
+
+
+                                </td>
+                                <td>
+                                    
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    
+                                        <img alt="David Bottorff" height="100" src="https://www.lib.uchicago.edu/media/images/David_Bottorff_01.460d9dc9.fill-100x100.jpg" width="100">
+                                    
+                                </td>
+                                <td>
+                                    <strong>
+    <a href="https://www.lib.uchicago.edu/about/directory/staff/david-w-bottorff/">David W. Bottorff</a>
+
+</strong>
+                                    <br>
+                                    <p>
+                                      Head of Collection Management and Circulation<br>
+                                      
+    <a href="/about/directory/?view=staff&amp;department=Collections%20%26%20Access">Collections &amp; Access</a>
+     - 
+
+    <a href="/about/directory/?view=staff&amp;department=Collections%20%26%20Access%20-%20Access%20Services">Access Services</a>
+     - 
+
+    <a href="/about/directory/?view=staff&amp;department=Collections%20%26%20Access%20-%20Access%20Services%20-%20Collection%20Management%20and%20Circulation">Collection Management and Circulation</a>
+    
+
+
+                                    </p>
+                                </td>
+                                <td>
+                                    <strong>Contact</strong>
+                                    <br>
+                                    
+  <a href="mailto:dbottorff@uchicago.edu">dbottorff@uchicago.edu</a><br>
+
+
+                                    
+  
+    <a href="https://www.lib.uchicago.edu/spaces/joseph-regenstein-library/">The Joseph Regenstein Library</a><br>
+  
+  
+    Room A02B<br>
+  
+  
+    773-834-1244<br>
+  
+
+
+                                </td>
+                                <td>
+                                    
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    
+                                        <img alt="Default Placeholder Photo" height="100" src="https://www.lib.uchicago.edu/media/images/default-photo.2e16d0ba.fill-100x100.jpg" width="100">
+                                    
+                                </td>
+                                <td>
+                                    <strong>
+    <a href="https://www.lib.uchicago.edu/about/directory/staff/david-frankel/">David H Frankel</a>
+
+</strong>
+                                    <br>
+                                    <p>
+                                      Receiving and Rapid Cataloging Supervisor<br>
+                                      
+    <a href="/about/directory/?view=staff&amp;department=Collections%20%26%20Access">Collections &amp; Access</a>
+     - 
+
+    <a href="/about/directory/?view=staff&amp;department=Collections%20%26%20Access%20-%20Technical%20Services">Technical Services</a>
+     - 
+
+    <a href="/about/directory/?view=staff&amp;department=Collections%20%26%20Access%20-%20Technical%20Services%20-%20Acquisitions%20Services">Acquisitions Services</a>
+     - 
+
+    <a href="/about/directory/?view=staff&amp;department=Collections%20%26%20Access%20-%20Technical%20Services%20-%20Acquisitions%20Services%20-%20Receiving%20%26%20Rapid%20Cataloging">Receiving &amp; Rapid Cataloging</a>
+    
+
+
+                                    </p>
+                                </td>
+                                <td>
+                                    <strong>Contact</strong>
+                                    <br>
+                                    
+  <a href="mailto:dhfrankel@uchicago.edu">dhfrankel@uchicago.edu</a><br>
+
+
+                                    
+  
+    <a href="https://www.lib.uchicago.edu/spaces/joseph-regenstein-library/">The Joseph Regenstein Library</a><br>
+  
+  
+    Room 170<br>
+  
+  
+    773-702-8883<br>
+  
+
+
+                                </td>
+                                <td>
+                                    
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    
+                                        <img alt="David Larsen" height="100" src="https://www.lib.uchicago.edu/media/images/David_Larsen_02.0507e29b.fill-100x100.jpg" width="100">
+                                    
+                                </td>
+                                <td>
+                                    <strong>
+    <a href="https://www.lib.uchicago.edu/about/directory/staff/david-k-larsen/">David K. Larsen</a>
+
+</strong>
+                                    <br>
+                                    <p>
+                                      Director of Access Services &amp; Assessment<br>
+                                      
+    <a href="/about/directory/?view=staff&amp;department=Collections%20%26%20Access">Collections &amp; Access</a>
+     - 
+
+    <a href="/about/directory/?view=staff&amp;department=Collections%20%26%20Access%20-%20Access%20Services">Access Services</a>
+    
+
+
+                                    </p>
+                                </td>
+                                <td>
+                                    <strong>Contact</strong>
+                                    <br>
+                                    
+  <a href="mailto:lar1@uchicago.edu">lar1@uchicago.edu</a><br>
+
+
+                                    
+  
+    <a href="https://www.lib.uchicago.edu/spaces/joseph-regenstein-library/">The Joseph Regenstein Library</a><br>
+  
+  
+    Room 115<br>
+  
+  
+    773-702-8626<br>
+  
+
+
+                                </td>
+                                <td>
+                                    
+                                    
+                                </td>
+                            </tr>
+                        
+                    </tbody>
+                </table>
              
 </div> <!-- // Center Content -->
 
@@ -549,7 +679,6 @@
 
             
             </div><!-- // Right Sidebar Content -->
-
 
 <!-- *********** END VARIABLE CONTENT *********** -->
 </div>
