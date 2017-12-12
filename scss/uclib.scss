@@ -222,6 +222,16 @@ p q { //Inline Quote
   }
 }
 
+.empty-state {
+  padding: 1em;
+  color: $darkgray;
+  .nothing {
+    display: block;
+    font-size: 1.3em;
+    padding-left: 0;
+  }
+}
+
 
 /*
  * Images, Video, and other Media

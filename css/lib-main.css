@@ -1127,6 +1127,14 @@ p q {
     content: close-quote;
     font-size: 1.2em; }
 
+.empty-state {
+  padding: 1em;
+  color: #767676; }
+  .empty-state .nothing {
+    display: block;
+    font-size: 1.3em;
+    padding-left: 0; }
+
 /*
  * Images, Video, and other Media
  * --------------------------------------------------
