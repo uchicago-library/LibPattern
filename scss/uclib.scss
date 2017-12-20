@@ -727,6 +727,9 @@ figure.embed {
     display: block; // corrects inline gap in enclosing div
     width: auto\9; // ie8+9
     -ms-interpolation-mode: bicubic; // lt ie8
+    &:hover {
+      opacity: .5;
+    }
   }
   figcaption {  //category tags on news images
     width: 100%;
@@ -1866,6 +1869,31 @@ a.coll-access {
   }
 }
 
+.row.collections {
+  padding-bottom: 1em;
+  .searchbox {
+    float: none;
+    width: 20em;
+    margin-top: 0;
+    @include respond-to(small) {
+      width: 40em;
+    }
+  }
+  .home-modwrapper {
+    border-bottom: 2px solid #ADB17D;
+    h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.25em;
+      color: $mid-dark;
+      font-weight: 600;
+      line-height: 1.4em;
+    }
+    .newsblock {
+      padding: 0.5em;
+    }
+  }
+}
+
 /*
  * Directory
  * --------------------------------------------------
@@ -1964,6 +1992,13 @@ a.coll-access {
   }
   .col-xs-12 {
     padding-bottom: 1em;
+    margin-top: 1em;
+    @include respond-to(medium) {
+      &:nth-child(3n+2) {
+        border-right: 1px solid #eee;
+        border-left: 1px solid #eee;
+      }
+    }
   }
 }
 
