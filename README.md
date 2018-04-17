@@ -1,5 +1,5 @@
 # LibPattern
-Directory of mock-ups for the UChicago Library website redesign that occurred in 2017. Mocks created by [Kathy Zadrozny](https://github.com/kzadrozny.
+Directory of mock-ups for the UChicago Library website redesign that occurred in 2017. Mocks created by [Kathy Zadrozny](https://github.com/kzadrozny)
 
 ## Live Mocks
 Live mocks can be viewed at [uchicago-library.github.io/LibPattern](https://uchicago-library.github.io/LibPattern/)
