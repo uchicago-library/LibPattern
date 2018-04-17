@@ -5,11 +5,11 @@ Directory of mock-ups for the UChicago Library website redesign that occurred in
 Live mocks can be viewed at [uchicago-library.github.io/LibPattern](https://uchicago-library.github.io/LibPattern/)
 
 ## Design Results
+### After
+![screenshot of updated homepage view](readme-imgs/Website-ScreenShotAFTER.png)
+
 ### Before
 ![screenshot of old homepage view](readme-imgs/Website_ScreenShotBEFORE.png)
-
-### After
-![screenshot of updated homepage view](readme-imgs/Website_ScreenShotAFTER.png)
 
 ## Making Changes
 ### Working and Editing Files
