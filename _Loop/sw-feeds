@@ -1,0 +1,18 @@
+<hr>
+      
+      <p><strong>Hyde Park Food Trucks</strong></p>
+            <a class="twitter-timeline" href="https://twitter.com/uchiNOMgo" data-widget-id="646771624612642818">Tweets by @uchiNOMgo</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+      <hr>
+
+      <!-- SCRC Instagram Feed -->
+      <div class="ig-root 5011e9 clearfix"> </div>
+      <script>
+       scripts=[];
+       host='http://tsatchi.com';
+       js=document.createElement('script');
+       js.src=host+"/apps/instagram-widget-builder/b/I371T5655k13f767h2GW3D9Z2c3X460e1S288j58O1QEkjiKg26JUk7l4i62cM08V0bP67";
+       scripts[0] = js;
+       for(i=0;i< scripts.length; i++){document.getElementsByTagName("HEAD")[0].appendChild(scripts[i]); }
+      </script>

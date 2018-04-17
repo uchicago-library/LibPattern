@@ -1,0 +1,98 @@
+
+ 
+a:link {
+	color: #8F7B70;
+	text-decoration: none;
+}
+a:hover {
+	color: #A03941;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+	
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.intro-text {
+ font-family: font-family: 'Open Sans Condensed', sans-serif;
+ font-weight: 400;
+ font-size:50px;
+ color:#8F7B70;
+ margin-left: 150px;
+}
+
+.header {
+ font-family: font-family: 'Open Sans Condensed', sans-serif;
+ font-weight: 700;
+ font-size:20px;
+ color:#8F7B70;
+}
+
+.subheader {
+ font-family: font-family: 'Open Sans Condensed', sans-serif;
+ font-weight: 400;
+ font-size:18px;
+ text-align:center;
+}
+
+.navbar a:active {
+color:#8F7B70;
+}
+
+.navbar-brand {
+	padding-top:0px;
+	margin-left: 0px;
+}
+
+.nav navbar-nav a{
+	font-color: #000;
+ font-family: font-family: 'Open Sans Condensed', sans-serif;
+ font-weight: 700;
+ font-size:18px;
+ text-align:center;
+}
+
+.jumbotron {
+	background-size: 100%;
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    background-image: url('../images/header.jpg'); /* Header Image */
+}
+
+section {
+	padding-top: 60px;
+	margin-top: -60px;
+}
+
+/*Email Link */
+a[href^="mailto"]:hover:after { content: " > " attr(title); } 
+
+a.fancy:hover:after { content: " > " attr(title); }
+
+/*Grayscale overlay */
+img.grayscale {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+}
