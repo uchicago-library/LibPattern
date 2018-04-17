@@ -1,0 +1,24 @@
+{
+  "name": "loop",
+  "version": "1.0.0",
+  "description": "UChicago Library Intranet",
+  "main": "swhome.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kzadrozny/Loop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kzadrozny/Loop/issues"
+  },
+  "homepage": "https://github.com/kzadrozny/Loop#readme",
+  "devDependencies": {
+    "browser-sync": "^2.17.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  }
+}

@@ -1,0 +1,34 @@
+The Dept list needs to be wrapped in <div class="col-md-12 deptlist"> </div>
+
+For the side bar:
+The second line needs to be added, sandwhiched between the two shown, with the third haivng updates to class and id.
+
+  <div class="row-fluid"> <!-- Main Row -->
+    <div class="row row-offcanvas row-offcanvas-left"> <!-- Off Canvas Wrapper Row -->
+      <div class="col-sm-12 col-md-2 sidebar-offcanvas sidebar swside" id="sidebar"> <!-- Start side div -->
+
+      And then closed
+
+       </div><!-- // End body -->
+   </div> <!-- // End Off Canvas Wrapper Row -->
+  </div> <!-- / Main row -->
+
+These lines needs to go above " <div class="col-sm-12 col-md-offset-1 col-md-8 unit-body"> <!-- Start body --> "
+
+    <div class="row visible-xs toggle-side">
+      <p><button type="button" class="btn btn-sidebar btn-xs" data-toggle="offcanvas"><i class="fa fa-caret-square-o-right fa-lg"></i></button></p>
+    </div>
+
+Should be removed from end of sidebar div
+
+    <hr class="visible-sm visible-xs"> 
+
+
+The following scripts need to be added to the end of the file:
+
+         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+    <script src="js/offcanvas.js"></script>
+
+    And their files moved into the js folder
