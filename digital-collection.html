@@ -10,6 +10,7 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/lib-main.css" rel="stylesheet">
+    <link href="css/collex.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/calendar/font-awesome.min.css">
 </head>
 
@@ -274,43 +275,44 @@
 				<!-- Main Content -->
 				<div class="col-xs-12 col-md-9 centermain"> <!-- Center Content -->
                     <figure class="imgcaption coll-thumb">
-                    <img src="images/RSJ.jpg">
-                        <figcaption>A 1906 issue of the satirical political journal “Signaly” (Signals) published in St. Petersburg.</figcaption>
+                    <img src="https://www.lib.uchicago.edu/media/images/MiddleEastPhoto.width-200.jpg">
+                        <figcaption>Mosque of the Dervishes Tekiyeh, Damascus (Bonfils, ca. 1870)</figcaption>
                     </figure>
-    				<p>The University of Chicago Library’s collection Russian Satirical Journals, 1905-1907 consists of 110 titles in 378 issues. It is primarily comprised of journals, but some newspapers, broadsides, and illustrated periodicals are also included. The full collection has been digitized.</p>
-                    <p>This collection documents some of the most important events of the period known as the first Russian Revolution of 1905-1907. It was during this unprecedented rise of national self-identity that the first Russian Constitution and Russian Parliament were initially created. The first Russian Revolution was a period of struggle for political, social and human rights, and the press, which had previously been subject to censorship, enjoyed a new freedom which had never before appeared in Russia.</p>
-                    <p>Nevertheless, disillusionment with the political and social reforms was expressed through political satire and caricature, published in numerous journals all over the country. The pages of these journals served as an arena for political parties and the newly born social classes of Russia – both the bourgeois and the workers. The explicit satirical form of these publications and their subsequent immediate distribution to interested readers attracted many well known writers and artists who were either contributors or, occasionally, editors of these journals. The journals in the collection present a unique and sparkling collaboration amongst famous Russian authors such as Konstantin Bal’mont, Ivan Bunin, Maxim Gorky, Aleksandr Kuprin, Valerii Brusov, etc., with the artistic talents of Ivan Bilibin, Boris Kustodiev, Léon Bakst, Valentin Serov, Alexandre Benois, and others.</p>
-                    <p>As the Russian autocracy regained its power, the unprecedented freedom of the Russian press diminished and then vanished. While some journals were published continuously for months afterward, many others were either closed or suppressed, and their editors prosecuted, with the entire publishing run of some issues confiscated and destroyed by the authorities.</p>
+    				<p>The Middle East Photograph Archive consists of over 400 photographic prints dating primarily to the second half of the nineteenth century. At this time, the spread of the art of photography and the influx of Europeans into the lands of the Middle East led to the creation of a large number of photographs produced by professional photographers. During these decades, the versatility of photography was enhanced through the development of a variety of chemical techniques, enabling photographers to produce images in relatively large numbers, intended chiefly to satisfy the tourism trade burgeoning in the Middle East and the European thirst for images of the Orient. The archive is particularly strong in photographs of nineteenth-century Cairo. Europeans were attracted to Egypt by its Pharaonic monuments, but once there, visitors came to appreciate Cairo as the largest and best-preserved medieval metropolis in the world. The scores of Islamic monuments built between the ninth and fifteenth centuries in and around Cairo provided a huge number of subjects for photography.</p>
+                    <p>These early photographs stand now as important documents of the history of photography. However, the significance of these artifacts is enriched by their utility as historical documents of the architectural and social history of the Middle East. Photographers chose as subjects the monuments of the Middle East’s medieval and ancient past, as well as scenes of daily life. Since the nineteenth century, many of these monuments have been altered through architectural restoration, or their contexts have been radically transformed by the inevitable modernization witnessed in the twentieth century. In some cases, and particularly in those scenes depicting social life, the images are the only surviving records of the Middle East’s history.</p>
+                    <p>The collection was first scanned and made available on the Library’s website in 1996 at what is today considered low resolution. The collection was re-digitized in 2014 in color and at a higher resolution in order to create preservation-quality master files, and to make the collection easier to navigate for both general and advanced users. Color is particularly important, allowing more accurate viewing of the varied tonality of the many albumen prints as well as the results of some of the more creative photographic experiments. The Middle East Photograph Archive re-digitization project was made possible in 2014 through the Library’s Mary and Samuel Somit Preservation Internship.</p>
 
-            <!-- !!!!! jej !!!!
-                - IF "digital collection" is active hide this button; have data from field be shown in the <a/> within the search module section below.
-
-                 <a role="button" class="btn btn-morecoll" href="https://www.lib.uchicago.edu/c/russiansatiricaljournals">View Online Collection</a>
-
-             /end note to jej  -->
                 
                <!-- Search Module -->
-                <h2>Browse &amp; Search Collection</h2>
-                <div class="row collections">
-                    <div class="col-xs-12">
-                        <form action="." class="searchbox" method="GET">
-                            <input name="query" placeholder="Search this collection" required="required" type="search" aria-label="..." class="searchbox-input" value="">
-                            <span class="searchbox-icon"><i title="search" class="fa fa-search"></i>
-                                <input type="submit" class="searchbox-submit" style="background-color: transparent; color: transparent;">
-                            </span>
-                        </form>
-                    </div>
+                <!-- <h2>Search or Browse Collection</h2> -->
+                <h2>Search &amp; Browse</h2>
+                <div class="row collections search">
+                        <div class="form-group">
+                        <label for="collection-search" class="col-sm-3 col-form-label headline">Search Collection</label>
+                            <div class="col-sm-9">
+                                <form action="." class="searchbox" method="GET">
+                                <input name="query" placeholder="miklagard" required="required" type="search" aria-label="..." class="searchbox-input" value="">
+                                <span class="searchbox-icon"><i title="search" class="fa fa-search"></i>
+                                    <input type="submit" class="searchbox-submit" style="background-color: transparent; color: transparent;">
+                                </span>
+                                </form>
+                            </div>
+                        </div>
 
-                    <!-- Search Results 
-                    <div class="col-xs-12 home-modwrapper">
-                        <h3>Search Results</h3>
 
-                    </div>
-                        // Search Results -->
                         
-                <div class="col-xs-12">
-               <!-- !!!!! jej !!!! - IF "digital collection" is active button data from above goes into this link -->
-                        <a class="coll-access" href="https://www.lib.uchicago.edu/c/russiansatiricaljournals">Browse Collection</a>
+                    <div class="col-xs-12 coll-dropdown">
+                      <span class="headline">Browse Collection by</span>
+
+                      <div class="btn-group">
+                        <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" class="btn btn-textonly dropdown-toggle" type="button"><span class="visually-hidden">Browse by</span> Subject <span class="caret"></span></button>
+                        <ul class="dropdown-menu listings-dropdown">
+                            <li><a href="#" class="dropdown-item">Subject</a></li>
+                            <li><a href="#" class="dropdown-item">Year</a></li>
+                            <li><a href="#" class="dropdown-item">Country</a></li>
+                            <li><a href="#" class="dropdown-item">City</a></li>
+                        </ul>
+                      </div>
                     </div>
                 </div>
                 <!-- // Search Module -->
@@ -321,6 +323,7 @@
                     <p>The physical collection of journals is housed unbound in six boxes in the Special Collections Research Center. To retrieve a title, search by title in the online catalog and use the Request from SCRC link. If looking for multiple titles, and records indicate that they are in the same box, you need only request the box one time. </p>
     				</div> <!-- // Center Content -->
 
+
 			<div class="col-xs-12 col-md-3 rightside coll-rightside"> <!-- Right Sidebar Content -->
 		
 				<div class="rightside-mod col-xs-12 col-sm-6 col-md-12">
@@ -328,37 +331,31 @@
                 <a href="https://www.lib.uchicago.edu/spaces/special-collections-research-center/">Special Collections Research Center</a>
                 </div>
                 <div class="rightside-mod col-xs-12 col-sm-6 col-md-12">
-					<h2>Subject Specialist</h2>
-                        <p><a href="#">Catherine M. Mardikes</a><br/>
-                        <em>Bibliographer for Classics, Ancient Near East, and General Humanities</em><br/>
-                        <a href="#">mardikes@uchicago.edu</a><br/>
-                        773-702-2783<br/>
-                        Regenstein, Rm 471</p>
+                    <h2>Subject Specialist</h2>
+                    <p><a href="https://www.lib.uchicago.edu/about/directory/staff/marlis-j-saleh/">Marlis J. Saleh</a>
+                    <br><em>Bibliographer for Middle Eastern Studies</em><br>
+                    <a href="mailto:msaleh@uchicago.edu">msaleh@uchicago.edu</a><br>
+                    773-702-8425<br>JRL 563</p>
                 </div>
 
                 <div class="rightside-mod col-xs-12 col-sm-6 col-md-12">
                 <h2>Explore Related Content</h2>
-                    <h3>Related Collections</h3>
+                    <h3>Related Exhibits</h3>
                     <ul>
-                        <li><a href="#">A Century of Progress International Exposition Publications</a></li>
-                        <li><a href="#">Hyde Park Center. Collection</a></li>
-                    </ul>
-                <h3>Related Exhibits</h3>
-                    <ul>
-                        <li><a href="#">Mapping the Young Metropolis: The Chicago School of Sociology, 1915-1940</a></li>
-                        <li><a href="#">Souvenirs Get Your Chicago Mementos and Memorabilia</a></li>
+                        <li><a href="https://www.lib.uchicago.edu/collex/exhibits/celebrating-poetry-asia-middle-east/">Celebrating the Poetry of Asia &amp; the Middle East</a></li>
                     </ul>
 
                 <h3>Collections by Subject</h3>
                     <ul>
-                        <li><a href="#">Arts</a></li>
-                        <li><a href="#">History</a></li>
+                        <li><a href="/collex/?view=collections&amp;subject=Middle%20East">Middle East</a></li>
+                        <li><a href="/collex/?view=collections&amp;subject=Ancient%20Near%20East">Ancient Near East</a></li>
+                        <li><a href="/collex/?view=collections&amp;subject=Photography">Photography</a></li>
                     </ul>
 
                 <h3>Collections by Format</h3>
                     <ul>
                         <li><a href="#">Digital</a></li>
-                        <li><a href="#">Archives &amp; Manuscripts</a></li>
+                        <li><a href="#">Photographs</a></li>
                     </ul>
 				</div>
 
