@@ -327,7 +327,7 @@ $display-font: "Helvetica Neue",Helvetica,Arial,sans-serif;
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(238,239,229, 0.5)', endColorstr='rgba(246,247,242, 0.5)',GradientType=0 ); /* IE6-9 */
 	border-top: 2px solid $midneutral;
 	width: 95%;
-    padding: 1.5em 1em 0 0.15em;
+    padding: 1.5em 1em 1.5em 0.15em;
 	.searchbox{
 		width: auto;
 	}
@@ -336,8 +336,20 @@ $display-font: "Helvetica Neue",Helvetica,Arial,sans-serif;
 		margin-left: -15px;
 		border: 1px solid #ccc;
 	}
-	.btn-textonly {
-		color: $mid-dark;
+	.browse {
+		padding-top: 1em;
+		.badge {
+			color: $mid-dark;
+		    background-color: transparent;
+		    font-size: inherit;
+		    &:first-of-type {
+		    	margin-left: 1.5em;
+		    }
+		    &:hover, &:focus {
+			    color: $active;
+			    text-decoration: underline;
+			}
+		}
 	}
 }
 

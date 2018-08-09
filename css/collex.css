@@ -490,14 +490,23 @@ a {
   /* IE6-9 */
   border-top: 2px solid #D2CDCC;
   width: 95%;
-  padding: 1.5em 1em 0 0.15em; }
+  padding: 1.5em 1em 1.5em 0.15em; }
   .row.collections.search .searchbox {
     width: auto; }
   .row.collections.search input {
     background-color: #fff;
     margin-left: -15px;
     border: 1px solid #ccc; }
-  .row.collections.search .btn-textonly {
-    color: #525252; }
+  .row.collections.search .browse {
+    padding-top: 1em; }
+    .row.collections.search .browse .badge {
+      color: #525252;
+      background-color: transparent;
+      font-size: inherit; }
+      .row.collections.search .browse .badge:first-of-type {
+        margin-left: 1.5em; }
+      .row.collections.search .browse .badge:hover, .row.collections.search .browse .badge:focus {
+        color: #8A9045;
+        text-decoration: underline; }
 
 /*# sourceMappingURL=collex.css.map */
