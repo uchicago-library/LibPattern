@@ -11,55 +11,6 @@
 @import "base.scss";
 
 
-
-/*
- * Media Queries
- * --------------------------------------------------
- *
- */
-
-@mixin respond-to($breakpoint) {
-  // Extra small devices (phones, 544px and up)
-  @if $breakpoint == "xsmall" {
-    @media (min-width: 34em) {
-      @content;
-    }
-  }
-
-  // Small devices (landscape phones, 768px and up)
-  @else if $breakpoint == "small" {
-    @media (min-width: 48em) {
-      @content;
-    }
-  }
-  // Medium devices (crappy laptops, tablets, 992px and up)
-  @else if $breakpoint == "medium" {
-    @media (min-width: 62em) {
-      @content;
-    }
-  }
-  // Large devices (desktops, 1200px and up)
-  @else if $breakpoint == "large" {
-    @media (min-width: 75em) {
-      @content;
-    }
-  }
-
-  //Extra large devices (large desktops, 1900px and up)
-  @else if $breakpoint == "xlarge" {
-    @media (min-width: 118em) {
-      @content;
-    }
-  }
-  
-  // Short-cut to target extra small devices *only* (phones, 544px and up)
-  @else if $breakpoint == "smallonly" {
-    @media (max-width: 34em) {
-      @content;
-    }
-  }
-}
-
 /*
  * Stable Variables
  * --------------------------------------------------
@@ -318,6 +269,14 @@ $display-font: "Helvetica Neue",Helvetica,Arial,sans-serif;
  *
  */
 
+.search-results {
+  	border-bottom: 1px solid $lightneutral;
+  	padding-bottom: 1em;
+	h2 {
+		margin: 0;
+	}
+}
+
 .row.collections.search {
     margin-top: -5px;
 	background: rgba(238,239,229, 0.5);
@@ -373,26 +332,32 @@ $display-font: "Helvetica Neue",Helvetica,Arial,sans-serif;
  * Thumbnail Grid
  * --------------------------------------------------
  */
-
-.thumbnails {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: 30px;
-}
-
-figure {
-  position: relative;
-  img {
-    height: 200px;
-    width: 100%;
-    object-fit: contain;
-  }
-  figcaption {
-    margin-top: 0.5em;
-    margin-bottom: 1em;
-    text-align: center;
-    line-height: 1.25em;
-  }
+section.thumbnails {
+	figure {
+	  display: grid;
+	  grid-template-columns: 25% 75%;
+	  grid-gap: 1.5em;
+	  &+figure {
+	  	margin-top: 1em;
+	  	border-top: 1px solid $lightneutral;
+	  }
+	  h3 {
+	  	margin-top: 0.75em;
+	  }
+	  img {
+	    height: 200px;
+	    width: 100%;
+	    padding-top: 1.5em;
+	    object-fit: contain;
+	    object-position: 50% 0;
+	  }
+	  figcaption {
+	    margin-top: 0.5em;
+	    margin-bottom: 1em;
+	    text-align: left;
+	    line-height: 1.25em;
+	  }
+	}
 }
 
 
