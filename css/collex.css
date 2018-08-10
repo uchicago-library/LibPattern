@@ -491,22 +491,53 @@ a {
   border-top: 2px solid #D2CDCC;
   width: 95%;
   padding: 1.5em 1em 1.5em 0.15em; }
+  .rightside-mod .row.collections.search {
+    background: transparent;
+    border-top: none; }
   .row.collections.search .searchbox {
     width: auto; }
   .row.collections.search input {
     background-color: #fff;
     margin-left: -15px;
     border: 1px solid #ccc; }
+    .rightside-mod .row.collections.search input {
+      margin-left: 0; }
   .row.collections.search .browse {
     padding-top: 1em; }
+    .rightside-mod .row.collections.search .browse .headline, .rightside-mod .row.collections.search .browse .badge {
+      display: block;
+      text-align: left; }
     .row.collections.search .browse .badge {
       color: #525252;
       background-color: transparent;
       font-size: inherit; }
       .row.collections.search .browse .badge:first-of-type {
         margin-left: 1.5em; }
+        .rightside-mod .row.collections.search .browse .badge:first-of-type {
+          margin-left: 0; }
       .row.collections.search .browse .badge:hover, .row.collections.search .browse .badge:focus {
         color: #8A9045;
         text-decoration: underline; }
+
+/*
+ * Thumbnail Grid
+ * --------------------------------------------------
+ */
+.thumbnails {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 30px; }
+
+figure {
+  position: relative; }
+  figure img {
+    height: 200px;
+    width: 100%;
+    object-fit: contain; }
+  figure figcaption {
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    text-align: center;
+    line-height: 1.25em; }
 
 /*# sourceMappingURL=collex.css.map */

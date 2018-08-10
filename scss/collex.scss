@@ -328,6 +328,10 @@ $display-font: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	border-top: 2px solid $midneutral;
 	width: 95%;
     padding: 1.5em 1em 1.5em 0.15em;
+    .rightside-mod & {
+    	background: transparent;
+    	border-top: none;
+    }
 	.searchbox{
 		width: auto;
 	}
@@ -335,15 +339,27 @@ $display-font: "Helvetica Neue",Helvetica,Arial,sans-serif;
 		background-color: #fff;
 		margin-left: -15px;
 		border: 1px solid #ccc;
+		.rightside-mod & {
+			margin-left: 0;
+		}
 	}
 	.browse {
 		padding-top: 1em;
+		.rightside-mod & {
+			.headline, .badge {
+				display: block;
+			    text-align: left;
+			}
+		}
 		.badge {
 			color: $mid-dark;
 		    background-color: transparent;
 		    font-size: inherit;
 		    &:first-of-type {
 		    	margin-left: 1.5em;
+		    	.rightside-mod & {
+		    		margin-left: 0;
+		    	}
 		    }
 		    &:hover, &:focus {
 			    color: $active;
@@ -351,6 +367,32 @@ $display-font: "Helvetica Neue",Helvetica,Arial,sans-serif;
 			}
 		}
 	}
+}
+
+/*
+ * Thumbnail Grid
+ * --------------------------------------------------
+ */
+
+.thumbnails {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+figure {
+  position: relative;
+  img {
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
+  }
+  figcaption {
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    text-align: center;
+    line-height: 1.25em;
+  }
 }
 
 
