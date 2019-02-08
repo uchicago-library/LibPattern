@@ -269,6 +269,20 @@ $display-font: "Helvetica Neue",Helvetica,Arial,sans-serif;
  *
  */
 
+h2.browse {
+	color: #616530;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #a0a282;
+}
+
+dl {
+	padding-left: 2em;
+	dt {
+		font-weight: 600;
+		padding-top: 1em;
+	}
+}
+
 .search-results {
   	border-bottom: 1px solid $lightneutral;
   	padding-bottom: 1em;
@@ -339,7 +353,7 @@ section.thumbnails {
 	  grid-gap: 1.5em;
 	  &+figure {
 	  	margin-top: 1em;
-	  	border-top: 1px solid $lightneutral;
+	  	border-top: 1px solid #D2CDCC;
 	  }
 	  h3 {
 	  	margin-top: 0.75em;

@@ -472,6 +472,17 @@ a {
  * --------------------------------------------------
  *
  */
+h2.browse {
+  color: #616530;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #a0a282; }
+
+dl {
+  padding-left: 2em; }
+  dl dt {
+    font-weight: 600;
+    padding-top: 1em; }
+
 .search-results {
   border-bottom: 1px solid #f0eeef;
   padding-bottom: 1em; }
@@ -530,7 +541,7 @@ section.thumbnails figure {
   grid-gap: 1.5em; }
   section.thumbnails figure + figure {
     margin-top: 1em;
-    border-top: 1px solid #f0eeef; }
+    border-top: 1px solid #D2CDCC; }
   section.thumbnails figure h3 {
     margin-top: 0.75em; }
   section.thumbnails figure img {
