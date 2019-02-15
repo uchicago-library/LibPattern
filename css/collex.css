@@ -472,16 +472,38 @@ a {
  * --------------------------------------------------
  *
  */
+body.collectionpage div.home-module {
+  padding-top: 1.5em;
+  padding-right: 15px; }
+
 h2.browse {
   color: #616530;
   padding-bottom: 5px;
-  border-bottom: 1px solid #a0a282; }
+  display: inline; }
 
-dl {
-  padding-left: 2em; }
-  dl dt {
-    font-weight: 600;
-    padding-top: 1em; }
+span.browse-links {
+  float: right; }
+
+@media (min-width: 62em) {
+  dl {
+    padding-left: 1em;
+    display: flex;
+    flex-flow: row wrap; } }
+
+dl dt {
+  font-weight: 600;
+  padding-top: 1em;
+  flex-basis: 15%; }
+  @media (min-width: 62em) {
+    dl dt {
+      padding-top: 1.5em; } }
+
+dl dd {
+  flex-basis: 75%;
+  flex-grow: 1; }
+  @media (min-width: 62em) {
+    dl dd {
+      padding-top: 1.5em; } }
 
 .search-results {
   border-bottom: 1px solid #f0eeef;
@@ -555,5 +577,7 @@ section.thumbnails figure {
     margin-bottom: 1em;
     text-align: left;
     line-height: 1.25em; }
+    section.thumbnails figure figcaption h3 a {
+      color: #525252; }
 
 /*# sourceMappingURL=collex.css.map */
