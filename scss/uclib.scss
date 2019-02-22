@@ -152,6 +152,21 @@ body.staffpublicpage {
   }
 }
 
+.url-wrap {
+  word-wrap: break-word;
+}
+
+.share-icons {
+  color: $darkgray;
+  display: block;
+  a {
+    color: $darkgray!important;
+  }
+  i.fa {
+    margin-right: 0.5em;
+  } 
+}
+
 /*
  * Text
  * --------------------------------------------------
@@ -1774,10 +1789,13 @@ td.time, td.event-nav {
     font-weight: 600;
     font-size: 1em;
   }
-  ul {
+  ul:not(.no-indent) {
     padding-left: 2em;
     text-indent: -2em;
     margin-bottom: 10px;
+  }
+  ul.no-indent li {
+    margin-top: 0.75em;
   }
 }
 

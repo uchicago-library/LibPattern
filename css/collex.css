@@ -505,6 +505,12 @@ dl dd {
     dl dd {
       padding-top: 1.5em; } }
 
+.digitalobjectpage .rightside.coll-rightside .rightside-mod {
+  padding-bottom: 1em; }
+
+.digitalobjectpage .rightside.coll-rightside a {
+  text-decoration: underline; }
+
 .search-results {
   border-bottom: 1px solid #f0eeef;
   padding-bottom: 1em; }

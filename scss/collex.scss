@@ -314,6 +314,17 @@ dl {
 	}
 }
 
+.digitalobjectpage {
+	.rightside.coll-rightside {
+		.rightside-mod {
+			padding-bottom: 1em;
+		}
+		a {
+			text-decoration: underline;
+		}
+	}
+}
+
 .search-results {
   	border-bottom: 1px solid $lightneutral;
   	padding-bottom: 1em;

@@ -1068,6 +1068,17 @@ body.staffpublicpage h1 {
   margin-bottom: 2px;
   font-style: italic; }
 
+.url-wrap {
+  word-wrap: break-word; }
+
+.share-icons {
+  color: #767676;
+  display: block; }
+  .share-icons a {
+    color: #767676 !important; }
+  .share-icons i.fa {
+    margin-right: 0.5em; }
+
 /*
  * Text
  * --------------------------------------------------
@@ -2339,10 +2350,12 @@ td.time, td.event-nav {
     margin: 1.5em 0 0;
     font-weight: 600;
     font-size: 1em; }
-  .rightside.coll-rightside ul, .coll-rightside.flex-sidebar ul {
+  .rightside.coll-rightside ul:not(.no-indent), .coll-rightside.flex-sidebar ul:not(.no-indent) {
     padding-left: 2em;
     text-indent: -2em;
     margin-bottom: 10px; }
+  .rightside.coll-rightside ul.no-indent li, .coll-rightside.flex-sidebar ul.no-indent li {
+    margin-top: 0.75em; }
 
 .listings-dropdown {
   margin-top: 0;
