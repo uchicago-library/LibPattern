@@ -282,12 +282,17 @@ h2.browse {
 }
 
 span.browse-links {
-	float: right;
 	a {
-		// &:after {
-		//     content: "\0020\f101";
-		//     font-family: FontAwesome;
-		// }
+		display: block;
+	}
+	@include respond-to(medium) {
+		float: right;
+		display: inline-flex;
+		a + a {
+			&:before {
+				content: "\00a0\00a0\007C\00a0\00a0";
+			}
+		}
 	}
 }
 
@@ -299,23 +304,35 @@ dl {
 	}
 	dt {
 		font-weight: 600;
-		padding-top: 1em;
+		padding-top: 0.5em;
 		flex-basis: 15%;
 		@include respond-to(medium) {
-	    	padding-top: 1.5em;
+	    	padding-top: 0.5em;
+		    border-bottom: 1px dashed #ddd;
+		    padding-bottom: 0.5em;
 	    }
 	}
     dd {
 	    flex-basis: 75%;
 	    flex-grow: 1;
+	    border-bottom: 1px dashed #ddd;
+	    padding-bottom: 0.5em;
 	    @include respond-to(medium) {
-	    	padding-top: 1.5em;
+	    	padding-top: 0.5em;
+		    border-bottom: 1px dashed #ddd;
+		    padding-bottom: 0.5em;
 	    }
 	}
 }
 
 .digitalobjectpage {
 	.rightside.coll-rightside {
+		.source-description {
+			color: $mid-dark;
+			font-size: 90%;
+			font-style: italic;
+			display: block;
+		}
 		.rightside-mod {
 			padding-bottom: 1em;
 		}
@@ -390,9 +407,11 @@ dl {
  */
 section.thumbnails {
 	figure {
-	  display: grid;
-	  grid-template-columns: 25% 75%;
-	  grid-gap: 1.5em;
+		@include respond-to(medium) {
+		  display: grid;
+		  grid-template-columns: 25% 75%;
+		  grid-gap: 1.5em;
+		}
 		  &+figure {
 		  	margin-top: 1em;
 		  	border-top: 1px solid #D2CDCC;
@@ -414,6 +433,10 @@ section.thumbnails {
 		    line-height: 1.25em;
 	    	h3 a {
 				color: #525252;
+			}
+			a {
+				display: block;
+				padding-bottom: 0.5em;
 			}
 		}
 	}
