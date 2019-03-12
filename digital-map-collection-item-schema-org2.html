@@ -28,15 +28,15 @@
 	  "@type": "Map",
 	  "url": "http://pi.lib.uchicago.edu/1001/maps/chisoc/G4104-C6-2B8-1923-U5", 	// from MARC 856
 	  "name": "Brighton Park",		// from MARC 245 $a $b
-	  "creator": {
+	  "creator": [{
 		 "@type": "Organization",  	//If there exists a MARC 100, type=Person. 
 	//If there is a MARC 110 or 111, type=Organization
 		 "name": "prepared by Department of Sociology, University of Chicago, 1923."	// multiple creator blocks from MARC 245 $c
 	  },
-	  "creator": {
+	  {
 		 "@type": "Organization",  	
 		 "name": "University of Chicago. Department of Sociology."	// multiple creator blocks from MARC 100, 110, 111
-	  },
+	  }],
 	  "description": "Blue line print. Shows vacant frontage, residential area, commercial frontage, industrial areas, railroad property, surface lines, and churches.",		// concatenate MARC 255,500, 538. 
 	  "identifier": "http://pi.lib.uchicago.edu/1001/cat/bib/",		
 	// from MARC 001 (add to "http://pi.lib.uchicago.edu/1001/cat/bib/" + [MARC 001]
