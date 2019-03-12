@@ -23,47 +23,47 @@
 	<meta name="twitter:description" content="Blue line print. Shows vacant frontage, residential area, commercial frontage, industrial areas, railroad property, surface lines, and churches." /> <!--Same as DC:Description -->
 	<meta name="twitter:image" content="###IIIF image location - 1200 pixels recommended, 1:1 aspect ratio" /> <!--Format the correct IIIF call here. -->
 	<script type="application/ld+json">
-		{
-		  "@context": "https://schema.org",
-		  "@type": "Map",
-		  "url": "http://pi.lib.uchicago.edu/1001/maps/chisoc/G4104-C6-2B8-1923-U5", 	# from MARC 856
-		  "name": "Brighton Park",		# from MARC 245 $a $b
-		  "creator": {
-			 "@type": "Organization",  	#If there exists a MARC 100, type=Person. 
-		#If there is a MARC 110 or 111, type=Organization
-			 "name": "prepared by Department of Sociology, University of Chicago, 1923."	# multiple creator blocks from MARC 245 $c
-		  },
-		  "creator": {
-			 "@type": "Organization",  	
-			 "name": "University of Chicago. Department of Sociology."	# multiple creator blocks from MARC 100, 110, 111
-		  },
-		  "description": "Blue line print. Shows vacant frontage, residential area, commercial frontage, industrial areas, railroad property, surface lines, and churches.",		# concatenate MARC 255,500, 538. 
-		  "identifier": "http://pi.lib.uchicago.edu/1001/cat/bib/",		
-		# from MARC 001 (add to "http://pi.lib.uchicago.edu/1001/cat/bib/" + [MARC 001]
-		  "publisher": {
-			 "@type": "Organization",  	
-			 "name": "Chicago : Dept. of Sociology"	# always an organization, from MARC 264 _1  $b
-		  },		
-		  "datePublished": "1923",  #From MARC 264 _1  $c, use 	https://en.wikipedia.org/wiki/ISO_8601
-		  "contentLocation": {
-			 "@type": "Place",
-			 "name": "Brighton Park"	# from MARC 651 $a, $z
-		  },
-		  "contentLocation": {
-			 "@type": "Place",
-			 "name": "Chicago"	# from MARC 650 $x
-		  },
-		  "contentLocation": {
-			 "@type": "Place",
-			 "name": "Illinois"	# from MARC 650 $x
-		  },
-		  "ispartof": {
-			 "@type": "creativeWork",
-			 "name": "Social Scientists Map Chicago"	# from MARC 830
-			 "url": "[Collection page URL from manifest"
-		  },
-		"license":  "https://creativecommons.org/licenses/by-sa/4.0/"	# from MARC 506
-		}
+	{
+	  "@context": "https://schema.org",
+	  "@type": "Map",
+	  "url": "http://pi.lib.uchicago.edu/1001/maps/chisoc/G4104-C6-2B8-1923-U5", 	// from MARC 856
+	  "name": "Brighton Park",		// from MARC 245 $a $b
+	  "creator": {
+		 "@type": "Organization",  	//If there exists a MARC 100, type=Person. 
+	//If there is a MARC 110 or 111, type=Organization
+		 "name": "prepared by Department of Sociology, University of Chicago, 1923."	// multiple creator blocks from MARC 245 $c
+	  },
+	  "creator": {
+		 "@type": "Organization",  	
+		 "name": "University of Chicago. Department of Sociology."	// multiple creator blocks from MARC 100, 110, 111
+	  },
+	  "description": "Blue line print. Shows vacant frontage, residential area, commercial frontage, industrial areas, railroad property, surface lines, and churches.",		// concatenate MARC 255,500, 538. 
+	  "identifier": "http://pi.lib.uchicago.edu/1001/cat/bib/",		
+	// from MARC 001 (add to "http://pi.lib.uchicago.edu/1001/cat/bib/" + [MARC 001]
+	  "publisher": {
+		 "@type": "Organization",  	
+		 "name": "Chicago : Dept. of Sociology"	// always an organization, from MARC 264 _1  $b
+	  },		
+	  "datePublished": "1923",  //From MARC 264 _1  $c, use 	https://en.wikipedia.org/wiki/ISO_8601
+	  "contentLocation": {
+		 "@type": "Place",
+		 "name": "Brighton Park"	// from MARC 651 $a, $z
+	  },
+	  "contentLocation": {
+		 "@type": "Place",
+		 "name": "Chicago"	// from MARC 650 $x
+	  },
+	  "contentLocation": {
+		 "@type": "Place",
+		 "name": "Illinois"	// from MARC 650 $x
+	  },
+	  "ispartof": {
+		 "@type": "creativeWork",
+		 "name": "Social Scientists Map Chicago"	// from MARC 830
+		 "url": "[Collection page URL from manifest"
+	  },
+	"license":  "https://creativecommons.org/licenses/by-sa/4.0/"	// from MARC 506
+	}
 </script>
 
 </head>
