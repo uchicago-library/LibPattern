@@ -1,33 +1,138 @@
 /*------------------------------------------------------------------
+
 [Table of contents]
 
+Page Specific Alterations
+Fancy Splash Image (Jumbotron)
 Content
 Text
 Images, Video, and other Media
-Right Sidebar
+Light Box Styling
+Carousel
 Homepage Modules / Widgets  
 Workshops & Events Homepage Module
 News Homepage Module
-Ask A Librarian
-Forms
+Ask A Librarian Pages
 Buttons
 Tables
 Mini Search (For Lists / Tables)
-Light Box Styling
 Index List Page
 Hours (Mods to LibCal Feed)
 Agenda (Conferences)
 Event Calendar List
 Spaces
-Collections & Exhibits
-Directory
+Collections & Exhibits Listing
+Directory Listing
 Staff Profile Page
-Page Specific Alterations
+
 -------------------------------------------------------------------*/
 
 @import "variables.scss";
-@import "base.scss";
+@import "media.scss";
 
+
+/*
+ * Page Specific Alterations
+ * --------------------------------------------------
+ */
+
+.block-paragraph > .rich-text { // Giving Pages
+  #p-3413 &, #p-3415 &, #p-3417 &, #p-3418 &, #p-3419 & {
+    @include respond-to(small) {
+      overflow: hidden;
+    }
+  }
+}
+
+.body-container {
+  padding: 30px;
+  max-width: 1200px;
+  #p-3378 &, #p-1752 &, #p-1754 &, #p-1755 &, #p-1753 &, #p-1756 &, #p-1758 &, #p-1757 &, &.directory {  // Exception for Home pages and directory pages
+    max-width: 2000px;
+  }
+  .sidebar ~ & {
+    @include respond-to(medium) {
+      padding-left: 45px;
+    }
+  }
+}
+
+.h1-banner .breadcrumbs, #p-3378 .breadcrumbs, #p-1752 .breadcrumbs, #p-1754 .breadcrumbs, #p-1755 .breadcrumbs, #p-1753 .breadcrumbs, #p-1756 .breadcrumbs, #p-1758 .breadcrumbs, #p-1757 .breadcrumbs { // Hide breadcrumbs on homepages with banners
+   @include visually-hidden;
+}
+
+ .h1-banner, #p-4898 h1, #p-3378 h1:not(.searchbox-header) {  // Hide h1 on homepages with banners
+  @include visually-hidden;
+}
+
+
+/*
+ * Fancy Splash Image (Jumbotron)
+ * --------------------------------------------------
+ */
+
+.jumbotron {
+  max-height: 50px;
+  padding-top: 0px;
+  margin-bottom: 0;
+  background-color: $darkred; //fallback if all else fails
+  background-image: url("../images/banner.gif"); //fallback if no image uploaded
+  background-size: cover;
+  h2 {
+    color: #fff;
+  }
+  .container {
+    padding: 0px;
+  }
+  @include respond-to(small) { 
+    min-height: 75px;
+    .container {
+      position: relative;
+      margin: 0px;
+    }
+  }
+}
+
+.overlaywrap {
+  background-color: $trans-red; // Also applies to Law. Default if location is not specified
+  color: #E7E5E2;
+  left: 0;
+  top: 0;
+  h2 {
+    font-weight: 400;
+    font-size: 1.2em;
+    margin-top: 0;
+    padding: 10px 15px;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &.crerar {
+    background-color: $trans-blue;
+  }
+  &.eckhart {
+    background-color: $trans-purple;
+  }
+  &.mansueto {
+    background-color: $trans-darkgreen;
+  }
+  &.reg {
+    background-color: $trans-lightgreen;
+  }
+  &.ssa {
+    background-color: $trans-orange;
+  }
+  @include respond-to(small) {
+    position: absolute;
+    padding-right: 3em;
+    padding-left: 1.7em;
+    h2 {
+      font-size: 1.6em;
+      margin-top: 10px;
+      padding: 0;
+    }
+  }
+}
 
 /*
  * Content
@@ -40,37 +145,6 @@ Page Specific Alterations
   font-size: 85%;
  }
 
-.body-container {
-  padding: 30px;
-  max-width: 1200px;
-  #p-3378 &, #p-1752 &, #p-1754 &, #p-1755 &, #p-1753 &, #p-1756 &, #p-1758 & {  // Exception for Homepages
-    max-width: 2000px;
-  }
-  .sidebar ~ & {
-    @include respond-to(medium) {
-      padding-left: 45px;
-    }
-  }
-}
-
-body.staffpublicpage {
-  h1 {
-    border-bottom: none;
-    &~h2 {
-      border-bottom: 1px solid #D6D6CE;
-      margin-top: 0px;
-      padding-bottom: 5px;
-      font-weight: 400;
-    }
-  }
-}
-
-.nopadding {  // For use when do not want to wrap in row 
-   padding-right: 0;
-   padding-left: 0;
-   margin-right: 0;
-   margin-left: 0;
-}
 
 .centermain {
   padding: 0;
@@ -78,7 +152,7 @@ body.staffpublicpage {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  #p-3378 &, #p-1752 &, #p-1754 &, #p-1755 &, #p-1753 &, #p-1756 &, #p-1758 &, .floorplanpage & {  // Exception for Homepages
+  #p-3378 &, #p-1752 &, #p-1754 &, #p-1755 &, #p-1753 &, #p-1756 &, #p-1758 &, .floorplanpage &, .directory & {  // Exception for Home pages
     max-width: 1200px;
   }
   .collectionpage & {
@@ -87,50 +161,6 @@ body.staffpublicpage {
   @include respond-to(small) {
     padding: 0 30px 0 15px;
   }
-}
-
-.distinct-rightside {
-  background-color: $hovercalmlight;
-  margin: 10px 0;
-  padding: 15px 20px;
-  ul {
-    list-style-type: none;
-    margin-bottom: 10px;
-  }
-  li {
-  color: $brightpurple;
-  }
-  a {
-    color: $brightpurple;
-  }
-  & h2 {
-    color: $reggreen;
-    margin: 5px 0 10px 0;
-    font-size: 1.05em;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #a0a282;
-  }
-  @include respond-to(medium) {
-    border-top: 0;
-    margin: 0;
-    max-width: 350px;
-  }
-  @include respond-to(large) {
-    max-width: 30em;
-  }
-}
-
-.h1-banner, #p-4898 h1, #p-3378 h1:not(.searchbox-header) {  // Hide h1 on homepages with banners
-  position:absolute;
-  right:-10000px; 
-  top:auto; 
-  width:1px; 
-  height:1px; 
-  overflow:hidden;
-}
-
-.h1-banner .breadcrumbs, #p-3378 .breadcrumbs, #p-1752 .breadcrumbs, #p-1754 .breadcrumbs, #p-1755 .breadcrumbs, #p-1753 .breadcrumbs, #p-1756 .breadcrumbs, #p-1758 .breadcrumbs { // Hide breadcrumbs on homepages with banners
-   @include visually-hidden;
 }
 
 .search-results {
@@ -152,20 +182,16 @@ body.staffpublicpage {
   }
 }
 
-.url-wrap {
-  word-wrap: break-word;
+.empty-state {
+  padding: 1em;
+  color: $darkgray;
+  .nothing {
+    display: block;
+    font-size: 1.3em;
+    padding-left: 0;
+  }
 }
 
-.share-icons {
-  color: $darkgray;
-  display: block;
-  a {
-    color: $darkgray!important;
-  }
-  i.fa {
-    margin-right: 0.5em;
-  } 
-}
 
 /*
  * Text
@@ -175,6 +201,11 @@ body.staffpublicpage {
 #footnotes {
   font-family: 'ProximaNova-Light';
   font-size: 0.8em;
+}
+
+.block-pullquote {
+  clear: both;
+  padding: 2em 0;
 }
 
 .pullquote {
@@ -234,16 +265,6 @@ p q { //Inline Quote
   &:after{
     content: close-quote;
     font-size: 1.2em;
-  }
-}
-
-.empty-state {
-  padding: 1em;
-  color: $darkgray;
-  .nothing {
-    display: block;
-    font-size: 1.3em;
-    padding-left: 0;
   }
 }
 
@@ -326,19 +347,11 @@ a.img-src {
 figure.coll-thumb {
     margin-right: auto;
     margin-left: auto;
+    max-width: 25em;
     margin-bottom: 1.5em;
-    img {
-      max-height: 25em;
-    }
-    &.hub img {
-      max-height: 15em;
-    }
     @include respond-to(small) {
         float: left!important;
         margin-right: 2em;
-        img {
-          max-width: 25em;
-        }
     }
 }
 
@@ -367,7 +380,6 @@ figure.coll-thumb {
 .thumbnail-mod {
   text-align: center;
   img {
-    max-width: 300px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -379,63 +391,88 @@ figure.coll-thumb {
 
 
 /*
- * Right Sidebar
+ * Lightbox Styling
  * --------------------------------------------------
  */
 
-.rightside {
-  border-top: 1px dotted $darkgray;
-  border-left: 0;
-  margin: 10px 0;
-  padding: 20px 15px 0px 15px;
-  li {
-  color: $darkgray;
-  margin-bottom: 0.25em; //add to production
+.modal-content {
+  -webkit-box-shadow: 0 5px 35px rgba(0,0,0,.8);
+  box-shadow: 0 5px 35px rgba(0,0,0,.8);
+}
+
+.modal-header {
+    padding: 15px 20px 0px 15px;
+    border-bottom: none;
+    &> .close {
+      font-size: 2em;
+      opacity: .6;
+      &:hover {
+        opacity: .5;
+      }
+    }
+}
+
+
+/*
+ * Carousel
+ * --------------------------------------------------
+ */
+
+.carousel {
+  margin-bottom: 20px;
+}
+
+.carousel-indicators {
+    bottom: 0px;
+}
+
+.carousel-inner {
+  &>.item>a>img, &>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    width: 100%
   }
-  a {
-    color:  $active-hover;
-  }
-  h2, h3 {
-    font-weight: 400;
-    font-size:1.1em;
-    margin: 5px 0 10px 0;
-    padding-bottom: 5px;
-    color: $brightpurple;
-    font-style: normal;
-    border-bottom: 2px solid $brightpurple;
-    &:first-child {
-      margin-top: 5px;
+  .hero-image {
+    img {
+      @include respond-to(small) {
+        max-width: 100%;
+      }
     }
   }
-  @include respond-to(small) {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  @include respond-to(medium) {
-    border-left: 1px dotted $darkgray;
-    border-top: 0;
-    margin: 0;
-    padding: 0 15px;
-  }
-  @include respond-to(large) {
-    max-width: 30em;
-  }
-  .btn-morelink {
-    margin-bottom: 10px;
+  .hero-image::after {
+    display: block;
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(0,0,0, 0) 0, #000 100%);
+    margin-top: -175px;
+    height: 175px;
+    width: 100%;
+    content: '';
   }
 }
 
-.call-out {
-  color: #fff;
-  padding: 15px!important;
-  margin-bottom: 15px;
-  background-color: $maroon;
-  & h2, & h3 {
-    color: #fff;
-    border: none;
+.carousel-caption {
+  padding-top: 0;
+  text-shadow: 1px 1px 30px rgba(0, 0, 0, 1.0);
+  z-index: 5;
+  padding-bottom: 25px;
+  .image-title {
+    font-size: 1.5em;
+    display: block;
+    @include respond-to(small) {
+      font-size: 2em;
+    }
+  }
+  .image-subtitle {
+    font-size: 1.2em; 
+    @include respond-to(small) {
+      font-size: 1.5em;
+    }
   }
   & a {
     color: #fff;
+    line-height: 2.3em;
+    &:hover {
+      color: $darkgray;
+      text-decoration: none;
+    }
   }
 }
 
@@ -445,88 +482,6 @@ figure.coll-thumb {
  * --------------------------------------------------
  */
 
-.home-modwrapper {
-  padding-top: 20px;
-  margin: 10px 0;
-  & h2 {
-    display: inline;
-    font-size: 1.2em;
-    color: $maroon;
-  }
-  & h3 {
-    font-size: 1em;
-    font-weight: 600;
-    color: $darkgray;
-    margin: 0 0 5px 0;
-  }
-  @include respond-to(small) {
-    padding-top: 0;
-  }
-  & ul:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.home-module {
-  border-bottom: 1px solid $darkgray;
-  padding: 0px 0px 10px 15px;
-  margin-bottom: 15px;
-  a {
-    color: $darkgray;
-    display: inline;
-    &.viewall:before {
-      content: "\0020|\0020";
-      margin: 0 0.5em;
-    }
-    &:hover {
-      text-decoration: none;
-    }
-  }
-}
-
-.rightside ul, .home-modwrapper ul {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.rightside-mod { //Wrapper for individual modules
-  padding: 0 0 2em 0;
-  .collectionpage & {
-    padding-bottom: 1em;
-  }
-  @include respond-to(small) {
-    padding: 0 1em 2em 1em;
-  }
-  @include respond-to(medium) {
-    padding: 0 0 2em 0;
-  }
-}
-
-a.viewall {
-  &:after {
-    content: "\0020\f101";
-    font-family: FontAwesome;
-  }
-}
-
-.btn-morelink {  // "View more ..." link for sidebar
-  font-size: 0.9em;
-  color: $crerarblue;
-  background: $lightneutral;
-  border: 1px solid $lightgray;
-  border-radius: 0;
-  padding: 6px 12px;
-  margin-bottom: 10px;
-  &:after {
-    content: "\0020\f101";
-    font-family: FontAwesome;
-  }
-  &:hover {
-    background: #d8b9b7;
-    color: $maroon; 
-  }
-}
 
 .studymod { //Study Spaces
   p {
@@ -542,19 +497,12 @@ a.viewall {
     color: $eckhartpurple;
     vertical-align: middle;
     font-size: 2em;
-    .centermain & {
-      font-size: 4em;
-    }
   }
   .fa, a.fa {  // to make-up for the size difference between the two icon families
     color: $eckhartpurple;
     font-size:1.5em;
     padding-top: 10px;
     padding-bottom:7px;
-    .centermain & {
-      font-size: 3em;
-      padding-bottom: 0.35em;
-    }
   }
 }
 
@@ -566,53 +514,6 @@ a.viewall {
 #widget-explore-research-guides {
   padding-left: 0;
 }
-
-
-// Reg Kiosk
-.techbar-mod {
-  display: flex;
-  justify-content: center;
-  &>div {
-    flex-grow: 1;
-    text-align: center;
-    a {
-      color: $eckhartpurple;
-    }
-  }
-}
-
-// .techbar-count {
-//   display: block;
-//   font-size: 3em;
-//   color: $darkgray;
-// }
-
-.fa-stack {
-  fa-circle {
-    font-size: 2.5em!important;
-  }
-  &[data-count]:after{
-    position:absolute;
-    left: -20%;
-    bottom: -20%;
-    content: attr(data-count);
-    font-size:55%;
-    padding:.6em;
-    border-radius:999px;
-    line-height:.75em;
-    color: white;
-    background:$ssaorange;
-    text-align:center;
-    min-width:2em;
-    font-weight:bold;
-  }
-}
-
-.techbar-desc {
-  display: block;
-  padding-top: 0.75em;
-}
-
 
 
 /*
@@ -662,37 +563,7 @@ a#event-header {
   }
 }
 
-/*
- * Carousel
- * --------------------------------------------------
- */
 
-.carousel {
-  margin-bottom: 20px;
-}
-
-.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
-  width: 100%
-}
-
-.carousel-caption {
-  //font-family: Garamond, serif;
-  padding-top: 0;
-  text-shadow: 1px 1px 30px rgba(0, 0, 0, 1.0);
-  font-size: 0.7em;
-  z-index: 5;
-  @include respond-to(small) {
-    font-size: 1em;
-  }
-  & a {
-    color: #fff;
-    line-height: 2.3em;
-    &:hover {
-      color: $darkgray;
-      text-decoration: none;
-    }
-  }
-}
 
 /*
  * News Homepage Module
@@ -708,10 +579,10 @@ a#event-header {
 
 .newsblock {
   padding: 0 5px;
+  white-space: normal;
   h3 {
-    color: $darkneutral;
     font-style: normal;
-    margin-top: 0.5em;
+    padding: 0.75em 0 0.25em;
   }
   p {
     clear:both;
@@ -742,9 +613,6 @@ figure.embed {
     display: block; // corrects inline gap in enclosing div
     width: auto\9; // ie8+9
     -ms-interpolation-mode: bicubic; // lt ie8
-    &:hover {
-      opacity: .5;
-    }
   }
   figcaption {  //category tags on news images
     width: 100%;
@@ -800,98 +668,6 @@ figure.embed {
   overflow: hidden;
 }
 
-/*
- * Forms
- * --------------------------------------------------
- */
-
-form ol, form ul {
-  list-style: none;
-  margin-left: 0; }
-
-fieldset {
-  border: 0;
-  padding: 0;
-  margin: 0; }
-
-label {
-  display: block;
-  padding-bottom: 0.5em; }
-
-button, input, select, textarea {
-  font-family: inherit;
-  font-size: 100%;
-  margin: 0 1px 0; }
-
-input, textarea {
-  border: 1px solid gray; }
-
-input[type=text], input[type=search], input[type=url], input[type=number], textarea {
-  -webkit-appearance: none; }
-
-button, input[type="submit"] {
-  padding: 0.5em;
-  color: #fff;
-  background: #800000;
-  border: none;
-  cursor: pointer; }
-
-input[type="checkbox"],
-input[type="radio"] {
-  width: auto;
-  margin-right: 0.3em; }
-
-input[type="search"] {
-  -webkit-appearance: none;
-  border-radius: 0; }
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
-
-.field-container {
-  margin-bottom: 1em; }
-
-.inline-form fieldset, .inline-form .inline-container {
-  position: relative; }
-.inline-form input[type=submit], .inline-form button, .inline-form .btn {
-  font-size: 0.875em;
-  padding: 0.65rem 1.3rem;
-  background: $darkgray;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: auto; }
-  .inline-form input[type=submit]:hover, .inline-form input[type=submit]:focus, .inline-form button:hover, .inline-form button:focus, .inline-form .btn:hover, .inline-form .btn:focus {
-    background: gray;
-    color: white; }
-
-/* Validation */
-.has-error {
-  border-color: red; }
-
-.is-valid {
-  border-color: #089e00; }
-
-form#knowledgetracker { // Desk Tracker
-  & input#submit {
-    padding: 0.5em 1.5em;
-  }
-  & input[type="reset"] { // Hide "clear form" button
-    display: none;
-  }
-}
-
-.extract { // copyright info box
-  background-color: $hovercalm;
-  margin: 20px 50px;
-  padding: 5px 30px;
-  border-left: 3px solid #ccc;
-  border-right: 3px solid #ccc;
-  box-shadow: 5px 5px 5px #888888;
-}
-
 
 /*
  * Buttons
@@ -930,6 +706,9 @@ form#knowledgetracker { // Desk Tracker
     color: $maroon;
     -webkit-box-shadow: none;
     box-shadow: none;   
+    &:after {
+      @extend .menu-marker;
+    }
   }
   &:hover {
     border-top: 2px solid #d8b9b7;
@@ -963,10 +742,6 @@ form#knowledgetracker { // Desk Tracker
   background-color: $hovercalm;
 }
 
-.open>.dropdown-toggle.btn-obvious:focus, .open>.dropdown-toggle.btn-obvious:hover {
-  background-color: $hovercalm;
-}
-
 .btn-alpha {  //Finding Aids Search Page
   padding: 20px 0 0 0;
   text-align: center;
@@ -994,44 +769,14 @@ form#knowledgetracker { // Desk Tracker
   }
 }
 
-
 /*
- * Tables 
+ * Tables
  * --------------------------------------------------
  */
 
-table {
-  @include respond-to(smallonly) {
-    margin-top: 15px;
-  }
-}
+ // Table base (mobile friendly magic) is in global.scss
 
-table.table-striped, .table-striped>tbody {
-  @include respond-to(smallonly) { //mobile friendly magic
-    display: block;
-    width: 100%;
-    & thead, & tr, & th, & td {
-      display: block;
-      padding: 0;
-      text-align: left;
-      white-space: normal;
-    }
-    & tr {
-      border-bottom: 1px solid #eee;
-    }
-    & td {
-      border: none;
-      margin-bottom: 6px;
-      color: #444;
-    }
-  }
-}
-
-thead th {
-  white-space: nowrap;
-}
-
-.distinct-list { //table base
+ .distinct-list { //table base
   a {
     color: #8a4a20;
   }
@@ -1044,7 +789,7 @@ thead th {
   }
   &>tbody>tr {
     &:last-child {
-      border-bottom: 2px solid #ADB17D;
+      border-bottom: 2px solid $table-main;
     }
   }
   @include respond-to(medium) {
@@ -1080,9 +825,14 @@ tbody a {
   }
 }
 
-tr.etable-header, th.etable-header, table.etable thead {
-  border-bottom: 2px solid #ADB17D;
-  background-color: #c5c8a4 !important;
+tr.etable-header>th, th.etable-header, table.etable thead {
+  border-top: none!important;
+  border-bottom: 2px solid $table-main;
+  font-family: $accent-font;
+  font-size: 1.1em;
+  color: darken($table-main, 27%);
+  font-weight: 600;
+  background: lighten($table-main, 35%)!important;
   @include respond-to(smallonly) {
     display: inline-block;
     width: inherit;
@@ -1093,9 +843,13 @@ table.etable>thead>tr>th {
   border-bottom: 0;
 }
 
+.coll-list.table>thead>tr>th {
+  border-bottom-color: $table-main;
+}
+
 table.etable>tbody>tr {
   &:last-child {
-    border-bottom: 2px solid #ADB17D;
+    border-bottom: 2px solid $table-main;
   }
   &>td:last-child {
     vertical-align:middle;
@@ -1168,6 +922,7 @@ table.etable>tbody>tr {
     text-align: right;
   }
 }
+
 
 /*
  * Mini Search (For Browse / Lists / Tables)
@@ -1250,70 +1005,12 @@ table.etable>tbody>tr {
 }
 
 
-/*
- * Lightbox Styling
- * --------------------------------------------------
- */
-
-.modal-content {
-  -webkit-box-shadow: 0 5px 35px rgba(0,0,0,.8);
-  box-shadow: 0 5px 35px rgba(0,0,0,.8);
-}
-
-.modal-header {
-    padding: 15px 20px 0px 15px;
-    border-bottom: none;
-    &> .close {
-      font-size: 2em;
-      opacity: .6;
-      &:hover {
-        opacity: .5;
-      }
-    }
-}
-
-/*
- *  Index List Page
- * --------------------------------------------------
- */
-
-ul.index-list {
-  list-style: none;
-  &>li {
-    margin: 1em 0;
-    padding-left: 0;
-    a {
-      font-weight: 600;
-      color: $ssaorange;
-    }
-    &>ul.index-list>li { // 2nd Level
-      margin: 5px 0;
-      padding-left: 0;
-      a {
-        font-weight: 400;
-        color:$darkgray;
-      }
-      &>ul.index-list>li { // 3rd Level
-        a {
-          font-weight: 300;
-          color: $reggreen;
-        }
-        &>ul.index-list>li { // 4th Level
-          a {
-            font-weight: 300;
-            color:$darkgray;
-            font-style: italic;
-          }
-        }
-      }
-    }
-  }
-}
 
 /*
  * Ask A Librarian Pages
  * --------------------------------------------------
  */
+
  //Ask a Librarian menu item from global nave is in "navigation.scss"
 
 .libraryh3lp {
@@ -1332,7 +1029,7 @@ ul.index-list {
   background-color: #fff;
   @include respond-to(medium) {
     background-color: $hovercalmlight;
-    border: none;
+    border-left: none!important;
     margin-top: 10px;
   }
   ul {
@@ -1395,13 +1092,20 @@ a.btn-ask {
   }
 }
 
+
 /*
  * Hours (Mods to LibCal Feed)
  * --------------------------------------------------
  */
 
+// ** Springshare requires us to have two different widgets for mobile and desktop.  ** //
+
+
+// >> Desktop Widget << //
+
 .s-lc-whw {
   width: 100%;
+  margin-top: 0;
   margin-bottom: 20px;
   max-width: 100%;
   background-color: transparent;
@@ -1410,11 +1114,12 @@ a.btn-ask {
   border-collapse: collapse;
   border-spacing: 0;
   & thead {
-    background-color: #c5c8a4;
-    color: #000;
+    background-color: lighten($table-main, 15%);;
+    color: #323232;
+    font-style: italic;
     &>tr>th {
       vertical-align: bottom;
-      border-bottom: 2px solid #ADB17D;
+      border-bottom: 2px solid $table-main;
       padding: 5px;
     }
   }
@@ -1423,47 +1128,155 @@ a.btn-ask {
     border-bottom: none;
     border-right: none;
   }
-  & td {
-    @include respond-to(smllonly) {
-      white-space: nowrap;
-    }
-  }
   &>tbody>tr {
+    &:hover {
+      background-color: unset; // Removes hover color on table row that is not clickable
+    }
     &>td {
       padding: 5px;
       &:first-child {
-        @include respond-to(small) {
-          border-right: 1px solid #c5c8a4;
-        }
+        border-right: 1px solid #c5c8a4;
         @include respond-to(medium) {
           min-width: 150px;
         }
+      }
+      &.s-lc-whw-locname {
+        font-weight: bold;
       }
     }
     &:nth-of-type(even) {
       background-color: #f9f9f9;
     }
     &:last-child {
-      border-bottom:2px solid #ADB17D;
+      border-bottom:2px solid $table-main;
     }
   }
 }
 
+// Highlights "Today" column
 .s-lc-whw-head-date {
-  color: $darkgray;
-  font-style: italic;
+  color: #4c4c4c;
+  font-size: 0.9em;
 }
 
-.s-lc-whw-today-h {
-  background-color: #ADB17D;
+.s-lc-whw-today-h, .s-lc-whw-today-h>.s-lc-whw-head-date {
+  color: #000;
+  background-color: $table-main;
+  font-style: normal;
 }
 
 .s-lc-whw-today {
-  background-color: #edeee3;
+  background-color: lighten($table-main, 32%);
+  font-weight: 600;
 }
 
-.s-lc-whw-locname {
-  font-weight: bold;
+.hours-today tr {
+  border-bottom: 1px solid #b8aab1;
+  & td {
+    width: 100%;
+    display: list-item;
+    list-style: none;
+    &:first-child {
+      color: $active-hover;
+      padding: 5px 0 3px 0;
+    }
+    &:last-child {
+      padding: 0 0 5px 0;
+    }
+  }
+}
+
+
+// >> Mobile "Today" Widget  << //
+// A little wonky to work with Springshare's code
+
+.s-lc-w-today {
+  width: 100%;
+  margin-bottom: 20px;
+    & thead {
+    background-color: lighten($table-main, 15%);
+    color: #323232;
+    font-style: italic;
+    &>tr>th {
+      vertical-align: middle;
+      border-bottom: 2px solid $table-main;
+      padding: 5px;
+      text-align: center!important;
+      font-size: 0.9em;
+      line-height: 2em;
+    }
+    .s-lc-w-head-pre {
+      display: none;
+    }
+  }
+  .s-lc-w-location {
+    font-weight: 600;
+  }
+  .s-lc-w-previous, .s-lc-w-next {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    text-indent: -9999px;  // Swapping out button text, part 1
+    line-height: 0;   // Swapping out button text, part 2
+    &:disabled {
+      background-color: #efefef;
+    }
+  }
+  .s-lc-w-previous {
+    margin-left: 1em;
+    float: left;
+    &:after {   // Swapping out button text, part 3a
+      content: "\00ab";
+      text-indent: 0;
+      display: block;
+      line-height: initial;
+    }
+  }
+  .s-lc-w-next {   // Swapping out button text, part 3b
+    margin-right:1em;
+    float: right;
+    &:after {
+      content: "\00bb";
+      text-indent: 0;
+      display: block;
+      line-height: initial;
+    }
+  }
+  td {
+    padding: 5px;
+    &:first-child {
+      border-right: 1px solid #c5c8a4;
+    }
+    &.s-lc-w-time {
+      padding-left: 15px;
+    }
+  }
+  tr {
+    border: 1px solid #ddd;
+    &:nth-of-type(even) {
+      background-color: #f9f9f9;
+    }
+    &:last-child {
+      border-bottom:2px solid $table-main;
+    }
+  }
+}
+
+.s-lc-w-today-view-all {
+    display: none;
 }
 
 .s-lc-whw-sublocname {
@@ -1478,7 +1291,7 @@ a.btn-ask {
   }
 }
 
-.s-lc-whw-pr, .s-lc-whw-ne{
+.s-lc-whw-pr, .s-lc-whw-ne {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
@@ -1502,7 +1315,7 @@ a.btn-ask {
 }
 
 
-.sr-only {
+.sr-only, .s-lc-w-sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1513,66 +1326,6 @@ a.btn-ask {
   border: 0;
 }
 
-.hours-today tr {
-  border-bottom: 1px solid #b8aab1;
-  & td {
-    width: 100%;
-    display: list-item;
-    list-style: none;
-    &:first-child {
-      color: $active-hover;
-      padding: 5px 0 3px 0;
-    }
-    &:last-child {
-      padding: 0 0 5px 0;
-    }
-  }
-}
-
-.s-lc-whw-cont>.table-responsive {
-  &>table>tbody>tr>td {
-    white-space: normal;
-    @include respond-to(smallonly) {
-      white-space: normal;
-      width: 10%;
-      max-width: 100px;
-      margin-bottom: 15px;
-      overflow-y: hidden;
-      overflow-x: scroll;
-      -ms-overflow-style:
-      -ms-autohiding-scrollbar;
-      border: 1px solid #ddd;
-      -webkit-overflow-scrolling: touch;
-    }
-  }
-  @include respond-to(medium) {
-    border: 0;
-  }
- }
-
-//Quick Fix for showing all days
-//  .s-lc-whw>thead>tr>th:not(.s-lc-whw-today-h):not(.s-lc-whw-bh), .s-lc-whw>tbody>tr>td:not(.s-lc-whw-today):not(.s-lc-whw-locname):not(.s-lc-whw-sublocname) {
-//   @include respond-to(smallonly) {
-//     display: none;
-//   }
-// }
-
-.s-lc-whw>thead>tr>th, .s-lc-whw>tbody>tr>th {
-    display: table-cell;
-}
-
-th.s-lc-whw-bh {
-  text-align: left;
-  white-space: nowrap;
-  @include respond-to(smallonly) {
-    background-color: #ADB17D;
-  }
-  // & button {  ////// Quick Fix to show all days
-  //   @include respond-to(smallonly) {
-  //     display: none;
-  //   }
-  // }
-}
 
 /*
  * Agenda (Conferences)
@@ -1770,34 +1523,9 @@ td.time, td.event-nav {
 }
 
 /*
- * Collections & Exhibits
+ * Collections & Exhibits Listing
  * --------------------------------------------------
  */
-
-.rightside.coll-rightside {
-  @extend .distinct-rightside;
-  border: none;
-  h2 {
-    color: $reggreen;
-    font-weight: 600;
-  }
-  h3 {
-    color: $mid-dark;
-    border-bottom: none;
-    margin: 1.5em 0 0;
-    //font-style: italic;
-    font-weight: 600;
-    font-size: 1em;
-  }
-  ul:not(.no-indent) {
-    padding-left: 2em;
-    text-indent: -2em;
-    margin-bottom: 10px;
-  }
-  ul.no-indent li {
-    margin-top: 0.75em;
-  }
-}
 
 .listings-dropdown {
   margin-top: 0;
@@ -1887,93 +1615,73 @@ a.coll-access {
   }
 }
 
-.row.collections {
-  padding-bottom: 1em;
-  .searchbox {
-    float: none;
-    width: 20em;
-    margin-top: 0;
-    @include respond-to(small) {
-      width: 40em;
-    }
-  }
-  .home-modwrapper {
-    border-bottom: 2px solid #ADB17D;
-    h3 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.25em;
-      color: $mid-dark;
-      font-weight: 600;
-      line-height: 1.4em;
-    }
-    .newsblock {
-      padding: 0.5em;
-    }
-  }
-}
-
 /*
- * Directory
+ * Directory Listing
  * --------------------------------------------------
  */
 
- .side-test {
-  h2 a {
-    margin-bottom: 3px;
+ .directory-list {
+  @extend .distinct-list;
+  & img {
+    max-width: 7em;
+  }
+  &>tbody>tr>td {
+    &:nth-child(2) {
+      padding-left: 15px;
+    }
+    @include respond-to(small) {
+      &:nth-child(3), &:nth-child(4) {
+        width: 25%;
+      }
+    }
+    @include respond-to(smallonly) {
+      padding-left: 15px;
+    }
+  }
+ }
+
+.guide-link {
+  line-height:2.2em;
+  &:before {
+    content: "\f0f6";
+    font-family: FontAwesome;
     font-size: 1em;
-    font-weight: 600;
-    color: #642822;
-    font-style: italic;
+    margin-right: 0.5em;
   }
-  h3 a {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 1.25em;
-    color: $eckhartpurple;
-    font-weight: 600;
-    //line-height: 1.4em;
-    margin-top: 0!important;
-    margin-bottom: 0!important;
-  }
- }
+}
 
- .label {
-  font-size: 100%!important;
-  font-weight: 400;
-  &.label-library {
-    background: $crerarblue;
+.list-view, .coll-limit { // "Switch to [...] view"
+  padding: 5px 15px;
+  @include respond-to(small) {
+    text-align: right;
+    padding: 5px 15px 10px 0;
   }
-  &.label-subject {
-    background: $reggreen;
+  a {
+    color: $darkgray;
   }
- }
+}
 
- tr.dir-header {
-  background: $neutral;
-  border-bottom: 2px solid #ADB17D;
+.sdir-wrap {
+  @extend .news-wrap;
+  padding: 0;
   h3 {
-    color: $reggreen;
+    font-size: 1.1em;
+    margin-bottom: 0;
   }
- }
-
- tr td.div-head {
-  background-color: $lightneutral;
- }
-
-.card {
-  margin: 1em;
-  position: relative;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    background-color: #fff;
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: .25rem;
+  a, a:active, a:focus, a:hover {
+    color: $crerarblue;
+    text-decoration: underline;
+  }
+  .col-xs-12 {
+    padding-bottom: 1em;
+    margin-top: 1em;
+    @include respond-to(medium) {
+      &:nth-child(3n+2) {
+        border-right: 1px solid #eee;
+        border-left: 1px solid #eee;
+      }
+    }
+  }
 }
 
 .sdir {
@@ -2020,126 +1728,10 @@ a.coll-access {
   }
 }
 
-a.toggle-link {
-    color: #337ab7;
-    text-decoration: none;
-    font-size: 0.9em;
-    &:active, &:focus, &:hover {
-      color: #337ab7;
-      text-decoration: none;
-    }
-    &:before {
-    font-family: 'Material Icons';
-    font-size: 1.2em;
-    margin-right: 0.25em;
-    content: "indeterminate_check_box";
-  }
-}
-
-.card.card-two {
-  background-color: #eee;
-  border: none;
-  padding: 1em 2em;
-  font-size: 0.9em;
-  h3 {
-    font-size: 1em;
-    margin-bottom: 0;
-  }
-  a, a:active, a:focus, a:hover {
-    color: $crerarblue;
-    text-decoration: underline;
-  }
-}
-
-.card-header {
-  border-bottom: 2px solid #ADB17D;
-    background-color: #c5c8a4;
-  padding: .75rem 1.25rem;
-    margin-bottom: 0;
-  h2 {
-    font-family: "Cormorant Garamond", serif;
-    display: inline;
-    font-style: normal;
-    margin-top: 0;
-    margin-right: 1em;
-  }
-  a, a:active, a:focus, a:hover {
-    color: $mid-dark;
-  }
-}
-
-.card-block {
-  -webkit-box-flex: 1;
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    //padding: 1.25rem;
-    h3 {
-      margin-top: 0;
-      margin-right: 1em;
-      display: inline;
-    }
-}
-
- ////
-
- .directory-list {
-  @extend .distinct-list;
-  & img {
-    @include desaturate;
-    max-width: 7em;
-  }
-  &>tbody>tr>td {
-    &:nth-child(2) {
-      padding-left: 15px;
-    }
-    @include respond-to(small) {
-      &:nth-child(3), &:nth-child(4) {
-        width: 25%;
-      }
-    }
-    @include respond-to(smallonly) {
-      padding-left: 15px;
-    }
-  }
- }
-
-.guide-link {
-  line-height:2.2em;
-  &:before {
-    content: "\f0f6";
-    font-family: FontAwesome;
-    font-size: 1em;
-    margin-right: 0.5em;
-  }
-}
-
-.list-view, .coll-limit { // "Switch to [...] view"
-  padding: 5px 15px;
-  @include respond-to(small) {
-    text-align: right;
-    padding: 5px 15px 10px 0;
-  }
-  a {
-    color: $darkgray;
-  }
-}
-
 /*
  * Staff Profile Page
  * --------------------------------------------------
  */
-
-.flex-sidebar {  // right sidebar that has push/pull div properties
-  @extend .rightside;
-  border-top: none;
-  margin-top: 0;
-  padding-top: 0;
-  @include respond-to(small) {
-    display: block;
-    flex-wrap: nowrap;
-  }
-}
 
 .staff-profile { //Staff Page, Photo
   @include respond-to(smallonly) {
@@ -2147,31 +1739,16 @@ a.toggle-link {
   }
 }
 
-
-/*
- * Page Specific Alterations
- * --------------------------------------------------
- */
-
-.block-paragraph > .rich-text { // Giving Pages
-  #p-3413 &, #p-3415 &, #p-3417 &, #p-3418 &, #p-3419 & {
-    @include respond-to(small) {
-      overflow: hidden;
+body.staffpublicpage {
+  h1 {
+    border-bottom: none;
+    &~h2 {
+      border-bottom: 1px solid #D6D6CE;
+      margin-top: 0px;
+      padding-bottom: 5px;
+      font-weight: 400;
     }
   }
-}
-
-
-/*
- * Temporary until all web exhibits are migrated over
- * --------------------------------------------------
- */
-
-.collex-loc {
-  background-color: #eee;
-  padding: 1.5em;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 
