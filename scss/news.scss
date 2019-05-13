@@ -421,12 +421,14 @@
 			font-family: $base-font;
 		    font-size: 2em;
 		    font-weight: 600;
+		    margin-bottom: 0;
 		}
 		p {
 			color: $darkgray;
 			font-size: 1.25em;
 			line-height: 2em;
 		    font-weight: 200;
+		    margin-top: 1em; // cowboy coding
 		    .read-more {
 		    	font-style: italic;
 		    	padding-left: 0.75em;
@@ -615,6 +617,28 @@
 	    &.from-the-director {
 	      background: rgb(143,57,49);
 	    }
+	}
+
+	.newsbyline {
+		color: $darkgray;
+		font-style: italic;
+		padding-left: 15px;
+		font-size: 0.9em;
+		padding-top: 0.5em;
+		a {
+			color: $darkgray;
+			text-decoration: underline;
+		}
+	}
+
+	.newsbylinefeature {  // cowboy coding
+		color: $darkgray;
+		font-style: italic;
+		font-size: 0.9em;
+		a {
+			color: $darkgray;
+			text-decoration: underline;
+		}
 	}
 
 	section.news-footer {
