@@ -1,0 +1,291 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+Search Type Tabs
+Search Field Row
+Other Search Row
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Table of contents]
+
+Accessibility {Global Classes}
+Fonts
+Colors
+Elements
+Mixins
+
+-------------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond");
+/*
+ * Media Queries
+ * --------------------------------------------------
+ *
+ * Use as: @include respond-to(small) { ... }
+ *		@include respond-to(medium) { ... }
+ *		@include respond-to(large) { ... }
+ */
+/*
+ * Accessibility {Global Classes}
+ * --------------------------------------------------
+ */
+.is-vishidden, .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); }
+
+/*
+ * Fonts
+ * --------------------------------------------------
+ */
+/*
+ * Colors
+ * --------------------------------------------------
+ */
+/*
+ * Elements
+ * --------------------------------------------------
+ */
+.nopadding {
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 0;
+  margin-left: 0; }
+
+.btn-morelink {
+  font-size: 0.9em;
+  color: #0F425C;
+  background: #f0eeef;
+  border: 1px solid #D6D6CE;
+  border-radius: 0;
+  padding: 6px 12px;
+  margin-bottom: 10px; }
+  .btn-morelink:after {
+    content: "\0020\f101";
+    font-family: FontAwesome; }
+  .btn-morelink:hover {
+    background: #d8b9b7;
+    color: #800000; }
+
+.distinct-rightside {
+  background-color: #f6f7f2;
+  margin: 10px 0;
+  padding: 15px 20px; }
+  .distinct-rightside ul {
+    list-style-type: none;
+    margin-bottom: 10px; }
+  .distinct-rightside li {
+    color: #6d2f6a; }
+  .distinct-rightside a {
+    color: #6d2f6a; }
+  .distinct-rightside h2 {
+    color: #616530;
+    margin: 5px 0 10px 0;
+    font-size: 1.05em;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #a0a282; }
+  @media (min-width: 62em) {
+    .distinct-rightside {
+      border-top: 0;
+      margin: 0;
+      max-width: 350px; } }
+  @media (min-width: 75em) {
+    .distinct-rightside {
+      max-width: 30em; } }
+
+.menu-marker, .transformer-tabs li a.active:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: #642822 transparent transparent;
+  border-style: solid;
+  border-width: 11px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%; }
+
+/*
+ * Mixins
+ * --------------------------------------------------
+ */
+/*
+ * Media Queries
+ * --------------------------------------------------
+ *
+ * Use as: @include respond-to(small) { ... }
+ *		@include respond-to(medium) { ... }
+ *		@include respond-to(large) { ... }
+ */
+/*
+ * Search Type Tabs
+ * --------------------------------------------------
+ */
+h1.searchbox-header {
+  font-size: 1.1em;
+  color: #642822;
+  margin: 10px 0 10px 5px;
+  font-weight: 600;
+  border: none; }
+
+.main-search .transformer-tabs {
+  background-color: #fff; }
+
+.transformer-tabs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 3px solid #D6D6CE; }
+  @media (max-width: 34em) {
+    .transformer-tabs ul {
+      color: #fff;
+      display: flex; } }
+
+.transformer-tabs li {
+  display: inline-block;
+  padding: 0;
+  vertical-align: bottom; }
+  .transformer-tabs li a {
+    display: inline-block;
+    color: #525252;
+    text-decoration: none;
+    padding: 0.3em 1.5em;
+    font-weight: 600; }
+    .transformer-tabs li a.active {
+      color: #b0463c;
+      border-bottom: 3px solid transparent;
+      border-bottom-color: #642822;
+      position: relative;
+      bottom: -3px; }
+      @media (max-width: 34em) {
+        .transformer-tabs li a.active {
+          color: #642822;
+          display: flex;
+          padding-top: 0; } }
+    .transformer-tabs li a:hover {
+      color: #C16622;
+      border-bottom: 3px solid #C16622;
+      position: relative;
+      bottom: -3px; }
+
+.tabs > div {
+  display: none;
+  padding: 1em; }
+
+.tabs.main-search {
+  background: rgba(210, 205, 204, 0.5);
+  background: -moz-linear-gradient(top, rgba(214, 214, 206, 0.7) 20%, rgba(226, 221, 215, 0.6) 99%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(214, 214, 206, 0.7) 20%, rgba(226, 221, 215, 0.6) 99%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(214, 214, 206, 0.7) 20%, rgba(226, 221, 215, 0.6) 99%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(214,214,206, 0.5)', endColorstr='rgba(226,221,215, 0.5)',GradientType=0 );
+  /* IE6-9 */
+  margin-bottom: 10px; }
+
+.tabs > .active {
+  display: block; }
+
+.searchbody {
+  background-color: transparent;
+  padding: 15px 40px 20px 30px;
+  border-top: 4px solid #642822; }
+  @media (min-width: 48em) {
+    .searchbody {
+      border-top: none; } }
+
+/*
+ * Search Field Row
+ * --------------------------------------------------
+ */
+@media (min-width: 62em) {
+  .search-btn-wrapper {
+    padding-right: 0; } }
+
+.btn-searchtype {
+  border: none; }
+  @media (min-width: 48em) {
+    .btn-searchtype {
+      min-width: 100px; } }
+  .btn-searchtype > button {
+    color: #fff;
+    line-height: 1.2em;
+    padding: 8px 25px 8px 10px; }
+  .btn-searchtype > .btn-default {
+    margin-bottom: 0; }
+
+.btn-searchtype > .dropdown-menu {
+  background-color: #5e5e5e;
+  color: #fff;
+  margin-top: -1px;
+  border: none;
+  border-top-left-radius: 0; }
+  .btn-searchtype > .dropdown-menu > ul {
+    background-color: transparent; }
+    .btn-searchtype > .dropdown-menu > ul > li > a {
+      color: #fff; }
+      .btn-searchtype > .dropdown-menu > ul > li > a:hover, .btn-searchtype > .dropdown-menu > ul > li > a:focus {
+        color: #800000;
+        background-color: rgba(210, 205, 204, 0.95);
+        text-decoration: none; }
+
+.btn-search {
+  background-color: #642822;
+  color: #fff;
+  width: 100%;
+  font-size: 1.1em;
+  padding: 0.6em;
+  line-height: 0.45em;
+  margin-top: 0;
+  border: none; }
+  @media (min-width: 62em) {
+    .btn-search {
+      padding: 0.8em; } }
+
+.btn-search:hover, .btn-search:focus, .btn-search:active, .btn-searchtype > button:hover, .btn-searchtype > button:focus, .btn-searchtype > button:active, .btn-searchtype > button.btn.dropdown-toggle.btn-default {
+  color: #fff;
+  background-color: #5e5e5e; }
+
+.dropdown-menu-right {
+  margin: 0px;
+  border: 0px;
+  background-color: #F2F2F2; }
+
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+  overflow: initial; }
+
+/*
+ * Other Search Row
+ * --------------------------------------------------
+ */
+.eoptions, .advanced {
+  padding: 0 0 0 5px;
+  font-size: 0.9em;
+  margin-bottom: 0; }
+  .eoptions p, .advanced p {
+    margin-bottom: 0; }
+  @media (max-width: 34em) {
+    .eoptions, .advanced {
+      padding: 5px 0 0 5px; } }
+
+.advanced {
+  text-decoration: underline; }
+  @media (min-width: 48em) {
+    .advanced {
+      text-align: right; } }
+
+.searchoptions {
+  color: #525252;
+  padding: 10px 0 0 5px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 0.9em;
+  font-style: italic; }
+  .searchoptions p {
+    margin-bottom: 0; }
+
+/*# sourceMappingURL=uclib-search.css.map */

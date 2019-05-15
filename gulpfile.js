@@ -32,7 +32,7 @@ gulp.task("minifyScripts", ["concatScripts"], function() {
 
 //Compile Sass to css
 gulp.task('compileSass', function() {
-	return gulp.src(['scss/lib-main.scss', 'scss/collex.scss', 'scss/conf.scss', 'scss/a-search.scss'])
+	return gulp.src(['scss/**/*.scss'])
 		.pipe(maps.init()) // Sass source map 1/2
 		.pipe(sass())
 		.pipe(maps.write('./')) // Sass source map 2/2

@@ -1,0 +1,375 @@
+/*------------------------------------------------------------------
+
+> Styles that are only valid on public site <
+> Do not use for third party platforms <
+
+[Table of contents]
+
+Global Elements {Public Site}
+Fonts and Headers
+Forms
+Tables: Base
+Index List Page
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Table of contents]
+
+Accessibility {Global Classes}
+Fonts
+Colors
+Elements
+Mixins
+
+-------------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond");
+/*
+ * Media Queries
+ * --------------------------------------------------
+ *
+ * Use as: @include respond-to(small) { ... }
+ *		@include respond-to(medium) { ... }
+ *		@include respond-to(large) { ... }
+ */
+/*
+ * Accessibility {Global Classes}
+ * --------------------------------------------------
+ */
+.is-vishidden, .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); }
+
+/*
+ * Fonts
+ * --------------------------------------------------
+ */
+/*
+ * Colors
+ * --------------------------------------------------
+ */
+/*
+ * Elements
+ * --------------------------------------------------
+ */
+.nopadding {
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 0;
+  margin-left: 0; }
+
+.btn-morelink {
+  font-size: 0.9em;
+  color: #0F425C;
+  background: #f0eeef;
+  border: 1px solid #D6D6CE;
+  border-radius: 0;
+  padding: 6px 12px;
+  margin-bottom: 10px; }
+  .btn-morelink:after {
+    content: "\0020\f101";
+    font-family: FontAwesome; }
+  .btn-morelink:hover {
+    background: #d8b9b7;
+    color: #800000; }
+
+.distinct-rightside {
+  background-color: #f6f7f2;
+  margin: 10px 0;
+  padding: 15px 20px; }
+  .distinct-rightside ul {
+    list-style-type: none;
+    margin-bottom: 10px; }
+  .distinct-rightside li {
+    color: #6d2f6a; }
+  .distinct-rightside a {
+    color: #6d2f6a; }
+  .distinct-rightside h2 {
+    color: #616530;
+    margin: 5px 0 10px 0;
+    font-size: 1.05em;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #a0a282; }
+  @media (min-width: 62em) {
+    .distinct-rightside {
+      border-top: 0;
+      margin: 0;
+      max-width: 350px; } }
+  @media (min-width: 75em) {
+    .distinct-rightside {
+      max-width: 30em; } }
+
+.menu-marker {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: #642822 transparent transparent;
+  border-style: solid;
+  border-width: 11px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%; }
+
+/*
+ * Mixins
+ * --------------------------------------------------
+ */
+/*
+ * Media Queries
+ * --------------------------------------------------
+ *
+ * Use as: @include respond-to(small) { ... }
+ *		@include respond-to(medium) { ... }
+ *		@include respond-to(large) { ... }
+ */
+/*
+ * Global Elements {Public Site}
+ * --------------------------------------------------
+ */
+html, body {
+  /* The html and body elements cannot have any padding or margin. */
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  overflow-x: hidden;
+  /* Off Canvas: Prevent scroll on narrow devices */ }
+
+body {
+  margin-bottom: 0;
+  font-family: 'ProximaNova-Regular', "Arial", sans-serif; }
+
+.valid {
+  color: #089e00; }
+
+.error {
+  color: red; }
+
+.warning {
+  color: #fff664; }
+
+.information {
+  color: #000db5; }
+
+/* Links */
+a {
+  text-decoration: none;
+  outline: 0; }
+  a:hover, a:focus {
+    color: #5B8FA8; }
+  a.social {
+    color: #767676; }
+
+/*
+ * Fonts and Headers
+ * --------------------------------------------------
+ */
+h1 {
+  font-size: 1.4em;
+  color: #800000;
+  font-weight: 300;
+  padding-left: 1em;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #D6D6CE;
+  margin: 0 0 0.2em 0; }
+  @media (min-width: 62em) {
+    h1 {
+      padding-left: 0; } }
+
+h2 {
+  font-size: 1.2em;
+  color: #800000;
+  font-weight: 600;
+  line-height: 1.4em; }
+  h2 .contentalert {
+    line-height: 1.3em;
+    color: #FF3399; }
+  h2 + h3 {
+    margin-top: 0; }
+
+h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.25em;
+  color: #525252;
+  font-weight: 600;
+  line-height: 1.4em; }
+  h3 + h4 {
+    margin-top: 0; }
+
+h4 {
+  font-weight: 600;
+  font-size: 1.1em;
+  color: #6d2f6a;
+  font-style: italic;
+  line-height: 1.4em; }
+  .newsblock h4 {
+    margin-bottom: 3px; }
+  h4 + h5 {
+    margin-top: 0; }
+
+h5 {
+  font-size: 1em;
+  font-weight: 600;
+  color: #800000;
+  font-style: italic;
+  line-height: 1.4em; }
+  h5 + h6 {
+    margin-top: 0; }
+
+h6 {
+  font-size: 1em;
+  font-weight: 600;
+  color: #525252;
+  margin: 15px 0 5px 0; }
+
+p {
+  margin-bottom: 1em;
+  line-height: 1.5em; }
+  p small {
+    color: #767676; }
+
+/*
+ * Forms
+ * --------------------------------------------------
+ */
+form ol, form ul {
+  list-style: none;
+  margin-left: 0; }
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0; }
+
+label {
+  display: block;
+  padding-bottom: 0.5em; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0 1px 0; }
+
+input, textarea {
+  border: 1px solid gray; }
+
+input[type=text], input[type=search], input[type=url], input[type=number], textarea {
+  -webkit-appearance: none; }
+
+button, input[type="submit"] {
+  padding: 0.5em;
+  color: #fff;
+  background: #800000;
+  border: none;
+  cursor: pointer; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: 0.3em; }
+
+input[type="search"] {
+  -webkit-appearance: none;
+  border-radius: 0; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+.field-container {
+  margin-bottom: 1em; }
+
+.inline-form fieldset, .inline-form .inline-container {
+  position: relative; }
+
+.inline-form input[type=submit], .inline-form button, .inline-form .btn {
+  font-size: 0.875em;
+  padding: 0.65rem 1.3rem;
+  background: #767676;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: auto; }
+
+.inline-form input[type=submit]:hover, .inline-form input[type=submit]:focus, .inline-form button:hover, .inline-form button:focus, .inline-form .btn:hover, .inline-form .btn:focus {
+  background: gray;
+  color: white; }
+
+/* Validation */
+.has-error {
+  border-color: red; }
+
+.is-valid {
+  border-color: #089e00; }
+
+form#knowledgetracker input#submit {
+  padding: 0.5em 1.5em; }
+
+form#knowledgetracker input[type="reset"] {
+  display: none; }
+
+.extract {
+  background-color: #eeefe5;
+  margin: 20px 50px;
+  padding: 5px 30px;
+  border-left: 3px solid #ccc;
+  border-right: 3px solid #ccc;
+  box-shadow: 5px 5px 5px #888888; }
+
+/*
+ * Tables: Base
+ * --------------------------------------------------
+ */
+@media (max-width: 34em) {
+  table {
+    margin-top: 15px; } }
+
+@media (max-width: 34em) {
+  table.table-striped, .table-striped > tbody {
+    display: block;
+    width: 100%; }
+    table.table-striped thead, table.table-striped tr, table.table-striped th, table.table-striped td, .table-striped > tbody thead, .table-striped > tbody tr, .table-striped > tbody th, .table-striped > tbody td {
+      display: block;
+      padding: 0;
+      text-align: left;
+      white-space: normal; }
+    table.table-striped tr, .table-striped > tbody tr {
+      border-bottom: 1px solid #eee; }
+    table.table-striped td, .table-striped > tbody td {
+      border: none;
+      margin-bottom: 6px;
+      color: #444; } }
+
+thead th {
+  white-space: nowrap; }
+
+/*
+ *  Index List Page
+ * --------------------------------------------------
+ */
+ul.index-list {
+  list-style: none; }
+  ul.index-list > li {
+    margin: 1em 0;
+    padding-left: 0; }
+    ul.index-list > li a {
+      font-weight: 600;
+      color: #9A5324; }
+    ul.index-list > li > ul.index-list > li {
+      margin: 5px 0;
+      padding-left: 0; }
+      ul.index-list > li > ul.index-list > li a {
+        font-weight: 400;
+        color: #767676; }
+      ul.index-list > li > ul.index-list > li > ul.index-list > li a {
+        font-weight: 300;
+        color: #616530; }
+      ul.index-list > li > ul.index-list > li > ul.index-list > li > ul.index-list > li a {
+        font-weight: 300;
+        color: #767676;
+        font-style: italic; }
+
+/*# sourceMappingURL=global.css.map */

@@ -1,0 +1,194 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+Sticky Footer Magic
+Pleeb Footer Code
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Table of contents]
+
+Accessibility {Global Classes}
+Fonts
+Colors
+Elements
+Mixins
+
+-------------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond");
+/*
+ * Media Queries
+ * --------------------------------------------------
+ *
+ * Use as: @include respond-to(small) { ... }
+ *		@include respond-to(medium) { ... }
+ *		@include respond-to(large) { ... }
+ */
+/*
+ * Accessibility {Global Classes}
+ * --------------------------------------------------
+ */
+.is-vishidden, .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); }
+
+/*
+ * Fonts
+ * --------------------------------------------------
+ */
+/*
+ * Colors
+ * --------------------------------------------------
+ */
+/*
+ * Elements
+ * --------------------------------------------------
+ */
+.nopadding {
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 0;
+  margin-left: 0; }
+
+.btn-morelink {
+  font-size: 0.9em;
+  color: #0F425C;
+  background: #f0eeef;
+  border: 1px solid #D6D6CE;
+  border-radius: 0;
+  padding: 6px 12px;
+  margin-bottom: 10px; }
+  .btn-morelink:after {
+    content: "\0020\f101";
+    font-family: FontAwesome; }
+  .btn-morelink:hover {
+    background: #d8b9b7;
+    color: #800000; }
+
+.distinct-rightside {
+  background-color: #f6f7f2;
+  margin: 10px 0;
+  padding: 15px 20px; }
+  .distinct-rightside ul {
+    list-style-type: none;
+    margin-bottom: 10px; }
+  .distinct-rightside li {
+    color: #6d2f6a; }
+  .distinct-rightside a {
+    color: #6d2f6a; }
+  .distinct-rightside h2 {
+    color: #616530;
+    margin: 5px 0 10px 0;
+    font-size: 1.05em;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #a0a282; }
+  @media (min-width: 62em) {
+    .distinct-rightside {
+      border-top: 0;
+      margin: 0;
+      max-width: 350px; } }
+  @media (min-width: 75em) {
+    .distinct-rightside {
+      max-width: 30em; } }
+
+.menu-marker {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: #642822 transparent transparent;
+  border-style: solid;
+  border-width: 11px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%; }
+
+/*
+ * Mixins
+ * --------------------------------------------------
+ */
+/*
+ * Media Queries
+ * --------------------------------------------------
+ *
+ * Use as: @include respond-to(small) { ... }
+ *		@include respond-to(medium) { ... }
+ *		@include respond-to(large) { ... }
+ */
+/*
+ * Sticky Footer Magic
+ * --------------------------------------------------
+ */
+#body-wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -10px; }
+  @media (min-width: 62em) {
+    #body-wrap {
+      margin: 0 auto -200px; } }
+
+@media (min-width: 48em) {
+  #push {
+    height: 250px; } }
+
+/*
+ * Pleeb Footer Code
+ * --------------------------------------------------
+ */
+.footer {
+  width: 100%;
+  background: #767676;
+  background-image: url("../images/warm_grey_reddish.jpg");
+  background-repeat: repeat;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  .footer > hr {
+    border-top: 1px solid #767676; }
+  .footer p, .footer small {
+    color: #e2ddd7; }
+  .footer a {
+    color: #eee;
+    line-height: 1.7em;
+    text-decoration: none; }
+    .footer a:hover {
+      color: #D49464; }
+  .footer h5 {
+    margin-bottom: 0px; }
+  .footer .col-footer {
+    border-top: 1px solid #5e5e5e;
+    padding-top: 15px; }
+    .footer .col-footer:first-child {
+      border-top: none; }
+    @media (min-width: 48em) {
+      .footer .col-footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: none;
+        padding-top: 0; } }
+  @media (min-width: 48em) {
+    .footer {
+      margin: 0;
+      display: table;
+      width: 100%; }
+      .footer .divider-vertical {
+        height: 100%;
+        border-right: 1px solid #5e5e5e;
+        border-left: 1px solid #5e5e5e; } }
+
+.centerdiv img {
+  padding-bottom: 20px;
+  width: 150px;
+  height: auto; }
+
+@media (min-width: 48em) {
+  .centerdiv {
+    display: block;
+    text-align: center; } }
+
+/*# sourceMappingURL=footer.css.map */
