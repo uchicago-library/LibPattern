@@ -300,6 +300,11 @@ body.lib-news {
       font-style: italic;
       margin-bottom: 2rem;
       display: block; }
+    body.lib-news section.story-page .news-highlight {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      display: block; }
     body.lib-news section.story-page h2 {
       font-size: 2.4rem;
       font-weight: 200; }
