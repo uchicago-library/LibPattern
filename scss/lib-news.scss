@@ -238,6 +238,14 @@ body.lib-news {
 			font-weight: 600;
 			margin-bottom: 2rem;
 			display: block;
+			& + .news-hours {
+				margin-top: -1em;
+			}
+		}
+		.news-hours {
+			font-size: 1.4rem;
+			margin-bottom: 2rem;
+			display: block;
 		}
 		h2 {
 		    font-size: 2.4rem;

@@ -305,6 +305,12 @@ body.lib-news {
       font-weight: 600;
       margin-bottom: 2rem;
       display: block; }
+      body.lib-news section.story-page .news-highlight + .news-hours {
+        margin-top: -1em; }
+    body.lib-news section.story-page .news-hours {
+      font-size: 1.4rem;
+      margin-bottom: 2rem;
+      display: block; }
     body.lib-news section.story-page h2 {
       font-size: 2.4rem;
       font-weight: 200; }
