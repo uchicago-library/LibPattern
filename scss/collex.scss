@@ -359,7 +359,7 @@ dl {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(238,239,229, 0.5)', endColorstr='rgba(246,247,242, 0.5)',GradientType=0 ); /* IE6-9 */
 	border-top: 2px solid $midneutral;
 	width: 95%;
-    padding: 1.5em 1em 1.5em 0.15em;
+    padding: 0 1em 1.5em 0.15em;
     .rightside-mod & {
     	background: transparent;
     	border-top: none;
@@ -442,6 +442,75 @@ section.thumbnails {
 	}
 }
 
+
+/*
+ * List Grid
+ * --------------------------------------------------
+ */
+section.listing {
+	figure {
+		@include respond-to(medium) {
+		  display: grid;
+		  grid-gap: 1.5em;
+		}
+		  &+figure {
+		  	margin-top: 1em;
+		  	border-top: 1px solid #D2CDCC;
+		  }
+		  h3 {
+		  	margin-top: 0.75em;
+		  }
+		  figcaption {
+		    margin-top: 0.5em;
+		    margin-bottom: 1em;
+		    text-align: left;
+		    line-height: 1.25em;
+	    	h3 a {
+				color: #525252;
+			}
+			a {
+				// display: block;
+				padding-bottom: 0.5em;
+			}
+		}
+	}
+}
+
+
+.filter ul {
+	padding-left: 0!important;
+    text-indent: 0!important;
+}
+
+li.list-group-item.header {
+	color: black;
+	font-weight: 600;
+	background-color: #eee;
+	padding: 0.5em;
+
+}
+
+.card button {
+	padding: 0 0.5em;
+}
+
+.badge-info {
+	font-family: Arial;
+    color: #fff;
+    background-color: #17a2b8;
+}
+
+.badge-warning {
+	font-family: Arial;
+    color: #212529;
+    background-color: #ffc107;
+}
+
+.badge-success {
+	font-family: Arial;
+    color: #fff;
+    background-color: #28a745;
+}
 
 
 

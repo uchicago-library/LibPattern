@@ -643,7 +643,7 @@ dl dd {
   /* IE6-9 */
   border-top: 2px solid #D2CDCC;
   width: 95%;
-  padding: 1.5em 1em 1.5em 0.15em; }
+  padding: 0 1em 1.5em 0.15em; }
   .rightside-mod .row.collections.search {
     background: transparent;
     border-top: none; }
@@ -706,5 +706,59 @@ section.thumbnails figure figcaption {
   section.thumbnails figure figcaption a {
     display: block;
     padding-bottom: 0.5em; }
+
+/*
+ * List Grid
+ * --------------------------------------------------
+ */
+@media (min-width: 62em) {
+  section.listing figure {
+    display: grid;
+    grid-gap: 1.5em; } }
+
+section.listing figure + figure {
+  margin-top: 1em;
+  border-top: 1px solid #D2CDCC; }
+
+section.listing figure h3 {
+  margin-top: 0.75em; }
+
+section.listing figure figcaption {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  text-align: left;
+  line-height: 1.25em; }
+  section.listing figure figcaption h3 a {
+    color: #525252; }
+  section.listing figure figcaption a {
+    padding-bottom: 0.5em; }
+
+.filter ul {
+  padding-left: 0 !important;
+  text-indent: 0 !important; }
+
+li.list-group-item.header {
+  color: black;
+  font-weight: 600;
+  background-color: #eee;
+  padding: 0.5em; }
+
+.card button {
+  padding: 0 0.5em; }
+
+.badge-info {
+  font-family: Arial;
+  color: #fff;
+  background-color: #17a2b8; }
+
+.badge-warning {
+  font-family: Arial;
+  color: #212529;
+  background-color: #ffc107; }
+
+.badge-success {
+  font-family: Arial;
+  color: #fff;
+  background-color: #28a745; }
 
 /*# sourceMappingURL=collex.css.map */
