@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta charset="utf-8">
-	<title>University of Chicago Libraries</title>
+	<title>[Mock] Search Results</title>
 	<meta name="generator" content="Bootply" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -381,32 +381,35 @@
                     </ul>
                     <br/>
                 </div>
+            </div>
 
-                <h2>Search &amp; Browse</h2>
-                <div class="row collections search">
+                <div class="rightside-mod col-xs-12 col-sm-6 col-md-12">
+                    <h2>Search &amp; Browse</h2>
+                    <div class="collections search">
                         <div class="form-group">
-                       <!--  <label for="collection-search" class="col-xs-12 col-form-label headline">Search Collection</label> -->
-                            <div class="col-xs-12">
                                 <form action="." class="searchbox" method="GET">
                                 <input name="query" placeholder="start a new search" required="required" type="search" aria-label="..." class="searchbox-input" value="">
                                 <span class="searchbox-icon"><i title="search" class="fa fa-search"></i>
                                     <input type="submit" class="searchbox-submit" style="background-color: transparent; color: transparent;">
                                 </span>
                                 </form>
-                            </div>
                         </div>
-  
-                    <div class="col-xs-12 collections browse">
-                        <span class="headline">Browse Collection by</span>
-                        <a href="#" class="badge">Language</a>
-                        <a href="#" class="badge">Location</a>
-                        <a href="#" class="badge">Access</a>
+      
+                        <div class="collections browse">
+                            <span class="headline">Browse Collection by</span>
+                            <ul>
+                                <li><a href="#">Language</a></li>
+                                <li><a href="#">Location</a></li>
+                                <li><a href="#">Access</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    </div>
-                    <div class="col-xs-12 collections row">
+                </div>
+
+                    <div class="rightside-mod col-xs-12 col-sm-6 col-md-12">
                         <h2>Access</h2>
                         <p><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></p>
-                        <p><a href="http://dma.uchicago.edu/forms/request-research-access">Request Research Access</a></p>
+                        <p><a href="http://dma.uchicago.edu/forms/request-research-access"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Request Research Access</a></p>
                     </div>
 
 
