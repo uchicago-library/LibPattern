@@ -204,6 +204,7 @@ $display-font: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	.coll-rightside {
 		background-color: lighten($base-color, 75%);
 		h3, h3 a {
+			font-family: $display-font;
 			color: lighten($base-color, 10%);
 			border-bottom-color: lighten($base-color, 10%);
 		}
@@ -316,6 +317,7 @@ dl {
 	    flex-basis: 75%;
 	    flex-grow: 1;
 	    border-bottom: 1px dashed #ddd;
+	    padding-left: 0.5em;
 	    padding-bottom: 0.5em;
 	    @include respond-to(medium) {
 	    	padding-top: 0.5em;
@@ -527,6 +529,31 @@ li.list-group-item.header {
 .collections.search form.searchbox {
 	margin-top:0;
 	margin-bottom: 1.5em;
+}
+
+#accordion {
+	margin-left: 2em;
+}
+
+[data-toggle="collapse"] .fa:before {  
+  content: "\f139";
+  font-size: 1.35rem;
+  margin-right: 0.75em;
+}
+
+[data-toggle="collapse"].collapsed .fa:before {
+  content: "\f13a";
+}
+
+.rightside h3 {
+	font-family: $base-font;
+	font-weight: 400;
+}
+
+h3.mb-0 {
+	font-family: $display-font;
+	font-size: 1.5rem;
+	font-weight: 600;
 }
 
 

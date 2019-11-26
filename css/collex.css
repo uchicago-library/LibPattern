@@ -517,6 +517,7 @@ a {
 .exhibitpage .coll-rightside, .exhibitchildpage .coll-rightside {
   background-color: #ece7f7; }
   .exhibitpage .coll-rightside h3, .exhibitpage .coll-rightside h3 a, .exhibitchildpage .coll-rightside h3, .exhibitchildpage .coll-rightside h3 a {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #3c256d;
     border-bottom-color: #3c256d; }
 
@@ -605,6 +606,7 @@ dl dd {
   flex-basis: 75%;
   flex-grow: 1;
   border-bottom: 1px dashed #ddd;
+  padding-left: 0.5em;
   padding-bottom: 0.5em; }
   @media (min-width: 62em) {
     dl dd {
@@ -774,5 +776,25 @@ li.list-group-item.header {
 .collections.search form.searchbox {
   margin-top: 0;
   margin-bottom: 1.5em; }
+
+#accordion {
+  margin-left: 2em; }
+
+[data-toggle="collapse"] .fa:before {
+  content: "\f139";
+  font-size: 1.35rem;
+  margin-right: 0.75em; }
+
+[data-toggle="collapse"].collapsed .fa:before {
+  content: "\f13a"; }
+
+.rightside h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400; }
+
+h3.mb-0 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600; }
 
 /*# sourceMappingURL=collex.css.map */
