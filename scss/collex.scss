@@ -464,7 +464,6 @@ section.listing {
 		  }
 		  figcaption {
 		    margin-top: 0.5em;
-		    margin-bottom: 1em;
 		    text-align: left;
 		    line-height: 1.25em;
 	    	h3 a {
@@ -473,6 +472,9 @@ section.listing {
 			a {
 				// display: block;
 				padding-bottom: 0.5em;
+			}
+			p {
+				margin-bottom: 0.5em;
 			}
 		}
 	}
