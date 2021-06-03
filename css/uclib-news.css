@@ -1,0 +1,87 @@
+/*
+ * News Homepage Module
+ * --------------------------------------------------
+ */
+.news-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap; }
+
+.newsblock {
+  padding: 0 5px;
+  white-space: normal; }
+  .newsblock h3 {
+    font-style: normal;
+    padding: 0.75em 0 0.25em; }
+  .newsblock p {
+    clear: both;
+    padding: 0 15px 0 0; }
+
+figure.embed {
+  width: 98%;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  font-size: 0.9em;
+  background: transparent;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  figure.embed .people {
+    background: #f4f9fc;
+    background: radial-gradient(circle, #f4f9fc 0%, #7b421c 100%); }
+  figure.embed .events {
+    align-items: center;
+    display: flex;
+    background: #f4f9fc;
+    background: radial-gradient(circle, #f4f9fc 0%, #664d59 100%); }
+  .newsblock figure.embed {
+    clear: both; }
+  figure.embed img {
+    object-fit: unset;
+    min-width: unset;
+    min-height: unset;
+    height: unset;
+    width: unset;
+    display: block;
+    width: auto\9;
+    -ms-interpolation-mode: bicubic; }
+    figure.embed img.cover {
+      object-fit: cover;
+      min-width: 100%;
+      min-height: auto;
+      height: 125px;
+      width: 200px; }
+    figure.embed img.portrait {
+      object-position: contain;
+      max-height: 100%;
+      max-width: auto;
+      margin-left: auto;
+      margin-right: auto; }
+    figure.embed img.landscape {
+      object-position: contain;
+      max-height: auto;
+      max-width: 100%;
+      vertical-align: middle; }
+  figure.embed figcaption {
+    width: 100%;
+    padding: 0.5em;
+    background: rgba(50, 50, 50, 0.7);
+    color: #fff;
+    position: absolute;
+    bottom: 0px; }
+    figure.embed figcaption.exhibitdate {
+      position: absolute !important;
+      bottom: 30px; }
+    .newsblock figure.embed figcaption {
+      position: inherit;
+      font-size: 1.1em;
+      font-weight: 600; }
+
+.figure-wrap {
+  height: 125px;
+  overflow: hidden; }
+
+/*# sourceMappingURL=uclib-news.css.map */

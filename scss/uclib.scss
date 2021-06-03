@@ -1661,29 +1661,6 @@ a.coll-access {
   }
 }
 
-.sdir-wrap {
-  @extend .news-wrap;
-  padding: 0;
-  h3 {
-    font-size: 1.1em;
-    margin-bottom: 0;
-  }
-  a, a:active, a:focus, a:hover {
-    color: $crerarblue;
-    text-decoration: underline;
-  }
-  .col-xs-12 {
-    padding-bottom: 1em;
-    margin-top: 1em;
-    @include respond-to(medium) {
-      &:nth-child(3n+2) {
-        border-right: 1px solid #eee;
-        border-left: 1px solid #eee;
-      }
-    }
-  }
-}
-
 .sdir {
   margin: 2em 0 0.25em 0;
   padding-left: 0;
@@ -1700,8 +1677,19 @@ a.coll-access {
       text-decoration: none;
     }
   }
-  span {
-    padding-left: 15px;
+  article {
+    @include respond-to(medium) {
+      display: grid;
+      grid-template-columns: 10% 40% 25% 25%;
+      grid-gap: 1.5em;
+    }
+    h3 {
+      margin-top: 0;
+    }
+    span[role=main] {
+      font-weight: 600;
+      display: block;
+    }
   }
 }
 
