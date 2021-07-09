@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>LibPatterns</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+	    <link rel="stylesheet" href="stylesheets/styles.css">
+	    <link rel="stylesheet" href="stylesheets/github-light.css">
+	    <script src="javascripts/scale.fix.js"></script>
+
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+<style type="text/css">
+	header {
+	    min-width: 20em;
+	    background-color: #5e5e5e;
+	    background-image: none; 
+	}
+	h1.header {
+		font-weight: 100;
+		font-family: Gotham, sans-serif;
+	}
+	h1, h2, h3 {
+		font-family: Gotham, sans-serif;
+	}
+	h4 {
+		margin-top: 10px;
+	}
+	img {
+		max-width: none;
+	}
+</style>
+	</head>
+	<body>
+
+<!-- Begin Body -->
+ <div class="wrapper">
+      <header>
+        <h1 class="header">LibPattern</h1>
+        <p class="header">UChicago Library</p>
+	 </header>
+      <section>
+
+<div class="container-fluid">
+
+	<h2 class="lp">DMA Login States</h2>
+	<h3>Public object/logged out</h3>
+	<ul>
+		<li>Display “Log in” option</li>
+		<li>Display player</li>
+	</ul>
+	<img src="images/DMA-States/Public_loggedOut.jpg">
+
+<h3>Public object/logged in</h3>
+<ul>
+	<li>Display account information</li>
+	<li>Display player</li>
+</ul>
+<img src="images/DMA-States/Public_loggedIn.jpg">
+
+<h3>Campus object/logged out</h3>
+	<ul>
+		<li>Display “Log in” option</li>
+		<li>This online audio can be played by logged in users only. Please log in.</li>
+	</ul>
+	<img src="images/DMA-States/Campus_loggedOut.jpg">
+
+<h3>Campus object/logged in</h3>
+	<ul>
+		<li>Display account information</li>
+		<li>Display player</li>
+	</ul>
+	<img src="images/DMA-States/Campus_loggedIn.jpg">
+
+<h3>Restricted/logged out</h3>
+	<ul>
+		<li>Display “Log in” option</li>
+		<li>This online audio can be played by logged in users only. Please log in.</li>
+	</ul>
+	<img src="images/DMA-States/Restricted_loggedOut.jpg">
+
+<h3>Restricted/logged in w/o permission</h3>
+	<ul>
+		<li>Display account information</li>
+		<li>This online audio can be accessed by permission only. Request research access.</li>
+	</ul>
+	<img src="images/DMA-States/Restricted_loggedIn-Request.jpg">
+
+<h3>Restricted/logged in w/ permission</h3>
+	<ul>
+		<li>Display account information</li>
+		<li>Display player</li>
+	</ul>
+	<img src="images/DMA-States/Restricted_loggedIn.jpg">
+
+
+
+</div>
+
+
+<p><h2>&nbsp;</h2></p><p><h2>&nbsp;</h2></p><p><h2>&nbsp;</h2></p>
+
+
+
+
+
+</div>
+
+
+
+	<!-- script references -->
+<script>
+var shiftWindow = function() { scrollBy(0, -50) };
+if (location.hash) shiftWindow();
+window.addEventListener("hashchange", shiftWindow);
+
+$('.nav a').on('click', function(){
+    $(".btn-navbar").click(); //bootstrap 2.x
+    $(".navbar-toggle").click() //bootstrap 3.x by Richard
+});
+</script>
+
+      <script src="https://code.jquery.com/jquery-2.1.3.min.js"><script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"><script>
+      
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>
