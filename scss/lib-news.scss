@@ -1,6 +1,7 @@
 @import "variables.scss";
 
-body.lib-news {
+body.libnewspage,
+body.libnewsindexpage {
 
 	#content {
 		max-width: 2000px;
@@ -409,6 +410,7 @@ body.lib-news {
 	color: #fff;
     display: block;
     padding: 0.5em 1em;
+    background: darken($darkgray, 30%);
 	&.exhibits {
       background: rgb(37,25,15);
     }
