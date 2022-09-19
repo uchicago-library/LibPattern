@@ -1,0 +1,279 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+Digital Collection Parent Page
+Collection Search and Browse
+Digital Collection Object Page
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Table of contents]
+
+Accessibility {Global Classes}
+Fonts
+Colors
+Elements
+Mixins
+
+-------------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond");
+/*
+ * Media Queries
+ * --------------------------------------------------
+ *
+ * Use as: @include respond-to(small) { ... }
+ *		@include respond-to(medium) { ... }
+ *		@include respond-to(large) { ... }
+ */
+/*
+ * Accessibility {Global Classes}
+ * --------------------------------------------------
+ */
+.is-vishidden, .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); }
+
+/*
+ * Fonts
+ * --------------------------------------------------
+ */
+/*
+ * Colors
+ * --------------------------------------------------
+ */
+/*
+ * Elements
+ * --------------------------------------------------
+ */
+.nopadding {
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 0;
+  margin-left: 0; }
+
+.btn-morelink {
+  font-size: 0.9em;
+  color: #0F425C;
+  background: #f0eeef;
+  border: 1px solid #D6D6CE;
+  border-radius: 0;
+  padding: 6px 12px;
+  margin-bottom: 10px;
+  text-decoration: none; }
+  .btn-morelink:after {
+    content: "\0020\f101";
+    font-family: FontAwesome; }
+  .btn-morelink:hover {
+    background: #d8b9b7;
+    color: #800000; }
+
+.distinct-rightside {
+  background-color: #f6f7f2;
+  margin: 10px 0;
+  padding: 15px 20px; }
+  .distinct-rightside ul {
+    list-style-type: none;
+    margin-bottom: 10px; }
+  .distinct-rightside li {
+    color: #6d2f6a; }
+  .distinct-rightside i {
+    padding-left: 1em; }
+  .distinct-rightside a {
+    color: #6d2f6a; }
+  .distinct-rightside h2 {
+    color: #616530;
+    margin: 5px 0 10px 0;
+    font-size: 1.05em;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #a0a282; }
+  @media (min-width: 62em) {
+    .distinct-rightside {
+      border-top: 0;
+      margin: 0;
+      max-width: 350px; } }
+  @media (min-width: 75em) {
+    .distinct-rightside {
+      max-width: 30em; } }
+.menu-marker {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: #642822 transparent transparent;
+  border-style: solid;
+  border-width: 11px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%; }
+
+/*
+ * Mixins
+ * --------------------------------------------------
+ */
+/*
+ * Media Queries
+ * --------------------------------------------------
+ *
+ * Use as: @include respond-to(small) { ... }
+ *		@include respond-to(medium) { ... }
+ *		@include respond-to(large) { ... }
+ */
+/*
+ * Digital Collection Parent Page
+ * --------------------------------------------------
+ *
+ */
+body.collectionpage div.home-module {
+  padding-top: 1.5em;
+  padding-right: 15px; }
+
+body.collectionpage h2.browse {
+  color: #616530;
+  padding-bottom: 5px;
+  display: inline; }
+
+body.collectionpage span.browse-links a {
+  display: block; }
+
+@media (min-width: 62em) {
+  body.collectionpage span.browse-links {
+    float: right;
+    display: inline-flex; }
+    body.collectionpage span.browse-links a + a:before {
+      content: "\00a0\00a0\007C\00a0\00a0"; } }
+
+/*
+ * Collection Search and Browse 
+ * --------------------------------------------------
+ *
+ */
+body.collectionpage .results h2 {
+  color: #616530;
+  font-size: 1.3em;
+  margin: -15px 0 0 0; }
+
+body.collectionpage .filter ul {
+  padding-left: 0 !important;
+  text-indent: 0 !important; }
+
+body.collectionpage li.list-group-item.header {
+  color: black;
+  font-weight: 600;
+  background-color: #eee;
+  padding: 0.5em; }
+
+body.collectionpage .collections.search form.searchbox {
+  margin-top: 0;
+  margin-bottom: 1.5em; }
+
+body.collectionpage #accordion {
+  margin-left: 2em; }
+
+body.collectionpage [data-toggle="collapse"] .fa:before {
+  content: "\f139";
+  font-size: 1.35rem;
+  margin-right: 0.75em; }
+
+body.collectionpage [data-toggle="collapse"].collapsed .fa:before {
+  content: "\f13a"; }
+
+body.collectionpage section.browse-list {
+  /* List or Thumbnail Grid */ }
+  body.collectionpage section.browse-list .card h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    weight: 300; }
+  @media (min-width: 62em) {
+    body.collectionpage section.browse-list figure {
+      display: grid;
+      grid-template-columns: 25% 75%;
+      grid-gap: 1.5em; } }
+  body.collectionpage section.browse-list figure + figure {
+    margin-top: 1em;
+    border-top: 1px solid #D2CDCC; }
+  body.collectionpage section.browse-list figure h3 {
+    font-size: 1.5rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 0.75em; }
+    a body.collectionpage section.browse-list figure h3 {
+      color: #525252;
+      text-decoration: underline; }
+  body.collectionpage section.browse-list figure img {
+    height: 200px;
+    width: 100%;
+    padding-top: 1.5em;
+    margin-right: 1.5em;
+    object-fit: contain;
+    object-position: 50% 0; }
+  body.collectionpage section.browse-list figure figcaption {
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    text-align: left;
+    line-height: 1.25em; }
+    body.collectionpage section.browse-list figure figcaption ul {
+      list-style: none;
+      padding-left: 0; }
+      body.collectionpage section.browse-list figure figcaption ul li {
+        margin-bottom: 0.75rem; }
+
+/*
+ * Digital Collection Object Page
+ * --------------------------------------------------
+ *
+ */
+@media (min-width: 62em) {
+  body.collectionpage dl {
+    padding-left: 1em;
+    display: flex;
+    flex-flow: row wrap; } }
+
+body.collectionpage dl dt {
+  font-weight: 600;
+  padding-top: 0.5em;
+  flex-basis: 15%; }
+  @media (min-width: 62em) {
+    body.collectionpage dl dt {
+      padding-top: 0.5em;
+      border-bottom: 1px dashed #ddd;
+      padding-bottom: 0.5em; } }
+body.collectionpage dl dd {
+  flex-basis: 75%;
+  flex-grow: 1;
+  border-bottom: 1px dashed #ddd;
+  padding-left: 0.5em;
+  padding-bottom: 0.5em; }
+  @media (min-width: 62em) {
+    body.collectionpage dl dd {
+      padding-top: 0.5em;
+      border-bottom: 1px dashed #ddd;
+      padding-bottom: 0.5em; } }
+body.collectionpage .rightside .source-description {
+  color: #494949;
+  font-size: 90%;
+  font-style: italic;
+  display: block; }
+
+body.collectionpage .rightside .rightside-mod {
+  padding-bottom: 1em; }
+
+body.collectionpage #hiddenCitation {
+  width: 80vw; }
+  @media (min-width: 62em) {
+    body.collectionpage #hiddenCitation {
+      width: 50vw; } }
+  body.collectionpage #hiddenCitation .citationradios {
+    padding-left: 0; }
+
+body.collectionpage .save-to-link {
+  padding-top: 15px; }
+  body.collectionpage .save-to-link a {
+    display: block; }
+
+body.collectionpage .form-check input[type="radio"] {
+  display: inline-block; }
+
+body.collectionpage .form-check label {
+  display: inline-block; }
